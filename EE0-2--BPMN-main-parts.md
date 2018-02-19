@@ -1,3 +1,5 @@
+# BPMN main parts
+
 A BPMN process is composed of a set of activities and properties.
 
 Properties represent data that the process has to manage, composed of data passed to the process when starting it and data created or updated when moving from an activity to the other. Properties can be read only or updatable and can be linked to specific activities, in order to show or edit them.

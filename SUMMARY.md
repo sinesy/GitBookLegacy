@@ -6,7 +6,7 @@
   * [Creating a web application](creating-a-web-application.md)
 * [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
-  * Defining business components
+  * [Defining business components](defining-business-components.md)
     * [What are business components](3-1-5-Business-Components.md)
     * [Business components to fill-in panels](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
     * Creating business components
@@ -60,6 +60,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

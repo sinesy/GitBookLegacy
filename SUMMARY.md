@@ -55,9 +55,8 @@
     * [Drive](EE5-Google-Drive.md)
   * Google Cloud Platform
     * Datastore
-      * Google Datastore Introduction
-      * How to create Datastore entities
-      * How to create windows filled with data coming from datastore entities
+      * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
+      * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
   * Queue Manager
@@ -71,6 +70,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

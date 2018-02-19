@@ -59,8 +59,8 @@
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
-    * Scheduler
-    * Enterprise Scheduler
+    * [Scheduler](3-2-2-Scheduler.md)
+    * [Enterprise Scheduler](EE9-1--Scheduler-Introduction.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
@@ -72,6 +72,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

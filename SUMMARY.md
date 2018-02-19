@@ -1,4 +1,4 @@
 # Summary
 
-* [Overview]
-* [Core features]
+* Overview
+* Core features

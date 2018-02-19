@@ -24,19 +24,19 @@ In both cases, a parameter is defined using the Platform syntax: :XXX, dove XXX 
 
 Please do not change the business component content for a detail form: it must always contain the ID and it should never be changed.
 
-## Example of filtering conditions
+## Examples of filtering conditions
 
-The second component is used to feed a detail form by invoking tthe Alfresco API: it will get from Alfresco the metadata related to the specified document \(identified by a uuid\) it will pass back that content to the Platform’s detail form.  
-The data flow is as follow:
+A typical setting of a business component for grids is as the follow:
 
-Platform’s Form \(browser\) -&gt; Platform’s business component \(Platform server\) -&gt; Alfresco CMS API layer
+```js
+service/getList?format=json&amp;type=...&amp;model=...&amp;prefix=...
+```
 
-Both grids and forms could required input parameters to use when fetching data: a grid could require parameters to dinamically filter the grid content, the form has to pass the uuid to get a specific document.   
-In both cases, a parameter is defined using the Platform syntax: :XXX, dove XXX is the parameter name.
+* the model and prefix are automatically set by Platform, when importing an object, since all the objects retrieved inherit the same model \(and prefix\).
+* the parameter type is used to define which document type to filter.
 
-Please do not change the business component content for a detail form: it must always contain the ID and it should never be changed.
-
----
-
-
+Consequently, such a kind of URL would retrieve all the documents stored in Alfresco having the specified document type \(and related to the specified model\).  
+This is typically the starting point when retrieving list of documents from Alfresco. It is likely to add further filters to that base request. In order to do that, it is needed to include in the URL a parameter named  **filterBy** , used to add filter conditions.  
+These conditions must be expressed according to the Alfresco Query Syntax.  
+For instance, this is an URL including a filtering condition:
 

@@ -11,6 +11,12 @@
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
   * Defining events
+    * Panel events
+    * Column events
+    * Control events
+    * Filter events
+    * Timer events
+    * Start-End event
   * Server-side JavaScript & w.s
 * Setting up the environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
@@ -48,4 +54,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

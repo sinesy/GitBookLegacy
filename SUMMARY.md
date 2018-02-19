@@ -56,7 +56,7 @@
   * Google Cloud Platform
     * Datastore
       * Google Datastore Introduction
-      * How to create entities
+      * How to create Datastore entities
       * How to create windows filled with data coming from datastore entities
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler

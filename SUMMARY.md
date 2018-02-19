@@ -6,9 +6,9 @@
   * [Creating a web application](creating-a-web-application.md)
 * Core features
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
-  * Defining business components
-  * Defining the UI
-  * Working with users and roles
+  * [Defining business components](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
+  * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
+  * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
   * Defining events
   * Server-side JavaScript & w.s

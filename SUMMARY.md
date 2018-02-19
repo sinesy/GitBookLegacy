@@ -42,7 +42,13 @@
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
   * SSO
-    * [LDAP](ldap.md)
+    * LDAP
+      * LDAP support
+      * Connecting an LDAP server to Activiti BPM
+      * Connecting an LDAP server to Alfresco ECM
+      * Identity management based on LDAP and database
+      * Identity management based on an embedded LDAP server used by Alfresco and or Activiti
+      * Identity management based on a remote LDAP server to connect to Platform on the cloud
     * Google SSO
     * Custom SSO
   * Mobile
@@ -72,4 +78,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

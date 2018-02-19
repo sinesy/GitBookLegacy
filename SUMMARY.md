@@ -117,21 +117,19 @@
         * [Additional features](EE1-2-4-Additional-features.md)
       * [How to use 4WS.Platform and Alfresco together](EE1-3--How-to-use-4WS-Platform-and-Alfresco-together.md)
         * [Set the same Identity Management system](EE1-3-1-Set-the-same-Identity-Management-system.md)
-        * Define document types and aspects in Alfresco
-        * Import the document types and aspects definitions in 4WS.Platform
-        * Define document types and aspects in 4WS.Platform
-        * Reverse engineering of document types or aspects
-        * Definition of business components to fill-in panels
-        * Definition of the GUI
-        * Additional server-side services
-      * Requirements
-      * Current limits in 4WS-Platform - Alfresco integration
+        * [Define document types and aspects in Alfresco](EE1-3-2-Define-document-types-and-aspects-in-Alfresco.md)
+        * [Import the document types and aspects definitions in 4WS.Platform](EE1-3-3-Import-the-document-types-and-aspects-definitions-in-4WS-Platform.md)
+        * [Define document types and aspects in 4WS.Platform](EE1-3-4-Define-document-types-and-aspects-in-4WS-Platform.md)
+        * [Reverse engineering of document types or aspects](EE1-3-5-Reverse-engineering-of-document-types-or-aspects.md)
+        * [Definition of business components to fill-in panels](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
+        * [Definition of the GUI](EE1-3-7-Definition-of-the-GUI.md)
+        * [Additional server-side services](EE1-3-8-Additional-server-side-services.md)
+      * [Requirements](EE1-4-Requirements.md)
+      * [Current limits in 4WS-Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
     * [MongoDB](mongodb.md)
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

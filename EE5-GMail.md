@@ -9,13 +9,13 @@ In order to use this feature, you have also to define a few parameters in 4WS.Pl
 
 to enable the Google Apps integration and the sending address must correspond to a Google Apps user.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.sendGmail(from, to, subject, body, isHtmlContent, zipFiles, deleteFilesAfterSending, filesToAttach)
 ```
 
-### Details
+#### Details
 
 **from**  – \(optional, can be null\) a string representing the email address to use as the “from address” to send the email. Can be one of the address from which te Google usare can send emails.  
  **to**  – a string composed of one or more email addresses, separated by a comma \(,\)  

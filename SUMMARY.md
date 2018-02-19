@@ -29,7 +29,7 @@
     * Offline vs Online
     * Mobile side specifics
     * What Mobile side not includes
-  * GSuite
+  * [GSuite](gsuite.md)
     * [Gmail](EE5-GMail)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)

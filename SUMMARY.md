@@ -7,10 +7,11 @@
 * [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
-    * What are business components
-    * Business components to fill-in panels
+    * [What are business components](3-1-5-Business-Components.md)
+    * [Business components to fill-in panels](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
     * Creating business components
-    * Defining Custom Java Business component
+      * 
+    * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard

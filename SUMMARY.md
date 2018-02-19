@@ -73,8 +73,8 @@
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
   * BPM
-    * BPMN Introduction
-    * BPMN main parts
+    * [BPMN Introduction](EE0-1--BPM-Introduction.md)
+    * [BPMN main parts](EE0-2--BPMN-main-parts.md)
   * ECM
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
@@ -82,6 +82,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

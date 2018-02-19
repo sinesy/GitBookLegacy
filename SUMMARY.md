@@ -73,40 +73,40 @@
   * BPM
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)
     * [BPMN main parts](EE0-2--BPMN-main-parts.md)
-    * Platform integration
-      * Processes
-      * Models
-      * Process instances
-      * To-do list
-      * Process history
-    * Process Web Modeler
-      * Model Creation
-        * Start-End Event
-        * Gateways
-      * Supported objects
-      * Start tasks and user tasks
-      * Form properties
-        * Important notes
-        * Property types
-      * Service tasks
-        * Web service
-        * SQL Query
-        * SQL statement
-      * Mail task
-      * Script task
-        * Example : how to get a value previously read from a SQL query
-        * Example : how to get the current process instance id
-      * Timer events
-      * Subprocess and Call activiti
-    * Utility methods available in Platform
-      * How to start a process from a JavaScript action
-      * How to complete a user task from a JavaScript action
-    * An example
-      * From theory to practise
-      * Processes
-      * Instances
-      * Activities
-      * History
+    * [Platform integration](EE0-3--Platform-integration.md)
+      * [Processes](EE0-3-1-Processes.md)
+      * [Models](EE0-3-2-Models.md)
+      * [Process instances](EE0-3-3-Process-instances.md)
+      * [To-do list](EE0-3-4-To-do-list.md)
+      * [Process history](EE0-3-5-Process-history.md)
+    * [Process Web Modeler](EE0-4--Process-Web-Modeler.md)
+      * [Model Creation](EE0-4-1-Model-creation.md)
+        * [Start-End Event](EE0-4-10-Start-End-Event.md)
+        * [Gateways](EE0-4-11-Gateways.md)
+      * [Supported objects](EE0-4-2-Supported-objects.md)
+      * [Start tasks and user tasks](EE0-4-3-Start-Tasks-and-User-tasks.md)
+      * [Form properties](EE0-4-4-Form-properties.md)
+        * [Important notes](EE0-4-4-1-Important-notes.md)
+        * [Property types](EE0-4-4-2-Property-types.md)
+      * [Service tasks](EE0-4-5-Service-tasks.md)
+        * [Web service](EE0-4-5-1-Web-service.md)
+        * [SQL Query](EE0-4-5-2-SQL-Query.md)
+        * [SQL statement](EE0-4-5-3-SQL-statement.md)
+      * [Mail task](EE0-4-6-Mail-task.md)
+      * [Script task](EE0-4-7-Script-task.md)
+        * [Example : how to get a value previously read from a SQL query](EE0-4-7-1-Example-how-to-get-a-value-previously-read-from-a-SQL-query.md)
+        * [Example : how to get the current process instance id](EE0-4-7-2-Example-how-to-get-the-current-process-instance-id.md)
+      * [Timer events](EE0-4-8-Timer-events.md)
+      * [Subprocess and Call activiti](EE0-4-9-Subprocess-and-Call-activiti.md)
+    * [Utility methods available in Platform](EE0-5--Utility-methods-available-in-Platform.md)
+      * [How to start a process from a JavaScript action](EE0-5-1-How-to-start-a-process-from-a-Javascript-action.md)
+      * [How to complete a user task from a JavaScript action](EE0-5-2-How-to-complete-a-user-task-from-a-javascript-action.md)
+    * [An example](EE0-6--An-example.md)
+      * [From theory to practise](EE0-6-1-From-theory-to-practise.md)
+      * [Processes](EE0-6-2-Processes.md)
+      * [Instances](EE0-6-3-Instances.md)
+      * [Activities](EE0-6-4-Activities.md)
+      * [History](EE0-6-5-History.md)
   * ECM
     * Alfresco
       * Alfresco Introduction
@@ -130,6 +130,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

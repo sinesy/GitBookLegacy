@@ -1,3 +1,5 @@
+# Business components to fill-in panels
+
 For every imported object \(described in the previous section\), two business components are automatically created during the importing stage:
 
 * a business component to read a list of documents
@@ -64,6 +66,13 @@ To filter documents stored in a specified  **path** :
 ```js
 +PATH:"/cm:generalclassifiable/cm:Software_x0020_Document_x0020_Classification/member"
 ```
+
+You can also combine multiple expressions using the logical operators\*\*  AND, OR and NOT.
+
+You can have a deep look at the Alfresco syntax through these two links:
+
+* [http://wiki.alfresco.com/wiki/Search](http://wiki.alfresco.com/wiki/Search)
+* [http://wiki.alfresco.com/wiki/Full\_Text\_Search\_Query\_Syntax](http://wiki.alfresco.com/wiki/Full_Text_Search_Query_Syntax)
 
 
 

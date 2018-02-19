@@ -31,6 +31,7 @@
     * [Grid component filled by a server-side JS](3-1-5-3-Grid-component-filled-by-a-server-side-JS.md)
     * [Detail component filled by a server-side JS](3-1-5-4-Detail-component-filled-by-a-server-side-JS.md)
     * [How to define a server-side JavaScript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
+    * Web service
 * Setting up the environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
@@ -67,4 +68,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

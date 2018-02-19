@@ -13,7 +13,7 @@
       * [By a datastore entity](EE4-4--How-to-create-business-components.md)
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
-  * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
+  * Defining the UI
     * Integration at GUI level
     * Definition of the GUI
     * Translations about GUI components and internationalization settings

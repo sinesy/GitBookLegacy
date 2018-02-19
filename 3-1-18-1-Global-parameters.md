@@ -1,5 +1,7 @@
-Global parameters are accessible starting from the menu Administration -&gt; Parameters folder. Once opened it, a list of parameters can be defined.
-Some parameters are only global, others can be redefined at application level; some others can be defined at application level only.
+# Global parameters
+
+Global parameters are accessible starting from the menu Administration -&gt; Parameters folder. Once opened it, a list of parameters can be defined.  
+Some parameters are only global, others can be redefined at application level; some others can be defined at application level only.  
 The followings are the global parameters:
 
 * Permissions
@@ -51,15 +53,15 @@ The followings are the global parameters:
 * Password to use when connecting to LDAP
 * Username to use when connecting to LDAP
 * Base LDAP path when searching for users
-* (optional) Users LDAP filter
-* (optional) fields to manage in LDAP users
-* (optional) field types to manage in LDAP users
-* (optional) LDAP attribute for user id
+* \(optional\) Users LDAP filter
+* \(optional\) fields to manage in LDAP users
+* \(optional\) field types to manage in LDAP users
+* \(optional\) LDAP attribute for user id
 * Base LDAP path when searching from groups
-* (optional) Groups LDAP filter
-* (optional) fields to manage in LDAP groups
-* (optional) field types to manage in LDAP groups
-* (optional) LDAP attribute for group id
+* \(optional\) Groups LDAP filter
+* \(optional\) fields to manage in LDAP groups
+* \(optional\) field types to manage in LDAP groups
+* \(optional\) LDAP attribute for group id
 * Alfresco
 * Admin Password when connecting to Alfresco Server
 * Admin Username when connecting to Alfresco Server
@@ -71,11 +73,11 @@ The followings are the global parameters:
 * "From email address" when sending email from Scheduler
 * Email notification system
 * SMTP host when sending email
-* (optional) SMTP port when sending email
-* (optional) SMTP protocol when sending email
-* (optional) SMTP username when sending email
-* (optional) SMTP password when sending email
-* (optional) Use TLS when sending email: E/F
+* \(optional\) SMTP port when sending email
+* \(optional\) SMTP protocol when sending email
+* \(optional\) SMTP username when sending email
+* \(optional\) SMTP password when sending email
+* \(optional\) Use TLS when sending email: E/F
 * Collaboration
 * URL 4WSMonitor
 * Show role id
@@ -97,15 +99,13 @@ The followings are the global parameters:
 * Application activation key path
 * Password regular expression: you can define a regular expression for users password
 
-* Example : &#8216;^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$&#8217;
+* Example : ‘^\(?=._\d\)\(?=._\[a-z\]\)\(?=.\*\[A-Z\]\)\w{6,}$’
 
 * matches a string of six or more characters;
-* that contains at least one digit (d is shorthand for [0-9]);
+
+* that contains at least one digit \(d is shorthand for \[0-9\]\);
 * at least one lowercase character; and
 * at least one uppercase character.
-
-
-
 
 * Password: number of days to use for the password expiration
 * Password: number of erroneous login attempts
@@ -114,13 +114,9 @@ The followings are the global parameters:
 * 4WS.Platform Base URL
 * Order of Grid Export: ordered list of types export for grids
 
-* Example: XLS|CSV (;)|CSV (,)|HTML|PDF|RTF|XML (small format)|XML (large format)
-
-
-
-
-                
+* Example: XLS\|CSV \(;\)\|CSV \(,\)\|HTML\|PDF\|RTF\|XML \(small format\)\|XML \(large format\)
 
 ---
+
 
 

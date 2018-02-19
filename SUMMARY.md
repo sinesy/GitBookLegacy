@@ -97,7 +97,7 @@
         * [Example : how to get a value previously read from a SQL query](EE0-4-7-1-Example-how-to-get-a-value-previously-read-from-a-SQL-query.md)
         * [Example : how to get the current process instance id](EE0-4-7-2-Example-how-to-get-the-current-process-instance-id.md)
       * [Timer events](EE0-4-8-Timer-events.md)
-      * [Subprocess and Call activiti](EE0-4-9-Subprocess-and-Call-activiti.md)
+      * [Subprocess and Call Activiti](EE0-4-9-Subprocess-and-Call-activiti.md)
     * [Utility methods available in Platform](EE0-5--Utility-methods-available-in-Platform.md)
       * [How to start a process from a JavaScript action](EE0-5-1-How-to-start-a-process-from-a-Javascript-action.md)
       * [How to complete a user task from a JavaScript action](EE0-5-2-How-to-complete-a-user-task-from-a-javascript-action.md)

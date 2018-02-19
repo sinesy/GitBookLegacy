@@ -108,20 +108,22 @@
       * [Activities](EE0-6-4-Activities.md)
       * [History](EE0-6-5-History.md)
   * ECM
-    * Alfresco
-      * Alfresco Introduction
-      * Integration between 4WS.Platform and Alfresco
-        * Integration at GUI level
-        * Integration at model level
-        * Integration at authentication and authorizations level
-      * Additional features
-      * How to use 4WS.Platform and Alfresco together
-      * Set the same Identity Management system
-      * Define document types and aspects in 4WS.Platform
-      * Reverse engineering of document types or aspects
-      * Definition of business components to fill-in panels
-      * Definition of the GUI
-      * Additional server-side services
+    * [Alfresco](alfresco.md)
+      * [Alfresco Introduction](EE1-1--Alfresco-Introduction.md)
+      * [Integration between 4WS.Platform and Alfresco](EE1-2--Integration-between-4WS-Platform-and-Alfresco.md)
+        * [Integration at GUI level](EE1-2-1-Integration-at-GUI-level.md)
+        * [Integration at model level](EE1-2-2-Integration-at-model-level.md)
+        * [Integration at authentication and authorizations level](EE1-2-3-Integration-at-authentication-and-authorizations-level.md)
+        * [Additional features](EE1-2-4-Additional-features.md)
+      * [How to use 4WS.Platform and Alfresco together](EE1-3--How-to-use-4WS-Platform-and-Alfresco-together.md)
+        * [Set the same Identity Management system](EE1-3-1-Set-the-same-Identity-Management-system.md)
+        * Define document types and aspects in Alfresco
+        * Import the document types and aspects definitions in 4WS.Platform
+        * Define document types and aspects in 4WS.Platform
+        * Reverse engineering of document types or aspects
+        * Definition of business components to fill-in panels
+        * Definition of the GUI
+        * Additional server-side services
       * Requirements
       * Current limits in 4WS-Platform - Alfresco integration
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
@@ -130,4 +132,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

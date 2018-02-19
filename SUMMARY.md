@@ -64,7 +64,7 @@
   * ECM
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
-    * MongoDB
+    * [MongoDB](mongodb.md)
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises

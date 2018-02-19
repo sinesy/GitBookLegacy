@@ -20,7 +20,30 @@
     * [Report online]()
     * [Docx templating]()
     * [Charts]()
-  * [SSO]()
+  * [SSO]() # only enterprise
    * [LDAP]()
-   * [Google SSO]() # my comment
+   * [Google SSO]()
    * [Custom SSO]()
+  * [Mobile]() # only enterprise
+    * [Offline vs Online]()
+    * [Mobile side specifics]
+    * [What Mobile side not includes]
+  * [GSuite]() # only enterprise
+    * [Gmail]()
+    * [Calendar]()
+    * [Drive]()
+  * [Google Cloud Platform]() # only enterprise
+    * [Datastore]()
+    * [Cloud Storage]()
+  * [Scheduler]() # only enterprise
+  * [Queue Manager]() # only enterprise
+  * [Log & Analysis]() # only enterprise
+  * [Audit]() # only enterprise
+  * [BPM]() # potrebbero essere tolti
+  * [ECM]() # potrebbero essere tolti
+  * [Lotus Notes Migration Tool] # potrebbero essere tolti
+  * [NoSQL databases] # only enterprise
+    * [MongoDB]()
+    * [Google Datastore]() #link
+* [Troubleshootings]()
+* [Best practises]()

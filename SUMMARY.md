@@ -26,7 +26,11 @@
     * [Filter events](3-1-8-7-Filter-events.md)
     * [Timer events](EE0-4-8-Timer-events.md)
     * [Start-End event](EE0-4-10-Start-End-Event.md)
-  * [Server-side JavaScript & w.s](server-side-javascript-and-ws.md)
+  * Server-side Javascript & Web Service
+    * Server-side Javascript
+    * Grid component filled by a server-side JS
+    * Detail component filled by a server-side JS
+    * How to define a server-side JavaScript action
 * Setting up the environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)

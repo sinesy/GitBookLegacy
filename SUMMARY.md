@@ -41,8 +41,8 @@
   * [Audit]() # only enterprise
   * [BPM]() # potrebbero essere tolti
   * [ECM]() # potrebbero essere tolti
-  * [Lotus Notes Migration Tool] # potrebbero essere tolti
-  * [NoSQL databases] # only enterprise
+  * [Lotus Notes Migration Tool]() # potrebbero essere tolti
+  * [NoSQL databases]() # only enterprise
     * [MongoDB]()
     * [Google Datastore]() #link
 * [Troubleshootings]()

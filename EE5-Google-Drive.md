@@ -40,8 +40,7 @@ utils.getGoogleDriveFileInfo(fileId)
 #### Details
 
 **fileId**  – the id of the file  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\).
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\).
 
 #### Example
 
@@ -87,8 +86,7 @@ utils.uploadAndRenameGoogleDriveFileFromFS(fsPath, parentId, fileName, deleteFsF
  **parentId**  – the id of the Drive folder where the file must be uploaded to. Can be null, in this case the root folder is used.  
  **fileName**  – the new name of the uploaded file. If null the original file name is used.  
  **deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\).
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\).
 
 #### Example
 
@@ -117,8 +115,7 @@ utils.updateGoogleDriveFileFromFS(fileId, fsPath, deleteFsFile, newRevision)
  **deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.  
  **fileName**  – the new name of the uploaded file. If null the original file name is used.  
  **newRevision ** – true or false. Specifies if a new revision must be created or the file must be overwritten.  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\).
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\).
 
 #### Example
 
@@ -154,8 +151,7 @@ utils.uploadAndRenameGoogleDriveFileInNamedFolderFromFS(fsPath, baseFolderId, fo
  **createFolderIfNotExists ** – true or false. Whether or not to create the  **folderName**  folder if not exists in the base folder  
  **fileName**  – the new name of the uploaded file. If null the original file name is used.  
  **deleteFsFile ** – true or false. Specifies if the file on file system must be deleted or not after upload to Drive.  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\).
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\).
 
 ## Move a file or folder in a single folder
 
@@ -174,14 +170,14 @@ utils.moveGoogleDriveFile(fileId, newParents,addToRevision)
 
 #### **Details**
 
-fileId – the id of the file/folder to move  
-newParents – a comma separated list of folder ids that will become the new parents of the file/folder.  
-addToRevision – true/false. If true the file will be new version of a possible homonymous file in the destination folder. If false two files with the same name will be present in the destination folder.
+**fileId** – the id of the file/folder to move  
+**newParents** – a comma separated list of folder ids that will become the new parents of the file/folder.  
+**addToRevision** – true/false. If true the file will be new version of a possible homonymous file in the destination folder. If false two files with the same name will be present in the destination folder.
 
 #### **Example**
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.  
-`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);      
+`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);        
  utils.setReturnValue(‘{ “name”:”‘ + file.title +'” }’);`
 
 ## Move a file or folder
@@ -198,8 +194,8 @@ utils.moveGoogleDriveFile(fileId, newParents)
 
 #### Details
 
-fileId – the id of the file/folder to move  
-newParents – a comma separated list of folder ids that will become the new parents of the file/folder.
+**fileId** – the id of the file/folder to move  
+**newParents** – a comma separated list of folder ids that will become the new parents of the file/folder.
 
 #### Example
 
@@ -225,9 +221,9 @@ utils.modifyGoogleDriveFileParents(fileId, parentsToAdd, parentsToRemove)
 
 #### Details
 
-fileId – the id of the file/folder to patch  
-parentsToAdd – a comma separated list of folder ids that will be added as parents of the file/folder. Can be empty.  
-parentsToAdd – a comma separated list of folder ids that will be removed as parents of the file/folder. Can be empty.
+**fileId** – the id of the file/folder to patch  
+**parentsToAdd** – a comma separated list of folder ids that will be added as parents of the file/folder. Can be empty.  
+**parentsToAdd** – a comma separated list of folder ids that will be removed as parents of the file/folder. Can be empty.
 
 #### Example
 
@@ -278,8 +274,7 @@ utils.recoverGoogleDriveFile(fileId)
 #### Details
 
 **fileId ** – the id of the file to restore from trash  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\).
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\).
 
 #### Example
 
@@ -304,8 +299,7 @@ utils.getGoogleDriveFileOpenURL(fileId)
 #### Details
 
 **fileId ** – the id of the file  
-Return value  
-a string containing the URL
+_Return value_ - a string containing the URL
 
 ## Return the URL to download a file from Google Drive
 
@@ -320,8 +314,7 @@ utils.getGoogleDriveFileDownloadURL(fileId)
 #### Details
 
 **fileId ** – the id of the file  
-Return value  
-a string containing the URL
+_Return value_ - a string containing the URL
 
 ## Get the stored versions of the given file
 
@@ -336,8 +329,7 @@ utils.getGoogleDriveFileRevisions(fileId)
 #### Details
 
 **fileId ** – the id of the file  
-Return value  
-a list of the Platform representation of the version of a file \(List\)
+_Return value_ - a list of the Platform representation of the version of a file \(List\)
 
 ## Create a folder in Google Drive with the specified parents and optional description
 
@@ -354,8 +346,7 @@ utils.createGoogleDriveFolder(folderName, parents, description)
 **folderName ** – the name of the folder  
  **parents**  – a list of ids of parent folders. In general one folder.  
  **description**  – an optional description of the folder  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
 ## Return a list of ids of files/folder that are children of the specified folder
 
@@ -372,8 +363,7 @@ utils.getGoogleDriveFolderContentsIds(folderId, query, trashed)
 **folderId ** – the id of the folder  
  **query**  – an optional query to filter the search \(see docs\)  
  **trashed**  – true or false. Specify if extact also trashed files/folders.  
-Return value  
-list of strings
+_Return value_ - list of strings
 
 ## Return a list of files/folder that are children of the specified folder
 
@@ -390,8 +380,7 @@ utils.getGoogleDriveFolderContents(folderId, query, trashed)
 **folderId ** – the id of the folder  
  **query**  – an optional query to filter the search \(see docs\)  
  **trashed**  – true or false. Specify if extact also trashed files/folders.  
-Return value  
-list of the Platform file representation \(org.wag.valueobjects.java.File\)
+_Return value_ - list of the Platform file representation \(org.wag.valueobjects.java.File\)
 
 ## Set the permissions for a file/folder
 
@@ -448,8 +437,7 @@ utils.duplicateGoogleDriveFolderAndContents(sourceFolderId, newFolderName, newFo
  **destinationFolderId ** – the id of the folder where the copy must be created. Can be "root" for the root drive folder.  
  **titlePrefix**  – a prefix  
  **copyPermissions**  – true or false. Copy the permissions of the original folder in the duplicate folder.  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
 ## Tree permissions
 
@@ -475,8 +463,7 @@ utils.addPermissionsToGoogleDriveFolder(folderId, type, value, fileRole, folderR
  **recursive**  – true or false. If true applies permissions to all subtree, otherwise only to the first level.  
  **sendNotifications**  – true or false. Specify if send the notification to the user/group specified in the value.  
  **message**  – optional message for the notification.  
-Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
+_Return value_ - the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
 ## Return the value of a property for the specified file and visibility
 
@@ -493,8 +480,7 @@ utils.getGoogleDriveFileProperty(fileId, key, visibility)
 **fileId ** – the id of the file/folder  
  **key ** – the key of the property to get  
  **visibility**  – "PRIVATE" or "PUBLIC"  
-Return value  
-a String containing the property value.
+_Return value_ - a String containing the property value.
 
 ## Add property for the specified file and visibility
 

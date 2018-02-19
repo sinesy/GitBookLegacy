@@ -76,10 +76,18 @@
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)
     * [BPMN main parts](EE0-2--BPMN-main-parts.md)
   * ECM
+    * Alfresco
+      * Alfresco Introduction
+      * Integration between 4WS.Platform and Alfresco
+        * Integration at GUI level
+        * Integration at model level
+        * Integration at authentication and authorizations level
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
     * [MongoDB](mongodb.md)
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

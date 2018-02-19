@@ -4,9 +4,13 @@
 * Overview
   * [About 4WS.Platform](1-1--Architecture.md)
   * [Creating a web application](creating-a-web-application.md)
-* Core features
+* [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
-  * [Defining business components](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
+  * Defining business components
+    * What are business components
+    * Business components to fill-in panels
+    * Creating business components
+    * Defining Custom Java Business component
   * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
@@ -54,4 +58,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

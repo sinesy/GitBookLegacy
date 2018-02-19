@@ -42,7 +42,7 @@
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
   * SSO
-    * LDAP
+    * [LDAP](ldap.md)
     * Google SSO
     * Custom SSO
   * Mobile
@@ -54,7 +54,7 @@
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
   * Google Cloud Platform
-    * Datastore
+    * [Datastore](datastore.md)
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
   * Queue Manager

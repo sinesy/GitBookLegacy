@@ -16,6 +16,7 @@
   * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
     * Integration at GUI level
     * Definition of the GUI
+    * Translations about GUI components and internationalization settings
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
   * Defining events

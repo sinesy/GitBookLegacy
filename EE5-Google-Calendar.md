@@ -7,8 +7,9 @@ In order to use this feature, you have also to define a few parameters in 4WS.Pl
 * GOOGLE\_SERVACC\_KEY
 
 to enable the Google Apps integration and the 4WS.Platform user must be a Google Apps user.  
-The Javascript actions available are the following.  
-Add a calendar event in the main calendar of a Google Apps for Work Account
+The Javascript actions available are the following.
+
+##  Add a calendar event in the main calendar of a Google Apps for Work Account
 
 ### Syntax
 
@@ -44,7 +45,9 @@ var response = new SyncRequest().send(
 alert(response);
 ```
 
-Modify a calendar event
+
+
+## Modify a calendar event
 
 ### Syntax
 
@@ -67,7 +70,9 @@ modify the title of an event
 utils.modifyGoogleCalendarEvent('','Modyfied title',null,null);
 ```
 
-Delete a Google Apps calendar event
+
+
+## Delete a Google Apps calendar event
 
 ### Syntax
 

@@ -54,7 +54,10 @@
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
   * Google Cloud Platform
-    * [Datastore](datastore.md)
+    * Datastore
+      * Google Datastore Introduction
+      * How to create entities
+      * How to create windows filled with data coming from datastore entities
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
   * Queue Manager
@@ -68,4 +71,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

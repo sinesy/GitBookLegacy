@@ -27,9 +27,9 @@ Javascript actions
 These are the available Javascript actions.  
  **NOTE: almost every method has two versions. One that uses the current logged user to access Google Drive and one that let to specify the userId to access a different Google Drive account.**
 
-##  Get information about a file stored in Google Drive
+## Get information about a file stored in Google Drive
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFileInfo(userId, fileId)
@@ -37,13 +37,13 @@ utils.getGoogleDriveFileInfo(userId, fileId)
 utils.getGoogleDriveFileInfo(fileId)
 ```
 
-### Details
+#### Details
 
 **fileId**  – the id of the file  
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\).
 
-### Example
+#### Example
 
 this example shows how to call the method from a Javascript Server action and get the title of the file. The full list of fields can be found in the Java org.wag.valueobjects.java.File class.
 
@@ -69,7 +69,7 @@ showMessageDialog('Message',Title is ' + file.name, null, true);
 
 ## Upload a file in Google Drive from the server file system
 
-### Syntax
+#### Syntax
 
 ```js
 utils.uploadGoogleDriveFileFromFS(userId, fsPath, parentId, deleteFsFile)
@@ -81,7 +81,7 @@ utils.uploadGoogleDriveFileFromFS(fsPath, parentId, deleteFsFile)
 utils.uploadAndRenameGoogleDriveFileFromFS(fsPath, parentId, fileName, deleteFsFile)
 ```
 
-### Details
+#### Details
 
 **fsPath**  – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.  
  **parentId**  – the id of the Drive folder where the file must be uploaded to. Can be null, in this case the root folder is used.  
@@ -90,7 +90,7 @@ utils.uploadAndRenameGoogleDriveFileFromFS(fsPath, parentId, fileName, deleteFsF
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\).
 
-### Example
+#### Example
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java org.wag.valueobjects.java.File class.
 
@@ -98,14 +98,11 @@ This example shows how to call the method from a Javascript Server action and ge
 var file = utils.uploadGoogleDriveFileFromFS('', null, false);
 ```
 
-
-
 ## Update a file in Google Drive
 
-  
 The file source is in the server file system. This creates a new version of the file in Google Drive.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.updateGoogleDriveFileFromFS(userId, fileId, fsPath, deleteFsFile, newRevision)
@@ -113,7 +110,7 @@ utils.updateGoogleDriveFileFromFS(userId, fileId, fsPath, deleteFsFile, newRevis
 utils.updateGoogleDriveFileFromFS(fileId, fsPath, deleteFsFile, newRevision)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file to update  
  **fsPath**  – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.  
@@ -123,7 +120,7 @@ utils.updateGoogleDriveFileFromFS(fileId, fsPath, deleteFsFile, newRevision)
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\).
 
-### Example
+#### Example
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java org.wag.valueobjects.java.File class.
 
@@ -133,13 +130,11 @@ var file = utils.updateGoogleDriveFileFromFS('','',false);
 utils.setReturnValue('{ "name":"' + file.title +'" }');
 ```
 
-
-
 ## Upload a file in Google Drive
 
 In a folder with a specific name, contained in a base folder with a specific id. If the folder with the name does not exist in the base folder, it can be created or not:
 
-### Syntax
+#### Syntax
 
 ```js
 utils.uploadGoogleDriveFileInNamedFolderFromFS(userId, fsPath, baseFolderId, folderName, createFolderIfNotExists, deleteFsFile)
@@ -151,7 +146,7 @@ utils.uploadGoogleDriveFileInNamedFolderFromFS(fsPath, baseFolderId, folderName,
 utils.uploadAndRenameGoogleDriveFileInNamedFolderFromFS(fsPath, baseFolderId, folderName, createFolderIfNotExists, fileName, deleteFsFile)
 ```
 
-### Details
+#### Details
 
 **fsPath**  – the full path of the file to upload. This path is in the server where 4WS.Platform is installed.  
  **baseFolderId**  – the id of the Drive folder where the named folder must be created.  
@@ -162,15 +157,14 @@ utils.uploadAndRenameGoogleDriveFileInNamedFolderFromFS(fsPath, baseFolderId, fo
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\).
 
-##  Move a file or folder in a single folder
+## Move a file or folder in a single folder
 
-  
- If in the destination folder exists a single file with the same title/name of the file to move, different results happen depending on the addToRevision value:
+If in the destination folder exists a single file with the same title/name of the file to move, different results happen depending on the addToRevision value:
 
 if false, the file is moved under the new single folder and the homonymous file is kept as is. Two files with the same name will be present in the folder.  
 if true, the file is saved as a new history version of the homonymous file in the destination folder, and deleted
 
-### **Syntax**
+#### **Syntax**
 
 ```js
 utils.moveGoogleDriveFile(userId, fileId, newParents,addToRevision)
@@ -178,24 +172,23 @@ utils.moveGoogleDriveFile(userId, fileId, newParents,addToRevision)
 utils.moveGoogleDriveFile(fileId, newParents,addToRevision)
 ```
 
-### **Details**
+#### **Details**
 
 fileId – the id of the file/folder to move  
 newParents – a comma separated list of folder ids that will become the new parents of the file/folder.  
 addToRevision – true/false. If true the file will be new version of a possible homonymous file in the destination folder. If false two files with the same name will be present in the destination folder.
 
-### **Example**
+#### **Example**
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.  
-`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);    
+`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);      
  utils.setReturnValue(‘{ “name”:”‘ + file.title +'” }’);`
 
-##  Move a file or folder
+## Move a file or folder
 
-  
 You can specify a list of comma separated folder ids to become the parents of the file/folder. The current parents are removed.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.moveGoogleDriveFile(userId, fileId, newParents)
@@ -203,12 +196,12 @@ utils.moveGoogleDriveFile(userId, fileId, newParents)
 utils.moveGoogleDriveFile(fileId, newParents)
 ```
 
-### Details
+#### Details
 
 fileId – the id of the file/folder to move  
 newParents – a comma separated list of folder ids that will become the new parents of the file/folder.
 
-### Example
+#### Example
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.
 
@@ -218,13 +211,11 @@ var file = utils.moveGoogleDriveFile('&lt;file_id&gt;','&lt;new_folder_id&gt;');
 utils.setReturnValue('{ "name":"' + file.title +'" }');
 ```
 
-
-
 ## Modify the parents of a file or folder
 
 You can specify a list of comma separated folder ids to add as parents of the file/folder and a list of parents to remove.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.modifyGoogleDriveFileParents(userId, fileId, parentsToAdd, parentsToRemove)
@@ -232,13 +223,13 @@ utils.modifyGoogleDriveFileParents(userId, fileId, parentsToAdd, parentsToRemove
 utils.modifyGoogleDriveFileParents(fileId, parentsToAdd, parentsToRemove)
 ```
 
-### Details
+#### Details
 
 fileId – the id of the file/folder to patch  
 parentsToAdd – a comma separated list of folder ids that will be added as parents of the file/folder. Can be empty.  
 parentsToAdd – a comma separated list of folder ids that will be removed as parents of the file/folder. Can be empty.
 
-### Example
+#### Example
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.
 
@@ -247,14 +238,11 @@ var file = utils.moveGoogleDriveFile('&lt;file_id&gt;', '&lt;add_folder_id_1&gt;
 utils.setReturnValue('{ "name":"' + file.title +'" }');
 ```
 
-
-
 ## Delete a file or folder from Google Drive
 
-  
 You can specify if move the file in the trash or delete it immediately.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.deleteGoogleDriveFile(userId, fileId, skipTrash)
@@ -262,12 +250,12 @@ utils.deleteGoogleDriveFile(userId, fileId, skipTrash)
 utils.deleteGoogleDriveFile(fileId, skipTrash)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file to delete  
  **skipTrash ** – true or false. Specifies if the file is deleted immediately or moved to trash.
 
-### Example
+#### Example
 
 This example shows how to call the method from a Javascript Server action and get the file object.The full list of fields can be found in the Java org.wag.valueobjects.java.File class.
 
@@ -277,11 +265,9 @@ var file = utils.deleteGoogleDriveFile('',false);
 utils.setReturnValue('{ "name":"' + file.title +'" }');
 ```
 
-
-
 ## Recover a file or folder from Google Drive trash
 
-### Syntax
+#### Syntax
 
 ```js
 utils.recoverGoogleDriveFile(userId, fileId)
@@ -289,13 +275,13 @@ utils.recoverGoogleDriveFile(userId, fileId)
 utils.recoverGoogleDriveFile(fileId)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file to restore from trash  
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\).
 
-### Example
+#### Example
 
 this example shows how to call the method from a Javascript Server action and get the file object.The full list of fields can be found in the Java org.wag.valueobjects.java.File class.
 
@@ -305,62 +291,57 @@ var file = utils.recoverGoogleDriveFile('');
 utils.setReturnValue('{ "name":"' + file.title +'" }');
 ```
 
-
-
 ## Return the URL to open a file from Google Drive
 
-  
 This URL should be opened in a browser and must be used for files in Google Drive format \(documents, spreadsheets, presentations, forms and so on\).
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFileOpenURL(fileId)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file  
 Return value  
 a string containing the URL
 
-##  Return the URL to download a file from Google Drive
+## Return the URL to download a file from Google Drive
 
-  
 This must be used for uploaded files \(PDF, JPG, PNG, DOCX, XSLX, PPTX, TXT and so on\).
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFileDownloadURL(fileId)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file  
 Return value  
 a string containing the URL
 
-##  Get the stored versions of the given file
+## Get the stored versions of the given file
 
-  
 For both Google and non Google formats.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFileRevisions(fileId)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file  
 Return value  
 a list of the Platform representation of the version of a file \(List\)
 
-##  Create a folder in Google Drive with the specified parents and optional description
+## Create a folder in Google Drive with the specified parents and optional description
 
-### Syntax
+#### Syntax
 
 ```js
 utils.createGoogleDriveFolder(userId, folderName, parents, description)
@@ -368,18 +349,17 @@ utils.createGoogleDriveFolder(userId, folderName, parents, description)
 utils.createGoogleDriveFolder(folderName, parents, description)
 ```
 
-### Details
+#### Details
 
 **folderName ** – the name of the folder  
  **parents**  – a list of ids of parent folders. In general one folder.  
  **description**  – an optional description of the folder  
 Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.  
-
+the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
 ## Return a list of ids of files/folder that are children of the specified folder
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFolderContentsIds(userId, folderId, query, trashed)
@@ -387,7 +367,7 @@ utils.getGoogleDriveFolderContentsIds(userId, folderId, query, trashed)
 utils.getGoogleDriveFolderContentsIds(folderId, query, trashed)
 ```
 
-### Details
+#### Details
 
 **folderId ** – the id of the folder  
  **query**  – an optional query to filter the search \(see docs\)  
@@ -395,9 +375,9 @@ utils.getGoogleDriveFolderContentsIds(folderId, query, trashed)
 Return value  
 list of strings
 
-##  Return a list of files/folder that are children of the specified folder
+## Return a list of files/folder that are children of the specified folder
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFolderContents(userId, folderId, query, trashed)
@@ -405,18 +385,17 @@ utils.getGoogleDriveFolderContents(userId, folderId, query, trashed)
 utils.getGoogleDriveFolderContents(folderId, query, trashed)
 ```
 
-### Details
+#### Details
 
 **folderId ** – the id of the folder  
  **query**  – an optional query to filter the search \(see docs\)  
  **trashed**  – true or false. Specify if extact also trashed files/folders.  
 Return value  
-list of the Platform file representation \(org.wag.valueobjects.java.File\)  
-
+list of the Platform file representation \(org.wag.valueobjects.java.File\)
 
 ## Set the permissions for a file/folder
 
-### Syntax
+#### Syntax
 
 ```js
 utils.setGoogleDriveFilePermissions(userId, fileId, type, value, role, additionalRoles, sendNotifications, message)
@@ -424,7 +403,7 @@ utils.setGoogleDriveFilePermissions(userId, fileId, type, value, role, additiona
 utils.setGoogleDriveFilePermissions(fileId, type, value, role, additionalRoles, sendNotifications, message)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file/folder  
  **type ** – the type of sharing, one between “user”, “group”, “domain” or “default”  
@@ -432,12 +411,11 @@ utils.setGoogleDriveFilePermissions(fileId, type, value, role, additionalRoles, 
  **role**  – the role one of “reader”, “writer” or “owner”  
  **additionalRoles**  – optional string, for example “commenter”  
  **sendNotifications**  – true or false. Specify if send the notification to the user/group specified in the value.  
- **message**  – optional message for the notification  
-
+ **message**  – optional message for the notification
 
 ## Set additional attributes of a file/folder
 
-### Syntax
+#### Syntax
 
 ```js
 utils.setGoogleDriveFileAttributes(userId, fileId, fileAttributes)
@@ -445,18 +423,16 @@ utils.setGoogleDriveFileAttributes(userId, fileId, fileAttributes)
 utils.setGoogleDriveFileAttributes(fileId, fileAttributes)
 ```
 
-### Details
+#### Details
 
 **fileId**  – the id of the file/folder  
- **fileAttributes**  – the attributes as defined in org.wag.valueobjects.java.FileAttributes. Currently: starred, trashed, restricted, viewed, writersCanShare.  
-
+ **fileAttributes**  – the attributes as defined in org.wag.valueobjects.java.FileAttributes. Currently: starred, trashed, restricted, viewed, writersCanShare.
 
 ## Tree duplication
 
-  
 Duplicates the folder  **sourceFolderId**  and all its contents in a folder called  **newFolderName**  with optional description  **newFolderDescription**  under folder  **destinationFolderId** . It is also possible to specify a  **titlePrefix ** to prepend to the title of every duplicated resource \(files or folders\) and whether or not  **copyPermissions**  from the original folder to the duplicated forlder.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.duplicateGoogleDriveFolderAndContents(userId, sourceFolderId, newFolderName, newFolderDescription, destinationFolderId, titlePrefix, copyPermissions)
@@ -464,7 +440,7 @@ utils.duplicateGoogleDriveFolderAndContents(userId, sourceFolderId, newFolderNam
 utils.duplicateGoogleDriveFolderAndContents(sourceFolderId, newFolderName, newFolderDescription, destinationFolderId, titlePrefix, copyPermissions)
 ```
 
-### Details
+#### Details
 
 **sourceFolderId ** – the id of the original folder  
  **newFolderName**  – the name of the copy of the folder  
@@ -475,12 +451,11 @@ utils.duplicateGoogleDriveFolderAndContents(sourceFolderId, newFolderName, newFo
 Return value  
 the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
-##  Tree permissions
+## Tree permissions
 
-  
 Adds a single permission to a folder and its contents. It is possible to specify a role for files and a role for folders \(for example to make folders read only and files read/write\). additionlRoles**  lets to specify the “commenter” role or other future capabilities. recursive**  lets to go deep in the folder tree, otherwise it stops on the first level inside folderId\*\* . Notifications with a message can be sent for every resource.
 
-### Syntax
+#### Syntax
 
 ```js
 utils.addPermissionsToGoogleDriveFolder(userId, folderId, type, value, fileRole, folderRole, additionalRoles, updateBaseFolder, recursive, sendNotifications, message)
@@ -488,7 +463,7 @@ utils.addPermissionsToGoogleDriveFolder(userId, folderId, type, value, fileRole,
 utils.addPermissionsToGoogleDriveFolder(folderId, type, value, fileRole, folderRole, additionalRoles, updateBaseFolder, recursive, sendNotifications, message)
 ```
 
-### Details
+#### Details
 
 **folderId ** – the id of the original folder  
  **type ** – the type of sharing, one between "user", "group", "domain" or "default"  
@@ -501,12 +476,11 @@ utils.addPermissionsToGoogleDriveFolder(folderId, type, value, fileRole, folderR
  **sendNotifications**  – true or false. Specify if send the notification to the user/group specified in the value.  
  **message**  – optional message for the notification.  
 Return value  
-the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.  
-
+the Platform file representation \(org.wag.valueobjects.java.File\) having the boolean flag "folder" with true value.
 
 ## Return the value of a property for the specified file and visibility
 
-### Syntax
+#### Syntax
 
 ```js
 utils.getGoogleDriveFileProperty(userId, fileId, key, visibility)
@@ -514,18 +488,17 @@ utils.getGoogleDriveFileProperty(userId, fileId, key, visibility)
 utils.getGoogleDriveFileProperty(fileId, key, visibility)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file/folder  
  **key ** – the key of the property to get  
  **visibility**  – "PRIVATE" or "PUBLIC"  
 Return value  
-a String containing the property value.  
-
+a String containing the property value.
 
 ## Add property for the specified file and visibility
 
-### Syntax
+#### Syntax
 
 ```js
 utils.addGoogleDriveFileProperty(userId, fileId, key, value, visibility)
@@ -533,16 +506,16 @@ utils.addGoogleDriveFileProperty(userId, fileId, key, value, visibility)
 utils.addGoogleDriveFileProperty(fileId, key, value, visibility)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file/folder  
  **key ** – the key of the property to get  
  **value**  – the value  
  **visibility**  – "PRIVATE" or "PUBLIC"
 
-##  Patches a property for the specified file and visibility
+## Patches a property for the specified file and visibility
 
-### Syntax
+#### Syntax
 
 ```js
 utils.patchGoogleDriveFileProperty(userId, fileId, key, value, visibility)
@@ -550,16 +523,16 @@ utils.patchGoogleDriveFileProperty(userId, fileId, key, value, visibility)
 utils.patchGoogleDriveFileProperty(fileId, key, value, visibility)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file/folder  
  **key ** – the key of the property to get  
  **value**  – the value  
  **visibility**  – "PRIVATE" or "PUBLIC"
 
-##  Patches a property for the specified file
+## Patches a property for the specified file
 
-### Syntax
+#### Syntax
 
 ```js
 utils.deleteGoogleDriveFileProperty(userId, fileId, key)
@@ -567,7 +540,7 @@ utils.deleteGoogleDriveFileProperty(userId, fileId, key)
 utils.deleteGoogleDriveFileProperty(fileId, key)
 ```
 
-### Details
+#### Details
 
 **fileId ** – the id of the file/folder  
  **key ** – the key of the property to get

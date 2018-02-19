@@ -10,15 +10,15 @@ A timer start event works similarly, with the exception that it connects a manua
 This kind of events require the definition of the Id and Name properties, as well as the setting of the following mandatory properties:  
  **Time duration** : timer duration.
 
-## Example
+### Example
 
-**Time date** : starting date/hour of the process/task.   
+**Time date** : starting date/hour of the process/task.  
 Allowed format: yyyy:mm:ss \(
 
-## Example
+### Example
 
-**Time cycle** : repetition of a processo/task.   
-Allowed format: R3/PT10H \(repeat 3 times, every 10 hrs\).   
+**Time cycle** : repetition of a processo/task.  
+Allowed format: R3/PT10H \(repeat 3 times, every 10 hrs\).  
 If not specified, the first instance of the processo/task will be started when the process is created, otherwise an alternative date/time can be specified, as well as the cycle time.
 
 ---

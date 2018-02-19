@@ -9,21 +9,21 @@ In order to use this feature, you have also to define a few parameters in 4WS.Pl
 to enable the Google Apps integration and the 4WS.Platform user must be a Google Apps user.  
 The Javascript actions available are the following.
 
-##  Add a calendar event in the main calendar of a Google Apps for Work Account
+## Add a calendar event in the main calendar of a Google Apps for Work Account
 
-### Syntax
+#### Syntax
 
 ```js
 utils.addGoogleCalendarEvent(title, beginDate, endDate)
 ```
 
-### Details
+#### Details
 
 **title**  – the title of the event  
  **beginDate**  – the beginning date and time of the event  
  **endDate**  – the ending date time of the event
 
-### Example
+#### Example
 
 this example shows how to call the method from a Javascript Server action and get the id of the event. The full list of fields can be found in the Java org.wag.valueobjects.java.CalendarEvent class.
 
@@ -45,24 +45,22 @@ var response = new SyncRequest().send(
 alert(response);
 ```
 
-
-
 ## Modify a calendar event
 
-### Syntax
+#### Syntax
 
 ```js
 utils.modifyGoogleCalendarEvent(calendarEventId, title, beginDate, endDate)
 ```
 
-### Details
+#### Details
 
 **calendarEventId**  – the id of the event  
  **title**  – the title of the event  
  **beginDate**  – the beginning date and time of the event  
  **endDate**  – the ending date time of the event
 
-### Example
+#### Example
 
 modify the title of an event
 
@@ -70,17 +68,15 @@ modify the title of an event
 utils.modifyGoogleCalendarEvent('','Modyfied title',null,null);
 ```
 
-
-
 ## Delete a Google Apps calendar event
 
-### Syntax
+#### Syntax
 
 ```js
 utils.deleteGoogleCalendarEvent(calendarEventId)
 ```
 
-### Details
+#### Details
 
 **calendarEventId**  – the id of the event
 

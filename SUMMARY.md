@@ -14,8 +14,6 @@
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * Defining the UI
-    * [Integration at GUI level](EE1-2-1-Integration-at-GUI-level.md)
-    * [Definition of the GUI](EE1-3-7-Definition-of-the-GUI.md)
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
@@ -82,6 +80,16 @@
         * Integration at GUI level
         * Integration at model level
         * Integration at authentication and authorizations level
+      * Additional features
+      * How to use 4WS.Platform and Alfresco together
+      * Set the same Identity Management system
+      * Define document types and aspects in 4WS.Platform
+      * Reverse engineering of document types or aspects
+      * Definition of business components to fill-in panels
+      * Definition of the GUI
+      * Additional server-side services
+      * Requirements
+      * Current limits in 4WS-Platform - Alfresco integration
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
     * [MongoDB](mongodb.md)

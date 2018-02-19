@@ -73,6 +73,40 @@
   * BPM
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)
     * [BPMN main parts](EE0-2--BPMN-main-parts.md)
+    * Platform integration
+      * Processes
+      * Models
+      * Process instances
+      * To-do list
+      * Process history
+    * Process Web Modeler
+      * Model Creation
+        * Start-End Event
+        * Gateways
+      * Supported objects
+      * Start tasks and user tasks
+      * Form properties
+        * Important notes
+        * Property types
+      * Service tasks
+        * Web service
+        * SQL Query
+        * SQL statement
+      * Mail task
+      * Script task
+        * Example : how to get a value previously read from a SQL query
+        * Example : how to get the current process instance id
+      * Timer events
+      * Subprocess and Call activiti
+    * Utility methods available in Platform
+      * How to start a process from a JavaScript action
+      * How to complete a user task from a JavaScript action
+    * An example
+      * From theory to practise
+      * Processes
+      * Instances
+      * Activities
+      * History
   * ECM
     * Alfresco
       * Alfresco Introduction

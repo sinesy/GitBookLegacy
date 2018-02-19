@@ -26,8 +26,8 @@
    * [Custom SSO]()
   * [Mobile]() # only enterprise
     * [Offline vs Online]()
-    * [Mobile side specifics]
-    * [What Mobile side not includes]
+    * [Mobile side specifics]()
+    * [What Mobile side not includes]()
   * [GSuite]() # only enterprise
     * [Gmail]()
     * [Calendar]()

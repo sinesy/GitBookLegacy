@@ -14,6 +14,8 @@
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * [Defining the UI](EE1-3-7-Definition-of-the-GUI.md)
+    * Integration at GUI level
+    * Definition of the GUI
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
   * Defining events
@@ -23,7 +25,7 @@
     * [Filter events](3-1-8-7-Filter-events.md)
     * [Timer events](EE0-4-8-Timer-events.md)
     * [Start-End event](EE0-4-10-Start-End-Event.md)
-  * Server-side JavaScript & w.s
+  * [Server-side JavaScript & w.s](server-side-javascript-and-ws.md)
 * Setting up the environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
@@ -60,4 +62,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

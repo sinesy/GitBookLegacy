@@ -17,27 +17,27 @@ Finally, Activiti and/or Alfresco must be configured in order to communicate to 
 
 open the file  **webapps/activiti-rest/WEB-INF/classes/activiti-context.xml**  and add the following lines:
 
-| class=”it.sinesy.activiti.util.Utils”&gt;    &lt;property…                 **“\(&\(objectClass=person\)\(cn={0}\)\)” /&gt;** |
-| :--- |
-
+```
+class=”it.sinesy.activiti.util.Utils”> <property… “(&(objectClass=person)(cn={0}))” />
+```
 
 **Activiti Explorer configuration:**
 
 Open the file  **webapps/activiti-explorer/WEB-INF/activiti-standalone-context.xml ** and add the following lines:
 
-| class=”it.sinesy.activiti.util.Utils”&gt;               **“cn=ADMIN,dc=com” /&gt;**         **“\(&\(objectClass=person\)\(cn={0}\)\)” /&gt;**           --&gt; |
-| :--- |
-
+```
+class=”it.sinesy.activiti.util.Utils”> “cn=ADMIN,dc=com” /> “(&(objectClass=person)(cn={0}))” /> -->
+```
 
 **Alfresco configuration:**
 
 Open the file  **tomcat/shared/classes/alfresco-global.properties**  and add the following lines:
 
-| \# \# The default authentication chain \# To configure external authentication subsystems see: \# [http://wiki.alfresco.com/wiki/Alfresco\_Authentication\_Subsystems](http://wiki.alfresco.com/wiki/Alfresco_Authentication_Subsystems) \#————- authentication.chain= **alfrescoNtlm1:alfrescoNtlm,ldap1:ldap-ad**   ntlm.authentication.sso.enabled= **false**   ldap.authentication.active= **true**  ldap.authentication.allowGuestLogin= **false**  ldap.authentication.userNameFormat= **cn=%s,dc=com**  ldap.authentication.java.naming.provider.url= **ldap://localhost:….**  ldap.authentication.defaultAdministratorUserNames= **Administrator,alfresco**   ldap.synchronization.active= **true**  ldap.synchronization.synchronizeChangesOnly= **false**  ldap.synchronization.allowDeletions= **true**  \# ogni ora ldap.synchronization.import.cron=0 0 _ _ _ _ ldap.synchronization.java.naming.security.principal= **cn=ADMIN,dc=com**  ldap.synchronization.java.naming.security.credentials=… ldap.synchronization.groupSearchBase= **dc=com**  ldap.synchronization.userSearchBase= **dc=com**  ldap.synchronization.modifyTimestampAttributeName= **whenChanged**  ldap.synchronization.userEmailAttributeName= **cn**   \# The query to select all objects that represent the users to import. ldap.synchronization.personQuery= **\(objectClass=person\)**  \# per fare la sincronizzazione full ogni volta ldap.synchronization.userIdAttributeName= **cn**  ldap.synchronization.userFirstNameAttributeName= **sn**  ldap.synchronization.userLastNameAttributeName= **sn** |
-| :--- |
+The default authentication chain 
 
+`authentication.chain= alfrescoNtlm1:alfrescoNtlm,ldap1:ldap-ad ntlm.authentication.sso.enabled= false `
 
----
+To configure external authentication subsystems see: http://wiki.alfresco.com/wiki/Alfresco\_Authentication\_Subsystems 
 
-
+`ldap.authentication.active= true ldap.authentication.allowGuestLogin= false ldap.authentication.userNameFormat= cn=%s,dc=com ldap.authentication.java.naming.provider.url= ldap://localhost:…. ldap.authentication.defaultAdministratorUserNames= Administrator,alfresco ldap.synchronization.active= true ldap.synchronization.synchronizeChangesOnly= false ldap.synchronization.allowDeletions= true # ogni ora ldap.synchronization.import.cron=0 0 ldap.synchronization.java.naming.security.principal= cn=ADMIN,dc=com ldap.synchronization.java.naming.security.credentials=… ldap.synchronization.groupSearchBase= dc=com ldap.synchronization.userSearchBase= dc=com ldap.synchronization.modifyTimestampAttributeName= whenChanged ldap.synchronization.userEmailAttributeName= cn # The query to select all objects that represent the users to import. ldap.synchronization.personQuery= (objectClass=person) # per fare la sincronizzazione full ogni volta ldap.synchronization.userIdAttributeName= cn ldap.synchronization.userFirstNameAttributeName= sn ldap.synchronization.userLastNameAttributeName= sn`
 

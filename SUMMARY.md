@@ -108,7 +108,7 @@
       * [Activities](EE0-6-4-Activities.md)
       * [History](EE0-6-5-History.md)
   * ECM
-    * [Alfresco](alfresco.md)
+    * Alfresco
       * [Alfresco Introduction](EE1-1--Alfresco-Introduction.md)
       * [Integration between 4WS.Platform and Alfresco](EE1-2--Integration-between-4WS-Platform-and-Alfresco.md)
         * [Integration at GUI level](EE1-2-1-Integration-at-GUI-level.md)

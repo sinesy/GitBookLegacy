@@ -6,7 +6,7 @@
   * [Creating a web application](creating-a-web-application.md)
 * [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
-  * [Defining business components](defining-business-components.md)
+  * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
     * [Business components to fill-in panels](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
     * Creating business components
@@ -14,9 +14,9 @@
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * Defining the UI
-    * Integration at GUI level
-    * Definition of the GUI
-    * Translations about GUI components and internationalization settings
+    * [Integration at GUI level](EE1-2-1-Integration-at-GUI-level.md)
+    * [Definition of the GUI](EE1-3-7-Definition-of-the-GUI.md)
+    * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * Wizard
   * Defining events

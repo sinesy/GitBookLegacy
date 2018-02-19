@@ -2,10 +2,10 @@
 
 * [Introduction](README.md)
 * Overview
-  * [About 4WS.Platform](about-4wsplatform.md)
+  * [About 4WS.Platform](1-1--Architecture.md)
   * [Creating a web application](creating-a-web-application.md)
 * Core features
-  * Defining a data model and relations
+  * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
   * Defining the UI
   * Working with users and roles

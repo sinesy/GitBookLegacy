@@ -1,3 +1,4 @@
-# My Awesome Book
+# User Guide
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting
+

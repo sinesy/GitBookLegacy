@@ -1,4 +1,4 @@
-# Creating business components by a MongoDB collection
+# How to create business components by a MongoDB collection
 
 Once created an object representing a Mongo DB collection, you can define any number of business components connected to the object just created.  
 In order to fill in a grid, a business component must be created: you have to choose a "business component for a list automatically/manually generated" and select the right object, that is to say, the object just created.  

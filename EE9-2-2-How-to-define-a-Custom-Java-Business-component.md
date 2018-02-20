@@ -1,4 +1,4 @@
-# Defining Custom Java Business component
+# How to define Custom Java Business component
 
 A Java programmer can create a java class to invoke through the scheduler. This class must implement a specific Java interface described below. Once compliled that class, it must be deployed into Platform and the Platform service must be restarted, otherwise the class cannot be accessed by the Java classloader of the Application Server.
 

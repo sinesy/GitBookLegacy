@@ -52,9 +52,59 @@
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
   * Mobile
-    * Offline vs Online
+    * [Mobile introduction](EE7-1--Mobile-Introduction.md)
+    * [Offline vs Online](EE7-2--Main-features.md)
+      * [Server side features](EE7-1-1-Server-side-features.md)
+      * [Server side functionalities](EE7-1-2-Server-side-functionalities.md)
+      * [Server side Platform features](EE7-2-2-Server-side-Platform-features.md)
+      * [Mobile app features](EE7-2-1-Mobile-app-features.md)
     * Mobile side specifics
-    * What Mobile side not includes
+      * [Customizations](EE7-2-3-Customizations.md)
+        * [Custom theme editor](EE7-2-3-1-Custom-theme-editor.md)
+      * [App Menu](EE7-2-4-App-Menu.md)
+      * [Window content](EE7-2-5-Window-content.md)
+        * [Detail scrollable form](EE7-2-5-1-Detail-scrollable-form.md)
+        * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
+    * What mobile side not includes
+    * [Reference guide](EE7-3--Reference-Guide.md)
+      * [Mobile Javascript utility methods](EE7-3-1-Mobile-Javascript-utility-methods.md)
+      * [Global variables](EE7-3-2-Global-variables.md)
+      * [Application settings](EE7-3-3-Application-settings.md)
+        * [Synchronization folder](EE7-3-3-1-Synchronization-folder.md)
+        * [Application version](EE7-3-3-2-Application-version.md)
+        * [Files writing and reading](EE7-3-3-3-Files-writing-and-reading.md)
+        * [Import and Export commands](EE7-3-3-5-Import-and-Export-command.md)
+        * [Import-export start time and wait time](EE7-3-3-7-Import-export-start-time-and-wait-time.md)
+        * [Delete old data task](EE7-3-3-9-Delete-old-data-task.md)
+    * [How to](EE7-4--How-to.md)
+      * [How to create a new mobile app](EE7-4-1-How-to-create-a-new-mobile-app.md)
+      * [How to download file stored remotelly](EE7-4-10-How-to-download-a-file-stored-remotelly.md)
+      * [How to send an email](EE7-4-11-How-to-send-an-email.md)
+      * [How to pass forward parameters](EE7-4-12-How-to-pass-forward-parameters.md)
+      * [How to pass back parameters](EE7-4-13-How-to-pass-back-parameters.md)
+      * [How to share a document text on social media](EE7-4-14-How-to-share-a-document-text-on-social-media.md)
+      * [Push notifications](EE7-4-15-Push-notifications.md)
+      * [How to scan a QRcode or barcode](EE7-4-16-How-to-scan-a-QRcode-barcode.md)
+      * [How to get GPS coordinates](EE7-4-17-How-to-get-GPS-coordinates.md)
+      * [How to add a FAB button](EE7-4-18-How-to-add-a-FAB-button.md)
+      * [How to define custom images](EE7-4-2-How-to-define-custom-images.md)
+      * [How to disable hide buttons in a toolbar](EE7-4-20-How-to-disable-hide-buttons-in-a-toolbar.md)
+      * [How to change color for input controls](EE7-4-21-How-to-change-color-for-input-controls.md)
+      * [How to change colors in grid](EE7-4-22-How-to-change-colors-in-grid.md)
+      * [How to format data in grid](EE7-4-23-How-to-format-data-in-grid.md)
+      * [Files management](EE7-4-3-Files-management.md)
+        * [Prepare files through SQL](EE7-4-3-1-Prepare-files-through-SQL.md)
+        * [Prepare files through a zip based upload](EE7-4-3-2-Prepare-files-through-a-zip-based-upload.md)
+      * [Taking a photo and sending it to the server](EE7-4-4-Taking-a-photo-and-sending-it-to-the-server.md)
+      * [Filtering a grid column without a filter panel](EE7-4-5-Filtering-a-grid-column-without-a-filter-panel.md)
+      * [Adding a complex caption in the image gallery](EE7-4-6-Adding-a-complex-caption-in-the-image-gallery.md)
+      * [Adding clickable content to a grid](EE7-4-7-Adding-clickable-content-to-a-grid.md)
+      * [How to show alternative content in a window](EE7-4-8-How-to-show-alternative-content-in-a-window.md)
+      * [How to create a wizard to navigate through a series of panel with Previous-Next buttons](EE7-4-9-How-to-create-a-wizard-navigate-through-a-series-of-panels-with-Previous-Next-buttons.md)
+    * [App deployment](EE7-5--App-deployment.md)
+      * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
+      * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
+    * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * [GSuite](gsuite.md)
     * [Gmail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
@@ -65,8 +115,15 @@
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
-    * [Scheduler](3-2-2-Scheduler.md)
-    * [Enterprise Scheduler](EE9-1--Scheduler-Introduction.md)
+    * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
+    * [Process settings](EE9-2--Process-settings.md)
+      * [How to define a sequence of consecutive processes](EE9-2-1-How-to-define-a-sequence-of-consecutive-processes.md)
+      * [How to define a Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
+      * [How to define a Grid Data Import](EE9-2-3-How-to-define-a-Grid-Data-Import.md)
+      * [How to define a server-side Javascript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
+    * [Email notifications](EE9-3--Email-notifications.md)
+    * [Process executions](EE9-4--Process-executions.md)
+    * [Process input parameters](EE9-5--Process-input-parameters.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
@@ -128,10 +185,14 @@
       * [Current limits in 4WS-Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
-    * [MongoDB](mongodb.md)
+    * MongoDB
+      * [Mongo Introduction](EE8-1--Mongo-Introduction.md)
+      * [Setting up the environment](EE8-2--Setting-up-the-environment.md)
+      * [How to create collections](EE8-3--How-to-create-collections.md)
+      * [How to create business components](EE8-4--How-to-create-business-components.md)
+      * [How to create windows filled with data coming from MongoDB collections](EE8-5--How-to-create-windows-filled-with-data-coming-from-Mongo-DB-collections.md)
+      * [Design rules](EE8-6--Design-rules.md)
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

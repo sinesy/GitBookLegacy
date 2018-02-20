@@ -1,4 +1,4 @@
-# Drive
+# Google Drive
 
 With this integration, developers can automate the upload, download, update and deletion of files in the user’s Google Drive space. This feature is not intended for Google Drive UI substitution, but for basic and automatic operations and processes.  
  **NOTE: ** currently the Google Drive APIs v2 are supported \(see documentation\).  
@@ -177,7 +177,7 @@ utils.moveGoogleDriveFile(fileId, newParents,addToRevision)
 #### **Example**
 
 This example shows how to call the method from a Javascript Server action and get the file object. The full list of fields can be found in the Java File class.  
-`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);        
+`var file = utils.moveGoogleDriveFile(‘<file_id>’,'<new_folder_id>’,true);          
  utils.setReturnValue(‘{ “name”:”‘ + file.title +'” }’);`
 
 ## Move a file or folder

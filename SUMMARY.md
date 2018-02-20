@@ -25,9 +25,9 @@
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * [Wizard](3-1-25-Other-wizards.md)
-    * How to add a checkbox grid to select one or more rows
-    * How to load a second grid when clicking on a row from the first grid
-    * How to load a form when clicking on a row of the grid
+    * [How to add a checkbox grid to select one or more rows](3-1-25-1-How-to-add-a-checkbox-grid-to-select-one-or-more-rows.md)
+    * [How to load a second grid when clicking on a row from the first grid](3-1-25-2-How-to-load-a-second-grid-when-clicking-on-a-row-of-the-first-grid.md)
+    * [How to load a form when clicking on a row of the grid](3-1-25-3-How-to-load-a-form-when-clicking-on-a-row-of-the-grid.md)
     * How to open a window when double clicking on a row of the grid
     * How to open a window with right click on the popup menu
     * How to open a window when pressing a button on the grid toolbar
@@ -236,6 +236,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

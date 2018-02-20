@@ -56,6 +56,7 @@
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
+
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)
@@ -63,22 +64,27 @@
     * [Charts](3-1-6-10-Charts.md)
     * Pivot Grid
   * SSO
+
     * Identity management in Platform
       * Identity management on the internal Platform database
       * Identity management based on Google SSO
     * LDAP
+
       * [LDAP support](3-2-3-LDAP-support.md)
 
       * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
+
       * [Identity management based on an embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
       * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
       * Connecting an LDAP server to Activiti BPM
       * Connecting an LDAP server to Alfresco ECM
+
     * Google SSO
       * [Google SSO](EE5-SSO.md)
       * Google OAuth2
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
+
   * Mobile
     * [Mobile introduction](EE7-1--Mobile-Introduction.md)
     * [Offline vs Online](EE7-2--Main-features.md)
@@ -102,43 +108,22 @@
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * Google Collaboration
     * [Google Collaboration Introduction](EE3-1--Google-Collaboration-Introduction.md)
-    * [Client-side integration](EE3-2--Client-side-integration.md)
-    * [Server-side integration](EE3-3--Server-side-integration.md)
-      * [Server side API](EE3-3-1-Server-side-API.md)
-      * [Google Drive documents](EE3-3-2-Google-Drive-documents.md)
-    * [Google Apps for Work Integration](EE5-Google-Apps-for-Work-integration.md)
-      * [GMail](EE5-GMail.md)
-      * [Google Calendar](EE5-Google-Calendar.md)
-      * [Google Drive](EE5-Google-Drive.md)
-      * [Google Contacts](EE5-Google-Contacts.md)
-      * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-    * [Google for Work Integration](EE5-Google-for-Work-Integration.md)
-    * [Google OAuth2](EE5-Google-OAuth2.md)
+
     * [Send emails from Google Compute Engine](EE5-Send-emails-from-Google-Compute-Engine.md)
     * [Shared contacts synchronization](EE5-Shared-contacts-synchronization.md)
-    * [Google SSO](EE5-SSO.md)
-    * [Users and groups synchronization](EE5-Users-and-groups-synchronization.md)
   * GSuite
+    * Introduction
+    * Client-side integration
     * [GMail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
+    * Contacts
   * Google Cloud Platform
     * Datastore
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-  * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
-    * [Identity management based on the internal Platform database](EE6-1-1-Identity-management-based-on-the-internal-Platform-database.md)
-    * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
-      * [Connecting an LDAP server to Alfresco ECM](EE6-1-2-1-Connecting-an-LDAP-server-to-Alfresco-ECM.md)
-      * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)
-    * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
-    * [Identity management based on a embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
-    * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
-    * [User and groups provisioning](EE6-1-6-User-and-groups-provisioning.md)
-      * [User and groups synchronization](EE6-1-6-1-User-and-groups-synchronization.md)
-      * [Automatic user and group provisioning](EE6-1-6-2-Automatic-user-and-group-provisioning.md)
-    * [Authenticating on external systems](EE6-1-7-Authenticating-on-external-systems.md)
+
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -224,6 +209,7 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
+
 * Troubleshootings
 * Best practises
 

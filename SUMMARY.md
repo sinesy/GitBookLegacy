@@ -99,12 +99,12 @@
       * [Filtering a grid column without a filter panel](EE7-4-5-Filtering-a-grid-column-without-a-filter-panel.md)
       * [Adding a complex caption in the image gallery](EE7-4-6-Adding-a-complex-caption-in-the-image-gallery.md)
       * [Adding clickable content to a grid](EE7-4-7-Adding-clickable-content-to-a-grid.md)
-      * How to show alternative content in a window
-      * How to create a wizard to navigate through a series of panel with Previous-Next buttons
-    * App deployment
-      * App deployment for the iOS platform
-      * App deployment for the Android platform
-    * Appendix : Synchronization flow
+      * [How to show alternative content in a window](EE7-4-8-How-to-show-alternative-content-in-a-window.md)
+      * [How to create a wizard to navigate through a series of panel with Previous-Next buttons](EE7-4-9-How-to-create-a-wizard-navigate-through-a-series-of-panels-with-Previous-Next-buttons.md)
+    * [App deployment](EE7-5--App-deployment.md)
+      * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
+      * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
+    * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * [GSuite](gsuite.md)
     * [Gmail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
@@ -182,6 +182,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

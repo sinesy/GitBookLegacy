@@ -193,14 +193,12 @@
       * [How to create windows filled with data coming from MongoDB collections](EE8-5--How-to-create-windows-filled-with-data-coming-from-Mongo-DB-collections.md)
       * [Design rules](EE8-6--Design-rules.md)
     * Google Datastore
-      * Google Datastore Introduction
-      * Setting up the environment
-      * How to create entities
-      * How to create business components
-      * How to create windows filled with data coming from Datastore entities
-      * Design rules
+      * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
+      * [Setting up the environment](EE4-2--Setting-up-the-environment.md)
+      * [How to create entities](EE4-3--How-to-create-entities.md)
+      * [How to create business components](EE4-4--How-to-create-business-components.md)
+      * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
+      * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

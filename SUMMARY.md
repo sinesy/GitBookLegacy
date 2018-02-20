@@ -13,6 +13,8 @@
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
   * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
 * [Core features](core-features.md)
+  * Tables
+  * SqlTool
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
@@ -249,4 +251,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

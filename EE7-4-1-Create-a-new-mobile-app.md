@@ -1,4 +1,4 @@
-# Create a new mobile app
+# How to create a new mobile app
 
 In order to create a new mobile app, these steps are needed:
 
@@ -8,6 +8,7 @@ In order to create a new mobile app, these steps are needed:
 * objects
 
 * business components \(online or offline\); only if a b.c. is declared to work offline, an offline table is required; offline tables creation and data sync are managed using the ad hoc feature called "Mobile table creation" available in the "Mobile" menu of the App Designer
+
 * panels
 * windows; windows can be optimized per device display size: they can be showed for tablets only, smartphone only or both
 * menu items; note that all menu items have one level only: do not create subfilders

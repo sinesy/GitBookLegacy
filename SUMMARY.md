@@ -13,8 +13,8 @@
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
   * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
 * [Core features](core-features.md)
-  * Tables
-  * SqlTool
+  * [Tables](3-1-20-Tables.md)
+  * [SqlTool](3-1-21-SqlTool.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
@@ -26,6 +26,8 @@
   * Defining the UI
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
+    * Rule for roles
+    * Permissions Administrator
   * [Wizard](3-1-25-Other-wizards.md)
     * [How to add a checkbox grid to select one or more rows](3-1-25-1-How-to-add-a-checkbox-grid-to-select-one-or-more-rows.md)
     * [How to load a second grid when clicking on a row from the first grid](3-1-25-2-How-to-load-a-second-grid-when-clicking-on-a-row-of-the-first-grid.md)
@@ -59,16 +61,22 @@
     * [Online report](3-1-16-Reports-on-the-fly.md)
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
+    * Pivot Grid
   * SSO
+    * Identity management in Platform
+      * Identity management on the internal Platform database
+      * Identity management based on Google SSO
     * LDAP
       * [LDAP support](3-2-3-LDAP-support.md)
-      * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)
-      * [Connecting an LDAP server to Alfresco ECM](EE6-1-2-1-Connecting-an-LDAP-server-to-Alfresco-ECM.md)
+
       * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
       * [Identity management based on an embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
       * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
+      * Connecting an LDAP server to Activiti BPM
+      * Connecting an LDAP server to Alfresco ECM
     * Google SSO
       * [Google SSO](EE5-SSO.md)
+      * Google OAuth2
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
   * Mobile
@@ -86,41 +94,8 @@
         * [Detail scrollable form](EE7-2-5-1-Detail-scrollable-form.md)
         * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
     * What mobile side not includes
-    * [Reference guide](EE7-3--Reference-Guide.md)
-      * [Mobile Javascript utility methods](EE7-3-1-Mobile-Javascript-utility-methods.md)
-      * [Global variables](EE7-3-2-Global-variables.md)
-      * [Application settings](EE7-3-3-Application-settings.md)
-        * [Synchronization folder](EE7-3-3-1-Synchronization-folder.md)
-        * [Application version](EE7-3-3-2-Application-version.md)
-        * [Files writing and reading](EE7-3-3-3-Files-writing-and-reading.md)
-        * [Import and Export commands](EE7-3-3-5-Import-and-Export-command.md)
-        * [Import-export start time and wait time](EE7-3-3-7-Import-export-start-time-and-wait-time.md)
-        * [Delete old data task](EE7-3-3-9-Delete-old-data-task.md)
-    * [How to](EE7-4--How-to.md)
-      * [How to create a new mobile app](EE7-4-1-How-to-create-a-new-mobile-app.md)
-      * [How to download file stored remotelly](EE7-4-10-How-to-download-a-file-stored-remotelly.md)
-      * [How to send an email](EE7-4-11-How-to-send-an-email.md)
-      * [How to pass forward parameters](EE7-4-12-How-to-pass-forward-parameters.md)
-      * [How to pass back parameters](EE7-4-13-How-to-pass-back-parameters.md)
-      * [How to share a document text on social media](EE7-4-14-How-to-share-a-document-text-on-social-media.md)
-      * [Push notifications](EE7-4-15-Push-notifications.md)
-      * [How to scan a QRcode or barcode](EE7-4-16-How-to-scan-a-QRcode-barcode.md)
-      * [How to get GPS coordinates](EE7-4-17-How-to-get-GPS-coordinates.md)
-      * [How to add a FAB button](EE7-4-18-How-to-add-a-FAB-button.md)
-      * [How to define custom images](EE7-4-2-How-to-define-custom-images.md)
-      * [How to disable hide buttons in a toolbar](EE7-4-20-How-to-disable-hide-buttons-in-a-toolbar.md)
-      * [How to change color for input controls](EE7-4-21-How-to-change-color-for-input-controls.md)
-      * [How to change colors in grid](EE7-4-22-How-to-change-colors-in-grid.md)
-      * [How to format data in grid](EE7-4-23-How-to-format-data-in-grid.md)
-      * [Files management](EE7-4-3-Files-management.md)
-        * [Prepare files through SQL](EE7-4-3-1-Prepare-files-through-SQL.md)
-        * [Prepare files through a zip based upload](EE7-4-3-2-Prepare-files-through-a-zip-based-upload.md)
-      * [Taking a photo and sending it to the server](EE7-4-4-Taking-a-photo-and-sending-it-to-the-server.md)
-      * [Filtering a grid column without a filter panel](EE7-4-5-Filtering-a-grid-column-without-a-filter-panel.md)
-      * [Adding a complex caption in the image gallery](EE7-4-6-Adding-a-complex-caption-in-the-image-gallery.md)
-      * [Adding clickable content to a grid](EE7-4-7-Adding-clickable-content-to-a-grid.md)
-      * [How to show alternative content in a window](EE7-4-8-How-to-show-alternative-content-in-a-window.md)
-      * [How to create a wizard to navigate through a series of panel with Previous-Next buttons](EE7-4-9-How-to-create-a-wizard-navigate-through-a-series-of-panels-with-Previous-Next-buttons.md)
+    * [Reference guide \(API Link\)](EE7-3--Reference-Guide.md)
+    * [How to \(KB Link\)](EE7-4--How-to.md)
     * [App deployment](EE7-5--App-deployment.md)
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)

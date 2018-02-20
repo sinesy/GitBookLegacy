@@ -56,7 +56,6 @@
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
-
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)
@@ -79,9 +78,8 @@
       * [Google OAuth2](EE5-Google-OAuth2.md)
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
-      * Authenticating on external systems
+      * [Authenticating on external systems](EE6-1-7-Authenticating-on-external-systems.md)
   * Mobile
-
     * [Mobile introduction](EE7-1--Mobile-Introduction.md)
     * [Offline vs Online](EE7-2--Main-features.md)
       * [Server side features](EE7-1-1-Server-side-features.md)
@@ -102,16 +100,13 @@
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
-
   * GSuite
-
     * [Introduction](EE3-1--Google-Collaboration-Introduction.md)
     * [Client-side integration](EE3-2--Client-side-integration.md)
     * [GMail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
     * [Contacts](EE5-Google-Contacts.md)
-
   * Google Cloud Platform
     * Datastore
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
@@ -202,9 +197,6 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
-
 * Troubleshootings
 * Best practises
-
-
 

@@ -1,4 +1,4 @@
-# Automatic user and groups provisioning
+# Automatic user and group provisioning
 
 If the authentication is external from 4ws.Platform \(i.e. not based on internal DB structures\), for example is based on SSO or LDAP/AD, one option is to put in place the synchronization process, otherwise the automatic user and group provisioning can be used, as explained here.  
 This option works as follows: after a proper initial setup, when a user attempts the login and the external authentication system returns a positive response among with other information, this information are used to create \(if it does not not already exist\) or update the user and possibly assign default groups to the user \( **only**  if the user is new\).  

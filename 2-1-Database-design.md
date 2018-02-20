@@ -1,3 +1,5 @@
+# Database design
+
 In case you need to design a new database, it can be helpful to create tables having a common structure, in terms of field names and type.  
 These are some rules that we suggest to follow:  
  **PRIMARY KEY** : You should not define fields called ID or FUNCTION in the DB, as they may conflict with some Javascript commands. A possible variant is to call ID\_ or \_ID, e.g. CUSTOMER\_ID, PRODUCT\_ID, etc.  
@@ -10,6 +12,7 @@ Platform does not replace the business analysis: this important task must be car
   * NUMBER\(N\)
 
   * DATE
+
   * CHAR\(N\)
   * CLOB
 
@@ -18,6 +21,7 @@ Platform does not replace the business analysis: this important task must be car
   * NUMERIC\(N\)
 
   * DECIMAL\(M,N\)
+
   * DATE
   * DATETIME
   * NVARCHAR\(N\)
@@ -29,6 +33,7 @@ Platform does not replace the business analysis: this important task must be car
   * NUMERIC\(N\)
 
   * DECIMAL\(M,N\)
+
   * DATE
   * DATETIME
   * VARCHAR\(N\)
@@ -40,6 +45,7 @@ Platform does not replace the business analysis: this important task must be car
   * NUMERIC\(N\)
 
   * DECIMAL\(M,N\)
+
   * DATE
   * DATETIME
   * VARCHAR\(N\)

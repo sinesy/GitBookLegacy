@@ -1,4 +1,4 @@
-# Cloud Storage
+# Google Cloud Storage
 
 4WS.Platform is integrated with Google Cloud Platform, in particular with Google Cloud Storage.  
 To enable this integration a Service Account must be defined in the Google Cloud Console and the following parameters must be specified:
@@ -6,10 +6,9 @@ To enable this integration a Service Account must be defined in the Google Cloud
 * GOOGLE\_SERVACC\_EMAIL: the service account email address
 * GOOGLE\_SERVACC\_KEY: the service account p12 public key, Base64 encoded
 
-The available Javascript actions are the following  
+The available Javascript actions are the following
 
-
-## Get a signed URL 
+## Get a signed URL
 
 To get a signed URL for Google Cloud Storage operations \(refer to the official documentation for details: [https://cloud.google.com/storage/docs/access-control\#Signed-URLs](https://cloud.google.com/storage/docs/access-control#Signed-URLs)\).
 
@@ -26,8 +25,7 @@ utils.getGoogleCloudStorageSignedURL(verb,expiration, bucketName, objectName, mi
  **bucketName**  – the name of the bucket which we want to operate on  
  **objectName**  – the name of the object  
  **mime**  – the MIME type of the resource. Can be null.  
-_Return value_ - A string containing the signed URL.  
-
+_Return value_ - A string containing the signed URL.
 
 # Get information about a bucket
 
@@ -40,8 +38,7 @@ utils.getGoogleCloudStorageBucket(bucketName)
 #### Details
 
 **bucketName** – the name of the bucket which we want to operate on  
-_Return value_ - The file container representation \(org.wag.valueobjects.java.FileContainer\)  
-
+_Return value_ - The file container representation \(org.wag.valueobjects.java.FileContainer\)
 
 ## Create a bucket
 
@@ -57,8 +54,7 @@ utils.createGoogleCloudBucket(project, bucketName, bucketLocation, storageClass)
 **bucketName** – the name of the bucket which we want to operate on  
 **bucketLocation** – the location of the bucket. Multi-region location: US, EU, ASIA. Other locations are supported. See [https://cloud.google.com/storage/docs/](https://cloud.google.com/storage/docs/)  
 **storageClass** – \(optional\) storage class: STANDARD, NEARLINE and DURABLE\_REDUCED\_AVAILABILITY. See [https://cloud.google.com/storage/](https://cloud.google.com/storage/)  
-_Return value_ - the file container representation \(org.wag.valueobjects.java.FileContainer\)  
-
+_Return value_ - the file container representation \(org.wag.valueobjects.java.FileContainer\)
 
 ## Delete a bucket
 
@@ -71,8 +67,7 @@ utils.deleteGoogleCloudStorageBucket(bucketName)
 #### Details
 
 **bucketName** – the name of the bucket which we want to operate on  
-_Return value_ - the file container representation \(org.wag.valueobjects.java.FileContainer\)  
-
+_Return value_ - the file container representation \(org.wag.valueobjects.java.FileContainer\)
 
 ## Enable or disable the object versioning of a bucket
 
@@ -87,7 +82,7 @@ utils.setGoogleCloudStorageBucketVersioning(bucketName,versioning)
 **bucketName** – the name of the bucket which we want to operate on versioning – true or false. Whether to enable or disable versioning  
 _Return value_ - The file container representation \(org.wag.valueobjects.java.FileContainer\)
 
-##  Check if the object versioning of a bucket is enabled
+## Check if the object versioning of a bucket is enabled
 
 #### **Syntax**
 
@@ -100,7 +95,7 @@ utils.getGoogleCloudStorageBucketVersioning(bucketName)
 **bucketName** – the name of the bucket which we want to operate on  
 _Return value_ - true or false
 
-#  Upload a file from server file system to Cloud Storage
+# Upload a file from server file system to Cloud Storage
 
 #### Syntax
 
@@ -116,9 +111,8 @@ utils.uploadGoogleCloudStorageObjectFromFS(fsPath, bucketName, objectName, delet
 **deleteFsFile** – whether or not delete the file from file system after upload  
 _Return value_ - the file representation \(org.wag.valueobjects.java.File\)
 
-##  Copy an object and its metadata to a new bucket and object destination
+## Copy an object and its metadata to a new bucket and object destination
 
-  
 Can be used to copy between buckets with the same location and type. Can choose to copy from a specific object version if bucket versioning is enabled.
 
 #### Syntax
@@ -132,13 +126,12 @@ utils.copyGoogleCloudStorageObject(sourceBucketName, sourceObjectName, sourceObj
 **sourceBucketName** – the bucket of the source object  
 **sourceObjectName** – the source object name, with full path  
 **sourceObjectVersion** – \(optional\). The object version to copy. Can be null.  
-**destinationBucketName** – the destination bucket   
+**destinationBucketName** – the destination bucket  
 **destinationObjectName** – the destination object name, with full path  
 _Return value_ - the file representation \(org.wag.valueobjects.java.File\)
 
-##  Copy an object and its metadata to a new bucket and object destination
+## Copy an object and its metadata to a new bucket and object destination
 
-  
 Must be used to copy objects between regions and bucket types. Can choose to copy from a specific object version if bucket versioning is enabled
 
 #### Syntax
@@ -152,10 +145,9 @@ utils.rewriteGoogleCloudStorageObject(sourceBucketName, sourceObjectName, source
 **sourceBucketName** – the bucket of the source object  
 **sourceObjectName** – the source object name, with full path  
 **sourceObjectVersion** – \(optional\). The object version to copy. Can be null.  
-**destinationBucketName** – the destination bucket   
+**destinationBucketName** – the destination bucket  
 **destinationObjectName** – the destination object name, with full path  
-_Return value_ - the file representation \(org.wag.valueobjects.java.File\)  
-
+_Return value_ - the file representation \(org.wag.valueobjects.java.File\)
 
 ## Delete an object from a bucket
 
@@ -170,7 +162,7 @@ utils.deleteGoogleCloudStorageObject(bucketName,objectName)
 **bucketName** – the bucket of the object  
 **objectName** – the object name, with full path
 
-##  Get object information from a bucket
+## Get object information from a bucket
 
 #### Syntax
 
@@ -184,7 +176,7 @@ utils.getGoogleCloudStorageObject(bucketName,objectName)
 **objectName** – the object name, with full path  
 _Return value_ - the file representation \(org.wag.valueobjects.java.File\)
 
-##  Get a list of versions of the object from a bucket
+## Get a list of versions of the object from a bucket
 
 #### Syntax
 
@@ -196,12 +188,10 @@ utils.getGoogleCloudStorageObjectVersions(bucketName,objectName)
 
 **bucketName** – the bucket of the object  
 **objectName** – the object name, with full path  
-_Return value_ - A list of the file version representation objects \(org.wag.valueobjects.java.FileVersion\)  
-
+_Return value_ - A list of the file version representation objects \(org.wag.valueobjects.java.FileVersion\)
 
 ## Get a list of all the objects stored in a bucket
 
-  
 Possibly filtered by a prefix and a delimiter. See [https://cloud.google.com/storage/docs/json\_api/v1/objects/list](https://cloud.google.com/storage/docs/json_api/v1/objects/list)
 
 #### Syntax
@@ -217,9 +207,8 @@ utils.getGoogleCloudStorageObjectVersions(bucketName,prefix,delimiter)
 **delimiter** – the path delimiter  
 _Return value_ - A list of the file representation objects \(org.wag.valueobjects.java.File\)
 
-##  Get a paginated list of the objects stored in a bucket
+## Get a paginated list of the objects stored in a bucket
 
-  
 Possibly filtered by a prefix and a delimiter. See [https://cloud.google.com/storage/docs/json\_api/v1/objects/list](https://cloud.google.com/storage/docs/json_api/v1/objects/list). The next page token can be used to retrieve more pages, maxPageResults to manage page size and pages to specify how many pages to load.
 
 #### Syntax

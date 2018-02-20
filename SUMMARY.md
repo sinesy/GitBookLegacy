@@ -7,7 +7,7 @@
     * [Enterprise Edition](1-1-1-Enterprise-Edition.md)
     * [Tech specs and requirements](1-1-2-Tech-specs-and-requirements.md)
     * [Warp SDK](1-1-3-Warp-SDK.md)
-  * Tips
+  * [Tips](2--Tips.md)
     * [Database design](2-1-Database-design.md)
     * [Creating a web app common use cases](2-3-Creating-a-web-app-common-use-cases.md)
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
@@ -227,6 +227,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

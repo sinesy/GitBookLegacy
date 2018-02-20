@@ -35,12 +35,10 @@ LDAP2\_AUTH\_LDAP\_ACTIVE
 LDAP2\_AUTH\_LDAP\_SERVER  
 LDAP2\_AUTH\_LDAP\_PORT  
 LDAP2\_AUTH\_LDAP\_USER\_FORM  
-using the source id followed by underscore \(_\) followed by the parameter name.  
-
+using the source id followed by underscore \(_\) followed by the parameter name.
 
 **Google SSO authentication**  
-See the Google for Work documentation here.  
-
+See the Google for Work documentation [here](/EE5-SSO.md).
 
 **Tibbr SSO authentication**  
 Specify the value “org.warp4ws.common.web.SSOTibbrServer” for theparameter SSO\_MANAGER\_CLASS.

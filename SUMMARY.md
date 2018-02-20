@@ -24,7 +24,7 @@
   * Defining the UI
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
-  * Wizard
+  * [Wizard](3-1-25-Other-wizards.md)
   * Defining events
     * [Panel events](3-1-8-1-Panel-events.md)
     * [Column events](3-1-8-3-Column-events.md)

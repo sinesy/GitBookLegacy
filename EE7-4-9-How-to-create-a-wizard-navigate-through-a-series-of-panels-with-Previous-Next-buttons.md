@@ -1,8 +1,10 @@
-Suppose you need to create a window containing a large amount of controls and you need to force the user to fill the content gradually, from a set of data to another.
-A common solution for this scenario is using an Alternative panel, containing panels to show alternatively and driving from a panel to the other through Previous/Next buttons.
+# How to create a wizard to navigate through a series of panels with Previous-Next buttons
+
+Suppose you need to create a window containing a large amount of controls and you need to force the user to fill the content gradually, from a set of data to another.  
+A common solution for this scenario is using an Alternative panel, containing panels to show alternatively and driving from a panel to the other through Previous/Next buttons.  
 The steps to follow are:
 
-* add a panel in the window, containing two buttons: Previous and Next, used to decide which panel to show at a time. This panel could be arranged on the bottom of the window (South region).
+* add a panel in the window, containing two buttons: Previous and Next, used to decide which panel to show at a time. This panel could be arranged on the bottom of the window \(South region\).
 * add an Alternative panel in the window, occupying the rest of the available space
 * add a set of panels as children of the Alternative panel
 
@@ -21,12 +23,11 @@ else if (currentPanel=="2") {
 }
 else
 ...
-
 ```
 
-A panel parameter named CURRENT_PANEL is used to store the current panel to show.
-cardPanelID represents the id for the Alternative panel.
-prevButton represents the attribute name for the Previous button.
+A panel parameter named CURRENT\_PANEL is used to store the current panel to show.  
+cardPanelID represents the id for the Alternative panel.  
+prevButton represents the attribute name for the Previous button.  
 Similarly, the Next button needs to manage the switching of panels from left to right, which a scriptlet like the following:
 
 ```js
@@ -42,14 +43,9 @@ else if (currentPanel=="1") {
 }
 else
 ...
-
 ```
 
-
-
-
-                
-
 ---
+
 
 

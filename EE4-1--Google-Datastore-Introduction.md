@@ -1,3 +1,5 @@
+# Google Datastore Introduction
+
 Google Cloud Datastore is a NoSQL document database built for automatic scaling, high performance, and ease of application development. Datastore features include:
 
 * Atomic transactions. Datastore can execute a set of operations where either all succeed, or none occur.
@@ -8,11 +10,7 @@ Google Cloud Datastore is a NoSQL document database built for automatic scaling,
 * Encryption at rest. Datastore automatically encrypts all data before it is written to disk and automatically decrypts the data when read by an authorized user. For more information, see Server-Side Encryption.
 * Fully managed with no planned downtime. Google handles the administration of the Datastore service so you can focus on your application. Your application can still use Datastore when the service receives a planned upgrade.
 
-
-
-
-                
-
 ---
+
 
 

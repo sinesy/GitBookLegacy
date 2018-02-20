@@ -1,57 +1,49 @@
-In this page you can find instructions about how to install 4WS.Platform &#8211; Community Edition.
-The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not need to configure anything: the service is available instantly, once purchased the service.
+# How to Install
 
+In this page you can find instructions about how to install 4WS.Platform – Community Edition.  
+The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not need to configure anything: the service is available instantly, once purchased the service.
 
 STEPS NEEDED TO INSTALL THE PRODUCT
 
-
-
-* 
- **Install JDK 1.7.x**  in your machine, if not already available; please, do not use other versions, such as OpenJDK, otherwise some parts of the product would not work correctly. You can find that distribution also at this link:
-JDK 1.7
-* 4WS.Platform requires the availability of an empty database schema: install a database server (if not already installed) and then **create an empty database** in one of the supported databases (Oracle, MySQL 5.x or above, SQLServer 2008 or above, PostgreSQL 9 or above) and  **besure to provide grants to create objects**  to the database user that 4WS.Platform will use to connect to that schema.
-For example, you can download MySQL free database fromDownload MySQL
-Once installed the database, you have to create a schema, a user and link thisuser to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.
-You can use MySQL Workbench to carry out these operations.
-We don&#8217;t provide support for these activities: we give for granted that you are able to perform them on your own.
-* 4WS.Platform requiresa Java web container, such as Tomcat 7. If you have already installed it for other purposes, you can reuse it; if you do not have installed it yet, the 4WS.Platform installer will install it along with the product, since it is included in the distribution. You can  **download 4WS.Platform fromthe Sourceforge repository: ** http://sourceforge.net/projects/xwsplatform/files
-*  **Decompress**  the .zip file downloaded from the repository and **execute the installer** .
- **If you are using recent versions of Windows (e.g. Vista o next versions), you have to use a superuser and open a DOSprompt by right clicking on it and choose &#8220;Run as Administrator&#8221;: that is the right way to install the program** .  **DO NOT simply execute the installer using a superuser (e.g. administrator), since this has not the same effect** .
-There are two types of installer: an installer having a graphical user interface and the other without it. The first can be used with Windows or other graphical operating systems; in that case you have simply to follow the wizard and fill out all information required, including database type, host, port and the schema account. With the second one, you have to provide the same information, by executing the installer from the shell.
+* **Install JDK 1.7.x**  in your machine, if not already available; please, do not use other versions, such as OpenJDK, otherwise some parts of the product would not work correctly. You can find that distribution also at this link:
+  JDK 1.7
+* 4WS.Platform requires the availability of an empty database schema: install a database server \(if not already installed\) and then **create an empty database** in one of the supported databases \(Oracle, MySQL 5.x or above, SQLServer 2008 or above, PostgreSQL 9 or above\) and  **besure to provide grants to create objects**  to the database user that 4WS.Platform will use to connect to that schema.
+  For example, you can download MySQL free database fromDownload MySQL
+  Once installed the database, you have to create a schema, a user and link thisuser to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.
+  You can use MySQL Workbench to carry out these operations.
+  We don’t provide support for these activities: we give for granted that you are able to perform them on your own.
+* 4WS.Platform requiresa Java web container, such as Tomcat 7. If you have already installed it for other purposes, you can reuse it; if you do not have installed it yet, the 4WS.Platform installer will install it along with the product, since it is included in the distribution. You can  **download 4WS.Platform fromthe Sourceforge repository: ** [http://sourceforge.net/projects/xwsplatform/files](http://sourceforge.net/projects/xwsplatform/files)
+* **Decompress**  the .zip file downloaded from the repository and **execute the installer** .  
+  **If you are using recent versions of Windows \(e.g. Vista o next versions\), you have to use a superuser and open a DOSprompt by right clicking on it and choose “Run as Administrator”: that is the right way to install the program** .  **DO NOT simply execute the installer using a superuser \(e.g. administrator\), since this has not the same effect** .  
+  There are two types of installer: an installer having a graphical user interface and the other without it. The first can be used with Windows or other graphical operating systems; in that case you have simply to follow the wizard and fill out all information required, including database type, host, port and the schema account. With the second one, you have to provide the same information, by executing the installer from the shell.
 
 * In order to run theinstaller having a graphicaluser interface, type the following  **shell**  **command** :  **installgui.sh**  or  **installgui.bat** .
-* The installer without a graphical user interfacecan be invoked fromthe shell: this comes in handy where you are using a remote access to a server (such as ssh or telnet) or when a GUI environment is not available; this installer requires to specify a series of data, the same provided using the GUI version.In order to run the installer without the GUI, type the command  **install.sh**  or  **install.bat** , according to the operating system in use.Independently of the execution mode, you have to provide some a few data required to correctly install and configure the product:
+
+* The installer without a graphical user interfacecan be invoked fromthe shell: this comes in handy where you are using a remote access to a server \(such as ssh or telnet\) or when a GUI environment is not available; this installer requires to specify a series of data, the same provided using the GUI version.In order to run the installer without the GUI, type the command  **install.sh**  or  **install.bat** , according to the operating system in use.Independently of the execution mode, you have to provide some a few data required to correctly install and configure the product:
 
 * database settings, required to connect to the database schema, where the installer will create automatically all the required tables and initial data
-* company id; it represents a 5 characters code to use to partition all data for a specific &#8220;tentant&#8221;: 4WS.Platform supports multi-tenancy, that is to say, you can run the same application for distinct organizations, each identified by a specific company id, which is used to partition data per organization
+
+* company id; it represents a 5 characters code to use to partition all data for a specific “tentant”: 4WS.Platform supports multi-tenancy, that is to say, you can run the same application for distinct organizations, each identified by a specific company id, which is used to partition data per organization
 * default language code; 4WS.Platform supports any number of languages
 * installation path, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
 * JDK path: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
-* 4WS.Platform web context; the web context is the folder name within webapps Tomcat&#8217;s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to &#8220;platform&#8221;, then the URL to specify in your browser would be: http://host:port/platform
+* 4WS.Platform web context; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
 
+* **Run Tomcat**  A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)
 
-
-
-*  **Run Tomcat**  A.S. and use a browser to connect to the web application; typical URL is: http://localhost:8080/platform
-
-
-
-The default account to use is:
-company id: 00000
-site id: 100
-username: ADMIN
-password: admin
+The default account to use is:  
+company id: 00000  
+site id: 100  
+username: ADMIN  
+password: admin  
  **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
-
-
 
 4WS.PLATFORM INSTALLER STEPS
 
-* 
-
-Start
-Type the following command from the shell: installgui.sh or installgui.bat.
+* Start  
+  Type the following command from the shell: installgui.sh or installgui.bat.
 
 ---
+
 
 

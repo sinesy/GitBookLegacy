@@ -34,7 +34,7 @@
     * [How to load a grid after loading a form](3-1-25-7-How-to-load-a-grid-after-loading-a-form.md)
     * [How to open a window when pressing a button on the form toolbar](3-1-25-8-How-to-open-a-window-when-pressing-a-button-on-the-form-toolbar.md)
     * [How to load a grid when clicking on a tree node](3-1-25-9-How-to-load-a-grid-when-clicking-on-a-tree-node.md)
-    * How to load a form when clicking on a tree node
+    * [How to load a form when clicking on a tree node](3-1-25-10-How-to-load-a-form-when-clicking-on-a-tree-node.md)
   * Defining events
     * [Panel events](3-1-8-1-Panel-events.md)
     * [Column events](3-1-8-3-Column-events.md)
@@ -237,6 +237,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

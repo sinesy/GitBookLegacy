@@ -178,8 +178,16 @@
       * [Current limits in 4WS-Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
-    * [MongoDB](mongodb.md)
+    * MongoDB
+      * Mongo Introduction
+      * Setting up the environment
+      * How to create collections
+      * How to create business components
+      * How to create windows filled with data coming from MongoDB collections
+      * Design rules
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

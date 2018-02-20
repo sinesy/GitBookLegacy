@@ -1,4 +1,4 @@
-# Define custom images
+# How to define custom images
 
 Copy into the web.context folder linked to the mobile application all images required by the mobile app \(i.e. "platform//images\); examples of images are:  
  **btn\_menu** .png and  **btn\_menu@2x** .png – icon showed on the top left of the app \(the blu lego brick\)  

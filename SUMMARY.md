@@ -56,7 +56,6 @@
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
-
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)
@@ -64,27 +63,21 @@
     * [Charts](3-1-6-10-Charts.md)
     * Pivot Grid
   * SSO
-
     * Identity management in Platform
       * Identity management on the internal Platform database
       * Identity management based on Google SSO
     * LDAP
-
       * [LDAP support](3-2-3-LDAP-support.md)
-
       * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
-
       * [Identity management based on an embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
       * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
       * Connecting an LDAP server to Activiti BPM
       * Connecting an LDAP server to Alfresco ECM
-
     * Google SSO
       * [Google SSO](EE5-SSO.md)
       * Google OAuth2
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
-
   * Mobile
     * [Mobile introduction](EE7-1--Mobile-Introduction.md)
     * [Offline vs Online](EE7-2--Main-features.md)
@@ -107,23 +100,20 @@
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * Google Collaboration
-    * [Google Collaboration Introduction](EE3-1--Google-Collaboration-Introduction.md)
-
     * [Send emails from Google Compute Engine](EE5-Send-emails-from-Google-Compute-Engine.md)
     * [Shared contacts synchronization](EE5-Shared-contacts-synchronization.md)
   * GSuite
-    * Introduction
-    * Client-side integration
+    * [Introduction](EE3-1--Google-Collaboration-Introduction.md)
+    * [Client-side integration](EE3-2--Client-side-integration.md)
     * [GMail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
-    * Contacts
+    * [Contacts](EE5-Google-Contacts.md)
   * Google Cloud Platform
     * Datastore
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -209,7 +199,6 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
-
 * Troubleshootings
 * Best practises
 

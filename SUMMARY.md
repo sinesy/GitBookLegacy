@@ -150,6 +150,18 @@
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
+  * Identity management in Platform
+    * Identity management based on the internal Platform database
+    * Identity management based on LDAP and database
+      * Connecting an LDAP server to Alfresco ECM
+      * Connecting an LDAP server to Activiti BPM
+    * Identity management based on Google SSO
+    * Identity management based on a embedded LDAP server used by Alfresco and or Activiti
+    * Identity management based on a remote LDAP server to connect to Platform on the cloud
+    * User and groups provisioning
+      * User and groups synchronization
+      * Automatic user and group provisioning
+    * Authenticating on external systems
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -237,4 +249,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

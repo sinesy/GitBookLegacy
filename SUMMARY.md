@@ -28,12 +28,13 @@
     * [How to add a checkbox grid to select one or more rows](3-1-25-1-How-to-add-a-checkbox-grid-to-select-one-or-more-rows.md)
     * [How to load a second grid when clicking on a row from the first grid](3-1-25-2-How-to-load-a-second-grid-when-clicking-on-a-row-of-the-first-grid.md)
     * [How to load a form when clicking on a row of the grid](3-1-25-3-How-to-load-a-form-when-clicking-on-a-row-of-the-grid.md)
-    * How to open a window when double clicking on a row of the grid
-    * How to open a window with right click on the popup menu
-    * How to open a window when pressing a button on the grid toolbar
-    * How to load a grid after loading a form
-    * How to open a window when pressing a button on the form toolbar
-    * How to load a grid when clicking on a tree node
+    * [How to open a window when double clicking on a row of the grid](3-1-25-4-How-to-open-a-window-when-double-clicking-on-a-row-of-the-grid.md)
+    * [How to open a window with right click on the popup menu](3-1-25-5-How-to-open-a-window-with-right-click-on-the-popup-menu.md)
+    * [How to open a window when pressing a button on the grid toolbar](3-1-25-6-How-to-open-a-window-when-pressing-a-button-on-the-grid-toolbar.md)
+    * [How to load a grid after loading a form](3-1-25-7-How-to-load-a-grid-after-loading-a-form.md)
+    * [How to open a window when pressing a button on the form toolbar](3-1-25-8-How-to-open-a-window-when-pressing-a-button-on-the-form-toolbar.md)
+    * [How to load a grid when clicking on a tree node](3-1-25-9-How-to-load-a-grid-when-clicking-on-a-tree-node.md)
+    * How to load a form when clicking on a tree node
   * Defining events
     * [Panel events](3-1-8-1-Panel-events.md)
     * [Column events](3-1-8-3-Column-events.md)
@@ -236,4 +237,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

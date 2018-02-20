@@ -62,7 +62,7 @@
     * [Pivot Grid](3-1-6-2-Pivot-Grid-Panel.md)
   * SSO
     * Identity management in Platform
-      * 
+      \* 
   * * LDAP
       * [LDAP support](3-2-3-LDAP-support.md)
       * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)

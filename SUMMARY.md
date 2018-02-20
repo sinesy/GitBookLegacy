@@ -116,7 +116,7 @@
       * [Google Calendar](EE5-Google-Calendar.md)
       * [Google Drive](EE5-Google-Drive.md)
       * [Google Contacts](EE5-Google-Contacts.md)
-      * [Google Cloud Integration](EE5-Google-Cloud-integration.md)
+
       * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
     * [Google for Work Integration](EE5-Google-for-Work-Integration.md)
     * [Google OAuth2](EE5-Google-OAuth2.md)
@@ -132,7 +132,7 @@
     * Datastore
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
-    * [Google Cloud Integration](EE5-Google-Cloud-integration.md)
+
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
@@ -221,4 +221,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

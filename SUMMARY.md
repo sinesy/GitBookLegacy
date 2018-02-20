@@ -94,11 +94,11 @@
       * [How to format data in grid](EE7-4-23-How-to-format-data-in-grid.md)
       * [Files management](EE7-4-3-Files-management.md)
         * [Prepare files through SQL](EE7-4-3-1-Prepare-files-through-SQL.md)
-        * Prepare files through a zip based upload
-      * Taking a photo and sending it to the server
-      * Filtering a grid column without a filter panel
-      * Adding a complex caption in the image gallery
-      * Adding clickable content to a grid
+        * [Prepare files through a zip based upload](EE7-4-3-2-Prepare-files-through-a-zip-based-upload.md)
+      * [Taking a photo and sending it to the server](EE7-4-4-Taking-a-photo-and-sending-it-to-the-server.md)
+      * [Filtering a grid column without a filter panel](EE7-4-5-Filtering-a-grid-column-without-a-filter-panel.md)
+      * [Adding a complex caption in the image gallery](EE7-4-6-Adding-a-complex-caption-in-the-image-gallery.md)
+      * [Adding clickable content to a grid](EE7-4-7-Adding-clickable-content-to-a-grid.md)
       * How to show alternative content in a window
       * How to create a wizard to navigate through a series of panel with Previous-Next buttons
     * App deployment
@@ -182,4 +182,6 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
+
+
 

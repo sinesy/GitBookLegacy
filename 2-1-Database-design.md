@@ -14,6 +14,7 @@ Platform does not replace the business analysis: this important task must be car
   * DATE
 
   * CHAR\(N\)
+
   * CLOB
 
 * MS SQLServer database
@@ -23,6 +24,7 @@ Platform does not replace the business analysis: this important task must be car
   * DECIMAL\(M,N\)
 
   * DATE
+
   * DATETIME
   * NVARCHAR\(N\)
   * NCHAR\(N\)
@@ -35,6 +37,7 @@ Platform does not replace the business analysis: this important task must be car
   * DECIMAL\(M,N\)
 
   * DATE
+
   * DATETIME
   * VARCHAR\(N\)
   * CHAR\(N\)
@@ -47,6 +50,7 @@ Platform does not replace the business analysis: this important task must be car
   * DECIMAL\(M,N\)
 
   * DATE
+
   * DATETIME
   * VARCHAR\(N\)
   * CHAR\(N\)
@@ -84,6 +88,11 @@ It is important to being aware of these issues and the right way to deal with th
 * **CHAR type field in Oracle database**  – in case of Oracle database and a SQL query having a WHERE condition on CHAR type fields, it could happen that the SQL query seems slower: sometimes the performance can be improved in this scenario when replacing the binding variable on the CHAR field with an in-line value. You can force the execution of business component for list without the use of binding variables, by unchecking the checkbox named “Bind variables” in he business component definition window
 * **the same query, executed multiple times**  – if you execute a SQL query in Platform and it seems slow and a few seconds after you execute exactly the same query on an external SQL client and here it is faster: bear in mind that a database is able to cache the result after the first execution of the query, so it could be wrong to compare the execution time described in this scenario! Try to invert the query executions: first on the SQL client, then on Platform: what about the resulting time?
 * **fetch size when extracting data from a query**  – if you are executing a SQL query with a server-side js component and you are processing the whole result and this operation requires several seconds or minutes, but when executing the query on an external SQL client you can see the results instantly,, remember that it is likely the the SQL client is showing you only a porting of the whole data: that is the reason why it is faster; try to scroll all data shown on the SQL client until the end of the resultset: how long does it take?
+
+## Maintenance
+
+It is not advisable to rename PK columns in a table. The application uses the PK fields to generate unique keys as well as to set the parameters of input/output for windows and panels.  
+If you decide to change the primary keys fields, you have to align the data model, through the ad hoc button available in the detail model form and then manually align the input/output parameters folder of panes using that object.
 
 ---
 

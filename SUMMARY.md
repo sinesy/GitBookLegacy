@@ -63,19 +63,19 @@
     * [Charts](3-1-6-10-Charts.md)
     * Pivot Grid
   * SSO
-    * Identity management in Platform
-      * Identity management on the internal Platform database
-      * Identity management based on Google SSO
+    * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
+      * [Identity management on the internal Platform database](EE6-1-1-Identity-management-based-on-the-internal-Platform-database.md)
+      * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * LDAP
       * [LDAP support](3-2-3-LDAP-support.md)
       * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
       * [Identity management based on an embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
       * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
-      * Connecting an LDAP server to Activiti BPM
-      * Connecting an LDAP server to Alfresco ECM
+      * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)
+      * [Connecting an LDAP server to Alfresco ECM](EE6-1-2-1-Connecting-an-LDAP-server-to-Alfresco-ECM.md)
     * Google SSO
       * [Google SSO](EE5-SSO.md)
-      * Google OAuth2
+      * [Google OAuth2](EE5-Google-OAuth2.md)
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
   * Mobile
@@ -201,6 +201,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

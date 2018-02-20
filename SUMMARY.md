@@ -115,15 +115,15 @@
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
-    * Scheduler Introduction
-    * Process settings
-      * How to define a sequence of consecutive processes
-      * How to define a Custom Java Business component
-      * How to define a Grid Data Import
-      * How to define a server-side Javascript action
-    * Email notifications
-    * Process executions
-    * Process input parameters
+    * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
+    * [Process settings](EE9-2--Process-settings.md)
+      * [How to define a sequence of consecutive processes](EE9-2-1-How-to-define-a-sequence-of-consecutive-processes.md)
+      * [How to define a Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
+      * [How to define a Grid Data Import](EE9-2-3-How-to-define-a-Grid-Data-Import.md)
+      * [How to define a server-side Javascript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
+    * [Email notifications](EE9-3--Email-notifications.md)
+    * [Process executions](EE9-4--Process-executions.md)
+    * [Process input parameters](EE9-5--Process-input-parameters.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
@@ -195,6 +195,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

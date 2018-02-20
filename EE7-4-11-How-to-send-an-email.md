@@ -1,4 +1,4 @@
-## How to send and email
+# How to send and email
 
 Emails can only be sent from the server-side of Platform, not from the mobile device.  
 In order to send emails, you have first to configure a few application parameters, that you can set by opening: Application -&gt; Application Detail -&gt; folder Application Parameters -&gt; section “Mail”. Here you have to fill the required parameters to connect to an SMTP server.  

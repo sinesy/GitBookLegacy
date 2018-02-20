@@ -26,8 +26,8 @@
   * Defining the UI
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
-    * Rule for roles
-    * Permissions Administrator
+    * [Rule for roles](3-1-17-1-Rule-for-roles.md)
+    * [Permissions Administrator](3-1-17-2-Permissions-Administrator.md)
   * [Wizard](3-1-25-Other-wizards.md)
     * [How to add a checkbox grid to select one or more rows](3-1-25-1-How-to-add-a-checkbox-grid-to-select-one-or-more-rows.md)
     * [How to load a second grid when clicking on a row from the first grid](3-1-25-2-How-to-load-a-second-grid-when-clicking-on-a-row-of-the-first-grid.md)

@@ -2,7 +2,15 @@
 
 * [Introduction](README.md)
 * Overview
-  * [About 4WS.Platform](1-1--Architecture.md)
+  * About 4WS.Platform
+    * Architecture
+    * Enterprise Edition
+    * Tech specs and requirements
+    * Warp SDK
+  * Tips
+    * Database design
+    * Creating a web app common use cases
+    * Creating a mobile app common use cases
   * [Creating a web application](creating-a-web-application.md)
 * [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
@@ -123,6 +131,7 @@
       * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
 
     * [Google for Work Integration](EE5-Google-for-Work-Integration.md)
+
     * [Google OAuth2](EE5-Google-OAuth2.md)
     * [Send emails from Google Compute Engine](EE5-Send-emails-from-Google-Compute-Engine.md)
     * [Shared contacts synchronization](EE5-Shared-contacts-synchronization.md)
@@ -130,9 +139,11 @@
     * [Users and groups synchronization](EE5-Users-and-groups-synchronization.md)
 
   * GSuite
+
     * [GMail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
+
   * Google Cloud Platform
 
     * Datastore
@@ -143,6 +154,7 @@
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
 
   * Scheduler
+
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
       * [How to define a sequence of consecutive processes](EE9-2-1-How-to-define-a-sequence-of-consecutive-processes.md)
@@ -152,6 +164,7 @@
     * [Email notifications](EE9-3--Email-notifications.md)
     * [Process executions](EE9-4--Process-executions.md)
     * [Process input parameters](EE9-5--Process-input-parameters.md)
+
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
@@ -229,6 +242,7 @@
       * [Design rules](EE4-6--Design-rules.md)
 
 * Troubleshootings
+
 * Best practises
 
 

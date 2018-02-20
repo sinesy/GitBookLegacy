@@ -8,7 +8,7 @@ if not specified, the current data+time is used instead, that is to say, all pro
 
 ### Import-export wait time
 
-if specified, it represents wait time \(expressed in seconds\) after which all processes will be executed, on a regular basis. It is used together with "Import/export start time".  
+This is an optional field:                                                                                                                                                                                    if specified, it represents wait time \(expressed in seconds\) after which all processes will be executed, on a regular basis. It is used together with "Import/export start time".  
 if not specified, it is assumed a wait time of 1 hour.
 
 ---

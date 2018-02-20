@@ -9,8 +9,9 @@ To enable this feature the following parameters must be set in the general confi
 To configure more than one source per type \(LDAP1, LDAP2, …\) use this syntax: LDAP1;LDAP2. Where LDAP1/2 is the prefix of the source.  
 To start the synchronization the following URL must be called:http\[s\]://&lt;server&gt;:&lt;port&gt;/&lt;contextroot&gt;/secursync. The call to this URL can be scheduled.
 
-**  
-4ws.Platform synchronization**  
+## ** 4ws.Platform synchronization**
+
+  
 Currently 4ws.Platform is the  **destination**  of the synchronization process. The users and groups are inserted, modified, deleted \(logically\) and recovered \(from logical delete\), for every application listed in CON01 table and for every COMPANY ID-SITE ID couple specified in the configuration \(see below\).  
 To enable this synchronization specify the value **4WS** for the parameter **SEC\_SYNC\_DESTS** . Other parameters to specify are:  
  **SYNC\_4WS\_COMP\_SITE** : \(optional\) semicolon \(;\) separated list of COMPANY\_ID,SITE\_ID couples that specify company and sites for whichcreate users and groups. If not specified all the possible couples listed in PRM29\_SITE\_IDS are used. Example: 00888,100;00888,101;00889,10. This parameter is overloaded by the source specified company and sites \(see SYNC\_GOOGLE\_COMP\_SITE andSYNC\_LDAP\_COMP\_SITE\).  
@@ -44,10 +45,11 @@ To enable this synchronization specify the value **4WS** for the parameter **SEC
 
 **SYNC\_4WS\_GROUPS\_FIELDS** :\(opt.\) semicolon \(;\) separated list of 4ws.Platform groupobject fields target of the data coming from the source. The fields must correspond to the source field, can be empty but they must be in the same quantity of the source fields. Default:“pk.roleId;dictionary.description” \(see Prm02Groups fields\).  
 **SYNC\_4WS\_NAME\_FROM\_EMAIL\_FORMAT** : numeric. Code corresponding to the abilityto get name and surname from the email address, if theSUB01.eMail field is present. The currently supported codes are:  
-**1**  = &lt;name&gt;.&lt;surname&gt;.&lt;other&gt;@domain  
+**1**  = &lt;name&gt;.&lt;surname&gt;.&lt;other&gt;@domain
 
+## **LDAP synchronization**
 
-**LDAP synchronization**  
+  
 LDAP is a source for the synchronization process. To enable this source add the **LDAP**  code to theSEC\_SYNC\_SOURCES parameter. This source can be used also for Active Directory synchronization.  
 The following parameters are needed:
 

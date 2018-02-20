@@ -99,9 +99,7 @@
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
-  * Google Collaboration
-    * [Send emails from Google Compute Engine](EE5-Send-emails-from-Google-Compute-Engine.md)
-    * [Shared contacts synchronization](EE5-Shared-contacts-synchronization.md)
+
   * GSuite
     * [Introduction](EE3-1--Google-Collaboration-Introduction.md)
     * [Client-side integration](EE3-2--Client-side-integration.md)
@@ -201,4 +199,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

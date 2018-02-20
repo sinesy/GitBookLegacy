@@ -1,4 +1,4 @@
-# About 4WS.Platform
+# Architecture
 
 4WS.Platform is a suite of products composed of:
 

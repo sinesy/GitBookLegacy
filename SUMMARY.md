@@ -52,14 +52,12 @@
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
   * Mobile
-    * Mobile introduction
-
-    * Offline vs Online
-      * Server side features
-      * Server side functionalities
-      * Server side platform features
+    * [Mobile introduction](EE7-1--Mobile-Introduction.md)
+    * [Offline vs Online](EE7-2--Main-features.md)
+      * [Server side features](EE7-1-1-Server-side-features.md)
+      * [Server side functionalities](EE7-1-2-Server-side-functionalities.md)
+      * [Server side Platform features](EE7-2-2-Server-side-Platform-features.md)
       * Mobile app features
-
     * Mobile side specifics
       * Customizations
         * Custom theme editor

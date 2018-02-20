@@ -1,4 +1,4 @@
-# Calendar
+# Google Calendar
 
 With this integration developers can automate the creation and management of calendar events in the user’s main calendar. This feature is not intended for Google Calendar UI substitution, but for basic and automatic operations: creation, update and deletion of an event.  
 In order to use this feature, you have also to define a few parameters in 4WS.Platform:

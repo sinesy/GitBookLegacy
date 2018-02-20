@@ -105,15 +105,36 @@
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
-  * [GSuite](gsuite.md)
-    * [Gmail](EE5-GMail.md)
-    * [Calendar](EE5-Google-Calendar.md)
-    * [Drive](EE5-Google-Drive.md)
+  * Google Collaboration
+    * Google Collaboration Introduction
+    * Client-side integration
+    * Server-side integration
+      * Server side API
+      * Google Drive documents
+    * Google Apps for Work Integration
+      * GMail
+
+      * Google Calendar
+      * Google Drive
+      * Google Contacts
+      * Google Cloud Integration
+      * Google Cloud Storage
+    * Google for Work Integration
+    * Google OAuth2
+    * Send emails from Google Compute Engine
+    * Shared contacts synchronization
+    * Google SSO
+    * Users and groups synchronization
+  * GSuite
+    * GMail
+    * Calendar
+    * Drive
   * Google Cloud Platform
     * Datastore
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
-    * [Cloud Storage](EE5-Google-Cloud-Storage.md)
+    * Google Cloud Integration
+    * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -201,4 +222,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

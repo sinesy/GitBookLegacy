@@ -52,9 +52,61 @@
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
     * Custom SSO
   * Mobile
+    * Mobile introduction
+
     * Offline vs Online
+      * Server side features
+      * Server side functionalities
+      * Server side platform features
+      * Mobile app features
+
     * Mobile side specifics
-    * What Mobile side not includes
+      * Customizations
+        * Custom theme editor
+      * App Menu
+      * Window content
+        * Detail scrollable form
+        * Scrollable paginated grid
+    * What mobile side not includes
+    * Reference guide
+      * Mobile Javascript utility methods
+      * Global variables
+      * Application settings
+        * Synchronization folder
+        * Application version
+        * Files writing and reading
+        * Import and Export commands
+        * Import-export start time and wait time
+        * Delete old data task
+    * How to
+      * How to create a new mobile app
+      * How to download file stored remotelly
+      * How to send an email
+      * How to pass forward parameters
+      * How to pass back parameters
+      * How to share a document text on social media
+      * Push notifications
+      * How to scan a QRcode or barcode
+      * How to get GPS coordinates
+      * How to add a FAB button
+      * How to define custom images
+      * How to disable hide buttons in a toolbar
+      * How to change color for input controls
+      * How to change colors in grid
+      * How to format data in grid
+      * Files management
+        * Prepare files through SQL
+        * Prepare files through a zip based upload
+      * Taking a photo and sending it to the server
+      * Filtering a grid column without a filter panel
+      * Adding a complex caption in the image gallery
+      * Adding clickable content to a grid
+      * How to show alternative content in a window
+      * How to create a wizard to navigate through a series of panel with Previous-Next buttons
+    * App deployment
+      * App deployment for the iOS platform
+      * App deployment for the Android platform
+    * Appendix : Synchronization flow
   * [GSuite](gsuite.md)
     * [Gmail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)

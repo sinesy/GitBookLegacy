@@ -13,7 +13,8 @@
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
   * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
 * [Core features](core-features.md)
-  * 3-1-20 & 3-1-21
+  * Tables \(3-1-20\)
+  * SqlTool \(3-1-21\)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
@@ -24,7 +25,7 @@
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * Defining the UI
     * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
-  * [Working with users and roles](3-1-17-Users-and-Roles.md) \(3.1.17\)
+  * [Working with users and roles](3-1-17-Users-and-Roles.md)
   * [Wizard](3-1-25-Other-wizards.md)
     * [How to add a checkbox grid to select one or more rows](3-1-25-1-How-to-add-a-checkbox-grid-to-select-one-or-more-rows.md)
     * [How to load a second grid when clicking on a row from the first grid](3-1-25-2-How-to-load-a-second-grid-when-clicking-on-a-row-of-the-first-grid.md)
@@ -52,7 +53,7 @@
 * Setting up the environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
-* Modules //3-2
+* Modules
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)

@@ -150,18 +150,18 @@
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-  * Identity management in Platform
-    * Identity management based on the internal Platform database
-    * Identity management based on LDAP and database
-      * Connecting an LDAP server to Alfresco ECM
-      * Connecting an LDAP server to Activiti BPM
-    * Identity management based on Google SSO
-    * Identity management based on a embedded LDAP server used by Alfresco and or Activiti
-    * Identity management based on a remote LDAP server to connect to Platform on the cloud
-    * User and groups provisioning
-      * User and groups synchronization
-      * Automatic user and group provisioning
-    * Authenticating on external systems
+  * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
+    * [Identity management based on the internal Platform database](EE6-1-1-Identity-management-based-on-the-internal-Platform-database.md)
+    * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
+      * [Connecting an LDAP server to Alfresco ECM](EE6-1-2-1-Connecting-an-LDAP-server-to-Alfresco-ECM.md)
+      * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)
+    * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
+    * [Identity management based on a embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)
+    * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
+    * [User and groups provisioning](EE6-1-6-User-and-groups-provisioning.md)
+      * [User and groups synchronization](EE6-1-6-1-User-and-groups-synchronization.md)
+      * [Automatic user and group provisioning](EE6-1-6-2-Automatic-user-and-group-provisioning.md)
+    * [Authenticating on external systems](EE6-1-7-Authenticating-on-external-systems.md)
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -249,6 +249,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

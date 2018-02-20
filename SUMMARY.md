@@ -3,15 +3,15 @@
 * [Introduction](README.md)
 * Overview
   * About 4WS.Platform
-    * Architecture
-    * Enterprise Edition
-    * Tech specs and requirements
-    * Warp SDK
+    * [Architecture](1-1--Architecture.md)
+    * [Enterprise Edition](1-1-1-Enterprise-Edition.md)
+    * [Tech specs and requirements](1-1-2-Tech-specs-and-requirements.md)
+    * [Warp SDK](1-1-3-Warp-SDK.md)
   * Tips
-    * Database design
-    * Creating a web app common use cases
-    * Creating a mobile app common use cases
-  * [Creating a web application](creating-a-web-application.md)
+    * [Database design](2-1-Database-design.md)
+    * [Creating a web app common use cases](2-3-Creating-a-web-app-common-use-cases.md)
+    * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
+  * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
 * [Core features](core-features.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
@@ -42,7 +42,6 @@
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
-
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)
@@ -115,46 +114,33 @@
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * Google Collaboration
-
     * [Google Collaboration Introduction](EE3-1--Google-Collaboration-Introduction.md)
     * [Client-side integration](EE3-2--Client-side-integration.md)
     * [Server-side integration](EE3-3--Server-side-integration.md)
       * [Server side API](EE3-3-1-Server-side-API.md)
       * [Google Drive documents](EE3-3-2-Google-Drive-documents.md)
     * [Google Apps for Work Integration](EE5-Google-Apps-for-Work-integration.md)
-
       * [GMail](EE5-GMail.md)
       * [Google Calendar](EE5-Google-Calendar.md)
       * [Google Drive](EE5-Google-Drive.md)
       * [Google Contacts](EE5-Google-Contacts.md)
-
       * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-
     * [Google for Work Integration](EE5-Google-for-Work-Integration.md)
-
     * [Google OAuth2](EE5-Google-OAuth2.md)
     * [Send emails from Google Compute Engine](EE5-Send-emails-from-Google-Compute-Engine.md)
     * [Shared contacts synchronization](EE5-Shared-contacts-synchronization.md)
     * [Google SSO](EE5-SSO.md)
     * [Users and groups synchronization](EE5-Users-and-groups-synchronization.md)
-
   * GSuite
-
     * [GMail](EE5-GMail.md)
     * [Calendar](EE5-Google-Calendar.md)
     * [Drive](EE5-Google-Drive.md)
-
   * Google Cloud Platform
-
     * Datastore
-
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
-
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-
   * Scheduler
-
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
       * [How to define a sequence of consecutive processes](EE9-2-1-How-to-define-a-sequence-of-consecutive-processes.md)
@@ -164,7 +150,6 @@
     * [Email notifications](EE9-3--Email-notifications.md)
     * [Process executions](EE9-4--Process-executions.md)
     * [Process input parameters](EE9-5--Process-input-parameters.md)
-
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * Audit
@@ -240,10 +225,6 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
-
 * Troubleshootings
-
 * Best practises
-
-
 

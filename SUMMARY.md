@@ -95,7 +95,7 @@
         * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
     * What mobile side not includes
     * [Reference guide](EE7-3--Reference-Guide.md)
-    * [How to \(KB Link\)](EE7-4--How-to.md)
+    * [How to](EE7-4--How-to.md)
     * [App deployment](EE7-5--App-deployment.md)
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)

@@ -61,7 +61,7 @@
     * [Online report](3-1-16-Reports-on-the-fly.md)
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
-    * Pivot Grid
+    * Grid
   * SSO
     * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
       * [Identity management on the internal Platform database](EE6-1-1-Identity-management-based-on-the-internal-Platform-database.md)
@@ -201,4 +201,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

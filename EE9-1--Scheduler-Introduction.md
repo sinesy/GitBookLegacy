@@ -1,4 +1,4 @@
-# Enterprise Scheduler
+# Scheduler Introduction
 
 A scheduler is a system often required inside an organization to start automatically business processes. These processes can be invoked from the shell, like for data integration jobs, or via an Internet protocol, such as web services.  
 The next step is to monitor the execution of these processes and optionally notify the outcome.  

@@ -9,7 +9,8 @@ The main features of a detail form are:
 
 * text field
 
-* tex tarea
+* text area
+
 * check box
 * calendar, including a button to open a calendar
 * numeric field, including an ad hoc numeric keypad; decimal numbers are supported too and they are configurable in the App Designer form panel
@@ -20,6 +21,7 @@ The main features of a detail form are:
 * when typing a code directly on the input field, this code will be validated when loosing focus and will be emptied if the code validation fails
 
 * image preview, with buttons to select an image \(from the camera/image gallery\) and remove it
+
 * file selector – e.g. a PDF file, with buttons to show the file preview and delete it.
 
 ---

@@ -57,43 +57,43 @@
       * [Server side features](EE7-1-1-Server-side-features.md)
       * [Server side functionalities](EE7-1-2-Server-side-functionalities.md)
       * [Server side Platform features](EE7-2-2-Server-side-Platform-features.md)
-      * Mobile app features
+      * [Mobile app features](EE7-2-1-Mobile-app-features.md)
     * Mobile side specifics
-      * Customizations
-        * Custom theme editor
-      * App Menu
-      * Window content
-        * Detail scrollable form
-        * Scrollable paginated grid
+      * [Customizations](EE7-2-3-Customizations.md)
+        * [Custom theme editor](EE7-2-3-1-Custom-theme-editor.md)
+      * [App Menu](EE7-2-4-App-Menu.md)
+      * [Window content](EE7-2-5-Window-content.md)
+        * [Detail scrollable form](EE7-2-5-1-Detail-scrollable-form.md)
+        * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
     * What mobile side not includes
-    * Reference guide
-      * Mobile Javascript utility methods
-      * Global variables
-      * Application settings
-        * Synchronization folder
-        * Application version
-        * Files writing and reading
-        * Import and Export commands
-        * Import-export start time and wait time
-        * Delete old data task
-    * How to
-      * How to create a new mobile app
-      * How to download file stored remotelly
-      * How to send an email
-      * How to pass forward parameters
-      * How to pass back parameters
-      * How to share a document text on social media
-      * Push notifications
-      * How to scan a QRcode or barcode
-      * How to get GPS coordinates
-      * How to add a FAB button
-      * How to define custom images
-      * How to disable hide buttons in a toolbar
-      * How to change color for input controls
-      * How to change colors in grid
-      * How to format data in grid
-      * Files management
-        * Prepare files through SQL
+    * [Reference guide](EE7-3--Reference-Guide.md)
+      * [Mobile Javascript utility methods](EE7-3-1-Mobile-Javascript-utility-methods.md)
+      * [Global variables](EE7-3-2-Global-variables.md)
+      * [Application settings](EE7-3-3-Application-settings.md)
+        * [Synchronization folder](EE7-3-3-1-Synchronization-folder.md)
+        * [Application version](EE7-3-3-2-Application-version.md)
+        * [Files writing and reading](EE7-3-3-3-Files-writing-and-reading.md)
+        * [Import and Export commands](EE7-3-3-5-Import-and-Export-command.md)
+        * [Import-export start time and wait time](EE7-3-3-7-Import-export-start-time-and-wait-time.md)
+        * [Delete old data task](EE7-3-3-9-Delete-old-data-task.md)
+    * [How to](EE7-4--How-to.md)
+      * [How to create a new mobile app](EE7-4-1-How-to-create-a-new-mobile-app.md)
+      * [How to download file stored remotelly](EE7-4-10-How-to-download-a-file-stored-remotelly.md)
+      * [How to send an email](EE7-4-11-How-to-send-an-email.md)
+      * [How to pass forward parameters](EE7-4-12-How-to-pass-forward-parameters.md)
+      * [How to pass back parameters](EE7-4-13-How-to-pass-back-parameters.md)
+      * [How to share a document text on social media](EE7-4-14-How-to-share-a-document-text-on-social-media.md)
+      * [Push notifications](EE7-4-15-Push-notifications.md)
+      * [How to scan a QRcode or barcode](EE7-4-16-How-to-scan-a-QRcode-barcode.md)
+      * [How to get GPS coordinates](EE7-4-17-How-to-get-GPS-coordinates.md)
+      * [How to add a FAB button](EE7-4-18-How-to-add-a-FAB-button.md)
+      * [How to define custom images](EE7-4-2-How-to-define-custom-images.md)
+      * [How to disable hide buttons in a toolbar](EE7-4-20-How-to-disable-hide-buttons-in-a-toolbar.md)
+      * [How to change color for input controls](EE7-4-21-How-to-change-color-for-input-controls.md)
+      * [How to change colors in grid](EE7-4-22-How-to-change-colors-in-grid.md)
+      * [How to format data in grid](EE7-4-23-How-to-format-data-in-grid.md)
+      * [Files management](EE7-4-3-Files-management.md)
+        * [Prepare files through SQL](EE7-4-3-1-Prepare-files-through-SQL.md)
         * Prepare files through a zip based upload
       * Taking a photo and sending it to the server
       * Filtering a grid column without a filter panel
@@ -182,6 +182,4 @@
     * [Google Datastore](EE5-1--Google-Datastore-Introduction.md)
 * Troubleshootings
 * Best practises
-
-
 

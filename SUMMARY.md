@@ -13,8 +13,8 @@
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
   * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
 * [Core features](core-features.md)
-  * Tables \(3-1-20\)
-  * SqlTool \(3-1-21\)
+  * [Tables](3-1-20-Tables.md)
+  * [SqlTool](3-1-21-SqlTool.md)
   * [Defining a data model and relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
   * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
@@ -54,7 +54,6 @@
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * [Modules](3-2-App-Designer--Enterprise-Edition-features.md)
-
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)
@@ -62,37 +61,21 @@
     * [Charts](3-1-6-10-Charts.md)
     * [Pivot Grid](3-1-6-2-Pivot-Grid-Panel.md)
   * SSO
-
     * Identity management in Platform
-
       * Identity management based on the internal Platform database
-
       * Identity management based on Google SSO
-
     * LDAP
-
       * LDAP support
-
       * Identity management based on LDAP and database
-
       * Identity management based on an embedded LDAP server used by Alfresco and or Activiti
-
       * Identity management based on a remote LDAP server to connect to Platform on the cloud
-
       * Connecting an LDAP server to Activiti BPM
-
       * Connecting an LDAP server to Alfresco ECM
-
     * Google SSO
-
       * Google SSO
-
       * Google Auth2
-
       * Identity management based on Google SSO
-
     * Custom SSO
-
   * Mobile
     * [Mobile introduction](EE7-1--Mobile-Introduction.md)
     * [Offline vs Online](EE7-2--Main-features.md)
@@ -162,7 +145,6 @@
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-
   * Scheduler
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
@@ -249,9 +231,6 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
-
 * Troubleshootings
 * Best practises
-
-
 

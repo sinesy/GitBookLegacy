@@ -41,7 +41,7 @@ utils.getGoogleEmailContactsFiltered(3,150,’John’,false);
 IMPORTANT NOTES:  
 The number of email addresses retrieved can be different from the number of contacts, if contacts have 0 or more than 1 email addresses, in case of splitted emails.
 
-##  Get a list of contacts/emails from the Google Apps domain shared contact list
+## Get a list of contacts/emails from the Google Apps domain shared contact list
 
 #### Syntax
 
@@ -73,7 +73,7 @@ utils.getGoogleContactsFiltered(3,150,’John’,false);
 IMPORTANT NOTES:  
 The contact may not contain an email address.
 
-##  Add a contact to the user’s contact list or to the domain shared contact list
+## Add a contact to the user’s contact list or to the domain shared contact list
 
 #### Syntax
 
@@ -89,7 +89,7 @@ utils.addGoogleContact(name, surname, email, phone, shared)
  **phone**  – the phone of the contact.  
  **shared**  – \(can be null\) true if the contact must be stored in the share contact list of the domain, false for the user’s contact list. If null, the false case applies.
 
-##  Updates the contact of the user’s contact list or the domain shared contact list
+## Updates the contact of the user’s contact list or the domain shared contact list
 
 #### Syntax
 
@@ -106,7 +106,7 @@ utils.updateGoogleContact(contactId, name, surname, email, phone, shared)
  **phone**  – the phone of the contact.  
  **shared**  – \(can be null\) true if the contact is stored in the share contact list of the domain, false for the user’s contact list. If null, the false case applies.
 
-##  Deletes the contact from the user’s contact list or the domain shared contact list
+## Deletes the contact from the user’s contact list or the domain shared contact list
 
 #### Syntax
 
@@ -119,7 +119,7 @@ utils.deleteGoogleContact(contactId, shared)
 **contactId**  – the id of the contact.  
  **shared**  – \(can be null\) true if the contact is stored in the share contact list of the domain, false for the user’s contact list. If null, the false case applies.
 
-##  Get a list of contacts from the Google Apps domain user list
+## Get a list of contacts from the Google Apps domain user list
 
 #### Syntax
 
@@ -151,6 +151,39 @@ utils.getGoogleDomainContactsFiltered(3,150,’John’,’email:a*’,’DESCEND
 
 IMPORTANT NOTES:  
 The contact may not contain an email address.
+
+
+
+## Shared contacts synchronizations
+
+4WS.Platform has a DB table that can contain shared contacts and can be inquired by functionalities \(grids, lookups and so on\). The table can be filled from different sources, one of which is Google Apps for Work. In particular two sources are synced:
+
+* the Google Apps Directory, which contains the contacts of the Google Apps Domian, i.e. all people in the same domain.
+* the Google Domain GAL \(Global Access List\), which contains common contacts that do not belong to the Google Domain, i.e. contacts of general interest.
+
+  **NOTE** : The Google Apps Domain is only a source of information, not a destination. This means that the Google Apps Domain in not updated, only read.  
+  To synchronize the table, each application must be configured. In case of Google Apps as source, the following parameters must be specified:
+
+* GOOGLE\_SERVACC\_ADMIN\_USER: the account of an admin user
+
+* GOOGLE\_SERVACC\_EMAIL: the service account email address
+
+* GOOGLE\_SERVACC\_KEY: the service account p12 public key, Base64 encoded
+* CONTACTS\_SOURCE\_GOOGLE\_DOMAIN: must contain GOOGLE keyword.
+
+To call the synchronization method, two ways can be used:
+
+* call the web method sharedcontactssync with a GET call on the 4WS.Platform server, for example
+
+```js
+GET http://&lt;server&gt;/sharedcontactssync
+```
+
+* use the server side Javascript call from an action:
+
+```js
+utils.sharedContatctsSync()
+```
 
 ---
 

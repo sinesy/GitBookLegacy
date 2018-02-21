@@ -24,7 +24,47 @@
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * Defining the UI
-    * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
+    * App Designer
+      * App Designer Menu
+      * Definition of additional data sources
+      * Definition of Data Models and Relations
+        * Relation
+        * Reverse Engineering
+      * Creation of a window
+        * Grid Panel
+        * Form Panel
+        * Filter Panel
+        * Tree Panel
+        * Google Map Panel
+        * Image Panel
+        * Tree + Grid Panel
+        * Image Gallery
+      * Windows list
+      * Panels list
+        * Columns properties
+        * Controls properties
+        * Filter properties
+      * Variables
+      * Code selectors
+        * When not to use a dynamic combo-box
+      * Buttons
+      * Translations
+        * Translations about GUI components and internationalization settings
+        * Data coming from database
+        * Custom code and translations
+      * Application Menu
+      * Bulk import binded to a grid
+      * Data export
+    * Web Interpreter
+      * Grid components
+      * Detail forms
+      * Other components
+      * Other features
+        * Chat
+      * Global variables
+        * Client side global variables
+        * Server global variables
+      * Forgot Password
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
     * [Rule for roles](3-1-17-1-Rule-for-roles.md)
     * [Permissions Administrator](3-1-17-2-Permissions-Administrator.md)
@@ -199,4 +239,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

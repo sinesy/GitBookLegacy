@@ -62,7 +62,7 @@
       * [Other features](3-3-4-Other-features.md)
         * [Chat](3-3-4-1-Chat.md)
       * [Global variables](3-3-5-Global-variables.md)
-        * [Client side global variables](3-3-5-1-Client-side-global-variables.md)
+        * [Client-side global variables](3-3-5-1-Client-side-global-variables.md)
         * [Server global variables](3-3-5-2-Server-global-variables.md)
       * [Forgot Password](3-3-6-Forgot-Password.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)

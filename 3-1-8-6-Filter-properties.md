@@ -32,20 +32,21 @@ These are all properties defined for a filter control:
 * **Minimum numeric value**  – in case of number type, it is possible to set a minimum number the user can set
 * **Maximum numeric value**  – in case of number type, it is possible to set a maximum number the user can set.
 
-Allowed application types for controls, according to the related database field type:  
-\|  **Database field type**  \|  **Application type**  \|  
-\| :--- \| :--- \|  
-\| Text \| Text, Multi-line text, Check-box, Local/Remote Combo-box, Button lookup, Code+Button lookup \|  
-\| Integer \| Number \|  
-\| Decimal \| Number \|  
-\| Char \| Text, Check-box, Local/Remote Combo-box, Button lookup, Code+Button lookup \|  
-\| Datetime \| Date, Datetime, Time \|  
-\| Date \| Date, Datetime, Time \|  
-\| Internal Counter \| Internal Counter \|  
-\| Counter based on a table \| Counter based on a table \|  
-\| Counter based on a custom business component \| Counter based on a custom business component \|  
-\| Sequence \| Sequence \|  
-\| File identifier \| File upload/download \|
+Allowed application types for controls, according to the related database field type:
+
+| Database field type | Application type |
+| :--- | :--- |
+| Text | Text, Multi-line text, Check-box, Local/Remote Combo-box, Button lookup, Code+Button lookup |
+| Integer | Number |
+| Decimal | Number |
+| Char | Text, Check-box, Local/Remote Combo-box, Button lookup, Code+Button lookup |
+| Datetime | Date, Datetime, Time |
+| Date | Date, Datetime, Time |
+| Internal Counter | Internal Counter |
+| Counter based on a table | Counter based on a table |
+| Counter based on a custom business component | Counter based on a custom business component |
+| Sequence | Sequence |
+| File identifier | File upload/download |
 
 Note that it is not allowed to insert/delete filter controls in this list: filter controls are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model.
 

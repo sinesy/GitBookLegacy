@@ -25,7 +25,7 @@ Therefore, the wizard always creates one only panel inside the window, except fo
 The next wizard panes to show depend on the panel type chosen by the user.  
 In the following sections, a specific panel type is described, with its own properties and behavior.
 
-**Window content**   
+**Window content**  
 Once you have created a window and at least one panel, you can access to its content through the “Panels” folder:
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/winpanels.png)
@@ -44,7 +44,7 @@ When clicking on a panel you can always:
 
 In case of a panel which is a panel container, that is, a panel which can contain additional content, there is also an Add command through which you can add any other kind of panel.
 
-**Panel containers and layouts**   
+**Panel containers and layouts**  
 Platform supports a variety of different  **panel containers** , each managing the layout of its children panels in a different way:
 
 * tab panel
@@ -58,33 +58,33 @@ Platform supports a variety of different  **panel containers** , each managing t
 Each of them is described as follow.  
 Note: you can easily change the current panel container with another one, without having to remove its content and then remove it: the commands “Replace this panel with…” allow you to replace the current panel container with any other.
 
-Tab panel
+**Tab panel**
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/folders.png)
 
 This container allows to include any number of sub-panels, as folders. Each panel title will be used to set the corresponding panel title. You can change the position of a specific folder \(panel\), through the drag ‘n drop the corresponding node and move it to another position in the tree.
 
-Alternative panes  
+**Alternative panels**  
 This container allows to include any number of sub-panels, but only one at a time is shown. All the others can be shown alternatively. The only way to select which sub-panel to show is by using javascript. Consequently, you have to set a GUI event \(e.g. a button click\) and link to it a client-side javascript action, through which selecting the sub-panel to make visible.  
 The javascript method you can use to set the sub-panel to show is:  
 setActiveItem\(yourPanelContainerId,subPanelIndex\);
 
-Accordion panel  
+**Accordion panel**  
 This container allows to include any number of sub-panels, organized vertically like an accordion, where all panels are collapsed but one, which is the one expanded. All sub-panels are identified by their panel title. When clicking on a panel title in the accordion panel container, it is possible to expanded the corresponding sub-panel and make all the others collapsed.
 
-Vertical orientation panel
+**Vertical orientation panel**
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/vert.png)
 
 This container allows to include any number of sub-panels, organized vertically. Each sub-panel will occupy exactly the same height, which is distributed equally among all the sub-panels.
 
-Horizontal orientation panel
+**Horizontal orientation panel**
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/hor.png)
 
 This container allows to include any number of sub-panels, organized horizontally. Each sub-panel will occupy exactly the same width, which is distributed equally among all the sub-panels.
 
-Table panel \(responsive layout\)  
+**Table panel \(responsive layout\)**  
 This container allows to include any number of sub-panels, organized with different  **widths** ,  **heights**  and  **row/column spans** .  
 This is the most flexible layout and also the most complex to configure.  
 It allows to organize sub-panels in a way that they can use all the available space. Moreover, with different display sizes or when resizing the browser window, the organization of the panels can change. At panel container level, it is possible to set the maximum number of columns allowed: the content of the container will be then calculated at run-time, according to the available space.
@@ -103,7 +103,7 @@ Optionally, for every sub-panel you can define also the  **Rows span** , i.e. th
 Thanks to all these settings, you can arrange the window content in a very flexible way.  
 Please pay attention to the mandatory properties reported above: if you have not set them, the window content will not be rendered correctly, when executing the web application.
 
-Generic panel  
+**Generic panel**  
 This container allows to include up to 5 sub-panels, each in a specific region.  
 Five regions are supported:
 

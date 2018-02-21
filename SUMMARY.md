@@ -24,12 +24,12 @@
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
   * Defining the UI
-    * App Designer
-      * App Designer Menu
-      * Definition of additional data sources
-      * Definition of Data Models and Relations
-        * Relation
-        * Reverse Engineering
+    * [App Designer](3-1-App-Designer.md)
+      * [App Designer Menu](3-1-2-App-Designer-Menu.md)
+      * [Definition of additional data sources](3-1-3-Definition-of-additional-data-sources.md)
+      * [Definition of Data Models and Relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
+        * [Relations](3-1-4-1-Relations.md)
+        * [Reverse Engineering](3-1-4-2-Reverse-Engineering.md)
       * Creation of a window
         * Grid Panel
         * Form Panel

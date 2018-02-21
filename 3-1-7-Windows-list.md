@@ -1,47 +1,45 @@
-Once a window has been created, it can be arranged in terms of content.
+# Windows list
+
+Once a window has been created, it can be arranged in terms of content.  
 You can see all the created windows from the menu entry
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/windowList-1024x490.jpg)
 
-And a new feature allows you to see how windows are related to each other by clicking on  **Windows Schema** 
+And a new feature allows you to see how windows are related to each other by clicking on  **Windows Schema**
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/windowSchema-1024x515.jpg)
 
-The window content includes a set of panels, which can be: grids, detail forms, trees, image panels, map panels, custom panel.
-A user can manage these panels through the "Panels list" menu items, where there are all panels defined behind the scenes by the wizard "Add Window".
-Moreover, the user can create additional panels from the detail of an already existing window.
+The window content includes a set of panels, which can be: grids, detail forms, trees, image panels, map panels, custom panel.  
+A user can manage these panels through the "Panels list" menu items, where there are all panels defined behind the scenes by the wizard "Add Window".  
+Moreover, the user can create additional panels from the detail of an already existing window.  
 The window detail contains several folders:
 
-*  **window settings**  &#8211; these settings are the same the user had defined when creating the window through the window wizard
-*  **input parameters ** &#8211; optional parameters list, required by business components or other parts of the window (panels, window title, panels title, etc.) and passed by the parent window
-*  **panels**  &#8211; a hierarchical representation of the window, in terms of panels and subpanels.
-
+* **window settings**  – these settings are the same the user had defined when creating the window through the window wizard
+* **input parameters ** – optional parameters list, required by business components or other parts of the window \(panels, window title, panels title, etc.\) and passed by the parent window
+* **panels**  – a hierarchical representation of the window, in terms of panels and subpanels.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/windowDetail-1024x486.jpg)
 
-The window container has always a layout that requires at least one panel at center (which will be streched in all direction, by occupying the whole window container).
-Up to 5 panels can be added to that container, using these regions: left, right, top, bottom, center. For panels added to left or right the panel width is required. For panels added to top or bottom the panel height is required.
+The window container has always a layout that requires at least one panel at center \(which will be streched in all direction, by occupying the whole window container\).  
+Up to 5 panels can be added to that container, using these regions: left, right, top, bottom, center. For panels added to left or right the panel width is required. For panels added to top or bottom the panel height is required.  
 A panel can be:
 
-* a  **subpanel**  &#8211; having the same layout of the window container (up to 5 panels), so you can arrange any number of panels in the end, through nested panels
-* a  **folder container**  &#8211; it contains a set of folders, where a folder can be any kind of panel. The user can show any of these folders by clicking on the folder title. Additional javascript methods are available in order to programmatically show any folder, through the following method:
+* a  **subpanel**  – having the same layout of the window container \(up to 5 panels\), so you can arrange any number of panels in the end, through nested panels
+* a  **folder container**  – it contains a set of folders, where a folder can be any kind of panel. The user can show any of these folders by clicking on the folder title. Additional javascript methods are available in order to programmatically show any folder, through the following method:
 
- **setActiveTab(&#8216;folderContainerIdentifier&#8217;,panelIndex);** 
-Moreover, a specific folder can be showed/hidden through the following method:
- **setVisibleTab(&#8216;folderContainerIdentifier&#8217;,panelIndex,true|false);** 
-Finally, a specific folder can be enabled/disabled through the following method:
- **setEnableTab(&#8216;folderContainerIdentifier&#8217;,panelIndex,true|false);** 
+  **setActiveTab\(‘folderContainerIdentifier’,panelIndex\);**   
+  Moreover, a specific folder can be showed/hidden through the following method:  
+  **setVisibleTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**   
+  Finally, a specific folder can be enabled/disabled through the following method:  
+  **setEnableTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**
 
-* an ** accordion panel**  &#8211; which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem(&#8220;accordionPanelIdentifier&#8221;,panelIndex);** 
+* an ** accordion panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem\(“accordionPanelIdentifier”,panelIndex\);**
 
-
-* a  **card panel**  &#8211; which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
-
+* a  **card panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
 
 ```js
 setActiveItem("cardPanelIdentifier",panelIndex);
 ```
-
 
 * a  **grid** 
 * a  **pivot grid** 
@@ -57,10 +55,9 @@ When the user presses the edit button in the "Panels" folder of the window detai
 * you cannot add a filter panel if there is not a grid
 * you cannot add a subpanel or a folder container to a grid/filter/form/tree/map/image panel
 
-Furthermore, The user can remove panels, rearrange them, change the position (region) of the panel, change width/height of a panel.
-
-                
+Furthermore, The user can remove panels, rearrange them, change the position \(region\) of the panel, change width/height of a panel.
 
 ---
+
 
 

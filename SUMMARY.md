@@ -30,41 +30,41 @@
       * [Definition of Data Models and Relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
         * [Relations](3-1-4-1-Relations.md)
         * [Reverse Engineering](3-1-4-2-Reverse-Engineering.md)
-      * Creation of a window
-        * Grid Panel
-        * Form Panel
-        * Filter Panel
-        * Tree Panel
-        * Google Map Panel
-        * Image Panel
-        * Tree + Grid Panel
-        * Image Gallery
-      * Windows list
-      * Panels list
-        * Columns properties
-        * Controls properties
-        * Filter properties
-      * Variables
-      * Code selectors
-        * When not to use a dynamic combo-box
-      * Buttons
-      * Translations
-        * Translations about GUI components and internationalization settings
-        * Data coming from database
-        * Custom code and translations
-      * Application Menu
-      * Bulk import binded to a grid
-      * Data export
-    * Web Interpreter
-      * Grid components
-      * Detail forms
-      * Other components
-      * Other features
-        * Chat
-      * Global variables
-        * Client side global variables
-        * Server global variables
-      * Forgot Password
+      * [Creation of a window](3-1-6-Creation-of-a-Window.md)
+        * [Grid Panel](3-1-6-1-Grid-Panel.md)
+        * [Form Panel](3-1-6-3-Form-Panel.md)
+        * [Filter Panel](3-1-6-4-Filter-Panel.md)
+        * [Tree Panel](3-1-6-5-Tree-Panel.md)
+        * [Google Map Panel](3-1-6-6-Google-Map-Panel.md)
+        * [Image Panel](3-1-6-7-Image-Panel.md)
+        * [Tree + Grid Panel](3-1-6-8-Tree+Grid-Panel.md)
+        * [Image Gallery](3-1-6-9-Image-Gallery.md)
+      * [Windows list](3-1-7-Windows-list.md)
+      * [Panels list](3-1-8-Panels-list.md)
+        * [Columns properties](3-1-8-2-Columns-properties.md)
+        * [Controls properties](3-1-8-4-Controls-properties.md)
+        * [Filter properties](3-1-8-6-Filter-properties.md)
+      * [Variables](3-1-9-Variables.md)
+      * [Code selectors](3-1-10-Code-Selectors.md)
+        * [When not to use a dynamic combo-box](3-1-10-1-When-not-to-use-a-dynamic-combo-box.md)
+      * [Buttons](3-1-13-Buttons.md)
+      * [Translations](3-1-14-Translations.md)
+        * [Translations about GUI components and internationalization settings](3-1-14-1-Translations-about-GUI-components-and-internationalization-settings.md)
+        * [Data coming from database](3-1-14-2-Data-coming-from-database.md)
+        * [Custom code and translations](3-1-14-3-Custom-code-and-translations.md)
+      * [Application Menu](3-1-15-Application-Menu.md)
+      * [Bulk import binded to a grid](3-1-24-Bulk-import-binded-to-a-grid.md)
+      * [Data export](3-1-26-Data-export.md)
+    * [Web Interpreter](3-3-Web-Interpreter.md)
+      * [Grid components](3-3-1-Grid-components.md)
+      * [Detail forms](3-3-2-Detail-forms.md)
+      * [Other components](3-3-3-Other-components.md)
+      * [Other features](3-3-4-Other-features.md)
+        * [Chat](3-3-4-1-Chat.md)
+      * [Global variables](3-3-5-Global-variables.md)
+        * [Client side global variables](3-3-5-1-Client-side-global-variables.md)
+        * [Server global variables](3-3-5-2-Server-global-variables.md)
+      * [Forgot Password](3-3-6-Forgot-Password.md)
   * [Working with users and roles](3-1-17-Users-and-Roles.md)
     * [Rule for roles](3-1-17-1-Rule-for-roles.md)
     * [Permissions Administrator](3-1-17-2-Permissions-Administrator.md)
@@ -164,6 +164,9 @@
     * [Process input parameters](EE9-5--Process-input-parameters.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
+  * Export and Import of Metadata
+    * File Management
+    * Application Metadata Management
   * Audit
   * BPM
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)

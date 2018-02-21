@@ -18,7 +18,7 @@ name = companyId
 string value =
 
 name = url  
-string value = [http://host:port/platform/getList?param1=val1](http://host:port/platform/getList?param1=val1) **&** param2=val2
+string value = [http://host:port/platform/getList?param1=val1](http://host:port/platform/getList?param1=val1)**&**param2=val2
 
 A more detailed example related to the invocation of the executeJs service available in Platform is:  
 ClassFields  

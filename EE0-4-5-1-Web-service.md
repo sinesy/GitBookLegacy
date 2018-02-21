@@ -55,11 +55,7 @@ In this way, every installation would have its own ad hoc absolute path and all 
 | :--- |
 
 
-`… baseUrl=http://localhost:8180/platform/ …`
-
 value of "url" class property within a web service Service Task:
-
-`executeJs?applicationId=XXX&appId=XXX&actionId=xxx&userId=:ADMIN`
 
 | executeJs?applicationId=XXX&appId=XXX&actionId=xxx&userId=:ADMIN |
 | :--- |

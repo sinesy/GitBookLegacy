@@ -16,8 +16,8 @@
   * [Tables](3-1-20-Tables.md)
   * [SqlTool](3-1-21-SqlTool.md)
   * [Definition of Data models and Relations](3-1-4-Definition-of-Data-Models-and-Relations.md)
-    * Relations
-    * Reverse Engineering
+    * [Relations](3-1-4-1-Relations.md)
+    * [Reverse Engineering](3-1-4-2-Reverse-Engineering.md)
   * Defining business components
     * [What are business components](3-1-5-Business-Components.md)
     * [Business components to fill-in panels](EE1-3-6-Definition-of-business-components-to-fill-in-panels.md)
@@ -29,7 +29,6 @@
     * [App Designer](3-1-App-Designer.md)
       * [App Designer Menu](3-1-2-App-Designer-Menu.md)
       * [Definition of additional data sources](3-1-3-Definition-of-additional-data-sources.md)
-
       * [Creation of a window](3-1-6-Creation-of-a-Window.md)
         * [Grid Panel](3-1-6-1-Grid-Panel.md)
         * [Form Panel](3-1-6-3-Form-Panel.md)
@@ -242,6 +241,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

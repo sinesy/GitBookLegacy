@@ -164,9 +164,9 @@
     * [Process input parameters](EE9-5--Process-input-parameters.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
-  * Export and Import of Metadata
-    * File Management
-    * Application Metadata Management
+  * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
+    * [File Management](3-1-19-1-File-Management.md)
+    * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)
   * Audit
   * BPM
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)
@@ -242,6 +242,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

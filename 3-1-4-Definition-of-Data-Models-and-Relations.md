@@ -1,4 +1,4 @@
-# Defining a data model and relations
+# Definition of Data model and Relations
 
 A data model is a representation of a database table, including its relations to other tables, defined as foreign keys or manually defined by the user when configuring the data model.  
 For each table it is possible to define the following properties:

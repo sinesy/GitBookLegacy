@@ -8,7 +8,7 @@
         "ebook" : "./styles/ebook.scss"
     },
     "plugins": [ 
-        "theme-gestalt", 
+        "gitbook-theme-gestalt", 
         "-theme-default", 
         "styles-sass-fix" 
     ],

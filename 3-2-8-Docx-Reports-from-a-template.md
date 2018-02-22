@@ -4,16 +4,13 @@
 Through the App Designer it is possible to define a list of reports and for each of them a set of docx template, one for each supported language. In this way when launching a report, Platform will use the template related to the current language.  
 When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These a re the supported tags:
 
-**&lt;table&gt;**
-
-**&lt;td&gt;**   
- **&lt;tdtranslation&gt;**
-
-**&lt;control&gt;**   
- **&lt;translation&gt;**   
- **&lt;subform&gt;**
-
-* **&lt;subcontrol&gt;** 
+* **&lt;table&gt;**
+* **&lt;td&gt;**
+* **&lt;tdtranslation&gt;**
+* **&lt;control&gt;**
+* **&lt;translation&gt;**
+* **&lt;subform&gt;**
+* **&lt;subcontrol&gt;**
 * **&lt;subcontroltranslation&gt;** 
 
 For each tag belonging to the main report \(control or translation\), a corresponding field will be created and linked to the report definition: when configuring the report, a value must be mapped to each of these fields, in order to provide a value to fill in for each of them.  

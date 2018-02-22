@@ -1,0 +1,20 @@
+{
+    "title" : "User Guide",
+    "description" : "A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting",
+    "language" : "en",
+    "styles": {
+        "website" : "./styles/website.scss",
+        "pdf": "./styles/pdf.scss",
+        "ebook" : "./styles/ebook.scss"
+    },
+    "plugins": [ "theme-gestalt", "-theme-default", "styles-sass-fix" ],
+    "pluginsConfig": {
+        "theme-gestalt": {
+            "logo": "/assets/logo.png",            // path to the logo file to use in the sidebar
+            "favicon": "/assets/favicon.png",        // path to your favicon
+            "baseUrl": null,                // sets the base url in the HTML head
+            "excludeDefaultStyles": true,        // excludes the pre-compiled theme css in favor of your custom css
+            "doNotHideChildrenChapters" : false        // in summary, disables hiding of child chapters for inactive chapter
+        }
+    }
+}

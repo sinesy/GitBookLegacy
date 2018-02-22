@@ -10,11 +10,11 @@
     "plugins": [ "theme-gestalt", "-theme-default", "styles-sass-fix" ],
     "pluginsConfig": {
         "theme-gestalt": {
-            "logo": "/assets/logo.png",            // path to the logo file to use in the sidebar
-            "favicon": "/assets/favicon.png",        // path to your favicon
-            "baseUrl": null,                // sets the base url in the HTML head
-            "excludeDefaultStyles": true,        // excludes the pre-compiled theme css in favor of your custom css
-            "doNotHideChildrenChapters" : false        // in summary, disables hiding of child chapters for inactive chapter
+            "logo": "/assets/logo.png",
+            "favicon": "/assets/favicon.png",
+            "baseUrl": null,
+            "excludeDefaultStyles": true,
+            "doNotHideChildrenChapters" : false
         }
     }
 }

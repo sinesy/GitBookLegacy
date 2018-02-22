@@ -1,6 +1,6 @@
 # Warp SDK
 
-4WS.Platform is a product created starting from Warp, an open source framework based on JEE 5/6 that adds more powerful features to JEE 5 and 6 and to Sencha ExtJS 3.4.
+4WS.Platform is a product created starting from Warp, an open source framework based on JEE 5/6 that adds more powerful features to JEE 5 and 6 and to Sencha ExtJS 3.4.It can be used to develop rich web applications, based on JPA, JDBC, EJB, Java Beans, JAX-RS, ExtJS technologies **. **
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/02/tech.png)
 

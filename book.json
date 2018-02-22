@@ -5,7 +5,7 @@
     "styles":{
         "website": "./styles/website.scss",
         "pdf": "./styles/pdf.scss",
-        "ebook" : "./styles/ebook.scss",
+        "ebook" : "./styles/ebook.scss"
     },
     "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"],
     "pluginsConfig": {

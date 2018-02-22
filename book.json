@@ -4,8 +4,6 @@
     "language" : "en",
     "styles": {
         "website" : "./styles/website.scss",
-        "pdf": "./styles/pdf.scss",
-        "ebook" : "./styles/ebook.scss"
     },
     "plugins": [ 
         "theme-gestalt", 

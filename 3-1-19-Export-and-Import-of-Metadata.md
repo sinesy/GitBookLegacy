@@ -7,10 +7,8 @@ In order to do it, you can use the Application -&gt; Import/Export application f
 
 This feature is divided in two parts:
 
-* File management
-* Metadata Application Management
-
-Each of this parts are described in detail in the following sub-sections.
+* File management \(previous page\)
+* Metadata Application Management \(next page\)
 
 ---
 

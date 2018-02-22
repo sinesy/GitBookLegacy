@@ -163,7 +163,7 @@
     * [Process input parameters](EE9-5--Process-input-parameters.md)
   * Queue Manager
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
-  * File Management
+  * [File Management](3-1-19-1-File-Management.md)
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
     * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)
   * Audit
@@ -241,6 +241,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

@@ -3,11 +3,14 @@
 // Put your variable overrides here
 //$book-background: white;
 //$page-background: $book-background;
-$sidebar-background: rgb(17,17,17);
 $color-border: #F7F7F7;
 
+$sidebar-background: rgb(17,17,17);
+$sidebar-show-nested-levels : true;
+$sidebar-color: rgb(149,149,149);
+
 $color-primary: rgb(189,189,189);
-$color-text: rgb(149,149,149);
+$color-text: black;
 
 $heading-map : ( 
                 color: $color-primary, 

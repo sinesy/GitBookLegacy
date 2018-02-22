@@ -8,5 +8,4 @@
         "ebook" : "./styles/ebook.scss"
     },
     "plugins": ["theme-default"]
-    }
 }

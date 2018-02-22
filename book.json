@@ -2,6 +2,11 @@
     "title" : "User Guide",
     "description" : "A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting",
     "language" : "en",
+    "style":{
+        "website": "./styles/website.scss",
+        "pdf": "./styles/pdf.scss",
+        "ebook" : "./styles/ebook.scss",
+    },
     "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"],
     "pluginsConfig": {
         "theme-gestalt": {
@@ -12,4 +17,5 @@
             "doNotHideChildrenChapters" : false        
         }
     }
+    
 }

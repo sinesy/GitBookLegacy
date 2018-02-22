@@ -5,6 +5,6 @@
     "styles": {
         "website" : "./styles/website.scss",
     },
-    "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"],
+    "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"]
     
 }

@@ -7,11 +7,11 @@
         "pdf": "./styles/pdf.scss",
         "ebook" : "./styles/ebook.scss"
     },
-    "plugins": { 
+    "plugins": [ 
         "theme-gestalt", 
         "-theme-default", 
         "styles-sass-fix" 
-    },
+    ],
     "pluginsConfig": {
         "theme-gestalt": {
             "logo": "/assets/logo.png",            // path to the logo file to use in the sidebar

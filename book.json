@@ -2,5 +2,14 @@
     "title" : "User Guide",
     "description" : "A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting",
     "language" : "en",
-    "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"]
+    "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"],
+    "pluginsConfig": {
+        "theme-gestalt": {
+            "logo": "./assets/logo.png",            
+            "favicon": "./assets/favicon.png",        
+            "baseUrl": null,                
+            "excludeDefaultStyles": true,        
+            "doNotHideChildrenChapters" : false        
+        }
+    }
 }

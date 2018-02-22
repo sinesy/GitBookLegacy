@@ -10,9 +10,9 @@
         "theme-gestalt": {
             "logo": "./assets/logo.png",            
             "favicon": "./assets/favicon.png",        
-            "baseUrl": "null",                
-            "excludeDefaultStyles": "true",        
-            "doNotHideChildrenChapters" : "false"        
+            "baseUrl": null,                
+            "excludeDefaultStyles": true,        
+            "doNotHideChildrenChapters" : false        
         }
     }
 }

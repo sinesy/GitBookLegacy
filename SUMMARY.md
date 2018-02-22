@@ -7,12 +7,8 @@
     * [Enterprise Edition](1-1-1-Enterprise-Edition.md)
     * [Tech specs and requirements](1-1-2-Tech-specs-and-requirements.md)
     * [Warp SDK](1-1-3-Warp-SDK.md)
-    * Embedded CMS
-  * App Designer and Interpreter
-    * Introduction
-    * App Designer
-    * Web Interpreter
-    * Mobile Interpreter
+    * [Embedded CMS](EE2-Embedded-CMS.md)
+
   * [Tips](2--Tips.md)
     * [Database design](2-1-Database-design.md)
     * [Creating a web app common use cases](2-3-Creating-a-web-app-common-use-cases.md)

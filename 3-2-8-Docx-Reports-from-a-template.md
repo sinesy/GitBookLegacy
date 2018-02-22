@@ -2,7 +2,7 @@
 
 4WS.Platform provides a feature to create docx documents on the fly, starting from a docx template. The template can contain images, paragraphs, tables or any other kind of object; it can also contain special tags that will be replaced by values by Platform, when the template is executed to produce the final docx. Values to fill in come from a main query or from a subquery, linked to a report table.  
 Through the App Designer it is possible to define a list of reports and for each of them a set of docx template, one for each supported language. In this way when launching a report, Platform will use the template related to the current language.  
-When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These a re the supported tags:
+When uploading a template, the App Designer will analyze the docx content, searching for the "special tags" and subreports \(i.e. tables\). These are the supported tags:
 
 * **&lt;table&gt;**
 * **&lt;td&gt;**

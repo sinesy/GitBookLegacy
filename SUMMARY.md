@@ -92,6 +92,8 @@
     * [How to define a server-side JavaScript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
     * [Web service](EE0-4-5-1-Web-service.md)
 * Setting up the environment
+  * How to install
+  * How to setup the development environment
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
@@ -241,4 +243,6 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
+
+
 

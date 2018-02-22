@@ -6,7 +6,7 @@
         "website" : "./styles/website.scss",
     },
     "plugins": [ 
-        "theme-gestalt", 
+        "gitbook-theme-gestalt", 
         "-theme-default", 
         "styles-sass-fix" 
     ],

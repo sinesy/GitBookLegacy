@@ -6,13 +6,5 @@
         "website" : "./styles/website.scss",
     },
     "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"],
-    "pluginsConfig": {
-        "theme-gestalt": {
-            "logo": "./assets/logo.png",            
-            "favicon": "./assets/favicon.png",        
-            "baseUrl": null,                
-            "excludeDefaultStyles": true,        
-            "doNotHideChildrenChapters" : false        
-        }
-    }
+    
 }

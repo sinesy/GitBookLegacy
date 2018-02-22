@@ -7,5 +7,5 @@
         "pdf": "./styles/pdf.scss",
         "ebook" : "./styles/ebook.scss"
     },
-    "plugins": ["gitbook-plugin-theme-nicola@git+https://github.com/nicolaberny/gitbook-plugin-theme-nicola/", "-theme-default"]
+    "plugins": ["gitbook install gitbook-plugin-theme-nicola@git+https://github.com/nicolaberny/gitbook-plugin-theme-nicola/", "-theme-default"]
 }

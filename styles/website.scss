@@ -1,5 +1,4 @@
-@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/variables";
-@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/website/sidebar";
+@import "../node_modules/gitbook-plugin-theme-default/src/less/website/variables";
 
 // Put your variable overrides here
 //$book-background: white;
@@ -7,9 +6,9 @@
 $color-border: #F7F7F7;
 
 $sidebar-background: rgb(17,17,17);
-$sidebar-show-nested-levels : true;
+//$sidebar-show-nested-levels : true;
 $sidebar-color: rgb(149,149,149);
-$sidebar-logo-height : 50px;
+//$sidebar-logo-height : 50px;
 
 $color-primary: rgb(189,189,189);
 $color-text: black;
@@ -19,5 +18,3 @@ $heading-map : (
                 border-bottom: 1px solid $color-primary,
                 font-family: $font-family-sans
                 );
-
-@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/all";

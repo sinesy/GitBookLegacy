@@ -2,9 +2,5 @@
     "title" : "User Guide",
     "description" : "A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting",
     "language" : "en",
-    "styles": {
-        "website" : "./styles/website.scss",
-    },
     "plugins": ["theme-gestalt", "-theme-default", "styles-sass-fix"]
-    
 }

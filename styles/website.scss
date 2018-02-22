@@ -1,18 +1,18 @@
-@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/variables";
+//@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/variables";
 
 // Put your variable overrides here
-$book-background: white;
-$page-background: yellow;
-$sidebar-background: lightblue;
-$color-border: $color-gray-dark;
+//$book-background: white;
+//$page-background: yellow;
+//$sidebar-background: lightblue;
+//$color-border: $color-gray-dark;
 
-$color-primary: green;
-$color-text: black;
+//$color-primary: green;
+//$color-text: black;
 
-$heading-map : ( 
-                color: $color-primary, 
-                border-bottom: 1px solid $color-primary,
-                font-family: $font-family-sans
-                );
+//$heading-map : ( 
+  //              color: $color-primary, 
+   //             border-bottom: 1px solid $color-primary,
+  //              font-family: $font-family-sans
+  //              );
 
-@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/all";
+//@import "../node_modules/gitbook-plugin-theme-gestalt/src/scss/all";

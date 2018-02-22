@@ -8,13 +8,12 @@
     * [Tech specs and requirements](1-1-2-Tech-specs-and-requirements.md)
     * [Warp SDK](1-1-3-Warp-SDK.md)
     * [Embedded CMS](EE2-Embedded-CMS.md)
-
   * [Tips](2--Tips.md)
     * [Database design](2-1-Database-design.md)
     * [Creating a web app common use cases](2-3-Creating-a-web-app-common-use-cases.md)
     * [Creating a mobile app common use cases](2-4-Creating-a-mobile-app-common-use-cases.md)
   * [Creating a web application](3-1-1-A-quick-guide-to-create-an-application.md)
-  * Road Map
+  * [Road Map](EE2-Road-Map.md)
 * [Core features](core-features.md)
   * [Tables](3-1-20-Tables.md)
   * [SqlTool](3-1-21-SqlTool.md)
@@ -95,8 +94,8 @@
     * [How to define a server-side JavaScript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
     * [Web service](EE0-4-5-1-Web-service.md)
 * Setting up the environment
-  * How to install
-  * How to setup the development environment
+  * [How to install](EE2-How-to-install.md)
+  * [How to setup the development environment](EE2-How-to-setup-the-development-environment.md)
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * Modules
@@ -246,6 +245,4 @@
       * [Design rules](EE4-6--Design-rules.md)
 * Troubleshootings
 * Best practises
-
-
 

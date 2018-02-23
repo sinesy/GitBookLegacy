@@ -7,5 +7,5 @@
         "pdf": "./styles/pdf.scss",
         "ebook" : "./styles/ebook.scss"
     },
-    "plugins": ["theme-default"]
+    "plugins": ["theme-platform"]
 }

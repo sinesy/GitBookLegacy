@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Overview](overview.md)
-  * About 4WS.Platform
+  * [About 4WS.Platform](about-4wsplatform.md)
     * [Architecture](1-1--Architecture.md)
     * [Enterprise Edition](1-1-1-Enterprise-Edition.md)
     * [Tech specs and requirements](1-1-2-Tech-specs-and-requirements.md)

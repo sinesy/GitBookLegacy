@@ -8,6 +8,5 @@ The following authentication providers are currently available:
 * [Google SSO](/google-sso.md)
 * [Custom SSO](/custom-sso.md)
 
-**Tibbr SSO authentication**  
-Specify the value “org.warp4ws.common.web.SSOTibbrServer” for theparameter SSO\_MANAGER\_CLASS.
+
 

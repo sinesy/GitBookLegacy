@@ -27,7 +27,7 @@
       * [By a datastore entity](EE4-4--How-to-create-business-components.md)
       * [By a MongoDB collection](EE8-4--How-to-create-business-components.md)
     * [Defining Custom Java Business component](EE9-2-2-How-to-define-a-Custom-Java-Business-component.md)
-  * Defining the UI
+  * [Defining the UI](defining-the-ui.md)
     * [App Designer](3-1-App-Designer.md)
       * [App Designer Menu](3-1-2-App-Designer-Menu.md)
       * [Definition of additional data sources](3-1-3-Definition-of-additional-data-sources.md)

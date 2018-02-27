@@ -98,7 +98,7 @@
   * [How to setup the development environment](EE2-How-to-setup-the-development-environment.md)
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
-* Modules
+* [Modules](modules.md)
   * Reports & Charts
     * [Jasper Report + iReport](3-1-22-Reports.md)
     * [Online report](3-1-16-Reports-on-the-fly.md)

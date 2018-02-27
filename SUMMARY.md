@@ -87,7 +87,7 @@
     * [Filter events](3-1-8-7-Filter-events.md)
     * [Timer events](EE0-4-8-Timer-events.md)
     * [Start-End event](EE0-4-10-Start-End-Event.md)
-  * Server-side Javascript & Web Service
+  * [Server-side Javascript & Web Service](server-side-javascript-and-web-service.md)
     * [Server-side Javascript](3-1-12-Server-side-Javascript.md)
     * [Grid component filled by a server-side JS](3-1-5-3-Grid-component-filled-by-a-server-side-JS.md)
     * [Detail component filled by a server-side JS](3-1-5-4-Detail-component-filled-by-a-server-side-JS.md)

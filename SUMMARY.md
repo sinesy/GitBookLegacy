@@ -93,7 +93,7 @@
     * [Detail component filled by a server-side JS](3-1-5-4-Detail-component-filled-by-a-server-side-JS.md)
     * [How to define a server-side JavaScript action](EE9-2-4--How-to-define-a-server-side-Javascript-action.md)
     * [Web service](EE0-4-5-1-Web-service.md)
-* Setting up the environment
+* [Setting up the environment](setting-up-the-environment.md)
   * [How to install](EE2-How-to-install.md)
   * [How to setup the development environment](EE2-How-to-setup-the-development-environment.md)
   * [Application parameters](3-1-18-2-Application-parameters.md)

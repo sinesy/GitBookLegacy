@@ -11,8 +11,8 @@ Contents index :
   * [Web Interpreter](/3-3-Web-Interpreter.md)
 * [Working with users and roles](/3-1-17-Users-and-Roles.md)
 * [Wizard](/3-1-25-Other-wizards.md)
-* Defining events
-* Server-side Javascript & Web Service
+* [Defining events](/defining-events.md)
+* [Server-side Javascript & Web Service](/server-side-javascript-and-web-service.md)
 
 
 

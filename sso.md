@@ -1,4 +1,4 @@
-# Authentication - SSO
+# SSO - Authentication
 
 4WS.Platform supports external/SSO/federated SSO authentication mechanisms, that hold usernames and passwords and let the credential to be stored in a central system, without replication. Anyway, to make 4WS.Platform work correctly the users and roles must be synchronized or provisioned.  
 The following authentication providers are currently available:

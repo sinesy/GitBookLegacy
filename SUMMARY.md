@@ -105,11 +105,11 @@
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
     * [Pivot Grid](3-1-6-2-Pivot-Grid-Panel.md)
-  * SSO
+  * [SSO](sso.md)
     * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
       * [Identity management on the internal Platform database](EE6-1-1-Identity-management-based-on-the-internal-Platform-database.md)
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
-    * LDAP
+    * [LDAP](ldap.md)
       * [LDAP support](3-2-3-LDAP-support.md)
       * [Identity management based on LDAP and database](EE6-1-2-Identity-management-based-on-LDAP-and-database.md)
       * [Identity management based on an embedded LDAP server used by Alfresco and or Activiti](EE6-1-4-Identity-management-based-on-an-embedded-LDAP-server-used-by-Alfresco-and-or-Activiti.md)

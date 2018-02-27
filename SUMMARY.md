@@ -120,7 +120,7 @@
       * [Google SSO](EE5-SSO.md)
       * [Google OAuth2](EE5-Google-OAuth2.md)
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)
-    * Custom SSO
+    * [Custom SSO](custom-sso.md)
       * [Authenticating on external systems](EE6-1-7-Authenticating-on-external-systems.md)
   * Mobile
     * [Mobile introduction](EE7-1--Mobile-Introduction.md)

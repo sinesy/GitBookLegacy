@@ -116,7 +116,7 @@
       * [Identity management based on a remote LDAP server to connect to Platform on the cloud](EE6-1-5-Identity-management-based-on-a-remote-LDAP-server-to-connect-to-Platform-on-the-cloud.md)
       * [Connecting an LDAP server to Activiti BPM](EE6-1-2-2-Connecting-an-LDAP-server-to-Activiti-BPM.md)
       * [Connecting an LDAP server to Alfresco ECM](EE6-1-2-1-Connecting-an-LDAP-server-to-Alfresco-ECM.md)
-    * Google SSO
+    * [Google SSO](google-sso.md)
       * [Google SSO](EE5-SSO.md)
       * [Google OAuth2](EE5-Google-OAuth2.md)
       * [Identity management based on Google SSO](EE6-1-3-Identity-management-based-on-Google-SSO.md)

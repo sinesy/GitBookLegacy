@@ -80,7 +80,7 @@
     * [How to open a window when pressing a button on the form toolbar](3-1-25-8-How-to-open-a-window-when-pressing-a-button-on-the-form-toolbar.md)
     * [How to load a grid when clicking on a tree node](3-1-25-9-How-to-load-a-grid-when-clicking-on-a-tree-node.md)
     * [How to load a form when clicking on a tree node](3-1-25-10-How-to-load-a-form-when-clicking-on-a-tree-node.md)
-  * Defining events
+  * [Defining events](defining-events.md)
     * [Panel events](3-1-8-1-Panel-events.md)
     * [Column events](3-1-8-3-Column-events.md)
     * [Control events](3-1-8-5-Control-events.md)

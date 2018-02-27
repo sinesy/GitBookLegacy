@@ -60,7 +60,7 @@
       * [Grid components](3-3-1-Grid-components.md)
       * [Detail forms](3-3-2-Detail-forms.md)
       * [Other components](3-3-3-Other-components.md)
-      * Other features
+      * [Other features](other-features.md)
         * [Chat](3-3-4-1-Chat.md)
       * [Global variables](3-3-5-Global-variables.md)
         * [Client-side global variables](3-3-5-1-Client-side-global-variables.md)

@@ -168,6 +168,7 @@
   * [Queue Manager](queue-manager.md)
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
     * [Application Log](EE10-1--Log-and-analysis/application-log.md)
+    * [Log statistics](EE10-1--Log-and-analysis/log-statistics.md)
   * [File Management](3-1-19-1-File-Management.md)
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
     * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)

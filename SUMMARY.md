@@ -208,7 +208,7 @@
       * [Activities](EE0-6-4-Activities.md)
       * [History](EE0-6-5-History.md)
   * [ECM](ecm.md)
-    * Alfresco
+    * [Alfresco](ecm/alfresco.md)
       * [Alfresco Introduction](EE1-1--Alfresco-Introduction.md)
       * [Integration between 4WS.Platform and Alfresco](EE1-2--Integration-between-4WS-Platform-and-Alfresco.md)
         * [Integration at GUI level](EE1-2-1-Integration-at-GUI-level.md)
@@ -225,7 +225,7 @@
         * [Definition of the GUI](EE1-3-7-Definition-of-the-GUI.md)
         * [Additional server-side services](EE1-3-8-Additional-server-side-services.md)
       * [Requirements](EE1-4-Requirements.md)
-      * [Current limits in 4WS-Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
+      * [Current limits in 4WS.Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
   * NoSQL databases
     * MongoDB

@@ -171,6 +171,7 @@
     * [Log statistics](EE10-1--Log-and-analysis/log-statistics.md)
     * [App analyzer](EE10-1--Log-and-analysis/app-analyzer.md)
     * [Table log](EE10-1--Log-and-analysis/table-log.md)
+    * [Heap memory analysis](EE10-1--Log-and-analysis/heap-memory-analysis.md)
   * [File Management](3-1-19-1-File-Management.md)
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
     * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)

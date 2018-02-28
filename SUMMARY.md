@@ -155,7 +155,7 @@
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [How to create Datastore entities](EE4-3--How-to-create-entities.md)
     * [Google Cloud Storage](EE5-Google-Cloud-Storage.md)
-  * Scheduler
+  * [Scheduler](scheduler.md)
     * [Scheduler Introduction](EE9-1--Scheduler-Introduction.md)
     * [Process settings](EE9-2--Process-settings.md)
       * [How to define a sequence of consecutive processes](EE9-2-1-How-to-define-a-sequence-of-consecutive-processes.md)

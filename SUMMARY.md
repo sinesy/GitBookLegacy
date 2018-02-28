@@ -165,7 +165,7 @@
     * [Email notifications](EE9-3--Email-notifications.md)
     * [Process executions](EE9-4--Process-executions.md)
     * [Process input parameters](EE9-5--Process-input-parameters.md)
-  * Queue Manager
+  * [Queue Manager](queue-manager.md)
   * [Log & Analysis](EE10-1--Log-and-analysis.md)
   * [File Management](3-1-19-1-File-Management.md)
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)

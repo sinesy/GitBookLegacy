@@ -203,7 +203,6 @@
       * [How to start a process from a JavaScript action](EE0-5-1-How-to-start-a-process-from-a-Javascript-action.md)
       * [How to complete a user task from a JavaScript action](EE0-5-2-How-to-complete-a-user-task-from-a-javascript-action.md)
     * [An example](an-example.md)
-      * [From theory to practise](EE0-6-1-From-theory-to-practise.md)
       * [Processes](EE0-6-2-Processes.md)
       * [Instances](EE0-6-3-Instances.md)
       * [Activities](EE0-6-4-Activities.md)

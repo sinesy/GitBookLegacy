@@ -129,7 +129,7 @@
       * [Server side functionalities](EE7-1-2-Server-side-functionalities.md)
       * [Server side Platform features](EE7-2-2-Server-side-Platform-features.md)
       * [Mobile app features](EE7-2-1-Mobile-app-features.md)
-    * Mobile side specifics
+    * [Mobile side specifics](mobile-side-specifics.md)
       * [Customizations](EE7-2-3-Customizations.md)
         * [Custom theme editor](EE7-2-3-1-Custom-theme-editor.md)
       * [App Menu](EE7-2-4-App-Menu.md)

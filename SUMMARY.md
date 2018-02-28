@@ -170,6 +170,7 @@
     * [Application Log](EE10-1--Log-and-analysis/application-log.md)
     * [Log statistics](EE10-1--Log-and-analysis/log-statistics.md)
     * [App analyzer](EE10-1--Log-and-analysis/app-analyzer.md)
+    * [Table log](EE10-1--Log-and-analysis/table-log.md)
   * [File Management](3-1-19-1-File-Management.md)
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
     * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)

@@ -171,7 +171,7 @@
   * [Export and Import of Metadata](3-1-19-Export-and-Import-of-Metadata.md)
     * [Application Metadata Management](3-1-19-2-Application-Metadata-Management.md)
   * [Audit](audit.md)
-  * BPM
+  * [BPM](bpm.md)
     * [BPMN Introduction](EE0-1--BPM-Introduction.md)
     * [BPMN main parts](EE0-2--BPMN-main-parts.md)
     * [Platform integration](EE0-3--Platform-integration.md)
@@ -199,16 +199,16 @@
         * [Example : how to get the current process instance id](EE0-4-7-2-Example-how-to-get-the-current-process-instance-id.md)
       * [Timer events](EE0-4-8-Timer-events.md)
       * [Subprocess and Call Activiti](EE0-4-9-Subprocess-and-Call-activiti.md)
-    * Utility methods available in Platform
+    * [Utility methods available in Platform](utility-methods-available-in-platform.md)
       * [How to start a process from a JavaScript action](EE0-5-1-How-to-start-a-process-from-a-Javascript-action.md)
       * [How to complete a user task from a JavaScript action](EE0-5-2-How-to-complete-a-user-task-from-a-javascript-action.md)
-    * An example
+    * [An example](an-example.md)
       * [From theory to practise](EE0-6-1-From-theory-to-practise.md)
       * [Processes](EE0-6-2-Processes.md)
       * [Instances](EE0-6-3-Instances.md)
       * [Activities](EE0-6-4-Activities.md)
       * [History](EE0-6-5-History.md)
-  * ECM
+  * [ECM](ecm.md)
     * Alfresco
       * [Alfresco Introduction](EE1-1--Alfresco-Introduction.md)
       * [Integration between 4WS.Platform and Alfresco](EE1-2--Integration-between-4WS-Platform-and-Alfresco.md)

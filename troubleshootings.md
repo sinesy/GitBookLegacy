@@ -1,4 +1,4 @@
 # Troubleshootings
 
---&gt; Pagina da completare !!
+--&gt; Page under construction !
 

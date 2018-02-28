@@ -2,11 +2,11 @@
 
 * [Reports & Charts](/reports-and-charts.md)
 * [SSO](/sso.md)
-* Mobile
+* [Mobile](/mobile.md)
 * [GSuite](/gsuite.md)
 * [Google Cloud Platform](/google-cloud-platform.md)
 * [Scheduler](/scheduler.md)
-* Queue Manager
+* [Queue Manager](/queue-manager.md)
 * [Log & Analysis](/EE10-1--Log-and-analysis.md)
 * [File Management](/3-1-19-1-File-Management.md)
 * [Export and Import of Metadata](/3-1-19-Export-and-Import-of-Metadata.md)

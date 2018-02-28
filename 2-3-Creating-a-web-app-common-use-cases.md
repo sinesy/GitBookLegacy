@@ -1,6 +1,8 @@
 # Creating a web app : common use cases
 
-**Creating an editable grid**  
+#### **Creating an editable grid**
+
+  
 A window composed of a single grid can be created through the following steps:
 
 * select “ **Data Model** ” -&gt;  **Add Objects to Database** “
@@ -9,15 +11,16 @@ A window composed of a single grid can be created through the following steps:
 * once created the object, two additional business components have also been created; one of them can be used to feed a grid: select “ **Objects and relations** ” and select the object just created; in case data to show on grid requires the access to multiple tables, press the “ **New** ” button on the “ **Relations** ” section and  **add any relationship needed, ** then press ** “Save”** 
 * choose the “ **Business Components** ” tab in the object detail window and select the business component related to a list of data and
 
-* press the “ **Edit** ” button to change setttings
+  * press the “ **Edit** ” button to change setttings
 
-* click on the “ **Relations** ” subfolder and check the relationships required for that business component
+  * click on the “ **Relations** ” subfolder and check the relationships required for that business component
 
-* in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
+  * in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
 
 * select “ **Application Management** ” -&gt; “ **Add Window** ” to access to the window creation wizard, set the  **window title** , an  **icon**  and press “ **Next** ” button on the right bottom area
 
 * select the “ **Grid** ” widget andpress “ **Next** ” button on the right bottom area
+
 * set the  **business component ** to feed the grid, i.e. the one just configured
 * press the “ **Generate** ” button on the right bottom area
 
@@ -25,7 +28,9 @@ At this point, the window containing the grid has been created and it is ready t
 You can access at any time the grid settings and change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on the grid component showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to the grid: you can still change the current business component content anyway.
 
-**Creating a readonly grid + detail form in the same window**  
+#### **Creating a readonly grid + detail form in the same window**
+
+  
 A window composed of a read onlygrid + detail form can be created through the following steps:
 
 * select “ **Data Model** ” -&gt;  **Add Objects to Database** “
@@ -34,15 +39,16 @@ A window composed of a read onlygrid + detail form can be created through the fo
 * once created the object, two additional business components have also been created; one of them can be used to feed a grid, the other to fill in the detail form: select “ **Objects and relations** ” and select the object just created; in case data to show on grid/form requires the access to multiple tables, press the “ **New** ” button on the “ **Relations** ” section and  **add any relationship needed, ** then press ** “Save”** 
 * choose the “ **Business Components** ” tab in the object detail window and select the business component related to a list of data and
 
-* press the “ **Edit** ” button to change setttings
+  * press the “ **Edit** ” button to change setttings
 
-* click on the “ **Relations** ” subfolder and check the relationships required for that business component
+  * click on the “ **Relations** ” subfolder and check the relationships required for that business component
 
-* in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
+  * in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
 
 * select “ **Application Management** ” -&gt; “ **Add Window** ” to access to the window creation wizard, set the  **window title** , an  **icon**  and press “ **Next** ” button on the right bottom area
 
 * select the “ **Grid and detail** ” widget andpress “ **Next** ” button on the right bottom area
+
 * set the  **business component ** to feed the grid, i.e. the one just configured; here you have to ** unselect the checkboxesrelated to “can insert”, “can update”, “multiple update” and “can delete”** ; the latter could be let selected, in case you want to allow the deleting operation from the grid
 * press “ **Next** ” button on the right bottom area
 * set the  **business component ** to feed the detail form
@@ -52,7 +58,9 @@ At this point, the window containing the grid and form has been created and it i
 You can access at any time the grid or form settings and change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on the grid or form component showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to the grid or form: you can still change the binded business components content anyway.
 
-**Adding a detail form to an already existing window containing a grid**  
+#### **Adding a detail form to an already existing window containing a grid**
+
+  
 If you have already created a window containing a grid, you can still add to the same window a detail form binded to the grid, through the following steps:
 
 * select “ **Application Management** ” -&gt; “ **Windows** ” and select the already existing window containing the grid, choose the “Panels” subfolder and double click on the grid
@@ -70,7 +78,9 @@ At this point, the window contains boththe grid and formandit is ready to be use
 You can access at any time the grid or form settings and change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on the grid or form component showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to the grid or form: you can still change the binded business components content anyway.
 
-**Creating a window containinga detail form and attach it to analready existing window containing a grid**  
+#### **Creating a window containing a detail form and attach it to analready existing window containing a grid**
+
+  
 If you have already created a window containing a grid, you can create a secondwindow with a detail form binded to the grid, through the following steps:
 
 * select “ **Application Management** ” -&gt; “ **Add Window** ” to access to the window creation wizard, set the  **window title** , an  **icon**  and press “ **Next** ” button on the right bottom area
@@ -82,7 +92,9 @@ At this point, the window contains boththe grid and formandit is ready to be use
 You can access at any time the grid or form settings and change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on the grid or form component showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to the grid or form: you can still change the binded business components content anyway.
 
-**Adding a gridto an already existing window containing a grid**  
+#### **Adding a grid to an already existing window containing a grid**
+
+  
 If you have already created a window containing a grid, you can still add to the same window a second gridbinded to the first one, through the following steps:
 
 * be sure you have already an object and  **business component to bind to the second grid** ; that business component should contain a filtering condition in the WHERE clause having a bind variable \(e.g. FIELD = :VARIABLE\)
@@ -101,7 +113,9 @@ At this point, the window contains the two gridsandit is ready to be used.
 You can access at any time the two gridsand change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on one of the grids showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to a grid: you can still change the binded business components content anyway.
 
-**Creating a window containinga gridand attach it to analready existing window containing a grid**  
+#### **Creating a window containing a grid and attach it to an already existing window containing a grid**
+
+  
 If you have already created a window containing a grid, you can create a secondwindow with a gridbinded to the first grid, through the following steps:
 
 * select “ **Application Management** ” -&gt; “ **Add Window** ” to access to the window creation wizard, set the  **window title** , an  **icon**  and press “ **Next** ” button on the right bottom area
@@ -113,7 +127,9 @@ At this point, the two windows areready to be used and connected to each other.
 You can access at any time the two grid settings and change them, through the“Application Management” -&gt; “Windows” menu item: once opened the window settings, choose the “Panels” subfolder and double click on the grid showed in the hierarchical representation of the window content.  
 Note that you are not allowed to change the business component previously binded to agrid: you can still change the binded business components content anyway.
 
-**Setup an enumeration of values \(static combobox\) for a grid column**  
+#### **Setup an enumeration of values \(static combobox\) for a grid column**
+
+  
 If you have already created a grid and need to define a column having a fixed enumeration of values, you have to use a static combobox. In order to do that, you have to followthesesteps:
 
 * select “ **Application Management** ” -&gt; “ **Code Selectors** ” and press the “ **New** ” button, in order to define a new code selector for the static combobox
@@ -129,7 +145,9 @@ If you have already created a grid and need to define a column having a fixed en
 At this point, the grid will use the combobox to decode the codes and show the code description instead.  
 You can change at any time the codes or descriptions for the code selector by selecting it on “Code Selectors” menu item.
 
-**Setup a dynamic enumeration of values \(remotecombobox\) for a grid column**  
+#### **Setup a dynamic enumeration of values \(remotecombobox\) for a grid column**
+
+  
 If you have already created a grid and need to define a column having a dynamicenumeration of values, coming from database tables, you have to use a static combobox. In order to do that, you have to followthesesteps:
 
 * select “ **Application Management** ” -&gt; “ **Code Selectors** ” and press the “ **New** ” button, in order to define a new code selector for the remotecombobox
@@ -148,7 +166,9 @@ If you have already created a grid and need to define a column having a dynamice
 At this point, the grid will use the combobox to decode the codes and show the code description instead.  
 Important note: do not use a remote combobox to show a large amount of data, since the combobox is not a suitablecomponent to use with thousand of data; with high volume of data to show, use a lookup component instead.
 
-**Setup a lookup cod+buttonfor a grid column**  
+#### **Setup a lookup cod+button for a grid column**
+
+  
 If you have already created a grid and need to define a column having a lookup component,followthesesteps:
 
 * select “ **Application Management** ” -&gt; “ **Code Selectors** ” and press the “ **New** ” button, in order to define a new code selector for the lookup component
@@ -166,7 +186,9 @@ If you have already created a grid and need to define a column having a lookup c
 Optionally, you can also set a series of additional columns to automatically fill in, when choosing a code from the lookup component: the values for these columns would come from the SELECT clause of the business component linked to the lookup. In order to preset the column values, press the “Edit” button in the “Grid Columns” subfolder, choose the row related to the lookup and press the lens button to the right of the code selector column.  
 In the opened window, there are two lists: in the list to the left the fields coming from the lookup are showed, whereas in the list on the right, the list of columns to fill in is showed. You have to combine fields coming from the lookup with the ones coming from the grid. Pay attention to double click a field from lookup with a column: do it one row at a time and do not double click all the fields in the lookup first and then the columns from grid!
 
-**Set grid cell content**  
+#### **Set grid cell content**
+
+  
 If you have already created a grid and need toset thecontent a column according to a specific logic, you have to add one or more column events to specific columns.  
 Suppose you have a grid where there are three columns linked to the following table fields: QUANTITY, UNIT\_PRICE, ROW\_TOTAL. That means that each of these columns can be identified by the corresponding attribute names: quantity, unitPrice, rowTotal. If you need to set the totalRow with the result ofquantity x unitPrice, what you need is to add a column event to the quantity column, so that a javascript action can be invoked when losing focus on that column and execute the calculus.  
 Note that probably additional column events are needed for other columns to cover all the cases involved with the reckoning of the row total.  
@@ -187,7 +209,9 @@ gridXXX.getSelectionModel\(\).getSelected\(\). **set** \(“rowTotal”,quantity
 * press the “ **Save** ” button to confirm the action and close that window
 * press the “ **Save** ” button to confirm thecreation of that event linked to the action just created
 
-**Set server sidecontent**  
+#### **Set server sidecontent**
+
+  
 Suppose you have a couple of tables having a relationship 1:N \(as for an order header and order rows tables\).Moreover,you have a grid showing data from the first tableand a second grid showing data about the second table.  
 If you need to reload the content of the first grid when saving data on the second grid, what you have to do is to create a SQL action linked to the “after saving” event of the second grid, so that this SQL can be used to update the content of the first grid.  
 Finally, the first grid has to be reloaded, to refresh its content.
@@ -206,7 +230,9 @@ UPDATE FIRST\_TABLE SET … WHERE FIELD = :FIELD\_FROM\_SECOND\_TABLE
 * press the “ **Save** ” button to confirm the action and close that window
 * press the “ **Save** ” button to confirm thecreation of that event linked to the action just created
 
-**Reload a grid from another window**  
+#### **Reload a grid from another window**
+
+  
 If you have two windows and you need to reload a grid included in the first window, starting from a second window opened from the first one, what you need is to pass a reference to the first window grid to the second window and then use it to force the grid reloading when needed.  
 These are the steps to follow:
 
@@ -222,7 +248,9 @@ var gridPanelId = args. **parentGridId** ;
 var parentGrid = Ext.ComponentMgr.get\(gridPanelId\);  
 parentGrid.store.reload\(\);
 
-**Creating a window with a tree + grid**  
+#### **Creating a window with a tree + grid**
+
+  
 A window composed of a tree and a gridcan be created through the following steps:
 
 * select “ **Data Model** ” -&gt;  **Add Objects to Database** “
@@ -230,18 +258,21 @@ A window composed of a tree and a gridcan be created through the following steps
 * press the “ **Generate** ” button on the right bottom area
 * once created the objects, two additional business components have also been created for each object; you have to set the right filtering conditions for each tree level and for the grid: select “ **Objects and relations** ” and open everyobject created, for each of it,choose the “ **Business Components** ” tab in the object detail window and select the business component related to a list of data and
 
-* press the “ **Edit** ” button to change settings
+  * press the “ **Edit** ” button to change settings
 
-* in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
+  * in the main subfolder, set the  **WHERE**  condition as needed, then press “ **Save** “
 
 * select “ **Application Management** ” -&gt; “ **Add Window** ” to access to the window creation wizard, set the  **window title** , an  **icon**  and press “ **Next** ” button on the right bottom area
 
 * select the “ **Tree** ” widget andpress “ **Next** ” button on the right bottom area
+
 * set the  **business component ** to feed  **the first level**  of thetree; once saved that panel, you can access to the configuration of all the other levels by pressing the “ **Further levels** ” button on the right bottom area
 * press “ **New** ” buttonto  **selectthe business component**  to use for each level; you have to repeat this step for each remaining tree level; choose the right component,  **select the field to use as node description**  and select again the row to have access to the fields list in the second grid
 * in the second grid,  **choose the field to map**  with the filtering conditions defined for the current business component; press “ **Save** ” button when completing that task
 
-**Use a grid to upload/download files**  
+#### **Use a grid to upload/download files**
+
+  
 First you have to create a window containing and editable grid.  
 Once create that grid, be sure there is a column that can be used to store the file name and then follow these steps:
 
@@ -257,7 +288,9 @@ Once create that grid, be sure there is a column that can be used to store the f
 
 At this point, the file name column will show a button used to show a small dialog through which upload/download/preview files.
 
-**Embedding google calendar, drive or other content in Platform**  
+#### **Embedding google calendar, drive or other content in Platform**
+
+  
 Goole Apps suite includes several content: Google Spreadsheets, Calendar, Hangout, etc.  
 This content is HTML based, consequently, it can be easily embedded into a 4WS.Platform application, as HTML fragments.  
 In order to do it, you have first to configure your application with the Google SSO. This operation is described in the Google sections.  

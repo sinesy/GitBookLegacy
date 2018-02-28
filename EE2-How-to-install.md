@@ -28,6 +28,7 @@ STEPS NEEDED TO INSTALL THE PRODUCT
 * default language code; 4WS.Platform supports any number of languages
 
 * installation path, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
+
 * JDK path: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
 * 4WS.Platform web context; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
 
@@ -40,11 +41,11 @@ username: ADMIN
 password: admin  
  **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
 
-4WS.PLATFORM INSTALLER STEPS
+#### 4WS.PLATFORM INSTALLER STEPS
 
 * **START**
 
-   Type the following command from the shell: installgui.sh or installgui.bat.
+  Type the following command from the shell: installgui.sh or installgui.bat.
 
   ![](http://4wsplatform.org/wp-content/uploads/2013/10/Install0-300x206.png)
 

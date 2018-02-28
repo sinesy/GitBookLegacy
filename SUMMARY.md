@@ -227,15 +227,15 @@
       * [Requirements](EE1-4-Requirements.md)
       * [Current limits in 4WS.Platform - Alfresco integration](EE1-5-Current-limits-in-4WS-Platform-Alfresco-integration.md)
   * [Lotus Notes Migration Tool](3-2-1-3-Lotus-Domino-Migration-Tool.md)
-  * NoSQL databases
-    * MongoDB
+  * [NoSQL databases](nosql-databases.md)
+    * [MongoDB](nosql-databases/mongodb.md)
       * [MongoDB Introduction](EE8-1--Mongo-Introduction.md)
       * [Setting up the environment](EE8-2--Setting-up-the-environment.md)
       * [How to create collections](EE8-3--How-to-create-collections.md)
       * [How to create business components](EE8-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from MongoDB collections](EE8-5--How-to-create-windows-filled-with-data-coming-from-Mongo-DB-collections.md)
       * [Design rules](EE8-6--Design-rules.md)
-    * Google Datastore
+    * [Google Datastore](nosql-databases/google-datastore.md)
       * [Google Datastore Introduction](EE4-1--Google-Datastore-Introduction.md)
       * [Setting up the environment](EE4-2--Setting-up-the-environment.md)
       * [How to create entities](EE4-3--How-to-create-entities.md)

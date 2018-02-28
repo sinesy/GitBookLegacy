@@ -1,5 +1,7 @@
 # Mobile
 
+Creating applications for mobile devices
+
 * [Mobile introduction](/EE7-1--Mobile-Introduction.md)
 * [Offline vs Online](/EE7-2--Main-features.md)
 * [Mobile side specifics](/mobile-side-specifics.md)

@@ -2,19 +2,18 @@
 
 #### **Opening a detail form in a window, starting from a click in a row of a grid**
 
-  
 Suppose you have a window containing a grid and you want to replace that window with a window containing a detail form where showing data related to a row selected in grid.  
 The steps to follow are:
 
-* create the Data Model for grid and form
-* create or redefine the “Business Component for a list” to link to the grid
-* create or redefine the “Business Component for a form” to link to the form and be sure to include in the WHERE clause a filtering condition to read one only record \(e.g. WHERE MY\_TABLE.MY\_PK = :MY\_PK\)
-* create a window containing the grid, using UI -&gt; Windows -&gt; New window an choose the grid panel option
-* create a window containing the detail form, using UI -&gt; Windows -&gt; New window an choose the detail form option
-* open the window containing the grid, select the Panels subfolder and open the corresponding grid \(right click on the tree node related to the grid and then select “Show panl details”
-* choose the Events subfolder in the grid panel definition window and add a new event having type “Touch event on a grid row”
-* double click on the Action cell to open the Action editor
-* in the Action editor, select the “Javascript” option and type the following code:
+1. create the Data Model for grid and form
+2. create or redefine the “Business Component for a list” to link to the grid
+3. create or redefine the “Business Component for a form” to link to the form and be sure to include in the WHERE clause a filtering condition to read one only record \(e.g. WHERE MY\_TABLE.MY\_PK = :MY\_PK\)
+4. create a window containing the grid, using UI -&gt; Windows -&gt; New window an choose the grid panel option
+5. create a window containing the detail form, using UI -&gt; Windows -&gt; New window an choose the detail form option
+6. open the window containing the grid, select the Panels subfolder and open the corresponding grid \(right click on the tree node related to the grid and then select “Show panl details”
+7. choose the Events subfolder in the grid panel definition window and add a new event having type “Touch event on a grid row”
+8. double click on the Action cell to open the Action editor
+9. in the Action editor, select the “Javascript” option and type the following code:
 
 ```js
 var args = new Object();
@@ -29,7 +28,6 @@ The variable “args” represents any number of attributes to pass forward to t
 
 #### **Opening a report in a window**
 
-  
 PDF documents cab ne generated on the fly only on the web side, but the can be showed in a window of the mobile app.  
 Consequently, you always need to have a working Internet connection in order to invoke the reports generation, download it and then show it within the app.  
 Reports can be generated using Jasper Report, which is embedded in the web layer.  
@@ -71,7 +69,6 @@ That’s all!
 
 #### **Choosing a photo from photo-library/take a photo and send it to the server**
 
-  
 Platform provides a series of javascript methods you can use to manage photos.  
 What you need to to is creating a javascript action and include in it a few built-in methods:
 
@@ -128,7 +125,6 @@ where:
 
 #### **Scanning a barcode using the camera**
 
-  
 Platform provides a built-in method to scan a barcode:
 
 ```js

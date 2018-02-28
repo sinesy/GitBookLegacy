@@ -3,7 +3,7 @@
 In this page you can find instructions about how to install 4WS.Platform – Community Edition.  
 The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not need to configure anything: the service is available instantly, once purchased the service.
 
-STEPS NEEDED TO INSTALL THE PRODUCT
+#### STEPS NEEDED TO INSTALL THE PRODUCT
 
 * **Install JDK 1.7.x**  in your machine, if not already available; please, do not use other versions, such as OpenJDK, otherwise some parts of the product would not work correctly. You can find that distribution also at this link:
   JDK 1.7
@@ -30,6 +30,7 @@ STEPS NEEDED TO INSTALL THE PRODUCT
 * installation path, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
 
 * JDK path: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
+
 * 4WS.Platform web context; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
 
 * **Run Tomcat**  A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)

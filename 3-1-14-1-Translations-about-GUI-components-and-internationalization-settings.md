@@ -14,10 +14,10 @@ The tree organizes all the translations according to the type:
 
 ![](http://4wsplatform.org/wp-content/uploads/2018/01/translations.png)
 
-**How the translations are generated**   
+**How the translations are generated**  
 When creating a new component through the Designer, such as a label,  **the user**  has only  **provided one**   **description**  for the label, so  **this description is applied for all the languages** . Afterwards, the user can exploit the "Translations" feature to  **change the description for any language**  related to that label.
 
-**How to work with translations**   
+**How to work with translations**  
 The best way to find a panel is to work with the filter on the left: just expand Windows node and then select the right window and select the panel you are interested in, to show its translation in the grid on the right.  
 In order to make it easier the search for a specific component in this dictionary of translations, you can always use the  **quick filter panel**  by right clicking on a cell of that grid.  
 Moreover, there is a ** filter panel**  above the editable grid: it is possible to show in the grid only a subset of the whole dictionary, by showing only the ones:
@@ -27,7 +27,7 @@ Moreover, there is a ** filter panel**  above the editable grid: it is possible 
 * hideable –control labels/column headers declared as “hideable”, i.e. they can be visible or not currently, but they could be shown at some time
 * exportable – UI components which will be exported when exporting metadata
 
-**Custom translations**   
+**Custom translations**  
 In addition to the "Translations" functionality, there is also a " **Custom translations** " node in the tree: it can be used to show all ad hoc translations already defined and to add new ones.  
 Moreover, you can customize the default translations provided through the first feature. If the same entry is defined as a custom translation, this one has priority over the default translation.  
 In order to figure out when "Custom translations" comes in handy, it is important to focus on the deploy task, from the development environment to the next one, such as test or production.  
@@ -36,12 +36,18 @@ Apart from translations, this feature also manages internationalization settings
 A date value can be formatted with different separators among year, month, day, hours, minutes \(e.g.  **2015-01-01**  vs  **2015/01/01** \) and these parts can be set in different orders \(e.g.  **2015-31-12**  vs  **31-12-2015** \).  
 Similarly, numbers can be formatted in different ways: decimal symbol, thousand symbol, grouping or not, numbers of digits before and after the decimal symbol and so forth.  
 All these settings have already a default value, for each language used.  
-In case these settings must be overridden, it is possible to reset them, by adding entries in the Translations window, according to the following list of entries:  
+In case these settings must be overridden, it is possible to reset them, by adding entries in the Translations window, according to the following list of entries:
+
+| Entry | Example of value | Meaning |
+| :--- | :--- | :--- |
+| common.extdateformat | Y/m/d | define how year, month and day of month must be showed, for date \(only\) values |
+
+  
 \|  **Entry**  \|  **Example of value**  \|  **Meaning**  \|  
 \| :--- \| :--- \| :--- \|  
 \| common.extdateformat \| Y/m/d \| define how year, month and day of month must be showed, for date \(only\) values \|  
 \| common.extdatetimeformat \| Y/m/d H:i \| define how year, month and day of month + hours and minutes must be showed for date+time values \|  
-\| common.currencysymbol \| $ \| curreny symbol to use when defining numeric columns/controls as currency type components \|  
+\| common.currencysymbol \| $ \| currency symbol to use when defining numeric columns/controls as currency type components \|  
 \| common.decimalsymbol \| . \| decimal symbol to use with numeric columns/controls \|  
 \| common.thousandsymbol \| , \| thousand symbol to use with numeric columns/controls \|  
 \| common.groupingsymbol \| , \| grouping symbol to use with numeric columns/controls \|  

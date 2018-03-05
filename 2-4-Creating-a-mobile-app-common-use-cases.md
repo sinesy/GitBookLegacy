@@ -1,6 +1,6 @@
 # Creating a mobile app common use cases
 
-#### **Opening a detail form in a window, starting from a click in a row of a grid**
+#### **Opening a detail form in a window, starting from a click in a row of a grid** {#opendetailform}
 
 Suppose you have a window containing a grid and you want to replace that window with a window containing a detail form where showing data related to a row selected in grid.  
 The steps to follow are:

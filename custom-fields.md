@@ -1,6 +1,6 @@
 # Custom Fields
 
-In a multi-company environment 4WS.Platform allows you to create custom fields in each object.
+In a multi-company environment 4WS.Platform allows you to create custom fields in each object. 
 
 Fields added to the object are also physically created in the associated database table. It is possible to create fields of type text, number with or without decimals, and date with or without the time.
 

@@ -53,6 +53,7 @@ A window composed of a read onlygrid + detail form can be created through the fo
 * press “ **Next** ” button on the right bottom area
 
 * set the  **business component ** to feed the detail form
+
 * press the “ **Generate** ” button on the right bottom area
 
 At this point, the window containing the grid and form has been created and it is ready to be used.  
@@ -262,7 +263,7 @@ A window composed of a tree and a gridcan be created through the following steps
 
 * in the second grid,  **choose the field to map**  with the filtering conditions defined for the current business component; press “ **Save** ” button when completing that task
 
-#### **Use a grid to upload/download files** {#gridtoloadfiles}
+#### **Use a grid to upload/download files** {#usegridtoupdownloadfiles}
 
 First you have to create a window containing and editable grid.  
 Once create that grid, be sure there is a column that can be used to store the file name and then follow these steps:

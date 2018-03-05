@@ -26,7 +26,7 @@ Basically, through this code, you are passing the myPk attribute \(corresponding
 The variable “args” represents any number of attributes to pass forward to the window to open.  
  **Note** : Everything described here can be automated using the Windows -&gt; New window wizard and choose a form directly connected to the grid, i.e. when defining the form, select the “Linked grid” combobox.
 
-#### **Opening a report in a window**
+#### **Opening a report in a window** {#openreport}
 
 PDF documents cab ne generated on the fly only on the web side, but the can be showed in a window of the mobile app.  
 Consequently, you always need to have a working Internet connection in order to invoke the reports generation, download it and then show it within the app.  

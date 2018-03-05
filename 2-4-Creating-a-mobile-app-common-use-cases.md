@@ -67,7 +67,7 @@ where:
 
 That’s all!
 
-#### **Choosing a photo from photo-library/take a photo and send it to the server**
+#### **Choosing a photo from photo-library/take a photo and send it to the server** {#sendingphototoserver}
 
 Platform provides a series of javascript methods you can use to manage photos.  
 What you need to to is creating a javascript action and include in it a few built-in methods:
@@ -123,7 +123,7 @@ where:
 * YYY is the action id to define on the server \(a server-side javascript action\), which will be automatically invoked just after receiving the file. This is helpful to carry out additional operations on the server, like saving a record in a table, related to the file just received form the mobile app
 * ZZZ is the directory id, i.e. the identifier of a directory defined through Administration -&gt; Directories: it represents the path where the file just received will be stored
 
-#### **Scanning a barcode using the camera**
+#### **Scanning a barcode using the camera** {#scanningbarcode}
 
 Platform provides a built-in method to scan a barcode:
 

@@ -3,7 +3,7 @@
 In this page you can find instructions about how to install 4WS.Platform – Community Edition.  
 The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not need to configure anything: the service is available instantly, once purchased the service.
 
-STEPS NEEDED TO INSTALL THE PRODUCT
+#### STEPS NEEDED TO INSTALL THE PRODUCT
 
 * **Install JDK 1.7.x**  in your machine, if not already available; please, do not use other versions, such as OpenJDK, otherwise some parts of the product would not work correctly. You can find that distribution also at this link:
   JDK 1.7
@@ -24,9 +24,13 @@ STEPS NEEDED TO INSTALL THE PRODUCT
 * database settings, required to connect to the database schema, where the installer will create automatically all the required tables and initial data
 
 * company id; it represents a 5 characters code to use to partition all data for a specific “tentant”: 4WS.Platform supports multi-tenancy, that is to say, you can run the same application for distinct organizations, each identified by a specific company id, which is used to partition data per organization
+
 * default language code; 4WS.Platform supports any number of languages
+
 * installation path, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
+
 * JDK path: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
+
 * 4WS.Platform web context; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
 
 * **Run Tomcat**  A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)
@@ -38,10 +42,47 @@ username: ADMIN
 password: admin  
  **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
 
-4WS.PLATFORM INSTALLER STEPS
+#### 4WS.PLATFORM INSTALLER STEPS
 
-* Start  
+* **START**
+
   Type the following command from the shell: installgui.sh or installgui.bat.
+
+  ![](http://4wsplatform.org/wp-content/uploads/2013/10/Install0-300x206.png)
+
+* **SETTING DATABASE**
+
+  Insert data of database connection.
+
+  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install1-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install1.png)
+
+* **SETTING CONFIG**
+
+  Complete configuration fields for installation.
+
+  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install2-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install2.png)
+
+* **END**
+
+  Enjoy 4WS.Platform.
+
+  [![](http://4wsplatform.org/wp-content/uploads/2013/10/Install3-300x206.png)](http://4wsplatform.org/wp-content/uploads/2013/10/Install3.png)
+
+#### TROUBLESHOOTING
+
+Be careful : **avoid the installation of Tomcat in paths having a space in folders**, such as C:\Program Files
+
+Windows operating system could have problems in recognizing the correct path.
+
+If you are using recent versions of Windows \(Vista or next versions\), you have to use a superuser and open the prompt by right clicking on it and choose “Run as Administrator”: that is the right way to install the program. DO NOT simply execute the installer using a superuser \(e.g. administrator\), since this has not the same effect.
+
+Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat.
+
+If the installation process was successfully completed but when you start Tomcat it terminates immediately or 4WS.Platform is not accessible, it is likely that you have specified the wrong JDK path during the installation process: it is NOT the JRE path, but**the JDK path: **in that case, you have to delete the installation and run the installer again.
+
+**If you have changed the HTTP port in tomcat/conf/server.xml file, the URL to use in the browser to connect to 4WS.Platform changes as well.**
+
+If**you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transations; if this is the table type defined for yuor tables, you have to change it to InnoDB.
 
 ---
 

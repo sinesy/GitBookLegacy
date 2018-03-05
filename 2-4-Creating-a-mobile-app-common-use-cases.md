@@ -1,18 +1,19 @@
 # Creating a mobile app common use cases
 
-**Opening a detail form in a window, starting from a click in a row of a grid**  
+#### **Opening a detail form in a window, starting from a click in a row of a grid** {#opendetailform}
+
 Suppose you have a window containing a grid and you want to replace that window with a window containing a detail form where showing data related to a row selected in grid.  
 The steps to follow are:
 
-* create the Data Model for grid and form
-* create or redefine the “Business Component for a list” to link to the grid
-* create or redefine the “Business Component for a form” to link to the form and be sure to include in the WHERE clause a filtering condition to read one only record \(e.g. WHERE MY\_TABLE.MY\_PK = :MY\_PK\)
-* create a window containing the grid, using UI -&gt; Windows -&gt; New window an choose the grid panel option
-* create a window containing the detail form, using UI -&gt; Windows -&gt; New window an choose the detail form option
-* open the window containing the grid, select the Panels subfolder and open the corresponding grid \(right click on the tree node related to the grid and then select “Show panl details”
-* choose the Events subfolder in the grid panel definition window and add a new event having type “Touch event on a grid row”
-* double click on the Action cell to open the Action editor
-* in the Action editor, select the “Javascript” option and type the following code:
+1. create the Data Model for grid and form
+2. create or redefine the “Business Component for a list” to link to the grid
+3. create or redefine the “Business Component for a form” to link to the form and be sure to include in the WHERE clause a filtering condition to read one only record \(e.g. WHERE MY\_TABLE.MY\_PK = :MY\_PK\)
+4. create a window containing the grid, using UI -&gt; Windows -&gt; New window an choose the grid panel option
+5. create a window containing the detail form, using UI -&gt; Windows -&gt; New window an choose the detail form option
+6. open the window containing the grid, select the Panels subfolder and open the corresponding grid \(right click on the tree node related to the grid and then select “Show panl details”
+7. choose the Events subfolder in the grid panel definition window and add a new event having type “Touch event on a grid row”
+8. double click on the Action cell to open the Action editor
+9. in the Action editor, select the “Javascript” option and type the following code:
 
 ```js
 var args = new Object();
@@ -25,7 +26,8 @@ Basically, through this code, you are passing the myPk attribute \(corresponding
 The variable “args” represents any number of attributes to pass forward to the window to open.  
  **Note** : Everything described here can be automated using the Windows -&gt; New window wizard and choose a form directly connected to the grid, i.e. when defining the form, select the “Linked grid” combobox.
 
-**Opening a report in a window**  
+#### **Opening a report in a window** {#openreport}
+
 PDF documents cab ne generated on the fly only on the web side, but the can be showed in a window of the mobile app.  
 Consequently, you always need to have a working Internet connection in order to invoke the reports generation, download it and then show it within the app.  
 Reports can be generated using Jasper Report, which is embedded in the web layer.  
@@ -35,6 +37,7 @@ Typical scanarios are:
 * create a custom button in a grid or form \(shown in the topbar\) and link to its click the execution of the action
 
 * listen for the row click in a grid and link to that event the execution of the action
+
 * create a menu item having javascript type, i.e. directly linked to the action
 
 Independently of the event listened to, the action should contain something like the following:
@@ -64,7 +67,8 @@ where:
 
 That’s all!
 
-**Choosing a photo from photo-library/take a photo and send it to the server**  
+#### **Choosing a photo from photo-library/take a photo and send it to the server** {#sendingphototoserver}
+
 Platform provides a series of javascript methods you can use to manage photos.  
 What you need to to is creating a javascript action and include in it a few built-in methods:
 
@@ -119,7 +123,8 @@ where:
 * YYY is the action id to define on the server \(a server-side javascript action\), which will be automatically invoked just after receiving the file. This is helpful to carry out additional operations on the server, like saving a record in a table, related to the file just received form the mobile app
 * ZZZ is the directory id, i.e. the identifier of a directory defined through Administration -&gt; Directories: it represents the path where the file just received will be stored
 
-**Scanning a barcode using the camera**  
+#### **Scanning a barcode using the camera** {#scanningbarcode}
+
 Platform provides a built-in method to scan a barcode:
 
 ```js

@@ -243,7 +243,6 @@
       * [How to create business components](EE4-4--How-to-create-business-components.md)
       * [How to create windows filled with data coming from Datastore entities](EE4-5--How-to-create-windows-filled-with-data-coming-from-datastore-entities.md)
       * [Design rules](EE4-6--Design-rules.md)
-* [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises.md)
   * [Database design](/2-1-Database-design.md)
   * [Database maintenance](database-maintenance.md)

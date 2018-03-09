@@ -1,4 +1,4 @@
-## Database maintenance
+# Database maintenance
 
 It is not advisable to rename PK columns in a table. The application uses the PK fields to generate unique keys as well as to set the parameters of input/output for windows and panels.
 

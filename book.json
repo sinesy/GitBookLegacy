@@ -7,5 +7,5 @@
         "pdf": "./styles/pdf.css",
         "ebook" : "./styles/ebook.css"
     },
-    "plugins": ["apidefault", "collapsible-chapters", "-lunr", "-search", "search-pro"] 
+    "plugins": ["theme-default", "collapsible-chapters", "-lunr", "-search", "search-pro"] 
 }

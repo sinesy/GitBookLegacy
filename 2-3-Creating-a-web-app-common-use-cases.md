@@ -142,7 +142,7 @@ If you have already created a grid and need to define a column having a fixed en
 At this point, the grid will use the combobox to decode the codes and show the code description instead.  
 You can change at any time the codes or descriptions for the code selector by selecting it on “Code Selectors” menu item.
 
-#### **Setup a dynamic enumeration of values \(remotecombobox\) for a grid column** {#setupdynamicenumeration}
+#### **Setup a dynamic enumeration of values \(remote combobox\) for a grid column** {#setupdynamicenumeration}
 
 If you have already created a grid and need to define a column having a dynamicenumeration of values, coming from database tables, you have to use a static combobox. In order to do that, you have to followthesesteps:
 

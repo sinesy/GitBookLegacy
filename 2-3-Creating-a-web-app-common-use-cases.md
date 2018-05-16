@@ -162,8 +162,6 @@ If you have already created a grid and need to define a column having a dynamice
 At this point, the grid will use the combobox to decode the codes and show the code description instead.  
 Important note: do not use a remote combobox to show a large amount of data, since the combobox is not a suitable component to use with thousand of data; with high volume of data to show, use a lookup component instead.
 
-
-
 #### Setup a checkbox group in a filter panel
 
 An helpful way to compact a set of filter controls in a filter panel is by using the check group.
@@ -182,14 +180,12 @@ Finally, when pressing the Search button, all these filters will be applied to t
 
 In this way, it is possible to choose a filter value for each on the additional checkboxes, with a reduced amount of space in the filter panel.
 
-
-
 In order to setup what described above, you need to define:
 
-* a "static combo selector" or "dynamic combo selector" for each additional checkbox
-* a "static combo selector" must be defined, having as many items as the number of additional checkboxes.
+* a "**static combo selector**" or "**dynamic combo selector**" **for each additional checkbox**
+* a "**static combo selector**" must be defined, having **as many items as the number of additional checkboxes**.
 
-These selectors can be created by selecting “ Application Management ” -&gt; “ Code Selectors ” and then New.
+These selectors can be created by selecting “ **Application Management **” -&gt; “ **Code Selectors** ” and then New.
 
 ![](/assets/newcity.png)
 
@@ -199,17 +195,16 @@ Before continuing, you have to complete all selectors, one for each additional c
 
 For each item in the last selector you have to define:
 
-a code filled with the selector id of the corresponding additional checkbox \(i.e. the selector which represents the chekbox\)
-
-a description with the same name of the database field name in the filter panel. Please pay attention to the exact naming to use for such a description: it must be the one reported in the filter panel field, like "TABLENAME.FIELDNAME"
+* a **code** filled with the **selector id **of the corresponding additional checkbox \(i.e. the selector which represents the chekbox\)
+* a **description** with the same name of the **database field name** in the filter panel. Please pay attention to the exact naming to use for such a description: it must be the one reported in the filter panel field, like "TABLENAME.FIELDNAME"
 
 ![](/assets/newgeofilter2.png)
 
-Finally, once completed the definition of all these selectors, the last step involves the definition of a virtual field in the filter panel.
+Finally, once completed the definition of all these selectors, the last step involves the **definition of a virtual field** in the filter panel.
 
 ![](/assets/filterpanel.png)
 
-Bear in mind that you have to select the "add to filter" option as well as choose the "checkbox group" type for the filter and specify the "static combo selector" defined above: in this way the right checkboxes will be automatically rendered, when selecting the checkbox group control.
+Bear in mind that you have to select the "**add to filter**" option as well as choose the "**checkbox group**" type for the filter and specify the "**static combo selector**" defined above: in this way the right checkboxes will be automatically rendered, when selecting the checkbox group control.
 
 Please note that no additional settings are required in order to apply the filtering conditions: they will be applied automatically by Platform when pressing the Search button.
 

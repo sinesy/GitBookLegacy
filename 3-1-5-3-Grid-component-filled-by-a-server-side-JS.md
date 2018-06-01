@@ -91,5 +91,23 @@ utils.setReturnValue(json);
 
 ---
 
+**Working with complex SQL queries and decoding fields**
+
+In case of a complex SQL query to pass to getPartialResult method, involving multiple tables and fields, it could happen that a filtering or sorting condition will not be applied correctly, since on the grid \(UI\) an attribute is passed forward to the javascript business component and here the attribute is not translated correctly.
+
+In such a scenario, you can use a utility method to use for each attribute to decode:
+
+**utils.decodeField\(attributeName,databaseFiedl\);**
+
+where attributeName is the attribute coming from the grid \(UI\), like "contacts.customerCode"  and databaseField represents the tablename.fieldname to use instead of the attribute, like "CONTACTS.CUSTOMER\_CODE".
+
+In case of multiple mappings, i.e. for more than one attribute, you can use setDecodeField for each of them.
+
+
+
+
+
+
+
 
 

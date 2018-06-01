@@ -97,17 +97,9 @@ In case of a complex SQL query to pass to getPartialResult method, involving mul
 
 In such a scenario, you can use a utility method to use for each attribute to decode:
 
-**utils.decodeField\(attributeName,databaseFiedl\);**
+**utils.decodeField\(attributeName,databaseField\);**
 
-where attributeName is the attribute coming from the grid \(UI\), like "contacts.customerCode"  and databaseField represents the tablename.fieldname to use instead of the attribute, like "CONTACTS.CUSTOMER\_CODE".
+where **attributeName** is the attribute coming from the grid \(UI\), like "contacts.customerCode"  and **databaseField** represents the tablename.fieldname to use instead of the attribute, like "CONTACTS.CUSTOMER\_CODE".
 
 In case of multiple mappings, i.e. for more than one attribute, you can use setDecodeField for each of them.
-
-
-
-
-
-
-
-
 

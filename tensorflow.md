@@ -1,16 +1,16 @@
 # **Machine Learning**
 
-Machine learning is a method of data analysis that automates analyticalmodelbuilding. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.
+Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.
 
 Building precise models allows an organization to get a better chance of identifying profitable opportunities – or avoiding unknown risks.
 
 Platform allows to create a model through atrainingof that model, starting from data.
 
-The correct definition of the model is checked out through thetestingstep.
+The correct definition of the model is checked out through the testing step.
 
-Finally, once the model has been trained opportunely, it can be used with real data to makepredictions.
+Finally, once the model has been trained opportunely, it can be used with real data to make predictions.
 
-**    
+**      
 **
 
 ## **Fundamentals**
@@ -19,7 +19,7 @@ Before using this module, it is essential to go into depth with some concepts ab
 
 In the following sections, an explanation about the most important concepts is provided.
 
-**    
+**      
 **
 
 ### **Training**
@@ -30,7 +30,7 @@ Consequently, the training stage must include not only data in terms of problems
 
 That model will be as accurate as the data provided can represent a variety of different scenarios.
 
-What does a problem mean? Aproblemis something which requires a solution and can be represented by a set of features, expressed as primitive data, such as text, number, date.
+What does a problem mean? A problem is something which requires a solution and can be represented by a set of features, expressed as primitive data, such as text, number, date.
 
 These features play an essential role in the model definition and its effectiveness. Having a limited number of features could not represent the problem completely, having a wide range of features could include data not really connected with the problem and could lead to a significant amount of training problems to submit, before making the model enough efficient.
 
@@ -66,7 +66,7 @@ base=2, height=2 could lead the model to predict a solution = 0, since it can se
 
 Consequently, it is fundamental to provide “good” training data, in order to let the model to make the right decisions. Creating the right training data is more a form of art rather than a scientific approach, since it is important to give enough data for different combinations of the features, so that the model can notice how same values for a specific feature has lead to different solutions.
 
-**    
+**      
 **
 
 ### **Testing**
@@ -83,7 +83,7 @@ If the accuracy of the model is not good, multiple training sessions should be c
 
 Each time a training session is performed, the accuracy of the updated model can be measured through the testing step.
 
-**    
+**      
 **
 
 ### **Prediction**
@@ -92,10 +92,10 @@ Once the testing proved the quality of the model though a good level of accuracy
 
 It is possible to use the model and make predictions with the data provided in input, expressed through the features defined initially.
 
-**    
+**      
 **
 
-**    
+**      
 **
 
 ## **Neural Networks**
@@ -120,23 +120,23 @@ However, a model having a high number of layers/nodes requires a large amount of
 
 It goes without saying that the number of layers/nodes must not be increased indiscriminately, since it may lead to the opposite outcome: a low accuracy, due to an insufficient number of training examples.
 
-**    
+**      
 **
 
-**    
+**      
 **
 
 ## **TensorFlow**
 
 Platform Machine Learning module is based on Google TensorFlow ML engine: you can use the user interface provided by Platform to define a model, train and test it and finally, to use it on predicting solutions with your own application data.
 
-All the complexity of TensorFlow is hidden by Platform: you can graphically configure your model and carry out training & testing sessions usingCSV filesorSQL queriesdefined within Platform.
+All the complexity of TensorFlow is hidden by Platform: you can graphically configure your model and carry out training & testing sessions using CSV filesorSQL queries defined within Platform.
 
 Finally, you can connect the defined model to the rest of your application and exploit the predictions it provides and save them along with your application data.
 
-Optionally, you can access toTensorBoarduser interface, directly from Platform, in case you need to get detail information about the training sessions and the neural network under definition.
+Optionally, you can access toTensor Board user interface, directly from Platform, in case you need to get detail information about the training sessions and the neural network under definition.
 
-**    
+**      
 **
 
 ## **Machine Learning in Platform**
@@ -161,23 +161,23 @@ This list reports all models defined. These models are grouped per topic: it is 
 
 Every model is uniquely identified by a “topic”. Other information reported in this list are:
 
-* Last training date time
+* **Last training date time**
 
-* Last training outcome
+* **Last training outcome**
 
-* Total number of training examples
+* **Total number of training examples**
 
-* Last testing date time
+* **Last testing date time**
 
-* Last testing outcome
+* **Last testing outcome**
 
-* Last testing accuracy, expressed in %
+* **Last testing accuracy, expressed in %**
 
-* Last prediction date time
+* **Last prediction date time**
 
-* Last prediction outcome
+* **Last prediction outcome**
 
-* Last prediction duration
+* **Last prediction duration**
 
 Through theNew Modelbutton it is possible to create a new model.
 
@@ -185,29 +185,29 @@ When pressing the New Model button, a wizard is prompted, in order to fill out a
 
 In thefirst panel, some properties are required:
 
-* Topic, identifying the current model; the model name is defined per tenant \(company id\), site and environment.
+* **Topic**, identifying the current model; the model name is defined per tenant \(company id\), site and environment.
 
-* Description
+* **Description**
 
-* Totalnumber of possible solutions\(e.g. 2 for the geometric problem described above\)
+* **Total number of possible solutions** \(e.g. 2 for the geometric problem described above\)
 
-* Bucket name, in Google Cloud Storage, where all CSV files will be saved, defined as a directory in Platform
+* **Bucket name**, in Google Cloud Storage, where all CSV files will be saved, defined as a directory in Platform
 
-* Number oftraining steps\(default value: 1000\), used to repeat multiple times the examples provided in input
+* **Number of training steps**\(default value: 1000\), used to repeat multiple times the examples provided in input
 
-* Number ofnodes per layer\(default value: 10\)
+* **Number of nodes per layer **\(default value: 10\)
 
-* Optional server-side javascriptaction to execute after a prediction, for example to read the solutions just reckoned and use them somewhere, together with other application data.
+* **Optional server-side javascript action to execute after a prediction**, for example to read the solutions just reckoned and use them somewhere, together with other application data.
 
 ![](https://lh6.googleusercontent.com/RP6hjI7szAyxAYEcEJBlAhVMUto9bzAfDwD9y5fmutkDYY8jIruiUT-SwgIZ48zzOats7mkP8m6AW-qLtpku8Yj_ULaDplfjqB9zvhXwZX7jM7jtFffcFsyqQcixFzGHfr7-fj4X)
 
-Once filled out all required information, the wizard prompts asecond panel, where a description must be provided for each solution, representing something understandable for the end user.
+Once filled out all required information, the wizard prompts a second panel, where a description must be provided for each solution, representing something understandable for the end user.
 
 In the previous panel the total number of solutions has been prompted: here it is need to fill out as many descriptions as the number of specified solutions.
 
 ![](https://lh6.googleusercontent.com/GpKrK7uWsi9jfthBqKqbrFvo3sfxNg253iR6H1aXXqXerORge0IpVEIey0MoLtWz6Bnh5X0s7o7gSSMwcEME4CsnVc6BLikkf0uOr1sQHULuaaXkr-yIsnt07ANpbeAaAiIMnQr6)
 
-Finally, thethird panelin the wizard, “Data Extraction” allows to define a SQL query to use to fetch data for the training/testing, in terms of problems \(not solutions too\).
+Finally, the third panel in the wizard, “Data Extraction” allows to define a SQL query to use to fetch data for the training/testing, in terms of problems \(not solutions too\).
 
 A “Test Query “ button can be used to test the correct syntax of the typed query.
 
@@ -217,9 +217,9 @@ This query is not necessary in case data for training/testing is provided throug
 
 Anyway, if the SQL query has been specified, then two additional fields are required:
 
-* main table- this is the table containing the main data
+* **main table** - this is the table containing the main data
 
-* identifying field- this is a field in the main table, which identifies data for each row
+* **identifying field** - this is a field in the main table, which identifies data for each row
 
 Optionally, it is possible to specify also aprediction field, an additional field in the main table, where storing the prediction provided by this functionality. That is to say, when a prediction is completed and predictions are got back by TensorFlow, these will be loaded in the main table too, by setting them on the prediction field.
 
@@ -231,12 +231,12 @@ In the detail model window, there are 3 buttons which allow to execute the train
 
 ![](https://lh6.googleusercontent.com/KMCIwq9zo3i5LKicWdvN_Qq5GbHTBq8qtmpW2CV6R1Z8LN5Z5AkhCAm3U6LXlXQiCI1Z5-pQiyCWmllP-x1MFq2fPcJy0AmORYviadq7CHxj8vdGGBWIsPhylrrzc7Btx5zlhsq5)
 
-**    
+**      
 **
 
 ### **Training in action**
 
-When pressing the training button, aTrainingwindow is displayed. Thanks to this window, it is possible to train the model any number of times, starting either from a CSV file written externally and uploaded to Platform or starting from the SQL query defined previously.
+When pressing the training button, a Training window is displayed. Thanks to this window, it is possible to train the model any number of times, starting either from a CSV file written externally and uploaded to Platform or starting from the SQL query defined previously.
 
 ![](https://lh5.googleusercontent.com/oKeOkJV48La-a1gwFNTU0kc5QL6ATCrC1AQQT6jmULUUCb5ge1z8l9Zxa8T7FFL_7XvA6-Cs_f4nuSpNhizlNuhurV50DJPGMHCLK3H9b4tFGP0B2q_0mRqoZuB2pPt35SxRQGKg)
 
@@ -246,11 +246,11 @@ In case of a CSV file, this must contain data about problems and solutions.
 
 The CSV to provide could contain either
 
-* data aboutproblems + solutions
+* **data about problems + solutions**
 
 or
 
-* data aboutproblems + solutions+ anadditional header rowat the beginning + acounter columnon the left
+* **data about problems + solutions + an additional header row at the beginning + a counter column on the left**
 
 In the first case, you can easily create an hand-written CSV.
 
@@ -316,7 +316,7 @@ You are free to fill out any number of rows: only the ones filled will be passed
 
 Again, you can see the history of all training sessions through the second folder.
 
-**    
+**      
 **
 
 ### **Testing in action**
@@ -331,14 +331,14 @@ A typical scenario is composed of multiple sessions of training + testing, until
 
 Unfortunately, it could happen that the model has been trained with “wrong” data, i.e. data which do not lead to an efficient model and it could become hard to “fix” the model with additional data, since it has been ruined by the previous sessions.
 
-Such a scenario can be prevented through theCopybutton: thanks to this feature it is possible to duplicate the current content of a model and create a sub-version of it, completely independent from the original one. This feature comes in handy to train the model with data which could turn out to be useless, without affecting the original model.
+Such a scenario can be prevented through the Copy button: thanks to this feature it is possible to duplicate the current content of a model and create a sub-version of it, completely independent from the original one. This feature comes in handy to train the model with data which could turn out to be useless, without affecting the original model.
 
-**    
+**      
 **
 
 ### **Prediction in action**
 
-When pressing the prediction button on the model window, aPredictionwindow is displayed. Thanks to this window, it is possible to execute any number of predictions, starting from the model trained previously.
+When pressing the prediction button on the model window, a Prediction window is displayed. Thanks to this window, it is possible to execute any number of predictions, starting from the model trained previously.
 
 A prediction can be carried out starting either from a CSV file written externally and uploaded to Platform or from a the SQL query defined previously.
 
@@ -352,44 +352,44 @@ Here the first column is about the solution, which will be sorted out automatica
 
 After executing a prediction, solutions sorted out by TensorFlow have been gathered and stored by Platform, together with the unique identifier of each record passed in input.
 
-In this way, it is possible to get this combination &lt;problem id, solution&gt; and move them to application tables.
+In this way, it is possible to get this combination** &lt;problem id, solution&gt;** and move them to application tables.
 
-These solutions can be moved to the application database through the optional “Prediction field” in the “Extraction data” folder of the model definition: when it is specified, the values for predictions will be stored in that field automatically.
+These solutions can be moved to the application database through the optional “**Prediction field**” in the “**Extraction data**” folder of the model definition: when it is specified, the values for predictions will be stored in that field automatically.
 
-In case of custom needs, including complex business logic to fire after a prediction, you can always specify the “Action after prediction” field, in the “Model” folder of the model definition: when it is specified, such action will be automatically invoked after setting prediction data in the table.
+In case of custom needs, including complex business logic to fire after a prediction, you can always specify the “**Action after prediction**” field, in the “**Model**” folder of the model definition: when it is specified, such action will be automatically invoked after setting prediction data in the table.
 
 The server-side javascript action receive in input this attributes in the “vo” predefined object:
 
-* startTime \(e.g. “2018/03/23 14:57:30”\)
+* **startTime** \(e.g. “2018/03/23 14:57:30”\)
 
-* topic
+* **topic**
 
-* duration \(expressed in seconds\)
+* **duration** \(expressed in seconds\)
 
-* cmd \(“prediction”\)
+* **cmd** \(“prediction”\)
 
-* appId
+* **appId**
 
-* siteId
+* **siteId**
 
-* processId
+* **processId**
 
-* fileName \(the CSV file stored in Google Cloud Storage, containing the solutions for each row in input\)
+* **fileName** \(the CSV file stored in Google Cloud Storage, containing the solutions for each row in input\)
 
-* env \(Platform execution environment\)
+* **env** \(Platform execution environment\)
 
-* companyId
+* **companyId**
 
-* bucketName \(Bucket name in the Google Cloud Storage, containing the CSV file received\)
+* **bucketName** \(Bucket name in the Google Cloud Storage, containing the CSV file received\)
 
-* success \(true or false\)
+* **success** \(true or false\)
 
 Thanks to it, you can download the CSV file, if needed, or simply used this event to manage data already loaded in your application tables or, in any case, in the table named CON101\_TENSOR\_FLOW\_RESULTS.
 
-**    
+**      
 **
 
-**    
+**      
 **
 
 ### **TensorBoard**
@@ -412,19 +412,21 @@ What described in the previous sections is everything needed to start with the M
 
 Anyway, there are a few advanced topics which are described in the following sections which may come in handy in complex scenarios.
 
-**    
+**      
 **
 
 ### **Decoding functions**
 
 Converting text/date content to a numeric value.
 
-**    
+**      
 **
 
 ### **Server-side utility functions**
 
 Connecting the Machine Learning module to application functionalities, using the built-in low level javascript functions.
 
-**  **
+---
+
+
 

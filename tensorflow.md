@@ -10,7 +10,7 @@ The correct definition of the model is checked out through the testing step.
 
 Finally, once the model has been trained opportunely, it can be used with real data to make predictions.
 
-**                
+**                  
 **
 
 ## **Fundamentals**
@@ -19,7 +19,7 @@ Before using this module, it is essential to go into depth with some concepts ab
 
 In the following sections, an explanation about the most important concepts is provided.
 
-**                
+**                  
 **
 
 ### **Training**
@@ -66,10 +66,10 @@ base=2, height=2 could lead the model to predict a solution = 0, since it can se
 
 Consequently, it is fundamental to provide “good” training data, in order to let the model to make the right decisions. Creating the right training data is more a form of art rather than a scientific approach, since it is important to give enough data for different combinations of the features, so that the model can notice how same values for a specific feature has lead to different solutions.
 
-**                
+**                  
 **
 
-### **Testing**
+#### **Testing**
 
 A way to evaluate the accuracy of a training is testing the model.
 
@@ -83,19 +83,19 @@ If the accuracy of the model is not good, multiple training sessions should be c
 
 Each time a training session is performed, the accuracy of the updated model can be measured through the testing step.
 
-**                
+**                  
 **
 
-### **Prediction**
+#### **Prediction**
 
 Once the testing proved the quality of the model though a good level of accuracy \(e.g. 80-90% or more\), the model is ready to use.
 
 It is possible to use the model and make predictions with the data provided in input, expressed through the features defined initially.
 
-**                
+**                  
 **
 
-**                
+**                  
 **
 
 ## **Neural Networks**
@@ -120,10 +120,10 @@ However, a model having a high number of layers/nodes requires a large amount of
 
 It goes without saying that the number of layers/nodes must not be increased indiscriminately, since it may lead to the opposite outcome: a low accuracy, due to an insufficient number of training examples.
 
-**                
+**                  
 **
 
-**                
+**                  
 **
 
 ## **TensorFlow**
@@ -136,7 +136,7 @@ Finally, you can connect the defined model to the rest of your application and e
 
 Optionally, you can access toTensor Board user interface, directly from Platform, in case you need to get detail information about the training sessions and the neural network under definition.
 
-**                
+**                  
 **
 
 ## **Machine Learning in Platform**
@@ -231,10 +231,10 @@ In the detail model window, there are 3 buttons which allow to execute the train
 
 ![](https://lh6.googleusercontent.com/KMCIwq9zo3i5LKicWdvN_Qq5GbHTBq8qtmpW2CV6R1Z8LN5Z5AkhCAm3U6LXlXQiCI1Z5-pQiyCWmllP-x1MFq2fPcJy0AmORYviadq7CHxj8vdGGBWIsPhylrrzc7Btx5zlhsq5)
 
-**                
+**                  
 **
 
-### **Training in action**
+#### **Training in action**
 
 When pressing the training button, a Training window is displayed. Thanks to this window, it is possible to train the model any number of times, starting either from a CSV file written externally and uploaded to Platform or starting from the SQL query defined previously.
 
@@ -316,12 +316,12 @@ You are free to fill out any number of rows: only the ones filled will be passed
 
 Again, you can see the history of all training sessions through the second folder.
 
-**                
+**                  
 **
 
-### **Testing in action**
+#### **Testing in action**
 
-When pressing the testing button on the model window, aTestingwindow is shown. Thanks to this window, it is possible to test the accuracy of the model any number of times, starting either from a CSV file written externally and uploaded to Platform or from a SQL query defined previously.
+When pressing the testing button on the model window, a Testing window is shown. Thanks to this window, it is possible to test the accuracy of the model any number of times, starting either from a CSV file written externally and uploaded to Platform or from a SQL query defined previously.
 
 This window is identical to the one described for the training stage, except for the History folder in the model definition window, where the accuracy of the testing session is filled too.
 
@@ -333,10 +333,10 @@ Unfortunately, it could happen that the model has been trained with “wrong” 
 
 Such a scenario can be prevented through the Copy button: thanks to this feature it is possible to duplicate the current content of a model and create a sub-version of it, completely independent from the original one. This feature comes in handy to train the model with data which could turn out to be useless, without affecting the original model.
 
-**                
+**                  
 **
 
-### **Prediction in action**
+#### **Prediction in action**
 
 When pressing the prediction button on the model window, a Prediction window is displayed. Thanks to this window, it is possible to execute any number of predictions, starting from the model trained previously.
 
@@ -386,13 +386,13 @@ The server-side javascript action receive in input this attributes in the “vo�
 
 Thanks to it, you can download the CSV file, if needed, or simply used this event to manage data already loaded in your application tables or, in any case, in the table named CON101\_TENSOR\_FLOW\_RESULTS.
 
-**                
+**                  
 **
 
-**                
+**                  
 **
 
-### **TensorBoard**
+#### **TensorBoard**
 
 TensorBoard is a built-in web console available to check out how the machine learning model is working. It provides a series of diagnosis features to use in order to get more information about the accuracy of the model:
 
@@ -406,25 +406,9 @@ Distributions- reporting the chart for each solution defined: each solution is r
 
 ![](https://lh3.googleusercontent.com/PXVcRRJF2EUKQh9vDc7-oAlXRHbXOZdCjskdcts0IMWoXEtQ1fAaA-yxaKeQZbgG1ili5nGatTCD-yyvQ_GzyG-RcVBr3SBCJSdf6N2o-hd__JEMz5_9-0S0-6Xmr4UayhQYKg4m)
 
-## **Advanced usage**
+## **                 **
 
-What described in the previous sections is everything needed to start with the Machine Learning module included with Platform
-
-Anyway, there are a few advanced topics which are described in the following sections which may come in handy in complex scenarios.
-
-**                
-**
-
-### **Decoding functions**
-
-Converting text/date content to a numeric value.
-
-**                
-**
-
-### **Server-side utility functions**
-
-Connecting the Machine Learning module to application functionalities, using the built-in low level javascript functions.
+### 
 
 ---
 

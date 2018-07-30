@@ -16,9 +16,23 @@ The js object named “vo” must include the following attributes: applicationI
 
 Example:
 
-| login\(function\(res\) { // callbackif \(res.success==true\) {// do something}},{ // data to pass forwardapplicationId: "",companyId: "",siteId: xxx,username: "",password: ""}\); |
-| :--- |
+```js
+login(
+ function(res) { // callback
+    if (res.success==true) {
+      // do something
+    }
+  },
+  { // data to pass forward
+    applicationId: "", 
+    companyId: "", 
+    siteId: xxx, 
+    username: "", 
+    password: "" 
+  }
+);
 
+```
 
 Once the login operation has been successfully completed, a set of global js variables are filled and available everywhere inside the web page:
 
@@ -50,9 +64,15 @@ The js object named “vo” is optional, since in case of user already authenti
 
 Example:
 
-| try {init\(initCompleted\);}catch\(e\) {alert\(e\);} |
-| :--- |
+```js
+try {
+  init(initCompleted);
+}
+catch(e) {
+  alert(e);
+}
 
+```
 
 ## **Setting up a web page**
 
@@ -62,13 +82,64 @@ Consequently, your web page must always include a way to load main\_page.jsp in 
 
 This is an example of code to include in your web page in order to do it:
 
-| &lt;html&gt;&lt;head&gt;&lt;script language="Javascript"&gt;functionloadScript\(url, callback\){ // utility function always to include in any web page...var script = document.createElement\("script"\)script.type = "text/javascript";if \(script.readyState\){ //IEscript.onreadystatechange = function\(\){if \(script.readyState == "loaded" \|\|script.readyState == "complete"\){script.onreadystatechange = null;callback\(\);}};} else { //Othersscript.onload = function\(\){callback\(\);};}script.src = url;document.getElementsByTagName\("head"\)\[0\].appendChild\(script\);}// 3. callback invoked after the initializationvarinitCompleted= function\(\) {// do something} // 1. load dynamically the infra js...loadScript\('../4ws/main\_page.jsp?applicationId=XYZ,function\(\) {// 2 after loading the infra js, initialize user data:// that will load web pages variables \(username, etc.\) and initialize translationstry {init\(initCompleted\);}catch\(e\) {alert\(e\);}}\); &lt;/head&gt;&lt;body&gt;...&lt;/body&gt;&lt;/html&gt; |
-| :--- |
+```js
 
+<html>
+    <head>
+        <script language="Javascript">
+            
+            function loadScript(url, callback){
+
+                // utility function always to include in any web page...
+                var script = document.createElement("script")
+                script.type = "text/javascript";
+            
+                if (script.readyState){  //IE
+                    script.onreadystatechange = function(){
+                        if (script.readyState == "loaded" ||
+                                script.readyState == "complete"){
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    };
+                } else {  //Others
+                    script.onload = function(){
+                        callback();
+                    };
+                }
+            
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            
+            // 3. callback invoked after the initialization
+            var initCompleted = function() {
+              // do something
+            }
+
+            // 1. load dynamically the infra js...
+            loadScript('../4ws/main_page.jsp?applicationId=XYZ,function() {
+                // 2 after loading the infra js, initialize user data: 
+                // that will load web pages variables (username, etc.) and initialize translations
+                try {
+                    init(initCompleted);
+                }
+                catch(e) {
+                    alert(e);
+                }
+            });
+
+</head>
+    <body>
+...
+    </body>
+</html>
+
+```
 
 The example above requires that the authentication process has been already carried out before: in such a case, the “init” method will complete successfully, and the custom “initCompleted” method will be automatically invoked.
 
-1.2 Loading a grid
+## Loading a grid
 
 A typical scenario involves the data loading to show on a grid.
 
@@ -90,7 +161,7 @@ This class requires a few arguments:
 
 Once created this object, you can force any number of time the data loading through a method it provides:
 
-load\({ startPos: xyz, blockSize: xyz, filters: \[{ attrName: "", op: "", value: "" },...\] }\);
+`load({ startPos: xyz, blockSize: xyz, filters: [{ attrName: "", op: "", value: "" },...] });`
 
 You can simply use this method by calling it without arguments:
 
@@ -112,17 +183,79 @@ You can use valueObjectList to fill in your grid.
 
 Example:
 
-| var gridStore = new ListStore\(149, // component idfunction\(\) {// callback invoked after each data loading...},function\(\) {// callback invoked after each data loading with errors...alert\('Ops'\);}\); |
-| :--- |
+```js
+var gridStore = new ListStore(
+                    149, // component id
+                    function() {
+                        // callback invoked after each data loading...
+                    },
+                    function() {
+                        // callback invoked after each data loading with errors...
+                        alert('Ops');
+                    }
+);
 
+```
 
 There is not any utility available here to render the grid, starting from the data provided by this object: this is because you are free to use any external framework to render a grid.
 
 Just to give you an example of a simple rendering of a grid, starting from basic javascript, the grid will be rendered by appending DOM childs \(by adding &lt;tr&gt; and &lt;td&gt; tags\) to a &lt;table&gt; tag.
 
-| vargridStore=new ListStore\(149,function\(\) {// callback invoked after each data loading... var list =gridStore.valueObjectList;var myGrid = document.getElementById\("myGrid"\);while\(myGrid.children.length&gt;0\)myGrid.removeChild\(myGrid.children\[0\]\); // remove previous rowsfor\(var i=0;i&lt;list.length;i++\) {myGrid.append\(createTableRow\(list\[i\],\["clientCode","name","createDate","totalAmount","country"\],nullnull\) \);}},function\(\) {// callback invoked after each data loading with errors...alert\('Ops'\);}\); // utility methodfunctioncreateTableRow\(row,attributeNames,formatters,sizes\) {var tr = document.createElement\("tr"\);for\(var i=0;i&lt;attributeNames.length;i++\) {var td = document.createElement\("td"\);if \(sizes!=null\)td.style="width:"+sizes\[i\];tr.append\(td\);var value = row\[attributeNames\[i\]\];if \(value==null\)value = "";else if \(formatters!=null && formatters\[i\]!=null\)value = formatters\[i\]\(value\);var t = document.createTextNode\( value \);td.append\(t\);}return tr;} &lt;/script&gt; &lt;/head&gt;&lt;body&gt;&lt;tableid="myGrid" border=1&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt; |
-| :--- |
+```js
+            var gridStore = new ListStore(
+                    149,
+                    function() {
+                        // callback invoked after each data loading...
 
+                        var list = gridStore.valueObjectList;
+                        var myGrid = document.getElementById("myGrid");
+                        while(myGrid.children.length>0)
+                          myGrid.removeChild(myGrid.children[0]); // remove previous rows
+                        for(var i=0;i<list.length;i++) {
+                          myGrid.append( createTableRow(
+                              list[i],
+                              ["clientCode","name","createDate","totalAmount","country"],
+                              null
+                              null
+                          ) );
+                        }
+                                               
+                    },
+                    function() {
+                        // callback invoked after each data loading with errors...
+                        alert('Ops');
+                    }
+                );
+
+            // utility method
+            function createTableRow(row,attributeNames,formatters,sizes) {
+                var tr = document.createElement("tr");
+                for(var i=0;i<attributeNames.length;i++) {
+                  var td = document.createElement("td");
+                  if (sizes!=null)
+                    td.style="width:"+sizes[i];
+                  tr.append(td);
+                  var value = row[attributeNames[i]];
+                  if (value==null)
+                    value = "";
+                  else if (formatters!=null && formatters[i]!=null) 
+                      value = formatters[i](value);
+                  
+                  var t = document.createTextNode( value );
+                  td.append(t);
+                }
+                return tr;
+            }
+
+        </script>
+
+   </head>
+    <body>
+         <table id="myGrid" border=1></table>
+    </body>
+</html>
+
+```
 
 ## **Formatting data**
 
@@ -130,15 +263,15 @@ Suppose you need to format a number with a specific number of decimals or with t
 
 The main\_page.jsp provides a few utility methods, you can use both for formatting cells in grid and controls in form.
 
-var formattedString = dateFormatter\(dateObj\);
+`var formattedString = dateFormatter(dateObj);`
 
 Format a date object or a date/datetime coming from a JSON response to a formatted string related to a date without time, to show in a grid or form control. Such a date is automatically formatted according to the language set for the logged user.
 
-var formattedString = dateTimeFormatter\(dateObj\);
+`var formattedString = dateTimeFormatter(dateObj);`
 
 Format a date object or a date/datetime coming from a JSON response to a formatted string related to a date+time, to show in a grid or form control. Such a date and time is automatically formatted according to the language set for the logged user.
 
-var formattedNumber = numberFormatter\(numObj,decimals,grouping\);
+`var formattedNumber = numberFormatter(numObj,decimals,grouping);`
 
 Format a number to a formatted string, to show in a grid or form control. Such a number is formatted according to the other two arguments:
 
@@ -148,15 +281,40 @@ Format a number to a formatted string, to show in a grid or form control. Such a
 
 The decimal and thousand symbols to use are defined according to the language associated to the current user.
 
-var formattedNumber= currencyFormatter\(numObj,decimals,grouping\);
+`var formattedNumber= currencyFormatter(numObj,decimals,grouping);`
 
 Same behavior of the numberFormatter; in addition, a currency symbol is shown before the formatted string.The currency symbol is defined according to the language associated to the current user.
 
 Let’s see how to use these utility methods in the previous example, to format a date or a number:
 
-| vargridStore= newListStore\(149,function\(\) {// callback invoked after each data loading...var list =gridStore.valueObjectList;var myGrid = document.getElementById\("myGrid"\);while\(myGrid.children.length&gt;0\)myGrid.removeChild\(myGrid.children\[0\]\); // remove previous rows… for\(var i=0;i&lt;list.length;i++\) {myGrid.append\(createTableRow\(list\[i\],\["clientCode","name","createDate","totalAmount","abc","country"\],\[null,null,dateTimeFormatter,numberFormatter,null,null\],null\) \);}},function\(\) {// callback invoked after each data loading with errors...alert\('Ops'\);}\); |
-| :--- |
+```js
 
+var gridStore = new ListStore(
+                    149,
+                    function() {
+                        // callback invoked after each data loading...
+                      
+                        var list = gridStore.valueObjectList;
+                        var myGrid = document.getElementById("myGrid");
+                        while(myGrid.children.length>0)
+                          myGrid.removeChild(myGrid.children[0]); // remove previous rows…
+
+                        for(var i=0;i<list.length;i++) {
+                          myGrid.append( createTableRow(
+                              list[i],
+                              ["clientCode","name","createDate","totalAmount","abc","country"],
+                              [null,null,dateTimeFormatter,numberFormatter,null,null],
+                              null
+                          ) );
+                        }
+                    },
+                    function() {
+                        // callback invoked after each data loading with errors...
+                        alert('Ops');
+                    }
+                );
+
+```
 
 ## **Using combo-boxes**
 
@@ -164,7 +322,7 @@ You are free to include comboboxes in your web page. Platform can help you out i
 
 What you can do is including a &lt;select&gt; tag in your web page and then let Platform do the rest, by using the method:
 
-var combo = fillInCombo\(selectorId,comboId,synchronous\);
+`var combo = fillInCombo(selectorId,comboId,synchronous);`
 
 You have to specify:
 
@@ -180,9 +338,20 @@ Consequently, you can use an asynchronous loading only in case of comboboxes not
 
 Example of a combobox in a filter panel:
 
-| ...// fill in the first comboboxfillInCombo\(49,"myCombo",false\); &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;select id="myCombo" onchange="myComboChanged\(this\);"&gt;&lt;/select&gt;&lt;/body&gt;&lt;/html&gt; |
-| :--- |
+```js
+... 
+               // fill in the first combobox
+                fillInCombo(49,"myCombo",false);
 
+        </script>
+        
+    </head>
+    <body>
+        <select id="myCombo" onchange="myComboChanged(this);"></select>
+    </body>
+</html>
+
+```
 
 Another very helpful usage of a combobox is to decode a value to a translation to show in a grid cell or in a form control.
 
@@ -196,15 +365,54 @@ You can do it through a couple of utility method provided by the “fillInCombo�
 
 In the following example, you can see how to use a combobox to decode a value in a grid, for the column “country”:
 
-| …// fill in the form comboboxvarfakeCombo= fillInCombo\(49,"country",true\); // create a grid datastorevargridStore= newListStore\(149,function\(\) {// callback invoked after each data loading...var list =gridStore.valueObjectList;var myGrid = document.getElementById\("myGrid"\);while\(myGrid.children.length&gt;0\)myGrid.removeChild\(myGrid.children\[0\]\); // remove all previous rows… for\(var i=0;i&lt;list.length;i++\) {list\[i\].country =fakeCombo.code2Desc\(list\[i\].country\);myGrid.append\( createTableRow\(list\[i\],\["clientCode","name","createDate","totalAmount","abc","country"\],\[null,null,dateTimeFormatter,numberFormatter2Dec,null,null\],\[150,400,160,120,80,200\]\) \);}},function\(\) {// callback invoked after each data loading with errors...alert\('Ops'\);}\);  &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;table id="myGrid" border=1&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt; |
-| :--- |
+```js
+ …
+                // fill in the form combobox
+                var fakeCombo = fillInCombo(49,"country",true);
 
+                // create a grid datastore
+                var gridStore = new ListStore(
+                    149,
+                    function() {
+                        // callback invoked after each data loading...
+                        var list = gridStore.valueObjectList;
+                        var myGrid = document.getElementById("myGrid");
+                        while(myGrid.children.length>0)
+                          myGrid.removeChild(myGrid.children[0]); // remove all previous rows…
+
+                        for(var i=0;i<list.length;i++) {
+                          list[i].country =  fakeCombo.code2Desc(list[i].country);
+                          myGrid.append( createTableRow(
+                              list[i],
+                              ["clientCode","name","createDate","totalAmount","abc","country"],
+                              [null,null,dateTimeFormatter,numberFormatter2Dec,null,null],
+                              [150,400,160,120,80,200]
+                          ) );
+                        }
+                                               
+                    },
+                    function() {
+                        // callback invoked after each data loading with errors...
+                        alert('Ops');
+                    }
+                );
+
+
+        </script>
+        
+    </head>
+    <body>
+        <table id="myGrid" border=1></table>
+    </body>
+</html>
+
+```
 
 ## **Loading a form**
 
 A typical scenario involves the data loading to show into a set of graphics controls included in a form. There is a utility class you can use to simplify this task:
 
-var myStore = new FormStore\(compId,callback,callbackError\);
+`var myStore = new FormStore(compId,callback,callbackError);`
 
 This class represents the content of the form, in terms of data and can manage data retrieving, starting from a set of values to pass forward to the server layer, in order to identify the right record to fetch.
 
@@ -218,7 +426,7 @@ This class requires a few arguments:
 
 Once created this object, you can force any number of time the data loading through a method it provides:
 
-load\({ filters: \[{ attrName: "", op: "", value: "" },...\] }\);
+`load({ filters: [{ attrName: "", op: "", value: "" },...] });`
 
 Remember that the store will not load data automatically when created: you have always to call “load” to force data loading.
 
@@ -228,15 +436,56 @@ The FormStore includes this attribute you can use at any time:
 
 Example:
 
-| // create a form datastorevarformStore= newFormStore\(159,function\(\) {// callback invoked after each data loading...var controlClientCode =document.getElementById\("clientCode"\);var controlName = document.getElementById\("name"\);var controlCreateDate = document.getElementById\("createDate"\);var controlTotalAmount = document.getElementById\("totalAmount"\);var controlAbc = document.getElementById\("abc"\);var controlCountry = document.getElementById\("country"\);controlClientCode.value = formStore.vo.clientId;controlName.value = formStore.vo.name;controlCreateDate.value =dateFormatter\( formStore.vo.createDate \);controlTotalAmount.value =currencyFormatter\( formStore.vo.totalAmount \);controlAbc.value = formStore.vo.abc;controlCountry.value = formStore.vo.country;},function\(\) {// callback invoked after each data loading with errors...alert\('Ops'\);}\); formStore.load\({// filtering conditions needed to load a single recordfilters: \[{ attrName: "clientCode",value: “....” }\]}\); &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;table border=1 &gt;&lt;tr&gt;&lt;td&gt;Code&lt;/td&gt;&lt;td&gt;&lt;input type=textid="clientCode" style="width:200px" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;&lt;input type=textid="name"style="width:200px" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date&lt;/td&gt;&lt;td&gt;&lt;input type=textid="createDate"style="width:200px" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Amount&lt;/td&gt;&lt;td&gt;&lt;input type=textid="totalAmount"style="width:200px" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ABC&lt;/td&gt;&lt;td&gt;&lt;input type=textid="abc"/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Country&lt;/td&gt;&lt;td&gt;&lt;selectid="country"onchange=""&gt;&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt; |
-| :--- |
+```js
+                // create a form datastore
+                var formStore = new FormStore(
+                    159,
+                    function() {
+                        // callback invoked after each data loading...
+                        var controlClientCode = document.getElementById("clientCode");
+                        var controlName = document.getElementById("name");
+                        var controlCreateDate = document.getElementById("createDate");
+                        var controlTotalAmount = document.getElementById("totalAmount");
+                        var controlAbc = document.getElementById("abc");
+                        var controlCountry = document.getElementById("country");
+                        controlClientCode.value = formStore.vo.clientId;
+                        controlName.value = formStore.vo.name;
+                        controlCreateDate.value = dateFormatter( formStore.vo.createDate );
+                        controlTotalAmount.value = currencyFormatter( formStore.vo.totalAmount );
+                        controlAbc.value = formStore.vo.abc;
+                        controlCountry.value = formStore.vo.country;
+                    },
+                    function() {
+                         // callback invoked after each data loading with errors...
+                       alert('Ops');
+                    }
+                );
 
+                formStore.load({
+                                // filtering conditions needed to load a single record
+                                filters: [{ attrName: "clientCode",value: “....” }]
+                });
+
+   </script>
+        
+    </head>
+    <body>
+          <table border=1 >
+            <tr><td>Code</td><td><input type=text id="clientCode" style="width:200px" /></td></tr>
+            <tr><td>Name</td><td><input type=text id="name" style="width:200px" /></td></tr>
+            <tr><td>Date</td><td><input type=text id="createDate" style="width:200px" /></td></tr>
+            <tr><td>Amount</td><td><input type=text id="totalAmount" style="width:200px" /></td></tr>
+            <tr><td>ABC</td><td><input type=text id="abc"  /></td></tr>
+            <tr><td>Country</td><td><select id="country" onchange=""></select></td></tr>
+        </table>
+    </body>
+</html>
+
+```
 
 ## **Other utility methods**
 
----
-
-var t = getTranslation\(entry\);
+`var t = getTranslation(entry);`
 
 Translate the specified entry into the corresponding translation, according to the language associated to the current user. In case the entry is not found, the same entry will be passed back.
 
@@ -246,11 +495,11 @@ Synchronous web call to Platform server layer.
 
 Example:
 
-| try {var json = new SyncRequest\(\).send\(context+“/executeJs?...”,”GET”\);}catch\(e\) {alert\(e\);} |
-| :--- |
+```js
+try {var json = new SyncRequest().send(context+“/executeJs?...”,”GET”);}catch(e) {alert(e);}
+```
 
-
-new AsyncRequest\(\).send\(uri\[,method\[,data,mimeType\]\],callback,callbackError\)
+`new AsyncRequest().send(uri[,method[,data,mimeType]],callback,callbackError)`
 
 Asynchronous web call to Platform server layer.
 
@@ -260,7 +509,7 @@ The last two arguments represents callback functions invoked when the response a
 
 * callbackError\(json,status\)- json is a text formatted content related to the error, status the HTTP error code \(a number\), e.g. 401
 
-logout\(\)
+`logout()`
 
 Log out from the server layer.
 

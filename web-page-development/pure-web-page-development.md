@@ -6,7 +6,7 @@ That means you can still exploit everything provided by Platform in terms of ser
 
 All these features can be managed thanks to a utility main\_page.jsp file to include in your web page. This js file provides the following utility methods:
 
-login\(callback,vo\)
+`login(callback,vo)`
 
 Execute the authentication on Platform, in order to access later to the server-side layer.
 
@@ -31,7 +31,6 @@ login(
     password: "" 
   }
 );
-
 ```
 
 Once the login operation has been successfully completed, a set of global js variables are filled and available everywhere inside the web page:
@@ -71,7 +70,6 @@ try {
 catch(e) {
   alert(e);
 }
-
 ```
 
 ## **Setting up a web page**
@@ -83,17 +81,16 @@ Consequently, your web page must always include a way to load main\_page.jsp in 
 This is an example of code to include in your web page in order to do it:
 
 ```js
-
 <html>
     <head>
         <script language="Javascript">
-            
+
             function loadScript(url, callback){
 
                 // utility function always to include in any web page...
                 var script = document.createElement("script")
                 script.type = "text/javascript";
-            
+
                 if (script.readyState){  //IE
                     script.onreadystatechange = function(){
                         if (script.readyState == "loaded" ||
@@ -107,11 +104,11 @@ This is an example of code to include in your web page in order to do it:
                         callback();
                     };
                 }
-            
+
                 script.src = url;
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
-            
+
             // 3. callback invoked after the initialization
             var initCompleted = function() {
               // do something
@@ -134,7 +131,6 @@ This is an example of code to include in your web page in order to do it:
 ...
     </body>
 </html>
-
 ```
 
 The example above requires that the authentication process has been already carried out before: in such a case, the “init” method will complete successfully, and the custom “initCompleted” method will be automatically invoked.
@@ -194,7 +190,6 @@ var gridStore = new ListStore(
                         alert('Ops');
                     }
 );
-
 ```
 
 There is not any utility available here to render the grid, starting from the data provided by this object: this is because you are free to use any external framework to render a grid.
@@ -219,7 +214,7 @@ Just to give you an example of a simple rendering of a grid, starting from basic
                               null
                           ) );
                         }
-                                               
+
                     },
                     function() {
                         // callback invoked after each data loading with errors...
@@ -240,7 +235,7 @@ Just to give you an example of a simple rendering of a grid, starting from basic
                     value = "";
                   else if (formatters!=null && formatters[i]!=null) 
                       value = formatters[i](value);
-                  
+
                   var t = document.createTextNode( value );
                   td.append(t);
                 }
@@ -254,7 +249,6 @@ Just to give you an example of a simple rendering of a grid, starting from basic
          <table id="myGrid" border=1></table>
     </body>
 </html>
-
 ```
 
 ## **Formatting data**
@@ -288,12 +282,11 @@ Same behavior of the numberFormatter; in addition, a currency symbol is shown be
 Let’s see how to use these utility methods in the previous example, to format a date or a number:
 
 ```js
-
 var gridStore = new ListStore(
                     149,
                     function() {
                         // callback invoked after each data loading...
-                      
+
                         var list = gridStore.valueObjectList;
                         var myGrid = document.getElementById("myGrid");
                         while(myGrid.children.length>0)
@@ -313,7 +306,6 @@ var gridStore = new ListStore(
                         alert('Ops');
                     }
                 );
-
 ```
 
 ## **Using combo-boxes**
@@ -344,13 +336,12 @@ Example of a combobox in a filter panel:
                 fillInCombo(49,"myCombo",false);
 
         </script>
-        
+
     </head>
     <body>
         <select id="myCombo" onchange="myComboChanged(this);"></select>
     </body>
 </html>
-
 ```
 
 Another very helpful usage of a combobox is to decode a value to a translation to show in a grid cell or in a form control.
@@ -389,7 +380,7 @@ In the following example, you can see how to use a combobox to decode a value in
                               [150,400,160,120,80,200]
                           ) );
                         }
-                                               
+
                     },
                     function() {
                         // callback invoked after each data loading with errors...
@@ -399,13 +390,12 @@ In the following example, you can see how to use a combobox to decode a value in
 
 
         </script>
-        
+
     </head>
     <body>
         <table id="myGrid" border=1></table>
     </body>
 </html>
-
 ```
 
 ## **Loading a form**
@@ -467,7 +457,7 @@ Example:
                 });
 
    </script>
-        
+
     </head>
     <body>
           <table border=1 >
@@ -480,7 +470,6 @@ Example:
         </table>
     </body>
 </html>
-
 ```
 
 ## **Other utility methods**

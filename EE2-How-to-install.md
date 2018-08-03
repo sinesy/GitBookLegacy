@@ -21,17 +21,23 @@ The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not
 
 * The installer without a graphical user interfacecan be invoked fromthe shell: this comes in handy where you are using a remote access to a server \(such as ssh or telnet\) or when a GUI environment is not available; this installer requires to specify a series of data, the same provided using the GUI version.In order to run the installer without the GUI, type the command  **install.sh**  or  **install.bat** , according to the operating system in use.Independently of the execution mode, you have to provide some a few data required to correctly install and configure the product:
 
-* database settings, required to connect to the database schema, where the installer will create automatically all the required tables and initial data
+* first of all, you have to choose which kind of installation to execute:
 
-* company id; it represents a 5 characters code to use to partition all data for a specific “tentant”: 4WS.Platform supports multi-tenancy, that is to say, you can run the same application for distinct organizations, each identified by a specific company id, which is used to partition data per organization
+  * **New Installation/Change Configuration** - used for the first installation or, very rarely, when you want to change the default installation settings \(like from portal mode to no portal mode\)
 
-* default language code; 4WS.Platform supports any number of languages
+  * **Update Installation** - used after the first installation, when executing an upgrade of the already existing installation
 
-* installation path, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
+* **database settings**, required to connect to the database schema, where the installer will create automatically all the required tables and initial data
 
-* JDK path: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
+* **company id;** it represents a 5 characters code to use to partition all data for a specific “tentant”: 4WS.Platform supports multi-tenancy, that is to say, you can run the same application for distinct organizations, each identified by a specific company id, which is used to partition data per organization
 
-* 4WS.Platform web context; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
+* **default language code**; 4WS.Platform supports any number of languages
+
+* **installation path**, where Tomcat will be installed; if you want to reuse an already existing Tomcat 7 installation, you can simply specify that path and the installer will skip the Tomcat installation task and will install and configure the 4WS.Platform web application only
+
+* **JDK path**: pay attention to this path! it is NOT the JRE path, but  **the JDK path:** if you erroneously set the JRE instead of the JDK, Tomcat will not work correctly and you will not be able to access 4WS.Platform web application; in that case, you have to delete the installation and run the installer again
+
+* **4WS.Platform web context**; the web context is the folder name within webapps Tomcat’s subfolder where the web application will be installed; the same name will be used to connect from a browser; for instance, if you set that web context to “platform”, then the URL to specify in your browser would be: [http://host:port/platform](http://host:port/platform)
 
 * **Run Tomcat**  A.S. and use a browser to connect to the web application; typical URL is: [http://localhost:8080/platform](http://localhost:8080/platform)
 
@@ -40,7 +46,11 @@ company id: 00000
 site id: 100  
 username: ADMIN  
 password: admin  
- **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
+
+
+**It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
+
+
 
 #### 4WS.PLATFORM INSTALLER STEPS
 
@@ -82,7 +92,33 @@ If the installation process was successfully completed but when you start Tomcat
 
 **If you have changed the HTTP port in tomcat/conf/server.xml file, the URL to use in the browser to connect to 4WS.Platform changes as well.**
 
-If**you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transations; if this is the table type defined for yuor tables, you have to change it to InnoDB.
+**If** **you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transactions; if this is the table type defined for yuor tables, you have to change it to InnoDB.
+
+
+
+#### UPGRADES
+
+The same installing procedure can be used to apply upgrades to the product. In such a case, you have to select the second option, when executing the installer: Update Installation. Next, the already existing web context is requested. Starting from this information, the installer will apply the update to Platform web application, without changing any setting \(no changes are applied to web.xml or persistence.xml files\).
+
+
+
+**Important note**: there could be the need for including in Platform some custom jar file, in order to invoke custom java classes.
+
+That means that one or more jar files must be stored into **WEB-INF/lib** folder related to the Platform web context.
+
+Since each time the installer is executed the whole content of **WEB-INF/lib **is deleted, the additional custom files will be lost. In order to avoid it, you can optionally include into your already existing web.xml file the following tag:
+
+```html
+<init-param>
+  <description>Comma separated list of additional jar files added to WEB-INF/lib to not delete when updating Platform. Can be empty</description>
+  <param-name>additionalResourcesJarsNotToDelete</param-name>
+  <param-value>myCustomFile1.jar,myCustomFile2.jar</param-value>
+</init-param>
+```
+
+
+
+
 
 ---
 

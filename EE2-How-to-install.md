@@ -45,12 +45,9 @@ The default account to use is:
 company id: 00000  
 site id: 100  
 username: ADMIN  
-password: admin  
-
+password: admin
 
 **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
-
-
 
 #### 4WS.PLATFORM INSTALLER STEPS
 
@@ -94,13 +91,9 @@ If the installation process was successfully completed but when you start Tomcat
 
 **If** **you are using MySQL database and it seems that every SQL command is autocommitted**, probably there is an erroneous configuration in the database schema: pay attention to the “table type” defined at table level in MySQL: MyISAM does not support transactions; if this is the table type defined for yuor tables, you have to change it to InnoDB.
 
-
-
 #### UPGRADES
 
 The same installing procedure can be used to apply upgrades to the product. In such a case, you have to select the second option, when executing the installer: Update Installation. Next, the already existing web context is requested. Starting from this information, the installer will apply the update to Platform web application, without changing any setting \(no changes are applied to web.xml or persistence.xml files\).
-
-
 
 **Important note**: there could be the need for including in Platform some custom jar file, in order to invoke custom java classes.
 
@@ -115,10 +108,6 @@ Since each time the installer is executed the whole content of **WEB-INF/lib **i
   <param-value>myCustomFile1.jar,myCustomFile2.jar</param-value>
 </init-param>
 ```
-
-
-
-
 
 ---
 

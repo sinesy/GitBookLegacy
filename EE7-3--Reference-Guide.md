@@ -1,7 +1,5 @@
 # Reference guide
 
-
-
 When defining a new mobile app through the App Designer, there are a few settings to set in the "**Configuration**" panel. This panel is the same used when defining a web application. Among them, there are a few mandatory fields to set:
 
 * **app id**
@@ -20,21 +18,13 @@ In the following sections, the Mobile and Events panels are described more in de
 
 #### Mobile settings
 
-
-
 ![](/assets/mobile_dettaglio.png)
-
-
 
 ---
 
 #### Events settings
 
-
-
 ![](/assets/mobile_events.png)
-
-
 
 ---
 

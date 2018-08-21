@@ -88,7 +88,7 @@ Such "vo" object always has a structure as follows:
 {
   "tableName":".....",
    "pks":[
-       {"opType":"...","pk": {...},
+       {"opType":"...","pk": {...}   },
       ...
    ]
 }

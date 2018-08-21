@@ -55,7 +55,7 @@ In the following sections, the Mobile and Events panels are described more in de
 
 The "Events" panel allows to define a series of events which can be set at mobile app level, i.e. not linked to a specific window, panel, control:
 
-**Action before showing **- js action executed inside the mobile app, every time the app is launched or after every synchonization, in order to execute a custom logic needed to the rest of the app 
+**Action before showing **- js action executed inside the mobile app, every time the app is launched or after every synchonization, in order to execute a custom logic needed to the rest of the app
 
 **Action after showing** - js action executed inside the mobile app, every time the app is launched or after every synchonization, in order to execute a custom logic needed to the rest of the app and to apply after showing the app, i.e. after the menu creation or after showing the initial window of the app
 
@@ -83,11 +83,11 @@ Such "vo" object always has a structure as follows:
 
 ```
 {
-  "tableName":".....",
-   "pks":[
-       {"opType":"...","pk": {...},
-      ...
-   ]
+  "tableName":".....",
+   "pks":[
+       {"opType":"...","pk": {...},
+      ...
+   ]
 }
 ```
 
@@ -116,15 +116,13 @@ Once done that, this action will be invoked automatically when a Push notificati
 
 **Registration action **- js action invoked when the user is signing up, in order to perform custom logic needed at the end of the registration task, such as writing data in custom tables.
 
-**App started in Beacon region **- js action executed in the mobile device every time the device is close to a configured Beacon and the app is currently opened  
+**App started in Beacon region **- js action executed in the mobile device every time the device is close to a configured Beacon and the app is currently opened
 
-**App started exit from Beacon region **- js action executed in the mobile device every time the device is not any more close to a configured Beacon and the app is currently opened     
+**App started exit from Beacon region **- js action executed in the mobile device every time the device is not any more close to a configured Beacon and the app is currently opened
 
-**App off in Beacon region **- js action executed in the mobile device every time the device is close to a configured Beacon and the app is currently closed    
+**App off in Beacon region **- js action executed in the mobile device every time the device is close to a configured Beacon and the app is currently closed
 
-**App off exit from Beacon region **- js action executed in the mobile device every time the device is not any more close to a configured Beacon and the app is currently closed  
-
-
+**App off exit from Beacon region **- js action executed in the mobile device every time the device is not any more close to a configured Beacon and the app is currently closed
 
 ---
 

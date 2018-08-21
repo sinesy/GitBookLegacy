@@ -1,3 +1,6 @@
+
+---
+
 # Reference guide
 
 When defining a new mobile app through the App Designer, there are a few settings to set in the "**Configuration**" panel. This panel is the same used when defining a web application. Among them, there are a few mandatory fields to set:

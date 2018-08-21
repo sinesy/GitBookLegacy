@@ -35,8 +35,6 @@ In the following sections, the Mobile and Events panels are described more in de
   * will be maintained inside the app, if the current field is set to "Do nothing"
   * will be cleared up, if the current field is set to "Remove all data"
 
-
-
 ---
 
 #### Events settings

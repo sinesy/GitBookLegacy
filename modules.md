@@ -16,7 +16,8 @@
 * [Lotus Notes Migration Tool](/3-2-1-3-Lotus-Domino-Migration-Tool.md)
 * [NoSQL databases](/nosql-databases.md)
 * [TensorFlow](/tensorflow.md)
-* [Web Page Development](/web-page-development.md)
+* [Web Page Development](https://4wsplatform.gitbooks.io/user-guide/content/web-page-development.html)
+* Jira Integration
 
 
 

@@ -24,5 +24,3 @@ Supported features embedded in Platform are:
 
 
 
-
-

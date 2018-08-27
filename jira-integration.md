@@ -19,8 +19,12 @@ Supported features embedded in Platform are:
 * **all issues** at Project level
 * **assigned issues**
 * **issue creation**
-* **project** **dashboard**
 * **reporting**
+* **project** **dashboard**
+
+![](/assets/j_board.png)
+
+
 
 ### How to setup Jira integration
 
@@ -55,11 +59,7 @@ In that editable grid, you can assign for each row an already existing Platform 
 
 In this way, Platform and Jira users will be connected with each other.
 
-
-
 As an alternative, you can Import all users: in this case, Platform will also create Platform users for the rows not having a linked Platform user: for each empty cell, a Platform user will be created and linked to the Jira user. New Platform users are always created with site id = 100 and with an expiration password set to today, in order to force the user to change the expiration date.
-
-
 
 ### Project issues
 
@@ -67,11 +67,9 @@ There are two functionalities available.
 
 **Assigned issues **- related to the only issues assigned to the current logge user.
 
-
-
 **All issues**, independent from the assigned user and not necessarelly bounded to a sprint.
 
-
+![](/assets/j_list.png)
 
 On the top of the window, there is a filter panel you can use to filter the issues list:
 
@@ -81,16 +79,22 @@ On the top of the window, there is a filter panel you can use to filter the issu
 
 Through this filters, it is possible to show only user stories \(issues\) related to a specific sprint. In such a case, an additional panel on the right is shown: it reports the epics and sprint lists for the specified board.
 
-If a board and sprint has been selected, the "**Report**" button allows to open a web page where showing all available reports from Jira \(e.g. burndown chart, etc\)
+---
+
+If a board and sprint has been selected, the "**Report**" button allows to open a web page where showing all available reports from Jira \(e.g. burndown chart, etc\).
+
+![](/assets/j_report.png)
+
+---
 
 Very common filters you can use are also:
 
 * **key** - the issue key you can specify, in order to find a specific issue
 * **summary** - the text composing the issue you are searching for
 
-
-
 It is possible to show the issue details by double clicking on an issue.
+
+![](/assets/j_dett.png)
 
 In the issue detail, you can see:
 
@@ -100,22 +104,12 @@ In the issue detail, you can see:
 * the list of **attachments**; you can download attached files, if you desire
 * the list of **worklogs**; you can add a worklog, in case the issue is assigned to you
 
-
-
 Finally, there are a few commands you can execute form the issue detail window:
 
 * **Assign to me** - allows to assign the issue to the current logged user
 * **Add comment**
 * **Add worklog**
 * **Change state **- through it, you can change the current issue state: to do, in progress, done
-
-
-
-
-
-
-
-
 
 
 

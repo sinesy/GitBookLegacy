@@ -19,7 +19,7 @@ Supported features embedded in Platform are:
 * **issues** at Project level
 * **assigned issues**
 * **issue creation**
-* project **dashboard**
+* **project** **dashboard**
 * **reporting**
 
 

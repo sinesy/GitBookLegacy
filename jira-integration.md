@@ -6,7 +6,7 @@ Over time, Jira increased in popularity and features and now it includes a varie
 
 * project management and monitoring
 * agile team oriented tools, including Scrum dashboards and reports, kanban, backlog, epics, sprints and user stories
-* project versioning and planning
+* project versioning and planning 
 * bug and activities tracking system
 
 Moreover, Jira provides a powerful Rest API through which it is possible to connect Jira to external application and tools.

@@ -22,8 +22,6 @@ Supported features embedded in Platform are:
 * **reporting**
 * **project** **dashboard**
 
-
-
 ### How to setup Jira integration
 
 In order to make it possible for Platform to communicate with Jira, a few settings are needed:
@@ -45,8 +43,6 @@ Before connecting Platform to Jira, be sure to have a correct Jira cloud environ
 
 An **agile** setup inside Jira is recommended, in order to use all the amazing features provided by Jira and included in Platform as well.
 
-
-
 ### Importing Jira users
 
 Once you have correctly setup the Jira integration described in the previous section, you can start importing Jira users into Platform, through the new Jira menu available in the App Designer.
@@ -60,8 +56,6 @@ In the prompted editable grid, you can assign for each row an already existing P
 In this way, Platform and Jira users will be connected with each other.
 
 As an alternative, you can **Import all users**: in this case, Platform will also create Platform users for the rows not having a linked Platform user: for each empty cell, a Platform user will be created and linked to the Jira user. New Platform users are always created with site id = 100 and with an expiration password set to today, in order to force the user to change the expiration date.
-
-
 
 ### Project issues
 
@@ -77,15 +71,23 @@ This window includes a series of very helpful views, organized hierarchically, f
 
 **Boards** - a board is a Jira organization of issues; typically every Jira project has a default board; optionally, additional boards can be created.
 
-**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board. Epics are optional and it is possible to simply arrange a single board directly to a set of sprints, which represents a very common scenario.
+**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board. 
+
+Epics are optional and it is possible to simply arrange a single board directly to a set of sprints, which represents a very common scenario.
 
 ![](/assets/epics.png)
 
-**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration. The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released. When selecting a board, the list of sprints are filtered by the currently selected board.
+**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration. 
+
+The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released. 
+
+When selecting a board, the list of sprints are filtered by the currently selected board.
 
 ![](/assets/sprints.png)
 
-**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\). This view shows the backlog related to the current selected sprint. If not selected, the "active" sprint is used as default setting.
+**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\). 
+
+This view shows the backlog related to the current selected sprint. If not selected, the "active" sprint is used as default setting.
 
 ![](/assets/backlog.png)
 
@@ -95,14 +97,10 @@ This window includes a series of very helpful views, organized hierarchically, f
 
 **Project issues** - This is the list of issues, filtered by the current selected sprint, which is filtered by the current selected board.
 
-
-
-The last panel includes a few filter conditions, used to additionally apply filtering values to the issues list: 
+The last panel includes a few filter conditions, used to additionally apply filtering values to the issues list:
 
 * **issues state**: to do, in progress, done - the default setting allows to show all issues but not the ones already closed \(done\)
 * **issue key** - helpful when searching for a specific issue by its key
-
-
 
 ---
 
@@ -138,8 +136,6 @@ Starting from the issues list or from the menu bar, it is also possible to creat
 
 ![](/assets/newissue.png)
 
-
-
 You have always to specify:
 
 * an issue type
@@ -151,12 +147,6 @@ Optionally, in case you are defining user stories in a sprint, you can also defi
 
 * a sprint to use to link the issue \(the user story\) to that sprint
 * the story points for that user story
-
-
-
-
-
-
 
 
 

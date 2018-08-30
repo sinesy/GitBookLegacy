@@ -22,8 +22,6 @@ Supported features embedded in Platform are:
 * **reporting**
 * **project** **dashboard**
 
-![](/assets/j_board.png)
-
 
 
 ### How to setup Jira integration
@@ -35,31 +33,35 @@ In order to make it possible for Platform to communicate with Jira, a few settin
   * **JIRA\_URL** - the URL where Jira cloud is installed \(e.g. yourcompanydomain.atlassian.net\)
   * **JIRA\_PROJECT** - the Jira project name, you have previously defined in Jira
 
-Once saved this values, reload the App Designer, in order make it visible a new menu item: Jira.
-
-
+Once saved these values, reload the App Designer, in order allow Platform to add a new menu items about Jira.
 
 **Prerequisites**
 
-Before connecting Platform to Jira, be sure to have a correct Jira cloud environment already available. Within this environment, you have to have defined:
+Before connecting Platform to Jira, be sure to have a correct Jira cloud environment already available. Within this environment, you have to define:
 
 * Jira users
 * Jira groups \(if any\) and linked users
 * a Jira project and its permission schema, where users/groups must have been assigned to such a schema
 
+An **agile** setup inside Jira is recommended, in order to use all the amazing features provided by Jira and included in Platform as well.
+
+
+
 ### Importing Jira users
 
 Once you have correctly setup the Jira integration described in the previous section, you can start importing Jira users into Platform, through the new Jira menu available in the App Designer.
 
-Here you can find the menu item named "Import Jira user".
+Here you can find the menu item named "**Import Jira users**".
 
-Through it you can see all available Jira users assigned to the connected Jira project.
+Through it, you can see all available Jira users assigned to the already connected Jira project.
 
-In that editable grid, you can assign for each row an already existing Platform user. At the end of this configuration activity, simply press "Import selected users": only rows having the Platform user filled will be taken into account.
+In the prompted editable grid, you can assign for each row an already existing Platform user. At the end of this configuration activity, simply press "**Import selected users**": only rows having the Platform user filled will be taken into account.
 
 In this way, Platform and Jira users will be connected with each other.
 
-As an alternative, you can Import all users: in this case, Platform will also create Platform users for the rows not having a linked Platform user: for each empty cell, a Platform user will be created and linked to the Jira user. New Platform users are always created with site id = 100 and with an expiration password set to today, in order to force the user to change the expiration date.
+As an alternative, you can **Import all users**: in this case, Platform will also create Platform users for the rows not having a linked Platform user: for each empty cell, a Platform user will be created and linked to the Jira user. New Platform users are always created with site id = 100 and with an expiration password set to today, in order to force the user to change the expiration date.
+
+
 
 ### Project issues
 
@@ -69,15 +71,38 @@ There are two functionalities available.
 
 **All issues**, independent from the assigned user and not necessarelly bounded to a sprint.
 
-![](/assets/j_list.png)
+![](/assets/issues.png)
 
-On the top of the window, there is a filter panel you can use to filter the issues list:
+This window includes a series of very helpful views, organized hierarchically, from top to bottom:
 
-* **board** - a board is a Jira organization of issues; typically every Jira project has a default board; optionally, additional boards can be created
-* **epic** - in the agile methodology, an epic is a large amount of work, which can be split up in shorter ones, named user stories; it is optional
-* **sprint** - in the agile methodology, a sprint is an amount of work, composed of user stories; typically it represents a release of a working app
+**Boards** - a board is a Jira organization of issues; typically every Jira project has a default board; optionally, additional boards can be created.
 
-Through this filters, it is possible to show only user stories \(issues\) related to a specific sprint. In such a case, an additional panel on the right is shown: it reports the epics and sprint lists for the specified board.
+**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board. Epics are optional and it is possible to simply arrange a single board directly to a set of sprints, which represents a very common scenario.
+
+![](/assets/epics.png)
+
+**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration. The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released. When selecting a board, the list of sprints are filtered by the currently selected board.
+
+![](/assets/sprints.png)
+
+**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\). This view shows the backlog related to the current selected sprint. If not selected, the "active" sprint is used as default setting.
+
+![](/assets/backlog.png)
+
+**Versions** - This view reports all defined application versions, i.e. planned deliveries.
+
+![](/assets/versions.png)
+
+**Project issues** - This is the list of issues, filtered by the current selected sprint, which is filtered by the current selected board.
+
+
+
+The last panel includes a few filter conditions, used to additionally apply filtering values to the issues list: 
+
+* **issues state**: to do, in progress, done - the default setting allows to show all issues but not the ones already closed \(done\)
+* **issue key** - helpful when searching for a specific issue by its key
+
+
 
 ---
 
@@ -87,14 +112,9 @@ If a board and sprint has been selected, the "**Report**" button allows to open 
 
 ---
 
-Very common filters you can use are also:
-
-* **key** - the issue key you can specify, in order to find a specific issue
-* **summary** - the text composing the issue you are searching for
-
 It is possible to show the issue details by double clicking on an issue.
 
-![](/assets/j_dett.png)
+![](/assets/issue.png)
 
 In the issue detail, you can see:
 
@@ -110,6 +130,33 @@ Finally, there are a few commands you can execute form the issue detail window:
 * **Add comment**
 * **Add worklog**
 * **Change state **- through it, you can change the current issue state: to do, in progress, done
+* **Set a version**
+
+---
+
+Starting from the issues list or from the menu bar, it is also possible to create a new issue from scratch.
+
+![](/assets/newissue.png)
+
+
+
+You have always to specify:
+
+* an issue type
+* a priority
+* a summary
+* a description
+
+Optionally, in case you are defining user stories in a sprint, you can also define:
+
+* a sprint to use to link the issue \(the user story\) to that sprint
+* the story points for that user story
+
+
+
+
+
+
 
 
 

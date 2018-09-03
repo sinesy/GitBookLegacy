@@ -26,12 +26,12 @@ It provides:
 
 * window
 
-**      
+**        
 **
 
 ## **Utility methods directly connected to Platform**
 
-**      
+**        
 **
 
 ### Creating a combo-box store
@@ -48,7 +48,7 @@ This method creates both the grid store \(accessible as “store” attribute\) 
 
 Supported columns: text, number, checkbox, static/remote combo decoding, date, date+time.ì
 
-```
+```js
 var grid = createGrid({
                   panelId: ...,
                   region: ..., // center|north|east/west/south
@@ -60,7 +60,6 @@ var grid = createGrid({
                       }
                    }
 });
-
 ```
 
 ### Creating a form panel
@@ -69,11 +68,18 @@ This method creates both the form store \(accessible as “store” attribute\) 
 
 Supported controls: text number, checkbox, static/remote combo, date, date+time.
 
-```
-var formPanel = createForm({title: "....",region: ...,height: ….,labelWidth: ...,autoLoadData: false,panelId: ...});
+```js
+var formPanel = createForm({
+  title: "....",
+  region: ...,
+  height: ...,
+  labelWidth: ...,
+  autoLoadData: false,
+  panelId: ...
+});
 ```
 
-**      
+**        
 **
 
 ## **Additional methods**
@@ -82,25 +88,64 @@ These methods are connected to Material Design but independent from Platform.
 
 ### Creating a window containing panels
 
-| var win = newAppWindow\({title: "...",items: \[grid,formPanel,...\]}\); |
-| :--- |
+```js
+var win = newAppWindow({
+  title: "...",
+  items: [grid,formPanel,...]
+});
+```
+
 
 
 ### Creating a dialog
 
 This dialog is automatically shown when instantiated. If the handler callback is not specified, the dialog will be automatically closed. In order to close it programmatically, call d.hide\(\);
 
-| var d = newDialog\({width: ...,height: ….,title: ...,text: ...,buttons: \[{text: 'Ok',handler: function\(\) {}}\]}\); |
-| :--- |
+```js
+var d = newDialog({
+  width: ...,
+  height: ...,
+  title: ...,
+  text: ...,
+  buttons: [{
+    text: 'Ok',
+    handler: function() {
+    }
+  }
+  ]
+});
+```
+
 
 
 ### Creating a form store and a form panel
 
 This is an alternative to the createForm method described in the previous section and it allows to programmatically create a form store and, after that, the form panel.
 
-| var formStore = newFormStore\({url: context+"/getdetail?applicationId="+applicationId+"&compId=..."}\);var formPanel = newFormPanel\({title: "...",region: "...",height: ...,labelWidth: ...,autoLoadData: false,store: formStore,items: \[{xtype: 'textfield', // datefield \| datetimefield \| combo \| checkname: '....', // attr namelabel: '...',upper: true,width: 350,allowBlank: false},…\]\); |
-| :--- |
+```js
+var formStore = newFormStore({
+  url: context+"/getdetail?applicationId="+applicationId+"&compId=..."}
+);
 
+var formPanel = newFormPanel({
+  title: "...",
+  region: "...",
+  height: ...,
+  labelWidth: ...,
+  autoLoadData: false,
+  store: formStore,
+  items: [{
+    xtype: 'textfield', // datefield | datetimefield | combo | check
+    name: '....', // attr name
+    label: '...',
+    upper: true,
+    width: 350,
+    allowBlank: false
+  },
+  ...
+  ]
+);
+```
 
 Required arguments:
 
@@ -166,7 +211,6 @@ Available methods:
 ### Creating a grid store and a grid panel
 
 ```js
-
 var gridStore = new GridStore({
            url: context+"/getlist?applicationId="+applicationId+"&compId=...."
 });
@@ -185,7 +229,6 @@ var grid = new GridPanel({
                 …
                 ]
 );
-
 ```
 
 ### HTTP requests
@@ -211,19 +254,16 @@ In any case, menu items must be defined with the div named &lt;nav&gt;
 Example:
 
 ```
-
 <nav class="mdl-navigation">
   <a class="mdl-navigation__link" href="#" 
         onClick="executeFunction('showMyList')" >MyList</a>                
   <a class="mdl-navigation__link" href="#" onClick="logoutFromApp()" >Quit</a>
 </nav>
-
 ```
 
 You can filter menu items by checking out if specific functionalities are enabled for the current user. You can do it in this way:
 
 ```
-
 <nav class="mdl-navigation">
   <% if (is!=null && is.isFunctionIdEnabled("WEBPAGEDEV","articoli")) { %>
   <a class="mdl-navigation__link" href="#" 
@@ -232,7 +272,6 @@ You can filter menu items by checking out if specific functionalities are enable
   <% } %>            
   <a class="mdl-navigation__link" href="#" onClick="logoutFromApp()" >Quit</a>
 </nav>
-
 ```
 
 In the previous example, what has been checked out is the abilitation of a functionality whose id is “articoli”. This is the name of a menu item defined in Platform.
@@ -274,6 +313,6 @@ A good starting point is
 
 [**https://getmdl.io/components/index.html\#tables-section**](https://getmdl.io/components/index.html#tables-section)
 
-**      
+**        
 **
 

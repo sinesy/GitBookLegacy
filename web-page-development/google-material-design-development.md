@@ -26,12 +26,12 @@ It provides:
 
 * window
 
-**          
+**            
 **
 
 ## **Utility methods directly connected to Platform**
 
-**          
+**            
 **
 
 ### Creating a combo-box store
@@ -79,7 +79,7 @@ var formPanel = createForm({
 });
 ```
 
-**          
+**            
 **
 
 ## **Additional methods**
@@ -89,7 +89,7 @@ These methods are connected to Material Design but independent from Platform.
 ### Creating a window containing panels
 
 ```js
-var win = newAppWindow({
+var win = new AppWindow({
   title: "...",
   items: [grid,formPanel,...]
 });
@@ -100,7 +100,7 @@ var win = newAppWindow({
 This dialog is automatically shown when instantiated. If the handler callback is not specified, the dialog will be automatically closed. In order to close it programmatically, call d.hide\(\);
 
 ```js
-var d = newDialog({
+var d = new Dialog({
   width: ...,
   height: ...,
   title: ...,
@@ -116,14 +116,14 @@ var d = newDialog({
 
 ### Creating a form store and a form panel
 
-This is an alternative to the createForm method described in the previous section and it allows to programmatically create a form store and, after that, the form panel. 
+This is an alternative to the createForm method described in the previous section and it allows to programmatically create a form store and, after that, the form panel.
 
 ```js
-var formStore = newFormStore({
+var formStore = new FormStore({
   url: context+"/getdetail?applicationId="+applicationId+"&compId=..."}
 );
 
-var formPanel = newFormPanel({
+var formPanel = new FormPanel({
   title: "...",
   region: "...",
   height: ...,
@@ -309,6 +309,6 @@ A good starting point is
 
 [**https://getmdl.io/components/index.html\#tables-section**](https://getmdl.io/components/index.html#tables-section)
 
-**          
+**            
 **
 

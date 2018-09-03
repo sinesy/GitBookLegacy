@@ -26,12 +26,12 @@ It provides:
 
 * window
 
-**        
+**          
 **
 
 ## **Utility methods directly connected to Platform**
 
-**        
+**          
 **
 
 ### Creating a combo-box store
@@ -79,7 +79,7 @@ var formPanel = createForm({
 });
 ```
 
-**        
+**          
 **
 
 ## **Additional methods**
@@ -94,8 +94,6 @@ var win = newAppWindow({
   items: [grid,formPanel,...]
 });
 ```
-
-
 
 ### Creating a dialog
 
@@ -116,11 +114,9 @@ var d = newDialog({
 });
 ```
 
-
-
 ### Creating a form store and a form panel
 
-This is an alternative to the createForm method described in the previous section and it allows to programmatically create a form store and, after that, the form panel.
+This is an alternative to the createForm method described in the previous section and it allows to programmatically create a form store and, after that, the form panel. 
 
 ```js
 var formStore = newFormStore({
@@ -313,6 +309,6 @@ A good starting point is
 
 [**https://getmdl.io/components/index.html\#tables-section**](https://getmdl.io/components/index.html#tables-section)
 
-**        
+**          
 **
 

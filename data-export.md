@@ -44,8 +44,6 @@ The order is used when automating the export for all tasks or for a group of tas
 
 When pressing the Add button, it is possible to create a new export definition. When double clicking on an already existing row or pressing the Detail button, it is possible to review an already existing task and edit it.
 
-
-
 A task definition is split up in a sequence of panels, composing a wizard, which drives the user along the definition process.
 
 ![](/assets/export_def.png)
@@ -71,25 +69,114 @@ It includes the following input fields:
 * **Export order** - this field defines the execution order for a set of jobs; it is used only by the Scheduler to figure out the execution order, in case of "export of a group" or "export all" option
 * **Action before export **- server-side javascript action which can be optionally executed before starting the execution process
 * **Action after export **- server-side javascript action which can be optionally executed after the execution process
-* **Parameters filler** - it is likely that many SQL extraction queries \(see next section "Extract data from"\) can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically. In case of a manual execution, the end user can select a task definition from the tasks list \(see previous section\) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly. As an alternative, an export process can be started automatically, using the Scheduler. In such a scenario, the parameters values must be provided automatically: 
+* **Parameters filler** - it is likely that many SQL extraction queries \(see next section "Extract data from"\) can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically. 
+  * In case of a manual execution, the end user can select a task definition from the tasks list \(see previous section\) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly. 
+  * As an alternative, an export process can be started automatically, using the Scheduler. In such a scenario, the parameter values must be provided automatically: for that reason, a business component for a list can be set in "Parameter filler" field. This business component must contain in the SELECT clause all required parameter names. When executing the task, first the business component will be executed and the list of parameter values are retrieved; then for each record read, the job is executed, so that it is possible to automate the job execution multiple time, once for each record read from the business component.
 
-
+ 
 
 **Copy to folder **- it is optional and can be filled out, in case the exported files must be saved on a directory \(server file system, Google cloud\)
 
-**Copy to FTP** - it is optional and can be filled out, in case the exported files must be moved to a virtual folder within an FTP server
+
+
+**Copy to FTP** - it is optional and can be filled out, in case the exported files must be moved to a virtual folder within an FTP server.
+
+The FTP virtual folder can be defined dinamically, by including supported Platform variables.
+
+For example, a valid folder definition can be:
+
+LISTINO\_:ENTE\_:FILIALE
 
 
 
 ### Extract data from
 
-gg
+The second step in the job definition is related to the data extraction query.
+
+![](/assets/export_query.png)
+
+This SQL query can be defined in 2 ways:
+
+* by specifying a table: in that case, a filtering condition can be defined, including bind variables
+* by choosing a generic SQL query: in that case, the query is not limited to a single table, but can include any number of tables connected by JOIN conditions; again, it can include bind variables.
+
+When pressing the next button, the query is automatically tested: in case of invalid syntax, the error is prompted to the user, who has to fix the incorrect syntax before continuing.
+
+Another prompt is always shown to the user at this state: whether updating output fields. For each field specified in the SELECT clause, an output field is defined by Platform and automatically mapped to the corresponding SELECT field. In the section named "**Output** **Fields**", the end user has the change to set additional data conversion on the output field, like its type or date conversion mask.
+
+
+
+### Additional SQL queries or statements
+
+In the previous step, the user must specify the main query, i.e. the extraction query to execute. 
+
+![](/assets/export_otherqueries.png)
+
+Here it is possible to specify 
+
+* an additional query, named "Query executed with an empty db" can be defined; it will be used when \(i\) manually starting the task and the user has chosen such an option when prompted or \(ii\) when automatically starting the task by the Scheduler and the Scheduler parameter named "QUERY\_TYPE" has been specified and set to "I"
+* SQL statements executed before or after the query for empty db
+* SQL statements executed before or after the standard query
+
+The last two options will be automatically executed by Platform, without any prompt to the user.
+
+
+
+### Output fields
+
+This step allows the user to change a few settings related to the output fields: these are automatically defined by Platform, starting from the main query defined at step 2.
+
+![](/assets/export_fields.png)
+
+If needed, the user can change the target field type or its format, for instance in case of a date type, when it must be converted to a text having a specific format. If not specified, a date type input field is automatically converted to a text value having format "yyyy-MM-dd HH:mm:ss"
+
+The order property plays a very important role: it represents the order inside a CSV used to fill in the values for the fields. As a default behavior, fields are reported with the same order reported in the SELECT clause, so an easy and quick way to define the output order for values, is simply reporting them in the SELECT clause according to the desired sequence.
+
+
+
+### Query parameters
+
+This is the last step in the export task definition: it reports all bind variables found in the SQL extract query.
+
+![](/assets/export_params.png)
+
+The use has the chance to specify here the values for all or part of them.
+
+All missing values will be prompted when manually executing a data export \(see first section\).
+
+In case the export is automatically started by the Scheduler, all required values must be specified either as Scheduler parameters or through the **Parameters filler** described in the first step. 
+
+If there are bind variables not filled, the export process will fail with an error.
+
+
+
+### Scheduling data export
+
+Platform Scheduler includes 3 alternative ways to automate the data export execution.
+
+![](/assets/export_sched.png)
+
+**Export single job** - The first option is executing a single data export: in this case, you have also to specify which job to execute, through the "Command to run" field, which is filtered by all defined jobs.
+
+**Export a group** - This option will automate the execution of all jobs belonging to the same group: jobs are executed in the order defined though the"Execution order" field specified for each job. You have also to specify which group to execute, through the "Command to run" field, which is filtered by all defined groups.
+
+**Export all** - This option will automate the execution of all jobs: jobs are executed in the order defined though the"Execution order" field specified for each job. 
+
+
+
+Bind variables are filled according to the following policy:
+
+* values coming from the "Parameters" folder \(last step of job definition\)
+* values defined though the Scheduler parameters
+* values coming from the execution of the SQL query included in the Parameter Filler component
 
 
 
 
 
+### 
 
+### 
 
 
 

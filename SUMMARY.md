@@ -251,6 +251,7 @@
     * [Appendix A - a complete example without any lib](web-page-development/appendix-a-a-complete-example-without-any-lib.md)
     * [Appendix B - a complete example with Google MD](web-page-development/appendix-b-a-complete-example-with-google-md.md)
   * [Jira Integration](jira-integration.md)
+  * [Platform for GAE](platform-for-gae.md)
 * [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises.md)
   * [Database design](/2-1-Database-design.md)

@@ -22,11 +22,11 @@ When talking about the server-side computation, a weak point is the scalability 
 
 The backend is composed of the web service layer running on Compute Engine \(GCE\) and the relational database, running on CloudSQL, a managed database.
 
-A common production environment is composed of a Google Load Balancer able to forward requests to a number of GCE instances, using the auto-scaling feature provided by Google.
+A common production environment is composed of a **Google Load Balancer able to forward requests to a number of GCE instances**, using the auto-scaling feature provided by Google.
 
-However, this solution can scale in a minute \(the latency time required to startup a new GCE instance\), so not perfect for a peak of requests requiring more a response in seconds.
+However, **this solution can scale in a minute** \(the latency time required to startup a new GCE instance\), not so perfect for a peak of requests requiring a more responsive solution.
 
-GAE+Datastore represents a better solution when the auto-scaling needs a response in a second or so.
+GAE+Datastore represents a better solution when the auto-scaling **needs the creation of new instances in a second** or so.
 
 On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL.
 

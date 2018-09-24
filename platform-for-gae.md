@@ -28,7 +28,7 @@ However, this solution can scale in a minute \(the latency time required to star
 
 GAE+Datastore represents a better solution when the auto-scaling needs a response in a second or so.
 
-On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL.
+On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL. 
 
 Starting from these constraints, **Platform for GAE represents a subset of the Web Interpreter** described above, running on GAE and connected to Datastore \(and other Google Cloud Platform services\). You cannot use it to run a web application, but you can create your high-scalable set of web services.
 

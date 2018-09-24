@@ -10,7 +10,7 @@ Google App Engine's integrated Google Cloud Datastore database has a SQL-like sy
 
 Starting from this brief introduction, Platform can be deployed in a GAE standard environment, in order to scale in seconds, when needed.
 
-Platform suite is composed of different software layers:
+The Platform suite is composed of different software layers:
 
 * **App Designer** - a web application running on ComputeEngine and using a CloudSQL relational database to manage application configuration
 * **Web Interpreter** - a web application running on ComputeEngine and using a CloudSQL relational database or other data sources, representing the configured application running and accessible by the end users; there is one web interpreter instance for each configured application
@@ -52,7 +52,7 @@ Supported features are:
 
 ### Limitations
 
-GAE cannot be used in a flexible way as for GCE. These are the main limitations:
+GAE + Platform cannot be used in a flexible way as for GCE. These are the main limitations:
 
 * only **stateless web services** are supported. It means you have to design your javascript for GAE actions so that they can work without internal state linked to a user, but everything needed must be passed forward
 * **up to 10 queues** can be defined

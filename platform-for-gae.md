@@ -16,7 +16,7 @@ Platform suite is composed of different software layers:
 * **Web Interpreter** - a web application running on ComputeEngine and using a CloudSQL relational database or other data sources, representing the configured application running and accessible by the end users; there is one web interpreter instance for each configured application
 * **Mobile Interpreter** - a native mobile app, built for Android and iOS platforms, used to run mobile apps, configured starting form the App Designer
 
-![](/assets/gce_ar.png)
+![](/assets/gae_no.png)
 
 When talking about the server-side computation, a weak point is the scalability of a web solution, typically composed of a set of web services. The more requests the web application receives, the more difficult is for the backend to respond with an acceptable timing.
 
@@ -28,7 +28,7 @@ However, this solution can scale in a minute \(the latency time required to star
 
 GAE+Datastore represents a better solution when the auto-scaling needs a response in a second or so.
 
-On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL. 
+On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL.
 
 Starting from these constraints, **Platform for GAE represents a subset of the Web Interpreter** described above, running on GAE and connected to Datastore \(and other Google Cloud Platform services\). You cannot use it to run a web application, but you can create your high-scalable set of web services.
 
@@ -38,7 +38,7 @@ Using the App Designer, you can define web services to run into GAE \(i.e. "Java
 
 Once deployed these set of web services on GAE, you can access to them as usual.
 
-![](/assets/gae_ar.png)
+![](/assets/gae_arc.png)
 
 Supported features are:
 

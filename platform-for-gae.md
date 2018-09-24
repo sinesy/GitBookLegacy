@@ -1,14 +1,10 @@
 # Google App Engine & Platform
 
-
-
 Google App Engine \(GAE\) is a cloud computing platform for developing and hosting web services in Google-managed data centers. Web services can run across multiple servers, with automatic scaling: when the number of requests increases for an application, App Engine automatically allocates more resources to handle the additional demand.
 
 Google App Engine is free up to a certain level of consumed resources. Fees are charged for additional storage, bandwidth, or instance hours required by the application \(web services\).
 
 Google App Engine's integrated Google Cloud Datastore database has a SQL-like syntax called "GQL". GQL does not support the Join statement. Anyway, Datastore is a powerful NoSQL database, able to manage a very high amount of data, in a scalable way, so it represents the perfect choice for some parts of an application, requiring working with big data and do not have the need for analysis of aggregated data, where a relational database or a BI solution can better fit the scenario.
-
-
 
 ### Platform for GAE
 
@@ -20,9 +16,7 @@ Platform suite is composed of different software layers:
 * **Web Interpreter** - a web application running on ComputeEngine and using a CloudSQL relational database or other data sources, representing the configured application running and accessible by the end users; there is one web interpreter instance for each configured application
 * **Mobile Interpreter** - a native mobile app, built for Android and iOS platforms, used to run mobile apps, configured starting form the App Designer
 
-
-
-When talking about the server-side computation, a weak point is the scalability of a web solution, typically composed of a set of web services. The more requests the web application receives, the more difficult is for the backend to respond with an acceptable timing. 
+When talking about the server-side computation, a weak point is the scalability of a web solution, typically composed of a set of web services. The more requests the web application receives, the more difficult is for the backend to respond with an acceptable timing.
 
 The backend is composed of the web service layer running on Compute Engine \(GCE\) and the relational database, running on CloudSQL, a managed database.
 
@@ -34,15 +28,11 @@ GAE+Datastore represents a better solution when the auto-scaling needs a respons
 
 On the other hand, using a NoSQL database means a lower speed when executing queries and a very simple enquiring language, when compared with the standard SQL.
 
-
-
 Starting from these constraints, **Platform for GAE represents a subset of the Web Interpreter** described above, running on GAE and connected to Datastore \(and other Google Cloud Platform services\). You cannot use it to run a web application, but you can create your high-scalable set of web services.
-
-
 
 You have still to use a standard Platform installation, running on GCE+CloudSQL and configure a Datastore and objects and business components.
 
-Using the App Designer, you can define web services to run into GAE \(i.e. "Javascript for GAE" actions\). 
+Using the App Designer, you can define web services to run into GAE \(i.e. "Javascript for GAE" actions\).
 
 Once deployed these set of web services on GAE, you can access to them as usual.
 
@@ -56,18 +46,14 @@ Supported features are:
 * **Mem-Cache** support, i.e. a cross-instance data cache, where you can store/read values needed across multiple requests or for a long time, in order to avoid costly and slow Datastore queries
 * **Task Queue **support, i.e. javascript for GAE actions enqueued into an internal queue, processed one at a time, so that there is a limit to the required computational process and it can also provide a better response to HTTP sync calls. 
 
-
-
 ### Limitations
 
-GAE cannot be used in a flexible way as for GCE. These are the main limitations: 
+GAE cannot be used in a flexible way as for GCE. These are the main limitations:
 
 * only **stateless web services** are supported. It means you have to design your javascript for GAE actions so that they can work without internal state linked to a user, but everything needed must be passed forward
 * **up to 10 queues** can be defined
 * a single queue execution **cannot run for more than 10 minutes**
 * **no access to file system** is allowed, so reading/writing files should not be carried out using GAE
-
-
 
 ### Setup
 
@@ -80,8 +66,6 @@ In order to use Platform for GAE, a few steps must be followed:
   * Google Service Account Key
   * Google Datastore Id
 * through the App Designer, the Application parameter named **"Password Platform for GAE" must be defined**, in the GOOGLE folder, in order to correctly setup the connection with the Google App Engine, used to communicate with it and send application metadata or other operations
-
-
 
 At this point, it is possible to start creating objects for the Datastore and define Javascript for GAE actions, which will be later executed inside a GAE instance.
 
@@ -97,27 +81,21 @@ That'all!
 
 Now it is possible to invoke your web services into GAE and enjoy the high-scalability offered by this layer.
 
-
-
-
-
 ### Every-day activities
 
 **Uploading a single action**
 
 Once you have deployed your actions to GAE, you can change any of them multiple times.
 
-You can edit the action definition in the App Designer and send these change to GAE, without exporting the whole application \(Import/Export Application\). 
+You can edit the action definition in the App Designer and send these change to GAE, without exporting the whole application \(Import/Export Application\).
 
 You can send a single action by pressing the "Sync action with GAE" button available on the right fo the window related to the action definition.
 
 Once done that, the changes for your action are already available and up.
 
-
-
 **Enqueuing operations into GAE from your web application**
 
-A very common integration scenario between your web application running on GCE and web services available in GAE is related to the execution of computations within GAE, using the Task Queue feature, i.e. by enqueuing these operations into GAE, instead of running them in the standard Platfom queues. 
+A very common integration scenario between your web application running on GCE and web services available in GAE is related to the execution of computations within GAE, using the Task Queue feature, i.e. by enqueuing these operations into GAE, instead of running them in the standard Platfom queues.
 
 Forwarding these operations outside of a standard Platform environment has the big advantage of reducing the computation effort required by GCE and use GAE for whay it is designed for: high scalability with multiple requests.
 
@@ -138,8 +116,6 @@ A few limitations:
 * no postponed actions can be enqueued \(as for server-side javascript enqueueAction method\)
 * queue execution is not reported inside the App Designer: it can be monitored only by using the GCP console, in the section App Engine -&gt; Task Queues
 
-
-
 **Javascript for GAE**
 
 You can define your js actions to run into GAE in a very similar way you already do it when creating server-side js actions: the syntax is the same, i.e. utils.method\(...\)
@@ -152,13 +128,9 @@ Basically, the available methods are the ones compatible with GAE, i.e. there ar
 
 Logging operations are supported, as for Server-side Javascript, but it can be accessed only by using GCP console \(see next section for more details\).
 
-
-
 **Enqueuing operations into GAE from a GAE web service**
 
 You can use the utils.enqueueAction method from within a "Javascript for GAE" action in order to forward and postpone heavy operations from the main web service to the Task Queue: this design choice is highly recommended, since GAE will interrupt HTTP requests longer than 30 seconds, so in case of complex logic, it would be always a good idea to use queues for managing the real work.
-
-
 
 **Logging on GAE**
 
@@ -175,15 +147,13 @@ In order to see the logged messages, you have to access the GCP console and
 
 Messages will be shown automatically, according to these selections and other optional filters, from the least recent to the most recent \(on the bottom\).
 
+![](/assets/gae.png)
+
 Each line reports a single HTTP request, request time, outcome, etc.
 
 When expanding a single line, related to a specific HTTP request, you can see all logged messages related to that request.
 
-
-
-
-
-
+![](/assets/gaede.png)
 
 
 

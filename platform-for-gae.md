@@ -197,7 +197,7 @@ You can use both GET and POST HTTP methods.
 
 **Executing queries on Datastore**
 
-Platform for GAE was born to provide high scalability. This goal can be reach only if a few constraints are fulfilled:
+Platform for GAE was born to provide high scalability. This goal can be reached only if a few constraints are fulfilled:
 
 * use only stateless web services
 * use the MemCache as much as possible, to minimize the access to a database
@@ -256,7 +256,7 @@ var outcome = utils.deleteObjectOnGoogleDatastore(
 
 **Executing queries on CloudSQL**
 
-Platform for GAE was born to provide high scalability. This goal can be reach only if a few constraints are fulfilled:
+Platform for GAE was born to provide high scalability. This goal can be reached only if a few constraints are fulfilled:
 
 * use only stateless web services
 * use the MemCache as much as possible, to minimize the access to a database
@@ -266,7 +266,7 @@ Consequently, you should avoid reading or writing data to external systems, incl
 
 Optionally, you could connect App Engine to CloudSQL, the managed relational database provided by Google, having a MySQL implementation.
 
-Consequently, you have the change to directly access to this instance, if correctly set up in the Google Console for the same Google Cloud Project.
+Consequently, you have the chance to directly access this database instance, if correctly set up in the Google Console for the same Google Cloud Project.
 
 Since the CloudSQL instance cannot provide the same scalability of Datastore, it should be used carefully.
 
@@ -274,7 +274,7 @@ Please have a look at this section to get more details about that:
 
 [https://cloud.google.com/sql/docs/mysql/connect-app-engine](https://cloud.google.com/sql/docs/mysql/connect-app-engine)
 
-If you decide to directly connect App Engine to a CloudSQL, please respect the following steps,
+If you decide to directly connect App Engine to a CloudSQL, please respect the following steps:
 
 * at the moment, "Platform for GAE" only allows you to read data from CloudSQL
 * try to use the MemCache as much as possible, instead of reading data from CloudSQL: check if data you need from CloudSQL is already available in cache, only in case it is not, then read it though a query; this hint could ensure as much scalability as you need, if queries are always the same

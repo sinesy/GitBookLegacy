@@ -283,7 +283,7 @@ This hint can ensure as much scalability as you need, if queries are always the 
 
 Once you have created your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web services to read data in the corresponding tables.
 
-Reading data \(at the moment, "Platform for GAE" only allows you to read data from CloudSQ\)
+Reading data \(at the moment, "Platform for GAE" only allows you to read data from CloudSQL\)
 
 ```js
 var list = []; // please do not do it for long result sets!

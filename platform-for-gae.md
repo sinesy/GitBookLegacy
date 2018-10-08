@@ -214,7 +214,7 @@ First, you have to declare your objects, one of each "entity" \(e.g. table...\) 
 
 Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
 
-Reading data:
+Reading data \(using GQL - Google query language for Datastore\)
 
 ```js
 var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);

@@ -142,11 +142,13 @@ Logging operations are supported, as for Server-side Javascript, but it can be a
 
 You can use the utils.enqueueAction method from within a "Javascript for GAE" action in order to forward and postpone heavy operations from the main web service to the Task Queue: this design choice is highly recommended, since GAE will interrupt HTTP requests longer than 60 seconds, so in case of complex logic, it would be always a good idea to use queues for managing the real work.
 
+For an example, see the section below.
+
 ---
 
 **Executing public web services on GAE**
 
-It is strongly recommended to design web services in GAE \(i.e. actions having type "javascript for GAE"\) so that they are asynchronous, that is to say, they should always be coupled to a second "javascript for GAE" action to enqueue the elaboration internally, so that the real elaboration is executed in the queue and the web service can terminate immediately. 
+It is strongly recommended to design web services in GAE \(i.e. actions having type "javascript for GAE"\) so that they are asynchronous, that is to say, they should always be coupled to a second "javascript for GAE" action to enqueue the elaboration internally, so that the real elaboration is executed in the queue and the web service can terminate immediately.
 
 Bear in mind that a single HTTP request never can last for a long time: App Engine interrupt with error an HTTP request every time it lasts more than 60 seconds.
 
@@ -183,7 +185,7 @@ As an alternative, you can specify user credentials:
 /executeJs?actionId=yyy&appId=MYAPPID&companyId=...&siteId=...&username=...&password=...
 ```
 
-4. You are now ready to invoke your public web service:
+1. You are now ready to invoke your public web service:
 
 ```
 https://yourgoogleprojectname.appspot.com/alias?cmd=MY_ALIAS&appId=...
@@ -203,7 +205,7 @@ Platform for GAE was born to provide high scalability. This goal can be reach on
 
 If you need to read or write instructions on Google Datastore, you can use the same javascript instructions available in the standard installation of Platform, described below.
 
-First, you have to declare your objects, one of each "entity" \(e.g. table...\) you want to manage in Datastore: 
+First, you have to declare your objects, one of each "entity" \(e.g. table...\) you want to manage in Datastore:
 
 * select the "Data Model" menu and choose "Objects and relationships"
 * press the Add button and then "Add Object to Datastore"
@@ -272,12 +274,10 @@ Please have a look at this section to get more details about that:
 
 [https://cloud.google.com/sql/docs/mysql/connect-app-engine](https://cloud.google.com/sql/docs/mysql/connect-app-engine)
 
-If you decide to directly connect App Engine to a CloudSQL, please respect the following steps, 
+If you decide to directly connect App Engine to a CloudSQL, please respect the following steps,
 
 * at the moment, "Platform for GAE" only allows you to read data from CloudSQL
 * try to use the MemCache as much as possible, instead of reading data from CloudSQL: check if data you need from CloudSQL is already available in cache, only in case it is not, then read it though a query; this hint could ensure as much scalability as you need, if queries are always the same
-
-
 
 Once you have created your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
 
@@ -295,7 +295,7 @@ utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,
 utils.setReturnValue(JSON.stringify(list));
 ```
 
-As you can see from the example above, you can only read a single row a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function. 
+As you can see from the example above, you can only read a single row a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function.
 
 ---
 

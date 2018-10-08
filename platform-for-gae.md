@@ -97,6 +97,8 @@ You can send a single action by pressing the "Sync action with GAE" button avail
 
 Once done that, the changes for your action are already available and up.
 
+---
+
 **Enqueuing operations into GAE from your web application**
 
 A very common integration scenario between your web application running on GCE and web services available in GAE is related to the execution of computations within GAE, using the Task Queue feature, i.e. by enqueuing these operations into GAE, instead of running them in the standard Platfom queues.
@@ -120,6 +122,8 @@ A few limitations:
 * no postponed actions can be enqueued \(as for server-side javascript enqueueAction method\)
 * queue execution is not reported inside the App Designer: it can be monitored only by using the GCP console, in the section App Engine -&gt; Task Queues
 
+---
+
 **Javascript for GAE**
 
 You can define your js actions to run into GAE in a very similar way you already do it when creating server-side js actions: the syntax is the same, i.e. utils.method\(...\)
@@ -132,9 +136,168 @@ Basically, the available methods are the ones compatible with GAE, i.e. there ar
 
 Logging operations are supported, as for Server-side Javascript, but it can be accessed only by using GCP console \(see next section for more details\).
 
+---
+
 **Enqueuing operations into GAE from a GAE web service**
 
-You can use the utils.enqueueAction method from within a "Javascript for GAE" action in order to forward and postpone heavy operations from the main web service to the Task Queue: this design choice is highly recommended, since GAE will interrupt HTTP requests longer than 30 seconds, so in case of complex logic, it would be always a good idea to use queues for managing the real work.
+You can use the utils.enqueueAction method from within a "Javascript for GAE" action in order to forward and postpone heavy operations from the main web service to the Task Queue: this design choice is highly recommended, since GAE will interrupt HTTP requests longer than 60 seconds, so in case of complex logic, it would be always a good idea to use queues for managing the real work.
+
+---
+
+**Executing public web services on GAE**
+
+It is strongly recommended to design web services in GAE \(i.e. actions having type "javascript for GAE"\) so that they are asynchronous, that is to say, they should always be coupled to a second "javascript for GAE" action to enqueue the elaboration internally, so that the real elaboration is executed in the queue and the web service can terminate immediately. 
+
+Bear in mind that a single HTTP request never can last for a long time: App Engine interrupt with error an HTTP request every time it lasts more than 60 seconds.
+
+You can do it, by following these steps:
+
+1. create your internal action "javascript for GAE" which will elaborate your request; let's say that it has xxx id
+
+2.create your public web service, i.e. another action "javascript for GAE" which will be invoked by any external client and \(i\) enqueue the input data to the first action and \(ii\) will provide a response to the client; let's say that it has yyy id
+
+```js
+var uuid = utils.enqueueAction(
+      "MY_QUEUE_NAME", // queueName
+      xxx, // actionId
+      vo, // // my input data, expressed in JSON format
+      null, // priority is ignored
+      null, // processWaitTime is ignored
+      false // logExecution is ignored
+);
+utils.setReturnValue(JSON.stringify({ success: true, uuid: uuid }));
+// in this way, you can trace your enqueued action, starting from the uuid, if needed
+```
+
+3.define a request alias for your public web service, where you have to internally provide the appId, yyy action id and the token or the standard credentials appId+companyId+siteId+username
+
+```js
+/executeJs?actionId=yyy&appId=MYAPPID&token=MYAUTHTOKEN
+```
+
+Your auth token is set as default value like the Google Project Name; in any case, it is the same specified as "GAE Password" value for the app parameter in the App Designer.
+
+As an alternative, you can specify user credentials:
+
+```js
+/executeJs?actionId=yyy&appId=MYAPPID&companyId=...&siteId=...&username=...&password=...
+```
+
+4. You are now ready to invoke your public web service:
+
+```
+https://yourgoogleprojectname.appspot.com/alias?cmd=MY_ALIAS&appId=...
+```
+
+You can use both GET and POST HTTP methods.
+
+---
+
+**Executing queries on Datastore**
+
+Platform for GAE was born to provide high scalability. This goal can be reach only if a few constraints are fulfilled:
+
+* use only stateless web services
+* use the MemCache as much as possible, to minimize the access to a database
+* connect only to a high scalable database, that is to say, the NoSQL Google Datastore
+
+If you need to read or write instructions on Google Datastore, you can use the same javascript instructions available in the standard installation of Platform, described below.
+
+First, you have to declare your objects, one of each "entity" \(e.g. table...\) you want to manage in Datastore: 
+
+* select the "Data Model" menu and choose "Objects and relationships"
+* press the Add button and then "Add Object to Datastore"
+* Here you have to assign a name to the object, in camel mode and with the first letter in uppercase; example: OrderRows
+* Add as many fields as you need and choose a field as primary key; it is strongly recommended to choose a string type \(or directly an UUID type\)  field for the primary key and assign to it an UUID value, which does not require additional queries to be reckoned. That means you should always avoid to choose a counter for the primary key: it is not the faster choice
+
+Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
+
+Reading data:
+
+```js
+var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
+//utils.log(json,"DEBUG");
+utils.setReturnValue(json);
+```
+
+Insert data:
+
+```js
+var outcome = utils.insertObjectOnGoogleDatastore(
+  vo, // the js object to insert, having attributes compatible with the ones defined in the entity
+  xxx, // dataModelId corresponding to the entity where writing data
+  true // interruptExecution
+);
+```
+
+Update data:
+
+```js
+var outcome = utils.updateObjectOnGoogleDatastore(
+  vo, // the js object to insert, having attributes compatible with the ones defined in the entity
+  xxx, // dataModelId corresponding to the entity where writing data
+  true // interruptExecution
+);
+```
+
+Delete data:
+
+```js
+var outcome = utils.deleteObjectOnGoogleDatastore(
+  vo, // the js object to insert, having attributes compatible with the ones defined in the entity
+  xxx, // dataModelId corresponding to the entity where writing data
+  true // interruptExecution
+);
+```
+
+---
+
+**Executing queries on CloudSQL**
+
+Platform for GAE was born to provide high scalability. This goal can be reach only if a few constraints are fulfilled:
+
+* use only stateless web services
+* use the MemCache as much as possible, to minimize the access to a database
+* connect only to a high scalable database, that is to say, the NoSQL Google Datastore
+
+Consequently, you should avoid reading or writing data to external systems, including a relational database.
+
+Optionally, you could connect App Engine to CloudSQL, the managed relational database provided by Google, having a MySQL implementation.
+
+Consequently, you have the change to directly access to this instance, if correctly set up in the Google Console for the same Google Cloud Project.
+
+Since the CloudSQL instance cannot provide the same scalability of Datastore, it should be used carefully.
+
+Please have a look at this section to get more details about that:
+
+[https://cloud.google.com/sql/docs/mysql/connect-app-engine](https://cloud.google.com/sql/docs/mysql/connect-app-engine)
+
+If you decide to directly connect App Engine to a CloudSQL, please respect the following steps, 
+
+* at the moment, "Platform for GAE" only allows you to read data from CloudSQL
+* try to use the MemCache as much as possible, instead of reading data from CloudSQL: check if data you need from CloudSQL is already available in cache, only in case it is not, then read it though a query; this hint could ensure as much scalability as you need, if queries are always the same
+
+
+
+Once you have created your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
+
+Reading data:
+
+```js
+var list = []; // please do not do it for long result sets!
+var readRow = function(vo) {
+    //utils.log(JSON.stringify(vo),"DEBUG");
+    list.push(vo);
+}
+
+
+utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,true,[]);
+utils.setReturnValue(JSON.stringify(list));
+```
+
+As you can see from the example above, you can only read a single row a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function. 
+
+---
 
 **Logging on GAE**
 

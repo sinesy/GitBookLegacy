@@ -154,7 +154,7 @@ Bear in mind that a single HTTP request never can last for a long time: App Engi
 
 You can do it, by following these steps:
 
-1. create your internal action "javascript for GAE" which will elaborate your request; let's say that it has xxx id
+1.create your internal action "javascript for GAE" which will elaborate your request; let's say that it has xxx id
 
 2.create your public web service, i.e. another action "javascript for GAE" which will be invoked by any external client and \(i\) enqueue the input data to the first action and \(ii\) will provide a response to the client; let's say that it has yyy id
 

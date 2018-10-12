@@ -8,7 +8,7 @@
 
 4WS.Platform is a modular product composed of a set of sub-systems, each focused on a specific topic: authentication and authorization, menu, App Designer, Web Interpreter, etc. represented in the following schema.
 
-![](/assets/architettura_EE.png)
+![](/assets/arc_ee4.png)
 
 Since each organization has its own identity management, 4WS.Platform has been designed with a default open source implementation of an identity management, that can be replaced with another one of your choice.  
 That can be done easily, due to the pluggable nature of the platform: the default identity management implementation provided with 4WS.Platform is a plugin that can be replaced with something else, created ad hoc for a specific company.  

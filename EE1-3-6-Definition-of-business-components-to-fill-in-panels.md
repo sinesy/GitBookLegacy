@@ -26,7 +26,49 @@ In both cases, a parameter is defined using the Platform syntax: :XXX, dove XXX 
 
 Please do not change the business component content for a detail form: it must always contain the ID and it should never be changed.
 
-## Examples of filtering conditions
+## Filtering conditions on database connected grids
+
+In case of a grid connected to a business components for Reports on line or components for lists generated automatically, filtering and sorting conditions are applied automatically by the grid component and passed forward to the server layer through the HTTP request parameters.
+
+Optionally, you can define additional filtering conditions to the business component through the Additional Filters tab folder, available in the business component definition window.
+
+You can define any number of filtering conditions in this list: the only requirement is to include at least one binding variable in a filtering condition.
+
+Example:
+
+```js
+AND (FIELD1 = :MY_VAR OR FIELD2 = :MY_VAR )
+```
+
+In this example, the variable name is MY\_VAR and such condition will be automatically appended to the WHERE condition defined for the business component as long as the variable value is passed to the HTTP request. The corresponding request parameter must be expressed in camel-case format. So that for the example above, the request parameter name must be _myVar_.
+
+On the UI layer, such parameter is passed forward in a client-side javascript action in this way:
+
+```js
+gridxxx.store.baseParams.myVar = "...";
+```
+
+Note that every filter condition is appended to the base WHERE clause so it must start with a logical operation, which should be AND.
+
+Suppose you need to define a condition in an IN, where you don't know in advance if 1, 2 or 3 values will be passed forward. You can manage this scenario by defining multiple filtering conditions, each one with different variable names:
+
+```
+AND FIELD IN ( :VAR1 )
+```
+
+```
+AND FIELD IN ( :VAR2_1 , :VAR2_2 )
+```
+
+```
+AND FIELD IN ( :VAR3_1 , :VAR3_2 , :VAR3_3 )
+```
+
+In this way, each filter condition will be applied alternatively. As a consequence. on the client side, you need to manage different variable names, according to the amount of values to pass forward.
+
+
+
+## Filtering conditions on Alfresco connected grids
 
 A typical setting of a business component for grids is as the follow:
 

@@ -31,7 +31,7 @@ Please do not change the business component content for a detail form: it must a
 A typical setting of a business component for grids is as the follow:
 
 ```js
-service/getList?format=json&amp;type=...&amp;model=...&amp;prefix=...
+service/getList?format=json&type=...&model=...&prefix=...
 ```
 
 * the model and prefix are automatically set by Platform, when importing an object, since all the objects retrieved inherit the same model \(and prefix\).
@@ -43,7 +43,7 @@ These conditions must be expressed according to the Alfresco Query Syntax.
 For instance, this is an URL including a filtering condition:
 
 ```
-service/getList?format=json&amp;filterBy=zig:Flag_Stato:"C"&amp;type=...
+service/getList?format=json&filterBy=zig:Flag_Stato:"C"&type=...
 ```
 
 zig:Flag\_Stato represents the model prefix + property name related to the specified document type, whereas the : symbol represents the " **starts with** " comparison operator and "…" is the value to compare.  

@@ -46,10 +46,26 @@ These are all properties defined for a column:
 * **Maximum date**  – in case of date/datetime type, it is possible to set a maximum date the user can set
 * **Minimum numeric value**  – in case of number type, it is possible to set a minimum number the user can set
 * **Maximum numeric value**  – in case of number type, it is possible to set a maximum number the user can set
-* **Renderer**  – an optional javascript expression, to use to format data in a complex way; see ExtJS documentation about this property to know how to use it; For Example:
+* **Renderer**  – an optional javascript expression, to use to format data in a complex way; see ExtJS documentation about this property to know how to use it; 
+
+Example for a Web Application:
 
 ```js
 if (value&lt;0) return "negative"; if (value&gt;0) return "positive"; return "zero";
+```
+
+Example for a Mobile Application:
+
+```js
+var obj = { value: vo["COD_PRODOTTO"] }; 
+if (vo["VALIDATO"]=="N") { 
+  obj.backgroundColor = "FFDDDD";
+} 
+else { 
+  obj.backgroundColor = "DDFFDD"; 
+}; 
+var val = convertToObjectJson(obj); 
+return val;
 ```
 
 * **Not editable if**  – boolean expression, expressed in javascript, indicating when the cells of the selected column are editable; this property overrides the default behavior of the cells, defined through the combination of grid mode \(insert/edit\) + can insert/can edit properties. This property is useful when the behavior of the cell should change according to a dynamic value, such as "a document state" represented by the value of another attribute of the same row.
@@ -90,7 +106,7 @@ The default behavior of that button is to show the cell value as its text, paint
 function(value, metaData, record, rowIndex, colIndex, store) {
     metaData.style = 'text-align: center;color: white; background: #3d71b8';
     return value
-}
+} // example for a Web Application
 ```
 
 Note that it is not allowed to insert/delete columns in a grid: columns are automatically synchronized with the fields defined in the select clause of the binded business component, which are automatically synchronized with the data fields defined in the binded data model. The only exception to this rule is when the user is defining a business component "Query for a report to show on grid", where no data model is required: the select clause can be manually defined by the user and changes to this part of the SQL query are automatically reflected on the columns list of the linked grids.

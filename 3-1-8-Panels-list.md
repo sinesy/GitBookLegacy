@@ -10,20 +10,22 @@ The information available through a panel detail is split up in several folders:
 * **events**  – list of events defined by the user to link to the panel \(e.g. click on a row of the grid, a button pressed, etc.\)
 * **buttons panel ** – list of buttons to add to the default toolbar; the button definition includes the following properties:
 
-* button text
+  * button text
 
-* icon
-* action to link to the button \(see "Events and Actions" section\)
-* position of the button within the toolbar
-* synchronous or asynchronous event, i.e. if the button is blocked or not until the events has been completed
-* flags used to define the abilitation policy for the button: enabled only when the panel is in readonly/insert/edit modes
+  * icon
+
+  * action to link to the button \(see "Events and Actions" section\)
+  * position of the button within the toolbar
+  * synchronous or asynchronous event, i.e. if the button is blocked or not until the events has been completed
+  * flags used to define the abilitation policy for the button: enabled only when the panel is in readonly/insert/edit modes
 
 * **other subfolders** , depending on the panel type:
 
-* columns list and column events for grid panels
+  * columns list and column events for grid panels
 
-* controls list and control events for detail form panels
-* controls list and control events for filter panels
+  * controls list and control events for detail form panels
+
+  * controls list and control events for filter panels
 
 * **menu popup** , available for grid panels: adds a field with a linked action to the filter window opened with a right click on the same grid’s field defined for the menu popup item
 

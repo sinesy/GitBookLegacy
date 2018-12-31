@@ -29,6 +29,7 @@ This functionality requires a few settings:
 * **Table name** – the mobile table name; such table will be automatically created by Platform in the mobile device, when synchronizing data and structures; its structure will be automatically defined by Platform starting from the field types specified in the select clause of the starting SQL query
 
 * **Data source** – if not specified, the "Starting SQL query" will be executed on the main database schema \(the repository schema used by Platform\); if specified, extracted data will be retrieved in that data source
+
 * **Sync data** – if this flag is selected, data will be synchronized automatically \(it should be the default option\)
 * **Data target** –for every configured read-write table, a copy of such table will be created on the server as well: this copy is needed in order to prepare all data to send to all devices and also to receive all changes produced by devices and collect them in a unique central place. If not specified, such copy of the mobile table will be created on the main database schema \(the repository schema used by Platform\); if specified, the copy of the mobile table will be created in that data source
 * **Primary key fields **– when loosing focus from the "Starting SQL query" field, the SQL query will be executed and the list of fields specified in the selected clause is showed in this grid: it is mandatory to select at least one field with represents the primary key for the new mobile table; in this way, Platform will be able to manage writing operations like updates and deletes of the mobile table. _Pay attention to the correct definition of this primary key: once created, it cannot be changed any more_! 
@@ -54,7 +55,7 @@ Content of the "Action to avoid data sync"
 
 ```js
 var outcome = "true"; // sync for the read-only table will be carried out
-if (somecondition) {
+if (some condition) {
   outcome = "false"; // do not sync data again, since the device already owns an updated version of it
 }
 

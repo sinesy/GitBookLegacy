@@ -157,7 +157,7 @@ It is important to execute a **fine tuning of the database **as well, in terms o
 
 A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -&gt; Application Log -&gt; Log Statistics  **
 
-where all incoming requests are reported and grouped by type and day.
+where all incoming requests are reported  and grouped by type and day.
 
 Moreover, a more detail report reports the figure along the day, grouping the requests per hour of day. The same chart reports also the consumption of CPU, so it is possible to figure out how requests are affecting the CPU usage.
 

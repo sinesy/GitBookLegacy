@@ -298,7 +298,7 @@ If you decide to directly connect App Engine to a CloudSQL, please respect the f
 
 This hint can ensure as much scalability as you need, if queries are always the same.
 
-Once you have created your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web  services to read data in the corresponding tables.
+Once you have created  your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web  services to read data in the corresponding tables.
 
 **Reading data**
 

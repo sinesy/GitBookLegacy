@@ -222,7 +222,7 @@ var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
 utils.setReturnValue(json);
 ```
 
-**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key.
+**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key. 
 
 Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a service pay-per-use: the more you call them, the more you pay.
 

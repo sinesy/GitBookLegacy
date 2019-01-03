@@ -8,7 +8,7 @@ Be careful to avoid the installation of  Tomcat in paths having a space ‘‘ i
 
 ### Installation listening port problems
 
-Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat. 
+Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat.
 
 In order to run Tomcat, you can execute the command tomcat/bin/catalina.sh run or catalina.bat run, according to the o.s. in use; pay attention to the fact that in Linux/Unix/MacOS o.s. you have to change the permissions for those files, in order to execute them, use the command: “chmod u=rwx \*.sh” to make these files executable.
 
@@ -117,7 +117,8 @@ In this way, the Network Test functionality can be accessed by the end users, wi
 There is also a third option: programmatically execute it, without a visual prompt to the user. In order to do it, just invoke the global client-side method netTest from any client-side javascript action, using the following code:
 
 ```js
-var myCallbackFunction = function(latency,downloadRate,uploadRate) { // latency: expressed in ms, download/uploadRate: expressed in Kb/sec
+var myCallbackFunction = function(latency,downloadRate,uploadRate) { 
+  // latency: expressed in ms, download/uploadRate: expressed in Kb/sec
   // do something with the arguments...
 }
 netTest(myCallbackFunction);

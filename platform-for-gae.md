@@ -308,7 +308,6 @@ var readRow = function(vo) {
     list.push(vo);
 }
 
-
 utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,true,[]);
 utils.setReturnValue(JSON.stringify(list));
 ```

@@ -166,7 +166,7 @@ Moreover, a more detail report reports the figure along the day, grouping the re
 
 A heavy load due to the application logic on the server obviously affects the server \(hardware\) performance. The server can be sized accordingly to the nature of the app and its complexity. If needed, a cluster of servers should be introduced.
 
-A good approach is also to **limit the execution of enqueued elements and scheduled processed** in a dedicated server of the cluster: in this way, the performance of the on-line part of the application, accessed by the end users, would not be affected by the batch part. 
+A good approach is also to **limit the execution of enqueued elements and scheduled processed** in a dedicated server of the cluster: in this way, the performance of the on-line part of the application, accessed by the end users, would not be affected by the batch part.
 
 ---
 

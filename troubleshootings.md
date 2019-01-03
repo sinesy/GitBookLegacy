@@ -129,7 +129,7 @@ netTest(myCallbackFunction);
 
 This is probably the most difficult issue to recognize, since it is often due to a poor design activity.
 
-A good way to identify these kind of issues is using the AppDesigner functionality named App Diagnosis, available in 
+A good way to identify these kind of issues is using the AppDesigner functionality named App Diagnosis, available in
 
 **Monitoring -&gt; Application** **Log -&gt; App Analysis**
 
@@ -139,7 +139,7 @@ Thanks to this feature, it is possible to identify a wide range of issues, due t
 
 **too many requests to the server at the same time**
 
-It is important to pay attention to the number of HTTP requests coming to the server, especially in case of many web service calls. A large number of requests could: 
+It is important to pay attention to the number of HTTP requests coming to the server, especially in case of many web service calls. A large number of requests could:
 
 * saturate the network bandwidth available at server layer
 * reach the maximum amount of sockets \(ports\) available at operating system level and create HTTP network errors
@@ -154,9 +154,9 @@ Another option is to set up a **cluster of servers** in order to manage a wide n
 
 It is important to execute a **fine tuning of the database **as well, in terms of **max number of concurrent connections** it can manage and optionally increase the default number, according to the number of users/web service calls. The **max nr of database connections at pooler level** can be changed as well, if needed, by editing the **c3p0.properties** file available within WEB-INF/classes folder of the Platform server installation \(the property named c3p0.maxPoolSize\) and the max time to wait for a connection \(property named c3p0.checkoutTimeout, expressed in ms\).
 
-A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -&gt; Application Log -&gt; Log Statistics**
+A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -&gt; Application Log -&gt; Log Statistics **
 
-where all incoming requests are reported and grouped by type and day. 
+where all incoming requests are reported and grouped by type and day.
 
 Moreover, a more detail report reports the figure along the day, grouping the requests per hour of day. The same chart reports also the consumption of CPU, so it is possible to figure out how requests are affecting the CPU usage.
 
@@ -179,8 +179,6 @@ The diagnosis tool provided by Platform \(**Monitoring -&gt; Application** **Log
 * timeout when retrieving a database connection, often due to a pool size not correctly set and to increase, as well as the max number of connections at database level to set
 * slow queries
 * database locks, often due to design errors when creating the application
-
-
 
 
 

@@ -222,7 +222,7 @@ var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
 utils.setReturnValue(json);
 ```
 
-**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key. 
+**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key.
 
 Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a service pay-per-use: the more you call them, the more you pay.
 
@@ -312,7 +312,7 @@ utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,
 utils.setReturnValue(JSON.stringify(list));
 ```
 
-As you can see from the example above, you can only read a single row at a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function.
+As you can see from the example above, you can only read a single row at a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function. 
 
 **Writing data**
 

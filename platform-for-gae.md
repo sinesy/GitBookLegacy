@@ -214,6 +214,8 @@ First, you have to declare your objects, one of each "entity" \(e.g. table...\) 
 
 Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
 
+
+
 **Reading data \(using GQL - Google query language for Datastore\)**
 
 ```js
@@ -227,6 +229,8 @@ utils.setReturnValue(json);
 Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a  service pay-per-use: the more you call them, the more you pay.
 
 In case of reading an entity  by primary key use the next method.
+
+
 
 **Reading a single  entity by primary key:**
 
@@ -247,6 +251,8 @@ var outcome = utils.insertObjectOnGoogleDatastore(
 );
 ```
 
+
+
 **Update data:**
 
 ```js
@@ -256,6 +262,8 @@ var outcome = utils.updateObjectOnGoogleDatastore(
   true // interruptExecution
 );
 ```
+
+
 
 **Delete data:**
 

@@ -226,7 +226,7 @@ utils.setReturnValue(json);
 
 Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a  service pay-per-use: the more you call them, the more you pay.
 
-In case of reading an entity  by primary key use the next method.
+In case of reading an entity  by primary key use the next method
 
 **Reading a single  entity by primary key:**
 
@@ -238,8 +238,6 @@ var vo = getEntity(
 ); // vo is a javascript object, the entity
 ```
 
-
-
 **Insert data:**
 
 ```js
@@ -249,8 +247,6 @@ var outcome = utils.insertObjectOnGoogleDatastore
   true // interruptExecution
 );
 ```
-
-
 
 **Update data:**
 

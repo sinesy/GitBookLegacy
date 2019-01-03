@@ -228,7 +228,7 @@ Bear in mind that all reading/writing operations \(except for read an entity by 
 
 In case of reading an entity by primary key use the next method.
 
-**Reading a single entity by primary key:**
+**Reading a single  entity by primary key:**
 
 ```js
 var vo = getEntity(

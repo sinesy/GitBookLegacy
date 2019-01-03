@@ -214,7 +214,7 @@ First, you have to declare your objects, one of each "entity" \(e.g. table...\) 
 
 Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
 
-Reading data \(using GQL - Google query language for Datastore\)
+**Reading data \(using GQL - Google query language for Datastore\)**
 
 ```js
 var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
@@ -222,7 +222,22 @@ var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
 utils.setReturnValue(json);
 ```
 
+**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key. 
+
+Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a service pay-per-use: the more you call them, the more you pay.
+
+In case of reading an entity by primary key use the next method.
+
+**Reading a single entity by primary key:**
+
+```js
+var vo = getEntity(
+  entityName, // name of the entity, in camel-case (e.g. "OrderHeaders")
+  key, // the primary key, typically a String type
+  maxCachedEntities // max number of entities read from this method which will be stored in cached, instead of being retrieved from datastore; the cache can be cleared up, by using "clearDatastoreEntities" method
+); // vo is a javascript object, the entity
 Insert data:
+```
 
 ```js
 var outcome = utils.insertObjectOnGoogleDatastore(
@@ -232,7 +247,7 @@ var outcome = utils.insertObjectOnGoogleDatastore(
 );
 ```
 
-Update data:
+**Update data:**
 
 ```js
 var outcome = utils.updateObjectOnGoogleDatastore(
@@ -242,7 +257,7 @@ var outcome = utils.updateObjectOnGoogleDatastore(
 );
 ```
 
-Delete data:
+**Delete data:**
 
 ```js
 var outcome = utils.deleteObjectOnGoogleDatastore(
@@ -283,7 +298,7 @@ This hint can ensure as much scalability as you need, if queries are always the 
 
 Once you have created your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web services to read data in the corresponding tables.
 
-Reading data \(at the moment, "Platform for GAE" only allows you to read data from CloudSQL\)
+**Reading data**
 
 ```js
 var list = []; // please do not do it for long result sets!
@@ -297,7 +312,19 @@ utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,
 utils.setReturnValue(JSON.stringify(list));
 ```
 
-As you can see from the example above, you can only read a single row a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function.
+As you can see from the example above, you can only read a single row at a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function.
+
+**Writing data**
+
+```js
+var numberOfProcessedRecords = utils.executeSqlNoLog(
+  sql,
+  null,  // dataStore id
+  false, // separatedTransaction
+  true,  // interruptExecution
+  []     // parameters
+);  
+```
 
 ---
 

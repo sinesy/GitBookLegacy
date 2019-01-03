@@ -296,7 +296,7 @@ If you decide to directly connect App Engine to a CloudSQL, please respect the f
 * try to use the MemCache as much as possible, instead of reading data from CloudSQL
 * check if data you need from CloudSQL is already available in cache, only in case it is not, then read it though a query
 
-This hint can ensure as much scalability as you need, if queries are always the same.
+This hint can ensure as much scalability as you need, if queries are always the same. 
 
 Once you have created  your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web  services to read data in the corresponding tables.
 

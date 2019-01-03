@@ -81,7 +81,7 @@ Once the configuration process for your application has been completed, you can 
 * go to "Metadata Application Management" folder
 * press the Export metadata to Platform for GAE
 
-That'all!
+That's all!
 
 Now it is possible to invoke your web services into GAE and enjoy the high-scalability offered by this layer.
 

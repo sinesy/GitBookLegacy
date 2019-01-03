@@ -2,7 +2,7 @@
 
 ### Installation path problems
 
-Be careful to avoid the installation of Tomcat in paths having a space ‘‘ in folders: Windows operating system could have problems in recognizing the correct path.
+Be careful to avoid the installation of  Tomcat in paths having a space ‘‘ in folders: Windows operating system could have problems in recognizing the correct path.
 
 ---
 

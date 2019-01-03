@@ -234,7 +234,8 @@ In case of reading an entity  by primary key use the next method
 var vo = getEntity(
   entityName, // name of the entity, in camel-case (e.g. "OrderHeaders")
   key, // the primary key, typically a String type
-  maxCachedEntities // max number of entities read from this method which will be stored in cached, instead of being retrieved from datastore; the cache can be cleared up, by using "clearDatastoreEntities" method
+  maxCachedEntities // max number of entities read from this method which will be stored in cached, 
+  // instead of being retrieved from datastore; the cache can be cleared up, by using "clearDatastoreEntities" method
 ); // vo is a javascript object, the entity
 ```
 

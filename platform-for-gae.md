@@ -177,7 +177,7 @@ utils.setReturnValue(JSON.stringify({ success: true, uuid: uuid }));
 /executeJs?actionId=yyy&appId=MYAPPID&token=MYAUTHTOKEN
 ```
 
-Your auth token is set as default value like the Google Project Name; in any case, it is the same specified as "GAE Password" value for the app parameter in the App Designer.
+Your auth  token is set as default value like the Google Project Name; in any case, it is the same specified as "GAE Password" value for the app parameter in the App Designer.
 
 As an alternative, you can specify user credentials:
 

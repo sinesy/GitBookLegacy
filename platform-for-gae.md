@@ -171,7 +171,7 @@ utils.setReturnValue(JSON.stringify({ success: true, uuid: uuid }));
 // in this way, you can trace your enqueued action, starting from the uuid, if needed
 ```
 
-3.define a request alias for your public web service,  where you have to internally provide the appId, yyy action id and the token or the standard credentials appId+companyId+siteId+username
+3.define a request alias for  your public web service,  where you have to internally provide the appId, yyy action id and the token or the standard credentials appId+companyId+siteId+username
 
 ```js
 /executeJs?actionId=yyy&appId=MYAPPID&token=MYAUTHTOKEN

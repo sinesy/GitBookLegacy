@@ -8,7 +8,7 @@ Be careful to avoid the installation of  Tomcat in paths having a space ‘‘ i
 
 ### Installation listening port problems
 
-Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat.
+Moreover, pay attention to the port configured in Tomcat: in Linux/Unix O.S. you could have to change OS settings in order to allow the use of that port by Tomcat. 
 
 In order to run Tomcat, you can execute the command tomcat/bin/catalina.sh run or catalina.bat run, according to the o.s. in use; pay attention to the fact that in Linux/Unix/MacOS o.s. you have to change the permissions for those files, in order to execute them, use the command: “chmod u=rwx \*.sh” to make these files executable.
 

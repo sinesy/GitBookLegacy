@@ -312,7 +312,7 @@ utils.executeQueryWithCallback("readRow","SELECT * FROM PRM01_USERS",null,false,
 utils.setReturnValue(JSON.stringify(list));
 ```
 
-As you can see from the example above, you can only read a single row at a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function.
+As you can see from the example above, you can only read a single row at a time, in order to reduce the amount of memory needed to read a long result set; you should avoid accumulating records as in the example, but simply process each record when available in the callback function. 
 
 **Writing data**
 

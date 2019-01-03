@@ -214,8 +214,6 @@ First, you have to declare your objects, one of each "entity" \(e.g. table...\) 
 
 Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.
 
-
-
 **Reading data \(using GQL - Google query language for Datastore\)**
 
 ```js
@@ -230,8 +228,6 @@ Bear in mind that all reading/writing operations \(except for read an entity by 
 
 In case of reading an entity  by primary key use the next method.
 
-
-
 **Reading a single  entity by primary key:**
 
 ```js
@@ -240,11 +236,14 @@ var vo = getEntity(
   key, // the primary key, typically a String type
   maxCachedEntities // max number of entities read from this method which will be stored in cached, instead of being retrieved from datastore; the cache can be cleared up, by using "clearDatastoreEntities" method
 ); // vo is a javascript object, the entity
-Insert data:
 ```
 
+
+
+**Insert data:**
+
 ```js
-var outcome = utils.insertObjectOnGoogleDatastore(
+var outcome = utils.insertObjectOnGoogleDatastore
   vo, // the js object to insert, having attributes compatible with the ones defined in the entity
   xxx, // dataModelId corresponding to the entity where writing data
   true // interruptExecution
@@ -262,8 +261,6 @@ var outcome = utils.updateObjectOnGoogleDatastore(
   true // interruptExecution
 );
 ```
-
-
 
 **Delete data:**
 

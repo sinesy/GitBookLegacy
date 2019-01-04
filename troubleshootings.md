@@ -153,7 +153,7 @@ If the number of end users is higher than a hundred or the number of web service
 
 Another option is to set up a **cluster of servers** in order to manage a wide number of connections, with **auto-scale** option if available, in order to manage peaks of connections.
 
-It is important to execute a **fine tuning of the database **as well, in terms of **max number of concurrent connections** it can manage and optionally increase the default number, according to the number of users/web service calls. The **max nr of database connections at pooler level** can be changed as well, if needed, by editing the **c3p0.properties** file available within WEB-INF/classes folder of the Platform server installation \(the property named c3p0.maxPoolSize\) and the max time to wait for a connection \(property named c3p0.checkoutTimeout, expressed in ms\).
+It is important to execute a **fine tuning of the database **as well, in terms of **max number of concurrent connections** it can manage and optionally increase the default number, according to the number of users/web service calls. The **max nr of database connections at pooler level** can be changed as well, if needed, by editing the **c3p0.properties** file available within WEB-INF/classes folder of the Platform server installation \(the property named c3p0.maxPoolSize\) and the max time to wait for a connection \(property named c3p0.checkoutTimeout, expressed in ms\). 
 
 A good tool embedded in the App Designer to use to figure out the amount of HTTP requests coming to the server is available through **Monitoring -&gt; Application Log -&gt; Log Statistics  **
 

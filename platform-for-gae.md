@@ -171,11 +171,17 @@ utils.setReturnValue(JSON.stringify({ success: true, uuid: uuid }));
 // in this way, you can trace your enqueued action, starting from the uuid, if needed
 ```
 
-3.define a request alias for  your public web service,  where you have to internally provide the appId, yyy action id and the token or the standard credentials appId+companyId+siteId+username
+3.define a request alias for  your public web service,  where you have to internally provide the appId, the action id and either the token or the standard credentials appId+companyId+siteId+username.
 
 ```js
 /executeJs?actionId=yyy&appId=MYAPPID&token=MYAUTHTOKEN
 ```
+
+```
+/executeJs?actionId=yyy&appId=MYAPPID&companyId=...&siteId=...&username=...&password=...
+```
+
+It is strongly recommended to pass sensitive information in the request header rather than as request parameters, in this way they will be encrypted by HTTPS when executing the request.
 
 Your auth  token is set as default value like the Google Project Name; in any case, it is the same specified as "GAE Password" value for the app parameter in the App Designer.
 

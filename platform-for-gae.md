@@ -152,7 +152,7 @@ It is strongly recommended to design web services in GAE \(i.e. actions having t
 
 Bear in mind that a single HTTP request never can last for a long time: App Engine interrupt with error an HTTP request every time it lasts more than 60 seconds.
 
-You can do it, by following these steps:
+You can do it, by following these steps: 
 
 1.create your internal action "javascript for GAE" which will elaborate your request; let's say that it has xxx id
 

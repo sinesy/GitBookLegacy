@@ -150,9 +150,9 @@ For an example, see the section below.
 
 It is strongly recommended to design web services in GAE \(i.e. actions having type "javascript for GAE"\) so that they are asynchronous, that is to say, they should always be coupled to a second "javascript for GAE" action to enqueue the elaboration internally, so that the real elaboration is executed in the queue and the web service can terminate immediately.
 
-Bear in mind that a single HTTP request never can last for a long time: App Engine interrupt with error an HTTP request every time it lasts more than 60 seconds.
+Bear in mind that a single HTTP request never can last for a long time: App Engine interrupt with error an HTTP request every time it lasts more than 60 seconds. 
 
-You can do it, by following these steps: 
+You can do it, by following these steps:
 
 1.create your internal action "javascript for GAE" which will elaborate your request; let's say that it has xxx id
 

@@ -209,7 +209,7 @@ First, you have to declare your objects, one of each "entity" \(e.g. table...\) 
 
 * select the "Data Model" menu and choose "Objects and relationships"
 * press the Add button and then "Add Object to Datastore"
-* Here you have to assign a name to the object, in camel mode and with the first letter in uppercase; example: OrderRows
+* Here you have to assign a name to the object, in camel-case and with the first letter in uppercase \(e.g. OrderRows\)
 * Add as many fields as you need and choose a field as primary key; it is strongly recommended to choose a string type \(or directly an UUID type\)  field for the primary key and assign to it an UUID value, which does not require additional queries to be reckoned. That means you should always avoid to choose a counter for the primary key: it is not the faster choice
 
 Once you have created your objects, you can start using them in actions having type "Javascript for GAE" and create your web services to read or write data in the corresponding entities.

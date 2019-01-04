@@ -222,9 +222,9 @@ var json = utils.executeQueryOnGoogleDatastore("select * from Intro",9,true,[]);
 utils.setReturnValue(json);
 ```
 
-**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: this operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key.
+**Important note:** DO NOT use the previous method to execute a query whose purpose is reading a single record, starting from the primary key: the "executeQueryOnGoogleDatastore" operation is "expensive" and should not be used when it is not needed, i.e. when you need to read a single record by primary key.
 
-Bear in mind that all reading/writing operations \(except for read an entity by primary key\) are a  service pay-per-use: the more you call them, the more you pay.
+Bear in mind that all reading/writing operations \(except for reading an entity by primary key\) are pay-per-use operations: the more you call them, the more you pay.
 
 In case of reading an entity  by primary key use the next method
 
@@ -296,7 +296,7 @@ If you decide to directly connect App Engine to a CloudSQL, please respect the f
 * try to use the MemCache as much as possible, instead of reading data from CloudSQL
 * check if data you need from CloudSQL is already available in cache, only in case it is not, then read it though a query
 
-This hint can ensure as much scalability as you need, if queries are always the same. 
+This hint can ensure as much scalability as you need, if queries are always the same.
 
 Once you have created  your objects linked to CloudSQL, you can start using them in actions having type "Javascript for GAE" and create your web  services to read data in the corresponding tables.
 

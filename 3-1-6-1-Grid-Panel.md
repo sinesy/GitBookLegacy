@@ -36,7 +36,11 @@ if (colAttr!='attributenameofaspecificcolumn') return '';
 return formattedValue;
 ```
 
+
+
 or
+
+
 
 ```js
 params.css = 'red';

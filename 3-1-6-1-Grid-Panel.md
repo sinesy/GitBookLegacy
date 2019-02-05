@@ -36,7 +36,7 @@ if (colAttr!='attributenameofaspecificcolumn') return '';
 return formattedValue;
 ```
 
-or
+or 
 
 ```js
 params.css = 'red';
@@ -47,7 +47,7 @@ return total;
 
 Optionally, it is possible to **group columns in multiple groups**, so that there will be a hierarchy of headers, spread in multiple header rows.
 
-In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition. 
+In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition.
 
 An example of such a definition is:
 
@@ -82,10 +82,4 @@ return [[
 Optionally, a group of** locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
 
 In case **locked columns are combined with grouping columns, a new grid is rendered, composed of a tree+grid,** where grouping columns become tree nodes, which are anchored on the left side of the grid. That means it is not supported a grid having grouped columns+locked columns.
-
-
-
-
-
-
 

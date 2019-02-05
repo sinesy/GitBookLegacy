@@ -24,6 +24,8 @@ These buttons change the current grid mode, according to the following policy:
 * cancel button, from insert/edit mode -&gt; after confirming the operation, the grid is switched to readonly mode and the content reloaded
 * save button, from insert/edit mode -&gt; the grid is switched to readonly mode if the saving operation has been performed successfully.
 
+---
+
 Optionally, a  **summary locked row**  can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.  
 In order to avoid setting a total value for a specific cell, a ‘’ can be returned to that callback in the action. It is possible to set foreground and background colors for a cell through css class names \(see details specified below for the "update summary row" event\).
 
@@ -42,6 +44,48 @@ return total;
 ```
 
 ---
+
+Optionally, it is possible to **group columns in multiple groups**, so that there will be a hierarchy of headers, spread in multiple header rows.
+
+In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition. 
+
+An example of such a definition is:
+
+```js
+// example for 45 columns, grouped in 5 main headers
+// colspan is used to define how many headers to include in each main header
+return [[
+{ // first main header
+    header: ' ',
+    colspan: 10
+}, { // second main header
+    header: Ext.translate.Cache.getTranslation('SECOND_TITLE'),
+    align: 'center',
+    colspan: 3
+}, {
+    header: Ext.translate.Cache.getTranslation('THIRD_TITLE'),
+    align: 'center',
+    colspan: 3
+}, {
+    header: Ext.translate.Cache.getTranslation('FORTH_TITLE'),
+    align: 'center',
+    colspan: 4
+}, {
+    header: Ext.translate.Cache.getTranslation('FIFTH_TITLE'),
+    align: 'center',
+    colspan: 25
+}]];
+```
+
+---
+
+Optionally, a group of** locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
+
+In case **locked columns are combined with grouping columns, a new grid is rendered, composed of a tree+grid,** where grouping columns become tree nodes, which are anchored on the left side of the grid. That means it is not supported a grid having grouped columns+locked columns.
+
+
+
+
 
 
 

@@ -39,7 +39,7 @@ Supported containers are:
 
 * an ** accordion panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem\(“accordionPanelIdentifier”,panelIndex\);**
 
-* a  **card panel**   – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
+* a  **card panel** – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
 
 ```js
 setActiveItem("cardPanelIdentifier",panelIndex);

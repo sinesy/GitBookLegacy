@@ -22,9 +22,11 @@ The window detail contains several folders:
 
 The window container has always a layout that requires at least one panel at center \(which will be streched in all direction, by occupying the whole window container\).  
 Up to 5 panels can be added to that container, using these regions: left, right, top, bottom, center. For panels added to left or right the panel width is required. For panels added to top or bottom the panel height is required.  
-A panel can be:
+A pane can be a container or a data panel.
 
-* a  **subpanel**  – having the same layout of the window container \(up to 5 panels\), so you can arrange any number of panels in the end, through nested panels
+Supported containers are:
+
+* a  **subpanel \(generic panel\)**  – having the same layout of the window container \(up to 5 panels\), so you can arrange any number of panels in the end, through nested panels
 * a  **folder container**  – it contains a set of folders, where a folder can be any kind of panel. The user can show any of these folders by clicking on the folder title. Additional javascript methods are available in order to programmatically show any folder, through the following method:
 
   **setActiveTab\(‘folderContainerIdentifier’,panelIndex\);**  
@@ -33,6 +35,8 @@ A panel can be:
   Finally, a specific folder can be enabled/disabled through the following method:  
   **setEnableTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**
 
+* a **vertical folder container**, working like the previous one, but tabs are arranged vertically
+
 * an ** accordion panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem\(“accordionPanelIdentifier”,panelIndex\);**
 
 * a  **card panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning. Any other subpanel can be showed and replace the previous one, only by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature:
@@ -40,6 +44,13 @@ A panel can be:
 ```js
 setActiveItem("cardPanelIdentifier",panelIndex);
 ```
+
+* a **vertical/horizontal panel**, where the content is arranged either vertically \(1 only scrollable column\) or horizontally \(1 only scrollable row\)
+* a** responsive container \(table layout\)**, where the content is arranged from left to right, top to bottom and each element can have a weight potentially different from the others and can have a prefixed height or width. According to the avilable space in  the web page \(browser size\), elements are then arranged and moved in order to occupy the available space without the need for an horizontal bar.
+
+
+
+Data panels can be included in any container. Supported data panels are:
 
 * a  **grid, **supporting both read and write operations \(CRUD operations\)
 * a  **pivot grid, **a special type of grid, where 2 kinds of fields are managed in a special way: \(i\) a numeric field \(grouping field\) is spread along multiple columns, where each column represents a value for a second field \(identifying field\)

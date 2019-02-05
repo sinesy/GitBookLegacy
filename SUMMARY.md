@@ -38,7 +38,7 @@
         * [Tree + Grid Panel](3-1-6-8-Tree+Grid-Panel.md)
         * [Image Gallery](3-1-6-9-Image-Gallery.md)
       * [Windows list](3-1-7-Windows-list.md)
-      * [Panels list](3-1-8-Panels-list.md)
+      * [Panel definition](3-1-8-Panels-list.md)
         * [Columns properties](3-1-8-2-Columns-properties.md)
         * [Controls properties](3-1-8-4-Controls-properties.md)
         * [Filter properties](3-1-8-6-Filter-properties.md)

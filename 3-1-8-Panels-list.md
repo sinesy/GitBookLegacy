@@ -1,6 +1,6 @@
-# Panels list
+# Panel definition
 
-A user can manage already existing panels through the "Panels list" menu items, where there are all panels defined behind the scenes by the wizard "Add Window" or through the popup menu accessible in the window detail.  
+A user can manage already existing panels through the "**Panels list**" menu items, where there are all panels defined behind the scenes by the wizard "Add Window" or through the popup menu accessible in the window detail.  
 The information available through a panel detail is split up in several folders:
 
 * **detail panel**  – data showed here is the same defined when creating the panel. Therefore, it is always possible to change the settings for a panel
@@ -15,6 +15,7 @@ The information available through a panel detail is split up in several folders:
   * icon
 
   * action to link to the button \(see "Events and Actions" section\)
+
   * position of the button within the toolbar
   * synchronous or asynchronous event, i.e. if the button is blocked or not until the events has been completed
   * flags used to define the abilitation policy for the button: enabled only when the panel is in readonly/insert/edit modes

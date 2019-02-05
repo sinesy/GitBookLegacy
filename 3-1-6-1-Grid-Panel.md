@@ -27,7 +27,7 @@ These buttons change the current grid mode, according to the following policy:
 ---
 
 Optionally, a **summary locked row**  can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.  
-In order to avoid setting a total value for a specific cell, a ‘’ can be returned to that callback in the action. It is possible to set foreground and background colors for a cell through css class names \(see details specified below for the "update summary row" event\). 
+In order to avoid setting a total value for a specific cell, a ‘’ can be returned to that callback in the action. It is possible to set foreground and background colors for a cell through css class names \(see details specified below for the "update summary row" event\).
 
 ## Example
 
@@ -49,7 +49,7 @@ Optionally, it is possible to **group columns in multiple groups**, so that ther
 
 In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition.
 
-An example of such a definition is:
+An example of such a definition is the following:
 
 ```js
 // example for 45 columns, grouped in 5 main headers

@@ -27,9 +27,9 @@ A panel can be:
 * a  **subpanel**  – having the same layout of the window container \(up to 5 panels\), so you can arrange any number of panels in the end, through nested panels
 * a  **folder container**  – it contains a set of folders, where a folder can be any kind of panel. The user can show any of these folders by clicking on the folder title. Additional javascript methods are available in order to programmatically show any folder, through the following method:
 
-  **setActiveTab\(‘folderContainerIdentifier’,panelIndex\);**   
+  **setActiveTab\(‘folderContainerIdentifier’,panelIndex\);**  
   Moreover, a specific folder can be showed/hidden through the following method:  
-  **setVisibleTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**   
+  **setVisibleTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**  
   Finally, a specific folder can be enabled/disabled through the following method:  
   **setEnableTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**
 
@@ -41,13 +41,16 @@ A panel can be:
 setActiveItem("cardPanelIdentifier",panelIndex);
 ```
 
-* a  **grid** 
-* a  **pivot grid** 
+* a  **grid, **supporting both read and write operations \(CRUD operations\)
+* a  **pivot grid, **a special type of grid, where 2 kinds of fields are managed in a special way: \(i\) a numeric field \(grouping field\) is spread along multiple columns, where each column represents a value for a second field \(identifying field\)
 * a ** filter panel**  linked to a grid
-* a ** detail form** 
-* a ** tree** 
-* an ** image panel** 
+* a ** detail form, **supporting both read and write operations \(CRUD operations\)
+* an **editable panel**, which is not connected to any data source \(as for a detail form\), used to manage volatile data
+* a **tree** 
+* a **preview panel, **which can be used to show an image, a document like a PDF, etc.
+* an **image gallery**, containing a set of images, spread horizontally \(up to N predefined columns\) and along the vertical axis
 * a ** map panel** 
+* a **tree+grid panel**, working as a tree, where all data but the first field is arranged in a grid: expanding the value for the first field in the tree, leads to show all other data in the grid row \(helpful for instance when showing a BOM\)
 * a ** custom panel** , based on a javascript file, created by a programmer and uploaded together with 4WS.Platform, that will be automatically included within the window.
 
 When the user presses the edit button in the "Panels" folder of the window detail, it is possible to access to a popup menu through right click of the mouse on a tree node. The popup menu content is dynamic and depends on the clicked node: it allows to add subpanes or any other panel types, with these exceptions:

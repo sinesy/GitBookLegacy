@@ -35,7 +35,7 @@ Supported containers are:
   Finally, a specific folder can be enabled/disabled through the following method:  
   **setEnableTab\(‘folderContainerIdentifier’,panelIndex,true\|false\);**
 
-* a **vertical folder container**,  working like the previous one, but tabs are arranged vertically
+* a **vertical folder container**, working like the previous one, but tabs are arranged vertically
 
 * an ** accordion panel**  – which is a special kind of panel where any number of panels can be added to it, but only one of them can be showed at a time; the first added subpanel is the one showed at the beginning; any other subpanel can be showed by simply clicking on its title: all other subpanes are minimized and the one just clicked will be maximized. Any other subpanel can be showed and replace the previous one, also by executing a special javascript method which can be invoked from a js action; the method is accessible from within the window and has the following signature: **setActiveItem\(“accordionPanelIdentifier”,panelIndex\);**
 

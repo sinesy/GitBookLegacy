@@ -26,10 +26,12 @@ These buttons change the current grid mode, according to the following policy:
 
 ---
 
+## Summary row
+
 Optionally, a **summary locked row**  can be showed on the bottom of the grid; this read only row is automatically showed only if there is an "update summary row" event linked to the grid: in that case it will be showed and the javascript action binded to the event is invoked for each column, every time a cell is changed.  
 In order to avoid setting a total value for a specific cell, a ‘’ can be returned to that callback in the action. It is possible to set foreground and background colors for a cell through css class names \(see details specified below for the "update summary row" event\).
 
-## Example
+Example:
 
 ```js
 if (colAttr!='attributenameofaspecificcolumn') return '';
@@ -44,6 +46,8 @@ return total;
 ```
 
 ---
+
+## Grouped columns in multiple groups
 
 Optionally, it is possible to **group columns in multiple groups**, so that there will be a hierarchy of headers, spread in multiple header rows.
 
@@ -78,6 +82,8 @@ return [[
 ```
 
 ---
+
+## Locked columns
 
 Optionally, a group of** locked columns** can be anchored to the left side of the grid. In order to do it, set the "**Locked columns nr**" in the grid definition window.
 

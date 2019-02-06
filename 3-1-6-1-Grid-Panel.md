@@ -15,6 +15,8 @@
 * number of columns anchored to the left of the grid \(0 by default\)
 * boolean javascript expression "disable when", to disable everything when the boolean condition is true flags "enable columns permission" and "enable columns profile", used to manage these special features, described in a separate section.
 
+
+
 When creating the grid, a grid toolbar is automatically showed on top of it; this toolbar always includes the reload button; the other buttons \(insert, edit, delete and save/cancel\) are showed/hidden according to the flags described above.  
 These buttons change the current grid mode, according to the following policy:
 

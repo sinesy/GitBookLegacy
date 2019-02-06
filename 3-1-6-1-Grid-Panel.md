@@ -63,7 +63,7 @@ return [[
     header: ' ',
     colspan: 10
 }, { // second main header 
-    header:  Ext.translate.Cache.getTranslation('SECOND_TITLE'),
+    header: Ext.translate.Cache.getTranslation('SECOND_TITLE'),
     align: 'center',
     colspan: 3
 }, {

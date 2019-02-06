@@ -51,7 +51,7 @@ return total;
 
 Optionally , it is possible to **group columns in multiple groups**, so that there will be a hierarchy of headers, spread in multiple header rows.
 
-In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition. 
+In order to do it, add the "Column header" panel event to the grid and define a client-side javascript action containing the headers definition.
 
 An example of such a definition is the following:
 
@@ -78,7 +78,8 @@ return [[
     header: Ext.translate.Cache.getTranslation('FIFTH_TITLE'),
     align: 'center',
     colspan: 25
-}]];
+}
+]];
 ```
 
 ---

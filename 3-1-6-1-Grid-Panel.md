@@ -56,7 +56,7 @@ In order to do it, add the "Column header" panel event to the grid and define a 
 An example  of such a definition is the following:
 
 ```js
-// example for 45 columns, grouped in 5 main headers
+// example for 45  columns, grouped in 5 main headers
 // colspan is used to define how many headers to include in each main header
 return [[
 { // first main header

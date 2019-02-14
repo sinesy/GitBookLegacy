@@ -24,7 +24,7 @@ Anyway, ROW\_NUM must be declared as a "managed column", otherwise its value wou
 Starting from this example, it is now time to see how to configure a pivot table. Once selected the "pivot grid" from the "Add window" wizard, the user has to define settings for the grid. In addition, for a pivot grid the user also has to define settings related to that grid component:
 
 * business component that defines the list of columns for pivot column group, the only field specified in the select clause is used to automatically create the pivot column \(this setting is mandatory\). The number of pivot columns is the count of the list of element of business component
-* business component that defines the header of pivot column group, the fields specified in the select clause are used to automatically set the header of pivot column, the fields specified are like , \(comma\)
+* business component that defines the header of pivot column group, the fields specified in the select clause are used to automatically set the header of pivot column, the fields specified are like , \(comma\); **the first field in the select must be the code related to "identifying column"** \(in the example above, the CODE\_SIZE\); optionally, the select can contain  a second field, which will be used to set the column headers with these values rather than the codes; if the second field in the select is not specified, the first will be used to set the column headers; that means **the column headers are set with codes as default behavior and optionally they can be set with a description contained in the second field of the select clause**.
 
 Other fields are not considered.
 

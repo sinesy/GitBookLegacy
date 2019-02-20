@@ -69,12 +69,10 @@ It includes the following input fields:
 * **Export order** - this field defines the execution order for a set of jobs; it is used only by the Scheduler to figure out the execution order, in case of "export of a group" or "export all" option
 * **Action before export **- server-side javascript action which can be optionally executed before starting the execution process
 * **Action after export **- server-side javascript action which can be optionally executed after the execution process
-* **Export column headers** - checkbox used to export a first row in a CSV file containing the column headers, reckoned as the alias from the SELECT clause. This additional row can be added only when exporting a standard CSV file
+* **Export column headers** - checkbox used to export a first row in a CSV file containing the column headers, reckoned as the alias from the SELECT clause. This additional row can be added only when exporting a standard CSV file 
 * **Parameters filler** - it is likely that many SQL extraction queries \(see next section "Extract data from"\) can contain variables, expressed as :VARNAME. In case of parameters such these ones, it is required to specify the parameters values when executing an export task. An export task can be started manually or automatically. 
   * In case of a manual execution, the end user can select a task definition from the tasks list \(see previous section\) and press the "**Execute export**" button. Here the user will be prompt with an input dialog where he has to specify all parameters values, so that the execution process can work properly. 
   * As an alternative, an export process can be started automatically, using the Scheduler. In such a scenario, the parameter values must be provided automatically: for that reason, a business component for a list can be set in "Parameter filler" field. This business component must contain in the SELECT clause all required parameter names. When executing the task, first the business component will be executed and the list of parameter values are retrieved; then for each record read, the job is executed, so that it is possible to automate the job execution multiple time, once for each record read from the business component.
-
-
 
 **Copy to folder **- it is optional and can be filled out, in case the exported files must be saved on a directory \(server file system, Google cloud\)
 

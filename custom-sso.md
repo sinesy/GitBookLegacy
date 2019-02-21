@@ -29,7 +29,7 @@ These are the required steps:
 
 ---
 
-#### Support for a generic SSO server - custom scenarios
+#### Support for a generic SSO server 
 
 In case of very complex scenarios, you can always define your own server-side javascript class and manage the communication with the SSO server through it.
 
@@ -37,8 +37,6 @@ These are the required steps:
 
 * the global parameter named "**SSO manager class name**" \(having code SSO\_MANAGER\_CLASS\) must be filled with the value "**org.warp4ws.common.web.SSOJsActionServer**"
 * he global parameter is the parameter named "**SSO: list of app ids + actions ids, used by the custom SSSO server**" \(having name SSO\_\_JS\_\_ACTION\_IDS\) must be filled with a list of couples separated by a ; \(semicolon\). Each app id and action id are separated by a , \(comma\)
-
-
 
 Example: MYAPP1,123;MYAPP2,456
 

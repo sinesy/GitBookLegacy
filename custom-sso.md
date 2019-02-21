@@ -29,7 +29,7 @@ These are the required steps:
 
 ---
 
-#### Support for a generic SSO server 
+#### Support for a generic SSO server
 
 In case of very complex scenarios, you can always define your own server-side javascript class and manage the communication with the SSO server through it.
 
@@ -60,6 +60,12 @@ Note that the action must always get back the username, since the external link 
 
 ```js
  { "success": false }
+```
+
+An example of external URL which can be invoked to logon into a Platform app, which will use the SSO behind the scenes is:
+
+```
+http://host/webcontext/4ws/index_app.jsp?applicationId=...&appTitle=...&autoLogin=true&ssoToken=...&password=UNDEFINED&username=UNDEFINED
 ```
 
 

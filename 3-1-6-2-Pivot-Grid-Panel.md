@@ -37,6 +37,27 @@ Consequently, never define the identifying column as part of the “pivot column
 * the column named " **Aggregated column** " represents the quantity to show for each column; in the example above, it can be a quantity or a price related to each size; you have to define at least one field as an aggregate column; all aggregated columns are mandatory.
 * the column named " **Identifying Column** " represents the field to show along the grid columns; in the example above, it is the size; consequently, the set of records read from the database and related to the same combination of item and color becomes one only row in grid, where each record reading becomes a specific size and the corresponding quantity is reported as its cell value.
 
+
+
+**Behind the scenes**
+
+When saving data in update, edited cell can lead to 3 scenarios:
+
+* the edited cell was empty and it was filled out with a number &gt; 0; this is managed as an INSERT
+* the edited cell was not empty and with a value different from 0 
+  * and then cleared up or set to 0; this is managed as a DELETE
+  * and then changed with another value different from 0; this is managed as an UPDATE
+
+In order to correctly execute these operations, the grid must be configured by taking into account also mandatory values in the table where saving data:
+
+* in case of INSERT, you have to correctly set "default values in insert" for each mandatory field and these fields must be set as "to manage. In case the pk fields or other mandatory fields are not set starting from the UI or from default values \(as for an internal counter\), you can always use the "before save data in insert" event and link a server-side javascript action to fill in these values, through the method utils.setAttributeValue\(attrName,value\)
+* in case of UPDATE, you have to correctly set "default values in update" for each mandatory field not retrieved from the input, and these fields must be set as "to manage"; you have the chance to omit some fields \(flag "to manage" set to false\) for not mandatory fields: these fields will be ignored during the UPDATE operation, and the previous value would be maintained. In case other mandatory fields are not set starting from the UI or from default values, you can always use the "before save data in update" event and link a server-side javascript action to fill in these values, through the method utils.setAttributeValue\(attrName,value\)
+* for UPDATE/DELETE fields, you have to provide the values for the "real" primary key, otherwise it would be impossible to execute the operation. Behind the scenes, Platform always try to fetch the whole "real" record from the database, starting from the "pivot column values", which are considered "unique" and therefore they allow to get a single record from the database. The record fetched is used to fill in the pk in UPDATE/DELETE, if not included in the "pivot columns"; in case of UPDATE operation, the fetch operation is also used to fill in other fields \(not belonging to the pk\) and not available in the grid, but only for the fields marked as "to manage".
+
+
+
+
+
 ---
 
 

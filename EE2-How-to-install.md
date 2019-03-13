@@ -109,7 +109,7 @@ Since each time the installer is executed the whole content of **WEB-INF/lib **i
 </init-param>
 ```
 
-Otherwise you can specify the files you want to be deleted after the update you can optionally include into your already existing web.xml file the following tag:
+Otherwise you can specify the files you want to be deleted after the update. You can optionally include into your already existing web.xml file the following tag:
 
 ```html
 <init-param>

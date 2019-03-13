@@ -97,7 +97,7 @@ The same installing procedure can be used to apply upgrades to the product. In s
 
 **Important note**: there could be the need for including in Platform some custom jar file, in order to invoke custom java classes.
 
-That means that one or more jar files must be stored into **WEB-INF/lib** folder related to the Platform web context. 
+That means that one or more jar files must be stored into **WEB-INF/lib** folder related to the Platform web context.
 
 Since each time the installer is executed the whole content of **WEB-INF/lib **is deleted, the additional custom files will be lost. In order to avoid it, you can optionally include into your already existing web.xml file the following tag:
 
@@ -105,6 +105,16 @@ Since each time the installer is executed the whole content of **WEB-INF/lib **i
 <init-param>
   <description>Comma separated list of additional jar files added to WEB-INF/lib to not delete when updating Platform. Can be empty</description>
   <param-name>additionalResourcesJarsNotToDelete</param-name>
+  <param-value>myCustomFile1.jar,myCustomFile2.jar</param-value>
+</init-param>
+```
+
+Otherwise you can specify the files you want to be deleted after the update you can optionally include into your already existing web.xml file the following tag:
+
+```html
+<init-param>
+  <description>Comma separated list of additional jar files added to WEB-INF/lib to delete when updating Platform. Can be empty</description>
+  <param-name>additionalResourcesJarsToDelete</param-name>
   <param-value>myCustomFile1.jar,myCustomFile2.jar</param-value>
 </init-param>
 ```

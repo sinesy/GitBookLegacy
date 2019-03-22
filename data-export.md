@@ -12,6 +12,9 @@ Exported data formats are:
 * **csv**, with comma o semi-colon
 * **4WS.Trade data export format** \(a sort of csv\)
 * **SQL insert instructions**, whose syntax depends on the selected target database
+* **Insert data to Google Datastore**
+* **Update data to Google Datastore**
+* **xlsx**, i.e. the new zip format for Excel, working with up to 1M rows
 
 It is possible to set variables in the filtering conditions, so that the real values are specified at execution time.
 
@@ -29,6 +32,8 @@ Finally, it is possible to automate data export through the embedded Scheduler a
 * export all jobs
 
 In the second and third case, the execution order for the jobs is the one defined at job level.
+
+---
 
 ### Data export list
 
@@ -59,8 +64,8 @@ It includes the following input fields:
 * **Description** - described the jon
 * **Enabled** - flag used to ignore the job execution within an automated export performed by the Scheduler, in case of export of a set of jobs \(export of a group or export all\)
 * **Delete content** - not managed at the moment
-* **Export type** - allows to define the export format: CSV, 4WS.Trade data format, SQL insert instructions
-* Target database type - optional; used in case of SQL export type: it define the destination database type \(e.g. Oracle, SQL Server\), in order to generate SQL instructions compatible with the selected database type
+* **Export type** - allows to define the export format: CSV, 4WS.Trade data format, SQL insert instructions, insert/update records to Google Datastore, xlsx
+* **Target database type** - optional; used in case of SQL export type: it define the destination database type \(e.g. Oracle, SQL Server\), in order to generate SQL instructions compatible with the selected database type
 * **File name** - export file name
 * **File name policy **- optional value; if specified, the file name is ignored \(except for the file extension, e.g. .csv, .txt\) and the real file name will be the one defined here; it supports a dynamic name definition. Examples: **yyyy-MM-dd**_**HH-mm-ss** or** 'FILE**_**'yyyy-MM-dd**_**HH-mm-ss**_
 * **Group name** - optional: if specified, it means the current task will be part of a group of jobs sharing the same group name; if this setting is specified,** the "Group zip file name" setting must be specified as well, for ONE job of the group \(the last job\).** None of generated files will be moved to the specified destination, but a single file will be created in the destination location, a zip file, containing all generated files and having file name equal to the group file name property
@@ -86,6 +91,54 @@ LISTINO\_:ENTE\_:FILIALE
 
 Moreover, the other FTP settings \(except for the FTP port\) can be dynamically defined, using variables expressed as :XXX. **Variable values can be set either through the scheduled process parameters or through application/global parameters.** In this way, it is possible to decouple the job definition from the environment where it is executed, allowing to export the job definition and set variables with different values for different environments.
 
+
+
+**Additional Settings**
+
+The bottom part of the first panel contains also the Additional Settings area, where it is possible to optionally define a JSON object containing additional properties to use when exporting data.
+
+At the moment, this is used only in case of xlsx export. For such scenario, the JSON object can include these properties:
+
+* **formatHeaderColumns** - optional; used in case a first headers row must be included in the spreadsheet; in such a case, a list of javascript objects must be defined, one for each column header; supported properties are: header name, like title, colors, etc.
+* **formatColumns** - optional; a list of javascript objects, one for each column to export, defining data properties, like width, colors, etc.
+* **grouping** - optional; if specified, it allows to break up rows according to the value of a specific column, used to group rows. Each time a different value for that column is found, an additional row is added to the spreadsheet. Optionally, a footer row can be included as well, helpful to execute Excel formulas, like SUM or COUNT, for example. The "grouping" attribute must be a javascript object containing at least the attribute "fieldName". See below for the whole object content.
+
+**Example**
+
+```js
+{
+  formatHeaderColumns: [
+    { title: "Company", bold: true, backColor: "AQUA" },
+    { title: "User", bold: true, backColor: "AQUA" },
+    { title: "Desc", bold: true, backColor: "AQUA" },
+    { title: "Date", bold: true, backColor: "AQUA" },
+    { title: "Version", bold: true, backColor: "AQUA" }
+  ],
+  formatColumns: [
+    { width: 200 },
+    { width: 300 },
+    { width: 500 },
+    { width: 300,format: "m/d/yy" },
+    { width: 100 }
+    ],
+  grouping: {
+    fieldName: "COMPANY_ID",
+    showValue: false,
+    headerRow: [
+                { title: "Company: <COMPANY_ID>", backColor: "AQUA",colSpan: 5 },
+                { title: "", backColor: "AQUA" },
+                { title: "", backColor: "AQUA" },
+                { title: "", backColor: "AQUA" },
+                { title: "", backColor: "AQUA" }
+    ]
+  }
+}
+```
+
+In this example the SQL query exports 5 fields, where one is named "COMPANY\_ID". This is the field used to group records in different sections, one for each COMPANY\_ID.
+
+---
+
 ### Extract data from
 
 The second step in the job definition is related to the data extraction query.
@@ -101,6 +154,8 @@ When pressing the next button, the query is automatically tested: in case of inv
 
 Another prompt is always shown to the user at this state: whether updating output fields. For each field specified in the SELECT clause, an output field is defined by Platform and automatically mapped to the corresponding SELECT field. In the section named "**Output** **Fields**", the end user has the change to set additional data conversion on the output field, like its type or date conversion mask.
 
+---
+
 ### Additional SQL queries or statements
 
 In the previous step, the user must specify the main query, i.e. the extraction query to execute.
@@ -115,6 +170,8 @@ Here it is possible to specify
 
 The last two options will be automatically executed by Platform, without any prompt to the user.
 
+---
+
 ### Output fields
 
 This step allows the user to change a few settings related to the output fields: these are automatically defined by Platform, starting from the main query defined at step 2.
@@ -124,6 +181,8 @@ This step allows the user to change a few settings related to the output fields:
 If needed, the user can change the target field type or its format, for instance in case of a date type, when it must be converted to a text having a specific format. If not specified, a date type input field is automatically converted to a text value having format "yyyy-MM-dd HH:mm:ss"
 
 The order property plays a very important role: it represents the order inside a CSV used to fill in the values for the fields. As a default behavior, fields are reported with the same order reported in the SELECT clause, so an easy and quick way to define the output order for values, is simply reporting them in the SELECT clause according to the desired sequence.
+
+---
 
 ### Query parameters
 
@@ -138,6 +197,8 @@ All missing values will be prompted when manually executing a data export \(see 
 In case the export is automatically started by the Scheduler, all required values must be specified either as Scheduler parameters or through the **Parameters filler** described in the first step.
 
 If there are bind variables not filled, the export process will fail with an error.
+
+---
 
 ### Scheduling data export
 

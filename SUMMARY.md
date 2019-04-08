@@ -252,6 +252,7 @@
   * [Jira Integration](jira-integration.md)
   * [Platform for GAE](platform-for-gae.md)
   * [SQL errors management](sql-errors-management.md)
+  * [Voice recognition](voice-recognition.md)
 * [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises.md)
   * [Database design](/2-1-Database-design.md)

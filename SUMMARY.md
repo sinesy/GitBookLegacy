@@ -101,6 +101,7 @@
     * [Docx templating](3-2-8-Docx-Reports-from-a-template.md)
     * [Charts](3-1-6-10-Charts.md)
     * [Pivot Grid](3-1-6-2-Pivot-Grid-Panel.md)
+    * [Multidimensional pivot grid](multidimensional-pivot-grid.md)
     * [Data Export from SQL query](data-export.md)
   * [SSO](sso.md)
     * [Identity management in Platform](EE6-1--Identity-management-in-Platform.md)
@@ -252,7 +253,7 @@
   * [Jira Integration](jira-integration.md)
   * [Platform for GAE](platform-for-gae.md)
   * [SQL errors management](sql-errors-management.md)
-  * [Voice recognition](voice-recognition.md)
+  * Multidimensional pivot grid
 * [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises.md)
   * [Database design](/2-1-Database-design.md)

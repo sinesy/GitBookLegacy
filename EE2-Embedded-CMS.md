@@ -2,7 +2,6 @@
 
 ### **What is a CMS?**
 
-  
 An organization often has to manage a large number of documents, such as bills, transport documents, technical documentation, production orders and so forth. This large amount of documents would require a lower storage space and would be more easily retrieved if they were digitalized. For instance, bills coming from vendors could be scanned and converted to an electronic format, other documents could be created directly in a digitalized version, through some office applications or other information systems.  
 When such a scenario occurs, there is the need to store several gigabytes of documents in an efficient way, indexing them through ad hoc criterias, which can change according to the document type.  
 Moreover, they must be searched quickly and efficiently, that is to say, through specific search policies, like the navigation of a documents hierarchy, composed of categories and sub categories or by looking up documents using custom fields, such as the document title, author, creation date, etc.  
@@ -12,11 +11,8 @@ What just described is normally part of a system called Content Management Syste
 
 Every organization should have an information system including a CMS module or, as an alternative, it should add a stand alone CMS system if it is not supported by the main I.S., since its presence allows to take advantage of what described above.
 
-
-
 ### **Platform CMS main features**
 
-  
 Platform Enterprise Edition \(from version 5.2\) provides a basic CMS, including the following features:
 
 * a CMS engine, through which it can store and retrieve documents, using a UUID identifier for each document
@@ -32,22 +28,17 @@ Platform Enterprise Edition \(from version 5.2\) provides a basic CMS, including
 
 * custom logic \(expressed as server-side javascript actions\), which can be executed just afterimporting arow in the CSV, in order to perform additionalenquiry and fill data for the same record
 
-
-
 ### **How to use it**
 
-  
 The CMS module is fully integrated with the rest of the Platform and is based on the availability of one or more database tables, used to store the metadata linked to the imported documents.  
 The constraint to respect in order to make it working, is the definition of a field in the table used to maintain the document metadata. Such a field must be a text field having a length of at least 36 characters and will be used to store the UUID \(universal unique identifier\), identifying a specific file. In this way, every record is linked to a specific document.  
 Once designing and created one or more tables, representing your document types and used to store the corresponding metadata, the next step is executing the reverse engineering process and let Platform define the data models for each tables. At the same time, Platform will create also a series of business components, useful to fetch a list of documents and a single document.
-
-
 
 **Defining a document type \(model\)**  
 It is up to you the definition of the primary key for each table: independently from the primary key, you have to include a special field for storing the UUID.  
 When defining the data model, you can also activate the versioning of files or not: in the data model detail you can enable/disable this feature using the “ **Manage versioned files** ” check-box. When enabled, each time a new version of the same document is uploaded, it will become the current version, but it does not replace the previous one:  previous versions are maintained as well, and can be retrieved when needed, through the file detail window.
 
-When defining the data model, you can also activate the ACL checking or not: in the data model detail you can enable/disable this feature using the “ **Manage ACL for files** ” check-box. When enabled, uploaded files will be secured and only allowed users can access to them: operations like showing, uploading for time/next times, deleting will be granted according to the role assigned to the document. That means that uploaded documents have a specific role assigned and only users having the same role will be enabled to access such file.
+When defining the data model, you can also activate the ACL checking or not: in the data model detail you can enable/disable this feature using the “ **Manage ACL for files** ” check-box. When enabled, uploaded files will be secured and only allowed users can access to them: operations like showing, uploading for the first time/next times, deleting will be granted according to the role assigned to the document type. That means that uploaded documents have a specific role assigned and only users having the same role will be enabled to access such file.
 
 ![](/assets/Schermata 2019-05-10 alle 10.56.11.png)
 
@@ -57,14 +48,11 @@ When defining the data model, you can also activate the ACL checking or not: in 
 
 **Defining UI components linked to the document type**
 
-Next, you can define one or more panels working with the business components and the data model just defined.  
+Next, you can define one or more panels working with the business components and the data model just defined.
 
+In case of a grid panel, you have to set a column with a “CMS File” type \("Type" column\) for the corresponding field defined in the data model. You should find it already defined, since you have created the panel starting from a business component linked to that data model.
 
-In case of a grid panel, you have to set a column with a “CMS File” type \("Type" column\) for the corresponding field defined in the data model. You should find it already defined, since you have created the panel starting from a business component linked to that data model.  
-
-
-In case of a form panel, you have to set an input control with a “CMS File” type for the corresponding field defined in the data model. You should find it already defined, since you have created the panel starting from a business component linked to that data model.  
-
+In case of a form panel, you have to set an input control with a “CMS File” type for the corresponding field defined in the data model. You should find it already defined, since you have created the panel starting from a business component linked to that data model.
 
 Independently of the panel you are configuring,  **there is a second mandatory field to set: the directory id** \("Directory upload" column\). This property of a grid or form is related to the CMS File column/control: it must be set with the base path where all files will be stored.  
 You can define a unique directory id for all your document types \(for all your panels\) or define different directory ids for different panels.
@@ -74,8 +62,6 @@ You can define a unique directory id for all your document types \(for all your 
 A constraint you have to respect when importing documents is that** a file name must be unique per directory id** : you cannot import two distinct documents having the same name and save them in the same directory.  
 Consequently, it is a good idea to **define distinct directories for different panels/data models, if you are not sure you can have the same file names for different usages**.
 
-
-
 ### Working with documents
 
 At this point you are ready to fill your application with metadata and files, through the upload feature: when pressing on the upload/download button, a dialog window is shown. Through it you can upload/download/preview a document.
@@ -84,7 +70,22 @@ At this point you are ready to fill your application with metadata and files, th
 
 The preview feature is supported according to the browser capabilities and the installed plugins on the browser: a PDF can be shown as long as a plugin like Acrobat Reader has been installed on the user machine and recognized by the browser.
 
+### ACL Management
 
+The term Access Control List \(ACL\) stands for the ability for Platform to check out the allowed operations for a file, when it is stored in the directory linked to a document type through a panel.
+
+For the combination "document type" + "directory" \(where documents are stored\) it is possible to define one or more roles, where for each role these operations are supported:
+
+* can view documents
+* can upload documents for the first time \(insert\)
+* can upload documents multiple times \(update\)
+* can delete documents uploaded previously \(delete\)
+
+In this way, it is possible to restrict documents access not only through the standard features provided by Platform at grid/form level \(filtering records, allowed CRUD operations\) but also manage document CRUD operations specifically, using roles st directory level.
+
+In order to do it, use the "Administration -&gt; Permissions -&gt; Roles -&gt; CMS ACL List" button to show the document type ACL feature:
+
+![](/assets/Schermata 2019-05-10 alle 11.25.07.png)
 
 ### Bulk import
 
@@ -220,7 +221,9 @@ The insert boolean variable: if true, it means that the row to process will be i
 In case of an update operation \(insert flag isfalse\), the second variable uuid contains the unique identifier for the file already stored.  
 If needed you can define a custom logic using these variables according to the scenario: an insert or an update.
 
-**CRUD operations**  
+### **CRUD operations**
+
+  
 You can manage through server-side js actions single documents as well.  
 The following methods are provided by Platform and you can use them in an action:
 

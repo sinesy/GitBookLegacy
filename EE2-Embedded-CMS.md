@@ -28,12 +28,14 @@ Platform Enterprise Edition \(from version 5.2\) provides a basic CMS, including
 
 **How to use it**  
 The CMS module is fully integrated with the rest of the Platform and is based on the availability of one or more database tables, used to store the metadata linked to the imported documents.  
-The constraint to respect in order to make it working, is the definition of afield in the table used to mantain the document metadata. Such a field must be a text field having a length of at least 36 characters and will be used to store the UUID \(universal unique identifier\), identifying a specific file. In this way, every record is linked to a specific document.  
+The constraint to respect in order to make it working, is the definition of a field in the table used to maintain the document metadata. Such a field must be a text field having a length of at least 36 characters and will be used to store the UUID \(universal unique identifier\), identifying a specific file. In this way, every record is linked to a specific document.  
 Once designing and created one or more tables, representing your document types and used to store the corresponding metadata, the next step is executing the reverse engineering process and let Platform define the data models for each tables. At the same time, Platform will create also a series of business components, useful to fetch a list of documents and a single document.  
-It is up to you thedefinition of the primary key for each table: independently from the primary key, you have to include a special field for storing the UUID.  
-When defining the data model, you can also activate the versioning of files or not: in the data model detail you can enable/disable this feature using the “ **Manage versioned files** ” check-box.
+It is up to you the definition of the primary key for each table: independently from the primary key, you have to include a special field for storing the UUID.  
+When defining the data model, you can also activate the versioning of files or not: in the data model detail you can enable/disable this feature using the “ **Manage versioned files** ” check-box. When enabled, each time a new version of the same document is uploaded, it will become the current version, but it does not replace the previous one:  previous versions are maintained as well, and can be retrieved when needed, through the file detail window.
 
-![](http://4wsplatform.org/wp-content/uploads/2016/11/datamodel_1.png)
+When defining the data model, you can also activate the ACL checking or not: in the data model detail you can enable/disable this feature using the “ **Manage ACL for files** ” check-box. When enabled, uploaded files will be secured and only allowed users can access to them: operations like showing, uploading for time/next times, deleting will be granted according to the role assigned to the document. That means that uploaded documents have a specific role assigned and only users having the same role will be enabled to access such file.
+
+![](/assets/Schermata 2019-05-10 alle 10.56.11.png)
 
 **It is essential at this stage to specify which field is the UUID field** : in order to do it, open the data model and change the field type for such a field to “CMS File”.
 

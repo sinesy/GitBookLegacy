@@ -253,7 +253,8 @@
   * [Jira Integration](jira-integration.md)
   * [Platform for GAE](platform-for-gae.md)
   * [SQL errors management](sql-errors-management.md)
-  * Multidimensional pivot grid
+  * [Multidimensional pivot grid](multidimensional-pivot-grid.md)
+  * [Automated Testing](automated-testing.md)
 * [Troubleshootings](troubleshootings.md)
 * [Best practises](best-practises.md)
   * [Database design](/2-1-Database-design.md)

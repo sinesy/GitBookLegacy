@@ -139,6 +139,7 @@
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)
       * [App deployment for the Android platform](EE7-5-2-App-deployment-for-the-Android-platform.md)
     * [Constraint Layout](constraint-layout.md)
+    * [Style properties](style-properties.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
   * [GSuite](gsuite.md)
     * [Introduction](EE3-1--Google-Collaboration-Introduction.md)

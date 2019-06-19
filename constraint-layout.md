@@ -93,8 +93,6 @@ combobox to define **which element will be used to anchor the element** on somet
 
 numeric value, used to specify the margin between the two anchored elements; if not specified, the margin is set to 0 pixels.
 
-
-
 Moreover, a few more settings are included in the bottom part of this area:
 
 * **width** - \(optional value\) the element width, expressed in pixels; as an alternative, it is possible to choose **match constraint**, meaning the the element will auto-fit the available space \(horizontally\), according to the anchors set for it; for example, if the element is anchored both on the parent on the left side and to the parent on the right side, the match constraint would stretch the element by occupying the whole space of the container
@@ -103,8 +101,6 @@ Moreover, a few more settings are included in the bottom part of this area:
 * **max width** - optional value, defining the maximum width for the element, expressed in pixels
 * **min height** - optional value, defining the minimum height for the element, expressed in pixels
 * **max height** - optional value, defining the maximum height for the element, expressed in pixels
-
-
 
 ### Controls and Constraint layout
 
@@ -122,13 +118,5 @@ In the Controls folder, switch to **Advanced** mode, in order to show the Constr
 
 The same window described for the Constraint panel is shown: here you can specify the same settings and set the right anchors for each control.
 
-
-
-
-
-
-
-
-
-
+In addition to constraint panel, in this scenario you can choose** wrap** **content** for the **height** or **width**, this setting will force the control to expand only far enough to contain the values \(or child controls\) it contains.
 

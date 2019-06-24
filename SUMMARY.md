@@ -91,7 +91,6 @@
     * [Web service](EE0-4-5-1-Web-service.md)
 * [Setting up the environment](setting-up-the-environment.md)
   * [How to install](EE2-How-to-install.md)
-  * [How to setup the development environment](EE2-How-to-setup-the-development-environment.md)
   * [Application parameters](3-1-18-2-Application-parameters.md)
   * [Global parameters](3-1-18-1-Global-parameters.md)
 * [Modules](modules.md)

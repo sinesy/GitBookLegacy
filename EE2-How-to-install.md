@@ -14,8 +14,6 @@ In the next sections, you can find detailed descriptions about how to install bo
 
 #### INSTALLING 4WS.PLATFORM COMMUNITY EDITION - JAVA 11
 
-
-
 * **Install OpenJDK 11.0.2**  in your machine, if not already available; please, **do NOT use other versions**, such as Oracle JDK 11, otherwise some parts of the product would not work correctly and it would represent a license violation of Oracle JVM. You can find OpenJSK distribution at these links, for each  operating system:
 
 | [Windows 64bit](https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_windows-x64_bin.zip) |
@@ -30,7 +28,7 @@ In the next sections, you can find detailed descriptions about how to install bo
 | :--- |
 | **Microsoft SQL Server** - release 2008R2 or above |
 | **MySQL / Google CloudSQL** - release 5.5 or 5.6 |
-| **PostgreSQL**  |
+| **PostgreSQL** |
 
 * Once installed the database, you have to create a schema, a user and link this user to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.
   You can use MySQL Workbench to carry out these operations.
@@ -72,6 +70,19 @@ password: admin
 
 **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
 
+
+
+#### PORTING FROM JAVA 1.7 TO JAVA 11
+
+In case you already have a Platform installation previous to Platform 6 \(previous to Java 11\) and need to migrate it to the last version, you have to follow the steps reported above: installing the new version of Plaftorm, specify the same settings for the database connection.
+
+After doing it, bear in mind that you have also to copy a few other files:
+
+* copy the application static content from one installation to the other
+* copy the WEb-INF/classes/reports subfolder from the previous installation to the new one
+
+
+
 #### 4WS.PLATFORM INSTALLER STEPS
 
 * **START**
@@ -102,15 +113,14 @@ password: admin
 
 #### INSTALLING 4WS.PLATFORM COMMUNITY EDITION - JAVA 1.7 \(OLDER VERSION\)
 
+* **Install JDK 1.7**  in your machine, if not already available; please, **do NOT use other versions**, such as OpenJDK, otherwise some parts of the product would not work correctly.
 
+* 4WS.Platform requires the availability of an empty database schema: install a database server \(if not already installed\) and then **create an empty database** in one of the supported databases \(Oracle, MySQL 5.x or above, SQLServer 2008 or above, PostgreSQL 9 or above\) and  **be sure to provide grants to create objects**  to the database user that 4WS.Platform will use to connect to that schema.
 
-* **Install JDK 1.7**  in your machine, if not already available; please, **do NOT use other versions**, such as OpenJDK, otherwise some parts of the product would not work correctly. 
-
-* 4WS.Platform requires the availability of an empty database schema: install a database server \(if not already installed\) and then **create an empty database** in one of the supported databases \(Oracle, MySQL 5.x or above, SQLServer 2008 or above, PostgreSQL 9 or above\) and  **be sure to provide grants to create objects**  to the database user that 4WS.Platform will use to connect to that schema. 
-
-* Once installed the database, you have to create a schema, a user and link this user to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.
-  You can use MySQL Workbench to carry out these operations.
+* Once installed the database, you have to create a schema, a user and link this user to the schema and set the right privileges to the user, in order to allow the user to create objects such as tables, foreign keys, etc.  
+  You can use MySQL Workbench to carry out these operations.  
   We don’t provide support for these activities: we give for granted that you are able to perform them on your own.
+
 * 4WS.Platform requires a Java web container compatible with Java 1.7: Platform installer already includes Tomcat 7. If you have already installed it for other purposes, you can reuse it; if you do not have installed it yet, the 4WS.Platform installer will install it along with the product, since it is included in the distribution. You can  **download 4WS.Platform from the Sourceforge repository: ** [http://sourceforge.net/projects/xwsplatform/files](http://sourceforge.net/projects/xwsplatform/files)
 * **Decompress**  the .zip file downloaded from the repository and **execute the installer** .  
   **If you are using recent versions of Windows \(e.g. Vista o next versions\), you have to use a superuser and open a DOSprompt by right clicking on it and choose “Run as Administrator”: that is the right way to install the program** .  **DO NOT simply execute the installer using a superuser \(e.g. administrator\), since this has not the same effect** .  

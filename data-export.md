@@ -232,13 +232,13 @@ For example, suppose to have a SQL query retrieving a list of products and you w
 SELECT PRODUCT_CODE,DESCRIPTION,PRODUCT_CODE AS BRANCH_CODES FROM PRODUCTS
 ```
 
-Here the BRANCHCODES in the SELECT clause represents a multi-value field in Datastore. It is initially pre-filled with PRODUCT\_CODE, so that it is possible to figure out for each record, which branches are using it.
+Here the BRANCH\_CODES in the SELECT clause represents a multi-value field in Datastore. It is initially pre-filled with PRODUCT\_CODE, so that it is possible to figure out for each record, which branches are using it.
 
 Next, in the fields settings folder, **you have to change the field type** for BRANCH\_CODES, by replacing the default Text with Multi-value type.
 
 Finally, in the main settings folder, you have to **specify an server-side javascript action to execute at the beginning of the export**. The purpose of this action is creating the hashtable to use when exporting data to Datastore: Platform will automatically execute this action before starting the export and will cache the result of the action and use it as an hashmap.
 
-It is essential that **the class will get back a javascript object having as keys the values for the hashtable and as values the value list**. 
+It is essential that **the class will get back a javascript object having as keys the values for the hashtable and as values the value list**.
 
 Example:
 
@@ -264,7 +264,7 @@ utils.executeQueryWithCallback(
     []
 );
 
-utils.setVariable("FILIALI",JSON.stringify(map));
+utils.setVariable("BRANCH_CODES",JSON.stringify(map));
 ```
 
 

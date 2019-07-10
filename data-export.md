@@ -91,8 +91,6 @@ LISTINO\_:ENTE\_:FILIALE
 
 Moreover, the other FTP settings \(except for the FTP port\) can be dynamically defined, using variables expressed as :XXX. **Variable values can be set either through the scheduled process parameters or through application/global parameters.** In this way, it is possible to decouple the job definition from the environment where it is executed, allowing to export the job definition and set variables with different values for different environments.
 
-
-
 **Additional Settings**
 
 The bottom part of the first panel contains also the Additional Settings area, where it is possible to optionally define a JSON object containing additional properties to use when exporting data.
@@ -218,9 +216,62 @@ Bind variables are filled according to the following policy:
 * values defined though the Scheduler parameters
 * values coming from the execution of the SQL query included in the Parameter Filler component
 
-### 
+---
 
-### 
+### Filling a multi-value field having Array type
+
+In case of a Datastore export, it is possible to work with multi-value fields, i.e. fields having Array type. It means that a specific field can contain multiple values.
+
+In such a scenario, **you have to include in the SELECT clause of the SQL query an additional field** whose value will not be the one you have specified in the SELECT, but another one, indexed by that value and replaced by a list of values.
+
+Basically, it is needed a sort of hashtable where a key in the hashtable represents a specific record to save in Datastore and whose value will be a list of values to use to fill in the multi-value Datastore field.
+
+For example, suppose to have a SQL query retrieving a list of products and you want to have multi-value field in Datastore, named branchCodes, representing all shops where a specified product is used. The SQL query could be something like:
+
+```java
+SELECT PRODUCT_CODE,DESCRIPTION,PRODUCT_CODE AS BRANCH_CODES FROM PRODUCTS
+```
+
+Here the BRANCHCODES in the SELECT clause represents a multi-value field in Datastore. It is initially pre-filled with PRODUCT\_CODE, so that it is possible to figure out for each record, which branches are using it.
+
+Next, in the fields settings folder, **you have to change the field type** for BRANCH\_CODES, by replacing the default Text with Multi-value type.
+
+Finally, in the main settings folder, you have to **specify an server-side javascript action to execute at the beginning of the export**. The purpose of this action is creating the hashtable to use when exporting data to Datastore: Platform will automatically execute this action before starting the export and will cache the result of the action and use it as an hashmap.
+
+It is essential that **the class will get back a javascript object having as keys the values for the hashtable and as values the value list**. Example:
+
+```js
+var map = new Object(); // product code -> [list of branch codes]
+var list = null;
+var callback = function(vo) {
+    var k = vo.productCode+"";
+    list = map[k];
+    if (list==null) {
+      list = [];
+      map[k] = list;
+    }
+    list.push(vo.branchCode);
+}
+
+utils.executeQueryWithCallback(
+    "callback",
+    "SELECT PRODUCT_CODE,BRANCH_CODE FROM PRODUCTS_PER_BRANCH ORDER BY PRODUCT_CODE",
+    null,
+    false,
+    true,
+    []
+);
+
+utils.setVariable("FILIALI",JSON.stringify(map));
+```
+
+
+
+
+
+
+
+
 
 
 

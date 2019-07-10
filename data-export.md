@@ -238,7 +238,9 @@ Next, in the fields settings folder, **you have to change the field type** for B
 
 Finally, in the main settings folder, you have to **specify an server-side javascript action to execute at the beginning of the export**. The purpose of this action is creating the hashtable to use when exporting data to Datastore: Platform will automatically execute this action before starting the export and will cache the result of the action and use it as an hashmap.
 
-It is essential that **the class will get back a javascript object having as keys the values for the hashtable and as values the value list**. Example:
+It is essential that **the class will get back a javascript object having as keys the values for the hashtable and as values the value list**. 
+
+Example:
 
 ```js
 var map = new Object(); // product code -> [list of branch codes]
@@ -264,14 +266,6 @@ utils.executeQueryWithCallback(
 
 utils.setVariable("FILIALI",JSON.stringify(map));
 ```
-
-
-
-
-
-
-
-
 
 
 

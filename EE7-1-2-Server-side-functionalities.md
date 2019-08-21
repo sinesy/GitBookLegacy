@@ -31,6 +31,7 @@ This functionality requires a few settings:
 * **Data source** – if not specified, the "Starting SQL query" will be executed on the main database schema \(the repository schema used by Platform\); if specified, extracted data will be retrieved in that data source
 
 * **Sync data** – if this flag is selected, data will be synchronized automatically \(it should be the default option\)
+
 * **Data target** –for every configured read-write table, a copy of such table will be created on the server as well: this copy is needed in order to prepare all data to send to all devices and also to receive all changes produced by devices and collect them in a unique central place. If not specified, such copy of the mobile table will be created on the main database schema \(the repository schema used by Platform\); if specified, the copy of the mobile table will be created in that data source
 * **Primary key fields **– when loosing focus from the "Starting SQL query" field, the SQL query will be executed and the list of fields specified in the selected clause is showed in this grid: it is mandatory to select at least one field with represents the primary key for the new mobile table; in this way, Platform will be able to manage writing operations like updates and deletes of the mobile table. _Pay attention to the correct definition of this primary key: once created, it cannot be changed any more_! 
 
@@ -78,6 +79,16 @@ A typical scenario for such an action is comparing last sync time for the device
         // do something with this info... 
     }
 ```
+
+Note: you can skip the scriptlet described above, since Platform already passes forward such data in the reqParams input object, through an attribute named lastSyncDate, so the code reported above can be simplified as:
+
+```js
+     var lastSyncDate = reqParams.lastSyncDate;
+```
+
+
+
+
 
 Suppose your central table contains a LAST\_UPDATE datetime field: you can use it to get the last modified record time and compare it with the "lastSyncDate":
 

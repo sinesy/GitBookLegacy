@@ -93,6 +93,8 @@ Once created a new Test Case, the main panel of the window can be used to define
 
 That means the request can send dynamic data, whose content can be defined at runtime, and inherits values coming form previous requests: you could define a login request, where the Tests folder is used to save a token and then pass forward the token value to the next request.
 
+Special variables are {{DIGEST}} which gets back the current digest value for a mobile app and {{APP_VERSION}} which gets back the current application version for a mobile app.
+
 **Body** can only be expressed for text content.
 
 **Tests** can contain  javascript instructions, used for 2 purposes:

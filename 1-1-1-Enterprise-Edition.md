@@ -9,7 +9,7 @@ In addition to this open source layer, there is also an Enterprise Edition of 4W
 * **Advanced form designer** , used to graphically design a form, using drag ‘n drop techniques and components palette, to speed up and make it easier the development of complex forms, including folders, subfolders, subpanes.
 * **Groupware module** , which consists of mail server integration, calendar \(Microsoft and Google calendars\) and activities integration, CMS integration \(Alfresco, Google Drive, embedded CMS\) for document management, including search, setting metadata, upload/download, lock/unlock and versioning.
 * **Cloud extensions,**  which allow to run the product not only with an IaaS cloud solution, but also with the Google PaaS solution based on AppEngine.
-* **Mobile interpreter** , a mobile app for Android and iOS platforms, which is able to interpret the metadata defined through the app designer and create mobile apps that are deployed through AppStore or GooglePlay once, and then easily updated any number of times, through the synchrobization process supported by 4WS.Platform, which allows the transfer of metadata and data to make the mobile app always up to date.
+* **Mobile interpreter** , a mobile app for Android and iOS platforms, which is able to interpret the metadata defined through the app designer and create mobile apps that are deployed through AppStore or Google Play once, and then easily updated any number of times, through the synchronization process supported by 4WS.Platform, which allows the transfer of metadata and data to make the mobile app always up to date.
 
 ---
 

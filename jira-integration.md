@@ -43,6 +43,10 @@ Before connecting Platform to Jira, be sure to have a correct Jira cloud environ
 
 An **agile** setup inside Jira is recommended, in order to use all the amazing features provided by Jira and included in Platform as well.
 
+
+
+
+
 ### Importing Jira users
 
 Once you have correctly setup the Jira integration described in the previous section, you can start importing Jira users into Platform, through the new Jira menu available in the App Designer.
@@ -56,6 +60,17 @@ In the prompted editable grid, you can assign for each row an already existing P
 In this way, Platform and Jira users will be connected with each other.
 
 As an alternative, you can **Import all users**: in this case, Platform will also create Platform users for the rows not having a linked Platform user: for each empty cell, a Platform user will be created and linked to the Jira user. New Platform users are always created with site id = 100 and with an expiration password set to today, in order to force the user to change the expiration date.
+
+
+
+### User authentication
+
+Once configure what reported above, a Platform user \(which is also a Jira user\) can use any of the functionalities related to Jira in the App Designer. The first time he does it, an input dialog is showed, prompting for the password:
+
+* in case Platform has been connected to a Cloud Jira installation, the password is the auth token, specific for each user, which can be accessed following the web page reported in foreground
+* in case of a Server \(local\) installation of Jira, the password is NOT the one used by the Jira user to access it, but it is the API password. Each user can generate it by accessing the first time Jira, go to User Profile and press Set Password to specify it.
+
+
 
 ### Project issues
 
@@ -71,21 +86,21 @@ This window includes a series of very helpful views, organized hierarchically, f
 
 **Boards** - a board is a Jira organization of issues; typically every Jira project has a default board; optionally, additional boards can be created.
 
-**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board. 
+**Epics** - in the agile methodology \(Scrum\), an epic is a large amount of work, which can be split up in shorter ones, named user stories; when selecting a boards, the list of epics are filtered by the current board.
 
 Epics are optional and it is possible to simply arrange a single board directly to a set of sprints, which represents a very common scenario.
 
 ![](/assets/epics.png)
 
-**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration. 
+**Sprints** - in the agile methodology \(Scrum\), a sprint is an amount of work, composed of user stories; typically it represents a release of a working app, at the end of a period of time, called iteration.
 
-The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released. 
+The agile methodology involves an iterative and incremental approach, where deliveries are planned at the end of each iteration, where a working app is released.
 
 When selecting a board, the list of sprints are filtered by the currently selected board.
 
 ![](/assets/sprints.png)
 
-**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\). 
+**Backlogs** - in the agile methodology, a backlog represents a list of features or technical tasks which the team maintains and which, at a given moment, are known to be necessary and sufficient to complete a project or a release. Basically, a backlog reports the list of stories not started \(to do\), in progress and completed \(done\).
 
 This view shows the backlog related to the current selected sprint. If not selected, the "active" sprint is used as default setting.
 

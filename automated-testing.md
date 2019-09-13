@@ -104,6 +104,11 @@ Special variables are {{DIGEST}} which gets back the current digest value for a 
 
 ![](/assets/test-forldertests.png)
 
+
+You can specify variables expressed as {{VARNAME}} both in request parameters, request headers and body content.
+Predefined variables that do not require to be specified in Environment are:
+COMPANY_ID, SITE_ID, APPLICATION_ID, APP_VERSION, USERNAME, DAY, DOW, MONTH, TODAY, NOW, UUID, RANDOM, RANDOM10, RANDOM100, RANDOM1000, COUNTER
+
 Moreover, a top-bar is included, in order to quickly change the URL and a series of buttons:
 
 * **Send** - when pressed, the request is executed and the Body folder is automatically shown, so that the response can be reported in the bottom area; a colored panel is also included in order to check out the outcome of the request: green for an OK request, red for NO OK.

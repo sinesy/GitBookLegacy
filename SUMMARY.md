@@ -133,6 +133,7 @@
         * [Detail scrollable form](EE7-2-5-1-Detail-scrollable-form.md)
         * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
     * [Reference guide](EE7-3--Reference-Guide.md)
+    * [Cleaning up data](cleaning-up-data.md)
     * [How to](EE7-4--How-to.md)
     * [App deployment](EE7-5--App-deployment.md)
       * [App deployment for the iOS platform](EE7-5-1-App-deployment-for-the-iOS-platform.md)

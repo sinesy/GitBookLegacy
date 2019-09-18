@@ -127,6 +127,18 @@ Once done that, this action will be invoked automatically when a Push notificati
 
 **App off exit from Beacon region **- js action executed in the mobile device every time the device is not any more close to a configured Beacon and the app is currently closed
 
+**Network connectivity lost/restored** - js action executed when the mobile device lost or restore connection. The passed vo contains the connection status in the field "connectionStatus", this field can value "ONLINE" or "OFFLINE"
+
+Example:
+
+```
+if(vo.connectionStatus == "ONLINE){
+    //connection restore
+}else{
+    //you are offline
+}
+```
+
 ---
 
 You can find additional information into the API Documentation [here](https://4wsplatform.gitbooks.io/api/content/mobile-variables/inside-a-business-component-executed-on-the-mobile-app.html).

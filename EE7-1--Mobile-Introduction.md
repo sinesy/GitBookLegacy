@@ -12,7 +12,7 @@ a  **mobile app** , which consists of an interpreter created once for iOS and An
 
 * on-line apps \(app connected to a server to manage data, through an Internet connection\)
 * off-line apps \(data managed locally, without an Internet connection\)
-* no authentication or user authentication
+* authentication or user authentication
 * user authorizations \(different menu according to the user, different operations according to the user\)
 * data synchronization filtered per user
 * file synchronization

@@ -2,23 +2,34 @@
 
 In this section the most important elements of the process are reported and described:
 
-* START EVENTS
+START EVENTS
+
 * Start event
 * Start timer event
-* ACTIVITIES
+
+ACTIVITIES
+
 * User task
 * Service task
 * Mail task
 * Script task
-* STRUCTURAL
+
+STRUCTURAL
+
 * Event sub process
 * Call activity
-* GATEWAYS
+
+GATEWAYS
+
 * Exclusive gateway
 * Parallel gateway
-* BOUNDARY EVENTS
+
+BOUNDARY EVENTS
+
 * Boundary timer event
-* END EVENTS
+
+END EVENTS
+
 * End event
 
 ---

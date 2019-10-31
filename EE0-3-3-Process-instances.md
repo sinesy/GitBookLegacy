@@ -9,8 +9,10 @@ When opening the window, all instances of all processes are showed in the second
 If the user selects a specific process in the first list, the second list is filtered by the first one.
 
 On the right side of the window, the instance detail is reported:  
-a graphical representation of the process instance, where the current running activity is highlighted  
-details about the instance properties and completed tasks are reported as well.
+
+
+* a graphical representation of the process instance, where the current running activity is highlighted
+* details about the instance properties and completed tasks are reported as well.
 
 ---
 

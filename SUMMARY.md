@@ -132,6 +132,7 @@
       * [Window content](EE7-2-5-Window-content.md)
         * [Detail scrollable form](EE7-2-5-1-Detail-scrollable-form.md)
         * [Scrollable paginated grid](EE7-2-5-2-Scrollable-paginated-grid.md)
+        * [Collection grid view](collection-grid-view.md)
     * [Reference guide](EE7-3--Reference-Guide.md)
     * [Cleaning up data](cleaning-up-data.md)
     * [How to](EE7-4--How-to.md)

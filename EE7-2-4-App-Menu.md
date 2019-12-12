@@ -2,7 +2,7 @@
 
 No hierarchical menu items can be showed the menu: all menu items must be part of a unique "plain" list, showed in one of the layouts reported above. Anyway, this is not a limit at all: moble apps cannot be as complex as the web applications, since the device display size and resources are limited.
 
-## **No menu**
+**No menu**
 
 The app don't have a menu, the developer choose a first window and add to this window the navigation logic.
 

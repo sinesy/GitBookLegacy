@@ -22,7 +22,7 @@ The tab bar menu can be anchored to the top or the bottom, according to the host
 
 ## **Left tab bar**
 
-The menu is blocked on the left side of the app. The root of the menù is configura like the other menu, in the next window you can add leaves directly from the window.
+The menu is blocked on the left side of the app. The root of the menù is configured like the other menu, in the no-root window you can add leaves directly from the window.
 
 The leaves can be anchor to the top or botto of the window.
 

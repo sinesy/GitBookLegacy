@@ -6,21 +6,21 @@ No hierarchical menu items can be showed the menu: all menu items must be part o
 
 The app don't have a menu, the developer choose a first window and add to this window the navigation logic.
 
-## **Slide menu **
+**Slide menu **
 
 A slide menu is similar to the one proposed in Facebook or GMail app.
 
-## **Icon menu**
+**Icon menu**
 
 The icon menu has a Google icon menu style.
 
-## **Tab bar**
+**Tab bar**
 
 The tab bar menu can be anchored to the top or the bottom, according to the hosting operating system: typically it is showed on the top for Android and on the bottom for iOS.
 
 ![](http://4wsplatform.org/wp-content/plugins../../uploads/media/copiadiplatformmobilemanual/image19.png)
 
-## **Left tab bar**
+**Left tab bar**
 
 The menu is blocked on the left side of the app. The root of the menù is configured like the other menu, in the no-root window you can add leaves directly from the window.
 
@@ -28,7 +28,7 @@ The leaves can be anchor to the top or botto of the window.
 
 ![](/assets/IMG_94E9FA5E1E2C-1.jpeg)
 
-# **Window transition**
+**Window transition**
 
 Independently of the menu type, the transition form a window to another can happen through several events:  
 through a button \(including the "Back" button used to get back to the parent window\) included in the navigation bar, automatically showed if there is at least one other button defined for the navigation bar.

@@ -28,10 +28,6 @@ The leaves can be anchor to the top or botto of the window.
 
 ![](/assets/IMG_94E9FA5E1E2C-1.jpeg)
 
-![](/assets/IMG_94E9FA5E1E2C-1.jpeg)
-
-![](/assets/IMG_94E9FA5E1E2C-1.jpeg)
-
 # **Window transition**
 
 Independently of the menu type, the transition form a window to another can happen through several events:  

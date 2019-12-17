@@ -46,9 +46,14 @@ drawChartXXX();
 
 This javascript action should be linked to the "Before loading data" event of the chart panel.
 
-**Example to colorize columns with a single serie:**   
- **NOTE:**  **This shouldn’t be done with lots of columns/data since it involves overwriting a function by specifying all the chart columns again. Do it only if you have few columns.**   
-As can be seen on the relativeGoogle Docspage \(this example considers column charts\) you might want to colorize different columns with different colors even if you have a single serie, check example below.
+---
+
+### **Example to colorize columns with a single series:** 
+
+**NOTE:**  **This shouldn’t be done with lots of columns/data since it involves overwriting a function by specifying all the chart columns again. Do it only if you have few columns.**  
+
+
+As can be seen on the relative Google Docs page \(this example considers column charts\) you might want to colorize different columns with different colors even if you have a single serie, check example below.
 
 ![](http://4wsplatform.org/wp-content/uploads/2015/12/singleSerieColor.jpg)
 
@@ -87,14 +92,66 @@ function getChart292DataStoreWithStyles(list) {
 };
 ```
 
-Common mistakes  
+---
+
+### Special charts
+
+Some charts requires a specific number of mandatory fields to correctly work. In the following sections it is reported how to correctly set up a chart.
+
+
+
+**Timelane**
+
+This chart requires always 4 mandatory fields. Common misconfiguration errors are reported in the section below.
+
+For additional settings, see: [https://developers.google.com/chart/interactive/docs/gallery/timeline](https://developers.google.com/chart/interactive/docs/gallery/timeline)
+
+Common cases:
+
+1 - hide the first cell \(lane name\)
+
+In order to do it, you can use Options multitext field in the Chart definition panel and set the following setting:
+
+```js
+timeline: { colorByRowLabel: true }
+```
+
+2 - make the chart horizontally scrollable
+
+The default behavior of charts is to autofit themselves to the available space provided by their container.
+
+In case you want to distinguish between the available container space \(defined at runtime, since it depends on the browser page size\) and the chart width \(which can be larger\), you have to include in the xtheme.css a CSS scriptlet as follows:
+
+```css
+.x-chart-panel-39 {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 400px;
+}
+```
+
+where the CSS name must always defined as x-chart-panel + the panel id
+
+the width should be relatively lower than the real chart length, which is consequently auto enlarged, according to the provided timing for activities.
+
+
+
+---
+
+### Common mistakes
+
 Not all charts works in the same way and require the same configuration. When configuring charts, you have to pay attention to the settings you define, according to the chart type.  
 These are the most common mistakes made when configuring charts:
 
 * **Any chart –** the SQL select linked to the chart should always have \(at least\) two fields: one used by the horizontal axis, the other for the vertical axis. While the second must be a number value, the first could be a numeric or text value. Of course this point of view\(vertical/horizontal axis\) cannot be applied for charts where there is not a cartesian diagram, as for pies or donuts. Anyway, the concept is the same: a couple of values is required for each data to show: a value and a corresponding “label”
-* **Donut/Pie**  – the legend must be a text type value;a common error is to pass a numeric value, like when you are showing the distribution per year and the sections of the pie represent different years: in such case, you have to convert the numeric year in a text value, when defining the SQL query in the business component: this is the right place when you have define precisely the data type for each field in the select clause
+* **Donut/Pie**  – the legend must be a text type value; a common error is to pass a numeric value, like when you are showing the distribution per year and the sections of the pie represent different years: in such case, you have to convert the numeric year in a text value, when defining the SQL query in the business component: this is the right place when you have define precisely the data type for each field in the select clause
 * **Gauge**  – a list of gauges are shown for each record read by the defined SQL query. A single column in the SQL selectis required: if you define more than one field in the SQL select, then the number of gauges will be the sum of the records for each field in the select. A common mistake is thinking that a field in the select is required for the legend and a second field for the corresponding values, as for other charts: a gauge does not work in that way. A single field in the select is needed: the field name will be used as the gauge legend, the values for each record as the value of the gauge.
 * **Geolocation**  – this chart is based on the use of Google Maps: in order to use it, you have to purchase a Google account and activate a key for the Google Maps Javascript API. In case the didn’t to that, you will not be able to show the right content in the chart: it will not due to Platform, but on a wrong configuration on your Google account/APIs and that is beyond the support that the Platform team can provide. Additional information about Google configuration can be found here.
+* **Timelane** - this chart requires 4 mandatory columns: 
+  * a lane name, which can include multiple activities along the time, each having the same lane name; a common error is not to define it as a text type
+  * a description, related to the activity to draw into a lane
+  * start time, related to the initial time of the activity to draw; a common mistake is to pass forward a null value or provide a not date value
+  * end time, related to the final time of the activity to draw; a common mistake is to pass forward a null value or provide a not date value
 
 ---
 

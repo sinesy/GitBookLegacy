@@ -239,5 +239,5 @@ In order to let Platform communicate with Activiti, at least 2 parameters must b
 * ACTIVITI - URL to Activiti Rest - the value for this parameter must be set with a local URL, since this web app must not be public, but only accessible from within Platform server, so the URL should be something like: [http://localhost:activitiport/](http://localhost:activitiport/)
 * ACTIVITI - URL to Activiti Explorer - the value for this parameter must be set with a public URL, since the web editor must be opened remotelly, starting form the Platform App Designer, so the URL should be something like: [https://serverhost/activiti-explorer](https://serverhost/activiti-explorer)
 
-Finally, in case you want to activate the Platform embedded LDAP server, you have also to fill in the parameter named "Embedded  LDAP port", with the same value specified in WEB-INF/activiti-standalone-context.xml
+Finally, in case you want to activate the Platform embedded LDAP server, you have also to fill in the parameter named "LDAP - Embedded  LDAP port", with the same value specified in WEB-INF/activiti-standalone-context.xml
 

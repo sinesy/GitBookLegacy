@@ -211,6 +211,7 @@
       * [Instances](EE0-6-3-Instances.md)
       * [Activities](EE0-6-4-Activities.md)
       * [History](EE0-6-5-History.md)
+    * [Activiti Setup](activiti-setup.md)
   * [Embedded CMS](EE2-Embedded-CMS.md)
   * [ECM](ecm.md)
     * [Alfresco](ecm/alfresco.md)

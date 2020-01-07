@@ -15,7 +15,7 @@ In the following section is described the manual steps needed to correctly setup
 * prepare an ad hoc Tomcat 9, distinct from the one used by Platform and change the bin/catalina.sh file in order to set the JAVA\_HOME variable to your JDK 11 path
 * copy the 2 subfolders activiti-explorer and activiti-rest into the webapps Tomcat's subfolder
 * copy the JDBC driver used by Platform into the lib Tomcat's subfolder
-* copy the PlatformActiviti.jar file to the lib Tomcat's subfolder
+* copy the PlatformActiviti.jar file to WEB-INF/lib subfolder of both web applications 
 * copy the following the files to the lib Tomcat's subfolder: jaxb-api-2.4.0-b180830.0359.jar
   jaxb-impl-2.4.0-b180830.0438.jar
   jaxb-impl.jar
@@ -234,46 +234,46 @@ Apart from it, there is also the file WEB-INF/classes/activiti-context.xml to co
 
 ```
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
-	<!-- Comment this if you don't need demo data 
-	<bean id="demoDataGenerator" class="org.activiti.rest.service.demo.DemoDataGenerator"
-		init-method="init">
-		<property name="processEngine" ref="processEngine" />
-		<property name="createDemoUsersAndGroups" value="false" />
+    <!-- Comment this if you don't need demo data 
+    <bean id="demoDataGenerator" class="org.activiti.rest.service.demo.DemoDataGenerator"
+        init-method="init">
+        <property name="processEngine" ref="processEngine" />
+        <property name="createDemoUsersAndGroups" value="false" />
         <property name="createDemoProcessDefinitions" value="false" />
         <property name="createDemoModels" value="false" />
-	</bean>
+    </bean>
      -->
      <bean id="utils"
-		class="it.sinesy.activiti.util.Utils">
-	</bean>
+        class="it.sinesy.activiti.util.Utils">
+    </bean>
 
-	<bean id="dbProperties"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:db.properties" />
-		<!-- Allow other PropertyPlaceholderConfigurer to run as well -->
-		<property name="ignoreUnresolvablePlaceholders" value="true" />
-	</bean>
+    <bean id="dbProperties"
+        class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:db.properties" />
+        <!-- Allow other PropertyPlaceholderConfigurer to run as well -->
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean>
 
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driverClass" value="${jdbc.driver}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
-	</bean>
+    <bean id="dataSource"
+        class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <property name="driverClass" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
 
-	<bean id="transactionManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+    <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
 
-	<bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
+    <bean id="processEngineConfiguration" class="org.activiti.spring.SpringProcessEngineConfiguration">
 
                 <property name="dataSource" ref="dataSource" />
                 <property name="transactionManager" ref="transactionManager" />
@@ -291,56 +291,55 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 
           <list>
               <bean class="org.activiti.ldap.LDAPConfigurator">
-              
+
                 <!-- Server connection params -->
-				<property name="server" value="ldap://localhost" />
-				<property name="port" value="3389" />
-		                <property name="user" value="cn=ADMIN,dc=com" />
-			        <property name="password" value="..." />	
-				<!-- Query params -->
-				<property name="baseDn" value="dc=com" />
-			        <property name="queryUserByUserId" value="(&amp;(objectClass=person)(cn={0}))" />
-				<!--
-				<property name="queryUserByUserId" value="(&(objectClass=inetOrgPerson)(uid={0}))" />
-				<property name="queryUserByFullNameLike" value="(&(objectClass=inetOrgPerson)(|({0}=*{1}*)({2}=*{3}*)))" />
-				-->
-				<!--
-				<property name="queryGroupsForUser" value="(&(objectClass=groupOfUniqueNames)(uniqueMember={0}))" />
-				-->
-				<!-- Attribute config -->
-				<property name="userIdAttribute" value="userPrincipalName" />
-				<property name="userFirstNameAttribute" value="givenName" />
-				<property name="userLastNameAttribute" value="sn" />
-			
-				<property name="groupIdAttribute" value="cn" />
-				<property name="groupNameAttribute" value="cn" />
-			
-			<property name="ldapGroupManagerFactory" ref="platform4WSGroupManagerFactory"/>
-			<property name="ldapUserManagerFactory" ref="platform4WSUserManagerFactory"/>
-			
-                
+                <property name="server" value="ldap://localhost" />
+                <property name="port" value="3389" />
+                        <property name="user" value="cn=ADMIN,dc=com" />
+                    <property name="password" value="..." />    
+                <!-- Query params -->
+                <property name="baseDn" value="dc=com" />
+                    <property name="queryUserByUserId" value="(&amp;(objectClass=person)(cn={0}))" />
+                <!--
+                <property name="queryUserByUserId" value="(&(objectClass=inetOrgPerson)(uid={0}))" />
+                <property name="queryUserByFullNameLike" value="(&(objectClass=inetOrgPerson)(|({0}=*{1}*)({2}=*{3}*)))" />
+                -->
+                <!--
+                <property name="queryGroupsForUser" value="(&(objectClass=groupOfUniqueNames)(uniqueMember={0}))" />
+                -->
+                <!-- Attribute config -->
+                <property name="userIdAttribute" value="userPrincipalName" />
+                <property name="userFirstNameAttribute" value="givenName" />
+                <property name="userLastNameAttribute" value="sn" />
+
+                <property name="groupIdAttribute" value="cn" />
+                <property name="groupNameAttribute" value="cn" />
+
+            <property name="ldapGroupManagerFactory" ref="platform4WSGroupManagerFactory"/>
+            <property name="ldapUserManagerFactory" ref="platform4WSUserManagerFactory"/>
+
+
               </bean>
           </list>
         </property>
     </bean>
-	
-	
-  
+
+
+
   <bean id="ldapConfigBean" class="org.activiti.ldap.LDAPConfigurator" />
   <bean id="platform4WSGroupManagerFactory" class="it.sinesy.activiti.authorizations.Platform4WSGroupManagerFactory" >
-	  <constructor-arg type="org.activiti.ldap.LDAPConfigurator" ref="ldapConfigBean" />
-	  <constructor-arg type="org.springframework.jdbc.datasource.SimpleDriverDataSource" ref="dataSource" />
+      <constructor-arg type="org.activiti.ldap.LDAPConfigurator" ref="ldapConfigBean" />
+      <constructor-arg type="org.springframework.jdbc.datasource.SimpleDriverDataSource" ref="dataSource" />
     </bean>
-	<bean id="platform4WSUserManagerFactory" class="it.sinesy.activiti.authorizations.Platform4WSUserManagerFactory" >
-	  <constructor-arg type="org.activiti.ldap.LDAPConfigurator" ref="ldapConfigBean" />
-	  <constructor-arg type="org.springframework.jdbc.datasource.SimpleDriverDataSource" ref="dataSource" />
+    <bean id="platform4WSUserManagerFactory" class="it.sinesy.activiti.authorizations.Platform4WSUserManagerFactory" >
+      <constructor-arg type="org.activiti.ldap.LDAPConfigurator" ref="ldapConfigBean" />
+      <constructor-arg type="org.springframework.jdbc.datasource.SimpleDriverDataSource" ref="dataSource" />
   </bean>
-	<bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
-		<property name="processEngineConfiguration" ref="processEngineConfiguration" />
-	</bean>
+    <bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
+        <property name="processEngineConfiguration" ref="processEngineConfiguration" />
+    </bean>
 
 </beans>
-
 ```
 
 **Note**: comment the section about the demo data.
@@ -348,8 +347,6 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 **Note**: include the utils bean and the SMTP settings for sending emails.
 
 **Note**: in the example above, the authentication process has been redirected to the embedded LDAP server in Platform.
-
-
 
 ### Configuration in Platform App Designer
 

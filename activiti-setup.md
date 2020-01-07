@@ -52,6 +52,16 @@ This file is used to connect Activiti Explorer to its database schema. Values to
 * dbhostname and databasename \(the same used by Platform, since the database schema should be the same\)
 * dbusername and password \(the same used by Platform, since the database schema should be the same\)
 
+#### WEB-INF/activiti-ui-context.xml
+
+Here it is important to define correctly the adminGroups and userGroups.
+
+The adminGroups should always include the value 1, since Platform default admin role id is 1.
+
+The userGroups should be all the others.
+
+Anyway, PlatformActiviti.jar integration library should by-pass these default settings and automate the reading of Platform roles.
+
 #### WEB-INF/activiti-standalone-context.xml
 
 ```

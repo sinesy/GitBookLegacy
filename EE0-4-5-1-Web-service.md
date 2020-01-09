@@ -20,7 +20,7 @@ string value =
 name = url  
 string value = [http://host:port/platform/getList?param1=val1](http://host:port/platform/getList?param1=val1)**&**param2=val2
 
-**Important note:** pay attention to the URL definition: the Activiti workflow editor does not allow you to write the & symbol: if you do it, it is likely that the Service Task properties will not be opened any more; for each & to include in the URL definition, use 
+**Important note:** pay attention to the URL definition: the Activiti workflow editor does not allow you to write the & symbol: if you do it, it is likely that the Service Task properties will not be opened any more; for each & to include in the URL definition, use
 
 ```
 &amp;

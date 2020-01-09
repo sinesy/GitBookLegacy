@@ -249,80 +249,110 @@ The default stencilset.json content includes the definition of the servicetask, 
 In order to apply these changes, open with a text editor the stencilset.json file, find the "servicetaskbase" definition and replace the whole content was follows:
 
 ```
-		{
-			"name": "servicetaskbase",
-			"properties": [{
-				"id": "servicetaskclass",
-				"type": "Choice",
-				"title": "Class",
-				"value": "",
-				"items": [{
-					"id": "ExecuteSqlStmtServiceTask",
-					"title": "SQL Statement",
-					"value": "it.sinesy.activiti.services.ExecuteSqlStmtServiceTask"
-				}, {
-					"id": "ExecuteSqlQueryServiceTask",
-					"title": "SQL Query",
-					"value": "it.sinesy.activiti.services.ExecuteSqlQueryServiceTask"
-				}, {
-					"id": "ExecuteComponentServiceTask",
-					"title": "Platform Web Service",
-					"value": "it.sinesy.activiti.services.ExecuteComponentServiceTask"
-				}],
-				"description": "Class that implements the service task logic.",
-				"popular": true
-			}, {
-				"id": "servicetaskexpression",
-				"type": "String",
-				"title": "Expression",
-				"value": "",
-				"description": "Service task logic defined with an expression.",
-				"popular": true
-			}, {
-				"id": "servicetaskdelegateexpression",
-				"type": "String",
-				"title": "Delegate expression",
-				"value": "",
-				"description": "Service task logic defined with a delegate expression.",
-				"popular": true
-			}, {
-				"id": "servicetaskresultvariable",
-				"type": "String",
-				"title": "Result variable name",
-				"value": "",
-				"description": "Process variable name to store the service task result.",
-				"popular": true
-			}, {
-				"id": "servicetaskfields",
-				"type": "Complex",
-				"title": "Class fields",
-				"value": "{ \"totalCount\": 11, \"items\": [{ \"servicetask_field_name\": \"sql\" },{ \"servicetask_field_name\": \"dataSourceName\" },{ \"servicetask_field_name\": \"result\" },{ \"servicetask_field_name\": \"companyId\" },,{ \"servicetask_field_name\": \"siteId\" },{ \"servicetask_field_name\": \"applicationId\" },{ \"servicetask_field_name\": \"httpMethod\" },{ \"servicetask_field_name\": \"url\" },{ \"servicetask_field_name\": \"requestBody\" },{ \"servicetask_field_name\": \"fireError\" },{ \"servicetask_field_name\": \"username\" }] }",
-				"description": "Field extensions",
-				"popular": true,
-				"complexItems": [{
-					"id": "servicetask_field_name",
-					"name": "Name",
-					"type": "String",
-					"value": "",
-					"width": 100,
-					"optional": false
-				}, {
-					"id": "servicetask_field_value",
-					"name": "String value",
-					"type": "String",
-					"value": "",
-					"width": 500,
-					"optional": true
-				}, {
-					"id": "servicetask_field_expression",
-					"name": "Expression",
-					"type": "String",
-					"value": "",
-					"width": 200,
-					"optional": true
-				}]
-			}]
-		}
+        {
+            "name": "servicetaskbase",
+            "properties": [{
+                "id": "servicetaskclass",
+                "type": "Choice",
+                "title": "Class",
+                "value": "",
+                "items": [{
+                    "id": "ExecuteSqlStmtServiceTask",
+                    "title": "SQL Statement",
+                    "value": "it.sinesy.activiti.services.ExecuteSqlStmtServiceTask"
+                }, {
+                    "id": "ExecuteSqlQueryServiceTask",
+                    "title": "SQL Query",
+                    "value": "it.sinesy.activiti.services.ExecuteSqlQueryServiceTask"
+                }, {
+                    "id": "ExecuteComponentServiceTask",
+                    "title": "Platform Web Service",
+                    "value": "it.sinesy.activiti.services.ExecuteComponentServiceTask"
+                }],
+                "description": "Class that implements the service task logic.",
+                "popular": true
+            }, {
+                "id": "servicetaskexpression",
+                "type": "String",
+                "title": "Expression",
+                "value": "",
+                "description": "Service task logic defined with an expression.",
+                "popular": true
+            }, {
+                "id": "servicetaskdelegateexpression",
+                "type": "String",
+                "title": "Delegate expression",
+                "value": "",
+                "description": "Service task logic defined with a delegate expression.",
+                "popular": true
+            }, {
+                "id": "servicetaskresultvariable",
+                "type": "String",
+                "title": "Result variable name",
+                "value": "",
+                "description": "Process variable name to store the service task result.",
+                "popular": true
+            }, {
+                "id": "servicetaskfields",
+                "type": "Complex",
+                "title": "Class fields",
+                "value": "{ \"totalCount\": 11, \"items\": [{ \"servicetask_field_name\": \"sql\" },{ \"servicetask_field_name\": \"dataSourceName\" },{ \"servicetask_field_name\": \"result\" },{ \"servicetask_field_name\": \"companyId\" },,{ \"servicetask_field_name\": \"siteId\" },{ \"servicetask_field_name\": \"applicationId\" },{ \"servicetask_field_name\": \"httpMethod\" },{ \"servicetask_field_name\": \"url\" },{ \"servicetask_field_name\": \"requestBody\" },{ \"servicetask_field_name\": \"fireError\" },{ \"servicetask_field_name\": \"username\" }] }",
+                "description": "Field extensions",
+                "popular": true,
+                "complexItems": [{
+                    "id": "servicetask_field_name",
+                    "name": "Name",
+                    "type": "String",
+                    "value": "",
+                    "width": 100,
+                    "optional": false
+                }, {
+                    "id": "servicetask_field_value",
+                    "name": "String value",
+                    "type": "String",
+                    "value": "",
+                    "width": 500,
+                    "optional": true
+                }, {
+                    "id": "servicetask_field_expression",
+                    "name": "Expression",
+                    "type": "String",
+                    "value": "",
+                    "width": 200,
+                    "optional": true
+                }]
+            }]
+        }
+```
+
+#### explorer/src/css/custom-styles.css
+
+Find the following 2 class definitions and replace them with the following content:
+
+```
+.north_view .x-panel-body,
+.x-panel-editor-north .x-panel-body {
+	/*height:0px !important;*/
+	height:32px !important;
+	top: 0px;
+}
+
+
+.x-panel-editor-north .x-panel .x-panel-body {
+	/*height:40px !important;*/
+	height:0px !important;
+}
+
+
+#editor_header {
+  background:url("../img/signavio/smoky/header_background2.png") repeat-x scroll center -4px transparent !important;
+  width: 100%;
+  overflow:hidden; 
+  position: relative;
+/*  height: 40px;*/
+  height: 0px;
+
+}
 ```
 
 ---

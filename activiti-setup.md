@@ -24,7 +24,7 @@ Now the setup is completed and Activiti ready to be used.
 
 **Note**: due to default security properties on Tomcat, escaped forward slashes \(%2F and %5C\) are not allowed by default \(400-result is returned\). This may have an impact on the deployment resources and their data-URL, as the URL can potentially contain escaped forward slashes.
 
-When issues are experienced with unexpected 400-results, set the following system-property: 
+When issues are experienced with unexpected 400-results, set the following system-property:
 
 -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW\_ENCODED\_SLASH=true.
 
@@ -43,7 +43,7 @@ Activiti Explorer uses a series of configuration files, described below.
 #### WEB-INF/classes/db.properties
 
 ```
-platform.url=http://localhost:platformport/platformwebcontext
+baseUrl=http://localhost:platformport/platformwebcontext
 sql=select USER_CODE_ID FROM PRM01_USERS WHERE STATUS='E'
 db=mysql
 jdbc.driver=com.mysql.jdbc.Driver

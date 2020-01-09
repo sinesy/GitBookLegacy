@@ -332,15 +332,15 @@ Find the following 2 class definitions and replace them with the following conte
 ```
 .north_view .x-panel-body,
 .x-panel-editor-north .x-panel-body {
-	/*height:0px !important;*/
-	height:32px !important;
-	top: 0px;
+    /*height:0px !important;*/
+    height:32px !important;
+    top: 0px;
 }
 
 
 .x-panel-editor-north .x-panel .x-panel-body {
-	/*height:40px !important;*/
-	height:0px !important;
+    /*height:40px !important;*/
+    height:0px !important;
 }
 
 
@@ -353,6 +353,24 @@ Find the following 2 class definitions and replace them with the following conte
   height: 0px;
 
 }
+
+
+
+
+/* new css classes */
+
+.x-panel-editor-west .x-panel-body {
+  background-color:#FEFEFE !important;
+}
+
+.x-tree-node {
+  background-color:#FEFEFE !important;
+  background: #FEFEFE url(../../libs/ext-2.0.2/resources/images/gray/panel/white-top-bottom.gif) repeat-x scroll 0 0 !important;
+}
+
+.x-grid3{position:relative;overflow:hidden;background-color: #FDFDFD !important;}
+ 
+
 ```
 
 ---

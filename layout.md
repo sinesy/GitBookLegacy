@@ -8,7 +8,7 @@ Platform supports a variety of different  **panel containers** , each managing t
 * [horizontal orientation panel](/layout/horizontal-orientation-panel.md)
 * [table panel](/layout/table-panel.md)
 * [generic panel](/layout/ggeneric-panel.md)
-* [Responsive panel](/layout/responsive-panel.md)
+* [responsive panel](/layout/responsive-panel.md)
 
 Each of them is described as follow.  
 Note: you can easily change the current panel container with another one, without having to remove its content and then remove it: the commands “Replace this panel with…” allow you to replace the current panel container with any other.

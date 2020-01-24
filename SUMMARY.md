@@ -60,7 +60,6 @@
         * [Custom code and translations](3-1-14-3-Custom-code-and-translations.md)
       * [Application Menu](3-1-15-Application-Menu.md)
       * [Bulk import binded to a grid](3-1-24-Bulk-import-binded-to-a-grid.md)
-      * Layout
     * [Web Interpreter](3-3-Web-Interpreter.md)
       * [Grid components](3-3-1-Grid-components.md)
       * [Detail forms](3-3-2-Detail-forms.md)

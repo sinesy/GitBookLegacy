@@ -1,7 +1,7 @@
 **Panel containers and layouts**  
 Platform supports a variety of different  **panel containers** , each managing the layout of its children panels in a different way:
 
-* [tab panel](/layout/table-panel.md)
+* [tab panel](/layout/tab-panel.md)
 * [alternative panes](/layout/alternative-panel.md)
 * [accordion panel](/layout/accordion-panel.md)
 * [vertical orientation panel](/layout/vertical-orientation-panel.md)

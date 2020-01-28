@@ -1,6 +1,6 @@
 # How to start a process from a JavaScript action
 
-var  **start**  = ** startActivitiProcess** \(processId, obj\);
+var  processInstanceId  = ** startActivitiProcess** \(processId, obj\);
 
 * processId: process id
 
@@ -27,7 +27,13 @@ var obj = {
   initiator: vo.requestUserId
 };
 
-startActivitiProcess("PROCESS_ID",obj);
+var processInstanceId = null;
+try {
+  processInstanceId = startActivitiProcess("PROCESS_ID",obj);
+}
+catch(e) {
+  // in case of failure when attempting to start a process, an exception is fired here: e.toString() contains the error message
+}
 ```
 
 ---

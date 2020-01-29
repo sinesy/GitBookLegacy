@@ -18,10 +18,10 @@ This product is available in two editions:
 Platform can be executed in two alternative ways:
 
 * **as a Software as a Service \(SaaS\)** , thanks to the Google Cloud Platform \(onlyEnterprise Edition\)
-* **in-house**  \(Enterprise Edition and Community Edition\) all you need is the Tomcat 7 web container, Java release 7 and a database.
+* **in-house**  \(Enterprise Edition and Community Edition\) all you need is the Tomcat 9 web container, Java release 11 and a database.
 
 Certified databases for the in-house solution are: Oracle, MS SqlServer, MySQL, PostgreSQL.  
-A last generation browser is required: Google Chrome or Mozilla Firefox are recommended. Anyway, Internet Explorer releases 9 or 10 are supported too.
+A last generation browser is required: Google Chrome or Mozilla Firefox are recommended. Anyway, Internet Explorer releases 9 or 10 are supported too \(Microsoft Edge is not supported and is going to be desupported by Microsoft soon\).
 
 ---
 

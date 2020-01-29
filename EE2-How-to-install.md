@@ -6,7 +6,7 @@ The Enterprise Edition is available as a SaaS on the Google Cloud, so you do not
 There are two alternative versions of 4WS.Platform:
 
 * **Java 1.7 based version** - Platform started with this version and it spreads up to the **5.2.3 version**
-* **Java 11 new version** - this is the last version of **Platform: 6.0**, which is functionally equivalent to 5.2.3 version
+* **Java 11 new version** - this is the most recent version of **Platform: 6.0**, which is functionally equivalent to 5.2.3 version
 
 In the next sections, you can find detailed descriptions about how to install both of them.
 
@@ -70,8 +70,6 @@ password: admin
 
 **It is recommended to use Chrome or Mozilla Firefox browsers** ; Internet Explorer 8 or above are also supported, but they are not optimized for javascript usage as for the other two browsers.
 
-
-
 #### PORTING FROM JAVA 1.7 TO JAVA 11
 
 In case you already have a Platform installation previous to Platform 6 \(previous to Java 11\) and need to migrate it to the last version, you have to follow the steps reported above: installing the new version of Plaftorm, specify the same settings for the database connection.
@@ -80,8 +78,6 @@ After doing it, bear in mind that you have also to copy a few other files:
 
 * copy the application static content from one installation to the other
 * copy the WEb-INF/classes/reports subfolder from the previous installation to the new one
-
-
 
 #### 4WS.PLATFORM INSTALLER STEPS
 
@@ -122,6 +118,7 @@ After doing it, bear in mind that you have also to copy a few other files:
   We don’t provide support for these activities: we give for granted that you are able to perform them on your own.
 
 * 4WS.Platform requires a Java web container compatible with Java 1.7: Platform installer already includes Tomcat 7. If you have already installed it for other purposes, you can reuse it; if you do not have installed it yet, the 4WS.Platform installer will install it along with the product, since it is included in the distribution. You can  **download 4WS.Platform from the Sourceforge repository: ** [http://sourceforge.net/projects/xwsplatform/files](http://sourceforge.net/projects/xwsplatform/files)
+
 * **Decompress**  the .zip file downloaded from the repository and **execute the installer** .  
   **If you are using recent versions of Windows \(e.g. Vista o next versions\), you have to use a superuser and open a DOSprompt by right clicking on it and choose “Run as Administrator”: that is the right way to install the program** .  **DO NOT simply execute the installer using a superuser \(e.g. administrator\), since this has not the same effect** .  
   There are two types of installer: an installer having a graphical user interface and the other without it. The first can be used with Windows or other graphical operating systems; in that case you have simply to follow the wizard and fill out all information required, including database type, host, port and the schema account. With the second one, you have to provide the same information, by executing the installer from the shell.

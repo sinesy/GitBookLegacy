@@ -12,6 +12,7 @@ The main features of a detail form are:
 * text area
 
 * check box
+
 * calendar, including a button to open a calendar
 * numeric field, including an ad hoc numeric keypad; decimal numbers are supported too and they are configurable in the App Designer form panel
 * code selector, composed of an input field and a selector button:
@@ -23,6 +24,12 @@ The main features of a detail form are:
 * image preview, with buttons to select an image \(from the camera/image gallery\) and remove it
 
 * file selector – e.g. a PDF file, with buttons to show the file preview and delete it.
+
+
+
+A for can be fill with a business component \(Form Panel\) or can exists without a business component \(Editable panel\).
+
+Form Panel, Editable panel and Filter Panel support the [constraints layout](/constraint-layout.md).
 
 ---
 

@@ -44,6 +44,8 @@ The result list reports the following columns:
 
 The "**Show linked elaborations**" button allows to filter the grid content according to the elaborations related to the same original elaboration which went wrong: when a service under monitoring is set with a number of retries/wait time, it is possible to automate the re-start of the same elaboration \(in case of FATAL errors\). In such a scenario, this button shows only failed elaborations re-started multiple times. I**f the n-retry for that elaboration completes successfully, the last elaboration is marked as "completed" and all the previous ones \(included the original one\) are marked as successfully rielaborated \(with previous errors\).**
 
+---
+
 When double clicking on a row in the result list, the corresponding detail window is prompted.
 
 ![](/assets/Schermata 2020-02-24 alle 12.25.00.png)
@@ -52,13 +54,17 @@ The elaboration detail window contains 3 subfolders:
 
 * **Elaboration** - it reports the elaboration details, such as the application, service code, elaboration state and its transaction id; apart from that, there is also a sub panel containing the input and output for the elaboration, better described below
 
-* **logged messages** - every message can be related to errors or other informative messages; each message include: message type \(fatal error, error, informative message, detailed message, finest message\), message date code, message text, optional file name
+* **Logs** - every message can be related to errors or other informative messages; each message include: message type \(fatal error, error, informative message, detailed message, finest message\), message date code, message text, optional file name
 
-* **files** - list of files managed by this elaboration; for each file it is reported the elaboration outcome: still in progress or completed
+* **Files** - list of files managed by this elaboration; for each file it is reported the elaboration outcome: still in progress or completed
+
+---
 
 The "**Elaboration restart**" button can be helpful when the current elaboration has failed. In such a scenario, the error can be due to an erroneous input content. Let's take the case of a web service containing a data not correct/valid/too long, etc.
 
-Thanks to the elaboration detail window and the "Log" folder the exact error is identified. If it depends on erroneous input data, it can be correct by pressing on "Elaboration restart": this will open an input dialog to edit the input content \(**only the request body can be changed**\). Finally, press the "Play" button to re-execute the process and create a new elaboration
+---
+
+Thanks to the elaboration detail window and the "**Log**" folder the exact error is identified. If it depends on erroneous input data, it can be correct by pressing on "Elaboration restart": this will open an input dialog to edit the input content \(**only the request body can be changed**\). Finally, press the "Play" button to re-execute the process and create a new elaboration
 
 ![](/assets/Schermata 2020-02-24 alle 12.29.26.png)
 

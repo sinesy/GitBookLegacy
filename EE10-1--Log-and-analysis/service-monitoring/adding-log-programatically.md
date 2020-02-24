@@ -52,9 +52,9 @@ Allowed values for elaborationState:
 
 * **E** - interrupted with errors
 
-* **W** - completed with errors; this state should be used programatically, when there are errors inside a server-side javascript action which are not evaluated as blocking and the service can reach the end; this state is very similar to "C", but it emphasize the presence of errors inside the elaboration
+* **W** - completed with errors; this state should be used programmatically, when there are errors inside a server-side javascript action which are not evaluated as blocking and the service can reach the end; this state is very similar to "C", but it emphasize the presence of errors inside the elaboration
 
-* **R** - ri-elaborated, since it was wrong in the pas; this state should never be used programmatically, since it is related to elaboration started automatically by Platform, according to the settings for the monitored service
+* **R** - re-elaborated, since it was wrong in the pas; this state should never be used programmatically, since it is related to elaboration started automatically by Platform, according to the settings for the monitored service
 
 ---
 
@@ -114,6 +114,6 @@ The arguments are::
 
 * **backupDirectoryId** - optional: used in combination with backupFileName; it represents the location of the backuped file
 
-**    
+**      
 **
 

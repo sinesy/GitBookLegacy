@@ -56,13 +56,11 @@ The elaboration detail window contains 3 subfolders:
 
 * **files** - list of files managed by this elaboration; for each file it is reported the elaboration outcome: still in progress or completed
 
-
-
 The "**Elaboration restart**" button can be helpful when the current elaboration has failed. In such a scenario, the error can be due to an erroneous input content. Let's take the case of a web service containing a data not correct/valid/too long, etc.
 
-Thanks to the elaboration detail window and the "Log" folder the exact error is identified. If it depends on erroneous input data, it can be correct by pressing on "Elaboration restart": this will open an input dialog to edit the input content \(**only the request body can be changed**\). Finally, press the "Play" button to re-execute the process and create a new elaboration.![](/assets/Schermata 2020-02-24 alle 12.29.26.png)
+Thanks to the elaboration detail window and the "Log" folder the exact error is identified. If it depends on erroneous input data, it can be correct by pressing on "Elaboration restart": this will open an input dialog to edit the input content \(**only the request body can be changed**\). Finally, press the "Play" button to re-execute the process and create a new elaboration
 
-
+![](/assets/Schermata 2020-02-24 alle 12.29.26.png)
 
 Note: in the Log sub-folder, when moving the mouse cursor over the “message code”, a tooltip is shown to show:
 

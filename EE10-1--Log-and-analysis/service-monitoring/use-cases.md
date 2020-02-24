@@ -45,8 +45,17 @@ Try to **fill in one or more tags**, so that the results list will be significan
 
 After reducing the results, it will be easier to navigate through the elaborations, probably one for each Platform server. Double click on the elaboration having an **ERROR state **and go into depth to its **messages list**: the original error is likely to be located there.
 
-  
 As an alternative, double click on any elaboration matching the filled tags and select the “Logs” folder: press the** “Transaction logs”** button to see all messages for all elaborations of any Platform installation, sharing the same transaction id: not only messages for the current elaboration will be reported, but all of them. Once identified an **error message, double click on it to open the elaboration **which contains it.
+
+---
+
+**How to trace multiple elaborations for the same failed process**
+
+In case an elaboration for a specific service failed with a FATAL log message, it is possible to automate its execution, through the  settings available in the service definition window.
+
+Once done that, the Elaborations window will include all elaborations, including multiple elaborations started from an original failed FATAL elaboration.
+
+In order to filter the elaborations started from an original failed elaboration, just click on the "Show linked elaborations" button: this will limit the elaborations to show to the only ones belonging to the same original failed elaboration.
 
 
 

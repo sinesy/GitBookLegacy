@@ -1,13 +1,13 @@
 # **Defining a service to monitor**
 
-**      
+**        
 **The App Designer menu-bar provides the “**Monitoring Services” -&gt;“Monitoring services**” submenu through which it is possible to define any number of services to track.
 
 ---
 
 ![](https://lh5.googleusercontent.com/rN4424PTxWdB9jxbqeYIAGzWW3JxM8vhwyT9RCZFumFV0da4FQqHWoL7cPgbOKzKGd_SlzriTfZxL7P942Hr4vj8StFV5bFzstUgeKSkTiCa2Rf_SNHW6Hs5HDgjkNdo6IyLTrmx)
 
-**      
+**        
 **
 
 This is the list containing all defined services under monitoring.
@@ -38,7 +38,7 @@ Optional fields that can be specified are:
 
 * **notification level** - if specified, an email notification can be automatically sent in case there are messages for the current elaboration, whose log level is higher or equal to the one specified here; for example, if this field is set to ERROR, it means that if there will be messages having ERROR/FATAL log type, an email will be sent
 
-* **max attempts** and **attempt wait time **- these two fields work together and they must be both filled or both set empty. When filled, they allow to automate the restart of an elaboration failed with a FATAL log message \(e.g. out of memory, database connection errors, etc.\). The elaboration will be re-executed after "attempt wait time" minutes
+* **max attempts** and **attempt wait time **- these two fields work together and they must be both filled or both set empty. When filled, they allow to automate the restart of an elaboration failed with a FATAL log message \(e.g. out of memory, database connection errors, etc.\). The failed \(FATAL\) elaboration will be re-executed automatically after "attempt wait time" minutes for up to "max attempts" times. If at some point the elaboration completes correctly, it is marked as "completed" whereas all the \(failed\) previous ones \(included the original one\) are marked as "successfully rielaborated with previous errors"
 
 * **tag X / label X **- there are up to 5 tags you can define; a tag represents a piece of data provided to a service in input; for example, in case of a web service \(server-side javascript action\), the request body can contain a complex JSON string, containing a set of attributes; a tag is the attribute name, the label is a more user-friendly description of it. When a couple tag/label has been specified, Platform will automatically extracts the attribute value from the input and save it along with the elaboration; this comes in handy later, when searching for data: instead of searching within the whole body request, the search can search directly for a tag.
 

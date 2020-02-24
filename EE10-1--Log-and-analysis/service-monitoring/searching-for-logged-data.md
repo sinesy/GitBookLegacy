@@ -42,15 +42,11 @@ The result list reports the following columns:
 
 * **elaboration state** - an elaboration can be started, ended correctly, ended/interrupted with errors
 
-
-
 The "**Show linked elaborations**" button allows to filter the grid content according to the elaborations related to the same original elaboration which went wrong: when a service under monitoring is set with a number of retries/wait time, it is possible to automate the re-start of the same elaboration \(in case of FATAL errors\). In such a scenario, this button shows only failed elaborations re-started multiple times. I**f the n-retry for that elaboration completes successfully, the last elaboration is marked as "completed" and all the previous ones \(included the original one\) are marked as successfully rielaborated \(with previous errors\).**
-
-
 
 When double clicking on a row in the result list, the corresponding detail window is prompted.
 
-![](https://lh3.googleusercontent.com/0t4gQ2oIyu5RiPtqa-rpy7r0K56kQkLiIAr_3dLKc26pHuP563QM5CetxX_6mQtOp3T0Qy0qPL-g7MoxfF-6qebIfB0cw7ZrLdK-qFIxOJpabzFts878GIbrWJ2mJE4_lk2S9l4T)
+![](/assets/Schermata 2020-02-24 alle 12.25.00.png)
 
 The elaboration detail window contains 3 subfolders:
 
@@ -59,6 +55,14 @@ The elaboration detail window contains 3 subfolders:
 * **logged messages** - every message can be related to errors or other informative messages; each message include: message type \(fatal error, error, informative message, detailed message, finest message\), message date code, message text, optional file name
 
 * **files** - list of files managed by this elaboration; for each file it is reported the elaboration outcome: still in progress or completed
+
+
+
+The "**Elaboration restart**" button can be helpful when the current elaboration has failed. In such a scenario, the error can be due to an erroneous input content. Let's take the case of a web service containing a data not correct/valid/too long, etc.
+
+Thanks to the elaboration detail window and the "Log" folder the exact error is identified. If it depends on erroneous input data, it can be correct by pressing on "Elaboration restart": this will open an input dialog to edit the input content \(**only the request body can be changed**\). Finally, press the "Play" button to re-execute the process and create a new elaboration.![](/assets/Schermata 2020-02-24 alle 12.29.26.png)
+
+
 
 Note: in the Log sub-folder, when moving the mouse cursor over the “message code”, a tooltip is shown to show:
 

@@ -1,14 +1,10 @@
 # **Adding log programmatically to a monitored service**
 
-
-
 Apart from the elaborations automatically managed by Platform \(start/end datetime, elaboration state, I/O\), a Platform developer can include additional messages to a specific elaboration, inside a server-side javascript action.
 
 This activity is not essential but can be helpful sometime, to include additional information to read later, when evaluating errors fired by an action.
 
 There are 4 methods available in a javascript action:
-
-
 
 **1. method used to add a log message to an elaboration in progress**
 
@@ -31,9 +27,7 @@ In the simplest case, only the first two arguments must be filled:
 
 Optionally, it is possible to specify a message code, i.e. a code related to a problem/solution, previously defined \(see the Knowledge Base section\)
 
-  
-In case the current elaboration is about a file to read/write, it is possible to include the file name too. In such a case, it will be created a link between this message and logged files \(see the last section about Searching for logged data\)  
-
+In case the current elaboration is about a file to read/write, it is possible to include the file name too. In such a case, it will be created a link between this message and logged files \(see the last section about Searching for logged data\)
 
 ---
 
@@ -50,17 +44,17 @@ In case the server-side javascript action should terminate before the default en
 
 Optionally, it is also possible to define the result got back \(if not specified, Platform will automatically gather the result provided by the action through the **utils.setReturnValue\(\)** method\).
 
-
-
 Allowed values for elaborationState:
 
-* S - started, not finished yet
+* **S** - started, not finished yet
 
-* C - completed correctly
+* **C** - completed correctly
 
-* E - completed/interrupted with errors
+* **E** - interrupted with errors
 
+* **W** - completed with errors; this state should be used programatically, when there are errors inside a server-side javascript action which are not evaluated as blocking and the service can reach the end; this state is very similar to "C", but it emphasize the presence of errors inside the elaboration
 
+* **R** - ri-elaborated, since it was wrong in the pas; this state should never be used programmatically, since it is related to elaboration started automatically by Platform, according to the settings for the monitored service
 
 ---
 
@@ -120,6 +114,6 @@ The arguments are::
 
 * **backupDirectoryId** - optional: used in combination with backupFileName; it represents the location of the backuped file
 
-**  
+**    
 **
 

@@ -60,11 +60,11 @@ Allowed values for elaborationState:
 
 **3. Method to set elaboration state and a message**
 
-This method carries out the same logic described for the previous one, with one more step: append a message to the elaboration, that is to say:
-
-* a message text
+This method carries out the same logic described for the previous one, with one more step: append a message to the elaboration; apart from the arguments described above, there are the additional arguments:
 
 * message type; allowed values: FINEST, INFO, DEBUG, ERROR, FATAL
+
+* a message text
 
 * optional message code
 
@@ -114,6 +114,6 @@ The arguments are::
 
 * **backupDirectoryId** - optional: used in combination with backupFileName; it represents the location of the backuped file
 
-**      
+**        
 **
 

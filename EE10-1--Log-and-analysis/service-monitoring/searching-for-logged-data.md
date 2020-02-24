@@ -42,6 +42,12 @@ The result list reports the following columns:
 
 * **elaboration state** - an elaboration can be started, ended correctly, ended/interrupted with errors
 
+
+
+The "**Show linked elaborations**" button allows to filter the grid content according to the elaborations related to the same original elaboration which went wrong: when a service under monitoring is set with a number of retries/wait time, it is possible to automate the re-start of the same elaboration \(in case of FATAL errors\). In such a scenario, this button shows only failed elaborations re-started multiple times. I**f the n-retry for that elaboration completes successfully, the last elaboration is marked as "completed" and all the previous ones \(included the original one\) are marked as successfully rielaborated \(with previous errors\).**
+
+
+
 When double clicking on a row in the result list, the corresponding detail window is prompted.
 
 ![](https://lh3.googleusercontent.com/0t4gQ2oIyu5RiPtqa-rpy7r0K56kQkLiIAr_3dLKc26pHuP563QM5CetxX_6mQtOp3T0Qy0qPL-g7MoxfF-6qebIfB0cw7ZrLdK-qFIxOJpabzFts878GIbrWJ2mJE4_lk2S9l4T)

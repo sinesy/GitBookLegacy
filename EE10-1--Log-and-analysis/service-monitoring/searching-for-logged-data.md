@@ -22,12 +22,11 @@ Available filters include:
 
 * **file name** - in case of elaborations involving files to read/write and logged as messages, it is possible to filter elaborations referring such a files as logged messages
 
-  
 In case the “service” combo-box has been specified, additional input fields are prompted: for each tag defined for the selected service, a filter control is shown here.
 
 For example, if a “selling” service has been defined with a “barcode” tag, when selecting this service in the filter panel, a “barcode” filter control will be added as well.
 
-![](https://lh3.googleusercontent.com/vFO_aef7ddleZjxVVuUJOnF3AdUO536B_stIbzcv71tsFmiTmq0j3jk0tYrkpMBOoas2DZPazlGHpsjNa1qRMIgHp0l7htkNKTW76cyn6vHkbgs67DU0LvMdHfPv5a7m0E0lXMnz)
+![](/assets/Schermata 2020-02-24 alle 11.56.13.png)
 
 The result list reports the following columns:
 
@@ -43,12 +42,10 @@ The result list reports the following columns:
 
 * **elaboration state** - an elaboration can be started, ended correctly, ended/interrupted with errors
 
-  
 When double clicking on a row in the result list, the corresponding detail window is prompted.
 
 ![](https://lh3.googleusercontent.com/0t4gQ2oIyu5RiPtqa-rpy7r0K56kQkLiIAr_3dLKc26pHuP563QM5CetxX_6mQtOp3T0Qy0qPL-g7MoxfF-6qebIfB0cw7ZrLdK-qFIxOJpabzFts878GIbrWJ2mJE4_lk2S9l4T)
 
-  
 The elaboration detail window contains 3 subfolders:
 
 * **Elaboration** - it reports the elaboration details, such as the application, service code, elaboration state and its transaction id; apart from that, there is also a sub panel containing the input and output for the elaboration, better described below
@@ -56,8 +53,6 @@ The elaboration detail window contains 3 subfolders:
 * **logged messages** - every message can be related to errors or other informative messages; each message include: message type \(fatal error, error, informative message, detailed message, finest message\), message date code, message text, optional file name
 
 * **files** - list of files managed by this elaboration; for each file it is reported the elaboration outcome: still in progress or completed
-
-
 
 Note: in the Log sub-folder, when moving the mouse cursor over the “message code”, a tooltip is shown to show:
 
@@ -67,7 +62,6 @@ Note: in the Log sub-folder, when moving the mouse cursor over the “message co
 
 ![](https://lh3.googleusercontent.com/92GrmgR1XZTU8mVEHMoruzPSpcTmPp5Hz9eMeLesifFvc_Vw-D3H57dVOfbKblnKeHHUVuotf1eedG678wjVURbmPbKVJI7pX_kaT-Fs3ln5cGp_8dTmg8cpRrnGHK1N73BsXamE)
 
-  
 Note: the **input and output** for the elaboration sub panel contains different content, spread along 4 sub-folders and expressed using JSON format.
 
 The content changes according to the service under monitoring:
@@ -76,6 +70,5 @@ The content changes according to the service under monitoring:
 
 * in case of a data export from table, the result sub-folder contains the number of extracted rows
 
-  
 
 

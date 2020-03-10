@@ -11,12 +11,7 @@ You can change most of the app's messages or buttons, if you want to change a tr
 
 Bellow the standard translation key and value:
 
-  
-		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Liberation Sans"; font-size:x-small }  
-		a.comment-indicator:hover + comment { background:\#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  }   
-		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  }   
-		comment { display:none;  }   
-	
+
 
 | Key | English | Italiano |
 | :--- | :--- | :--- |
@@ -47,7 +42,7 @@ Bellow the standard translation key and value:
 | error\_while\_fetching\_metadata | Error while fetching data | Error durante il recupero dei dati |
 | error | Ops! | Ops! |
 | js\_error\_message | Something went wrong. Please try again and contact the service if the problem persists. | Qualcosa è andato storto. Riprova e se il problema si ripresenta contatta l'assistenza. |
-| warning | Error on |   |
+| warning | Error on |  |
 | username | Username | Username |
 | password | Password | Password |
 | login | Login | Login |

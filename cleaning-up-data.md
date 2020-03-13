@@ -19,3 +19,4 @@ For reducing the amount of space required for these operations, Platform provide
 
 
 
+![](/assets/collection-grid-view.md)

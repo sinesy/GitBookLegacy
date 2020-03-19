@@ -149,6 +149,7 @@
     * [Constraint Layout](constraint-layout.md)
     * [Style properties](style-properties.md)
     * [Appendix : Synchronization flow](EE7-A1--Appendix-Synchronization-flow.md)
+    * [Translations](translations.md)
   * [GSuite](gsuite.md)
     * [Introduction](EE3-1--Google-Collaboration-Introduction.md)
     * [Client-side integration](EE3-2--Client-side-integration.md)

@@ -3,9 +3,9 @@
     "description" : "A reference guide you can read to go into depth with the knowledge of the app development, best practices, design rules, troubleshooting",
     "language" : "en",
     "styles":{
-    "website": "./styles/website.css",
-    "pdf": "./styles/pdf.css",
-    "ebook" : "./styles/ebook.css"
-},
-"plugins": ["-theme-default", "theme-platform", "collapsible-chapters", "-lunr", "-search", "search-pro"]
+        "website": "./styles/website.css",
+        "pdf": "./styles/pdf.css",
+        "ebook" : "./styles/ebook.css"
+    },
+    "plugins": ["-theme-default", "theme-platform", "collapsible-chapters", "-lunr", "-search", "search-pro"] 
 }
